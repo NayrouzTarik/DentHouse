@@ -612,22 +612,25 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   )}
                 </div>
 
-                {/* Advantage Savings Box */}
-                <div className="mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200/80">
-                  <div className="flex items-center justify-between text-xs font-bold text-emerald-900">
-                    <span>UK Private Clinic Cost:</span>
+                {/* Illustrative Comparison Box */}
+                <div className="mt-4 p-4 rounded-xl bg-sky-50/80 border border-sky-100">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-700">
+                    <span>Illustrative UK Private Fee:</span>
                     <span className="line-through text-slate-400">
                       £{ukTotalBenchmark.toLocaleString()}
                     </span>
                   </div>
-                  <div className="mt-2 pt-2 border-t border-emerald-200/60 flex items-center justify-between">
-                    <span className="text-xs font-bold text-emerald-800">
-                      Your Net UK Advantage:
+                  <div className="mt-2 pt-2 border-t border-sky-200/60 flex items-center justify-between">
+                    <span className="text-xs font-bold text-slate-800">
+                      Package Price Difference:
                     </span>
-                    <span className="text-sm font-extrabold text-emerald-700">
-                      Save £{totalSavings.toLocaleString()} ({savingsPercent}%)
+                    <span className="text-sm font-extrabold text-[#0284C7]">
+                      £{totalSavings.toLocaleString()} lower
                     </span>
                   </div>
+                  <p className="mt-2 text-[10px] text-slate-500 leading-relaxed">
+                    Based on private UK clinic average for {selectedTreatment.name}. Package covers treatment, accommodation, and transfers. <strong>Flights are not included.</strong>
+                  </p>
                 </div>
 
                 {/* Summary Items breakdown */}
@@ -687,6 +690,9 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                     <Check className="w-3.5 h-3.5 text-[#0284C7]" />
                     <span>4 Private Chauffeur Transfers included in every plan</span>
                   </div>
+                  <div className="mt-2 p-2 rounded-lg bg-amber-50 border border-amber-200/60 text-[10px] text-amber-900 leading-snug">
+                    Your package includes the accommodation and services explicitly listed in your selected offer. <strong>Flights are not included.</strong>
+                  </div>
                 </div>
 
                 {/* Primary CTA */}
@@ -740,11 +746,14 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                       <div className="text-xs text-slate-500 mt-1">
                         Total package: £{pkg.totalPriceGBP.toLocaleString()}
                       </div>
-                      <div className="mt-2 p-2 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-semibold flex items-center justify-between">
-                        <span>UK Patient Advantage:</span>
-                        <span className="font-bold text-emerald-700">
-                          Save £{pkg.totalSaving.toLocaleString()}
+                      <div className="mt-2 p-2 rounded-lg bg-sky-50 text-slate-700 text-xs flex items-center justify-between">
+                        <span className="text-slate-600">vs UK Private Benchmark:</span>
+                        <span className="font-bold text-[#0284C7]">
+                          £{pkg.totalSaving.toLocaleString()} lower
                         </span>
+                      </div>
+                      <div className="mt-1 text-[10px] text-amber-800 text-center">
+                        Flights not included. Compare total travel costs.
                       </div>
                     </div>
 

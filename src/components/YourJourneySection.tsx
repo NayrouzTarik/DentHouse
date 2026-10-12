@@ -209,7 +209,7 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
                 <div className="p-3 rounded-xl bg-slate-50 border border-slate-100">
                   <Coffee className="w-4 h-4 text-[#0284C7] mb-1.5" />
                   <div className="font-bold text-slate-800">No Language Barrier</div>
-                  <div className="text-slate-500 text-[11px] mt-0.5">100% Fluent English doctors & team</div>
+                  <div className="text-slate-500 text-[11px] mt-0.5">Fluent English-speaking clinical team</div>
                 </div>
 
                 <div className="p-3 rounded-xl bg-slate-50 border border-slate-100">

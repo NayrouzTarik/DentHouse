@@ -65,14 +65,12 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
     const priceText = prefilledPlan?.perPersonPrice
       ? `£${prefilledPlan.perPersonPrice.toLocaleString()} per person (£${prefilledPlan.grandTotal.toLocaleString()} total for ${prefilledPlan.partyCount || 2} patients)`
       : `From £${selectedTreatObj.dentHousePriceGBP.toLocaleString()} per person`;
-    const savingsText = prefilledPlan?.savings
-      ? `Saving £${prefilledPlan.savings.toLocaleString()} vs UK Private Clinics`
-      : 'Saving over 65% vs Harley Street';
+    const inclusionsNote = 'Includes selected stay & 4 private transfers. Flights arranged independently.';
 
     const textLines = [
       `Hello Dent House Marrakech!`,
       ``,
-      `I would like to book my 2-Day Marrakech Dental Package. Here is my exact plan:`,
+      `I would like to explore my 2-Day Marrakech Dental Package. Here is my exact plan:`,
       ``,
       `📋 MY PACKAGE DETAILS:`,
       `• Party: ${party.toUpperCase()} (${party === 'solo' ? '1 Patient' : party === 'duo' ? '2 Patients - 15% Off' : '3 Patients - 20% Off'})`,
@@ -82,7 +80,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
       `• Chauffeur: ${rideText} (All 4 Airport & Clinic Shuttles Included)`,
       `• Extras: ${extrasList}`,
       `• Total Price: ${priceText}`,
-      `• UK Advantage: ${savingsText}`,
+      `• Inclusions: ${inclusionsNote}`,
       ``,
       `👤 PATIENT DETAILS:`,
       `• Name: ${name || 'UK Patient'}`,
@@ -132,8 +130,8 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#0284C7]">
                 Configured Package Summary
               </span>
-              <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">
-                Saving £{prefilledPlan.savings?.toLocaleString()} vs UK
+              <span className="text-xs font-bold text-sky-800 bg-sky-100 px-2 py-0.5 rounded">
+                Package Estimate (Flights Excluded)
               </span>
             </div>
 

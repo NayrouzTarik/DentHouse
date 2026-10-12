@@ -51,24 +51,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-sky-100 selection:text-sky-900">
-      {/* Top Advisory Banner for UK patients */}
-      <div className="bg-slate-900 text-slate-300 py-2 px-4 text-xs font-medium border-b border-slate-800">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
-            <span className="truncate">
-              Direct UK flights available from London, Manchester & Bristol (3h 20m) · 2-Day Turnaround Guaranteed
-            </span>
-          </div>
-          <button
-            onClick={handleOpenConsultation}
-            className="hidden sm:flex items-center gap-1.5 text-sky-400 hover:text-sky-300 font-semibold cursor-pointer shrink-0"
-          >
-            <span>Free 3D Smile Mockup</span>
-            <span aria-hidden="true">→</span>
-          </button>
-        </div>
-      </div>
+
 
       {/* Strict 3-zone Header Navigation */}
       <Navbar
@@ -102,7 +85,7 @@ export default function App() {
         {/* Your 2-Day Marrakech Journey (Luxury Palmeraie Stays & 4 Private Transfers) */}
         <YourJourneySection onOpenConsultation={handleOpenConsultation} />
 
-        {/* The Clinic (Swiss E.max, 3Shape Trios 5, ISO Standards, Zero Laser) */}
+        {/* The Clinic (Swiss E.max, 3Shape Trios 5, Zero Laser) */}
         <TheClinicSection onOpenConsultation={handleOpenConsultation} />
 
         {/* What to Do & What Not to Do (Clear Dos & Don'ts + 1yr/5yr Warranties) */}

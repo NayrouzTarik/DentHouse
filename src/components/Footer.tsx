@@ -134,7 +134,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
           <div className="flex items-center gap-6">
             <span>Registered Medical Practice No. 49102-MA</span>
             <span className="text-slate-700">·</span>
-            <span>European CE / Swiss ISO Compliant</span>
+            <span>Authentic Swiss Ivoclar & Vita Materials</span>
+            <span className="text-slate-700">·</span>
+            <span>Flights Not Included</span>
             <span className="text-slate-700">·</span>
             <span>Privacy Policy</span>
           </div>

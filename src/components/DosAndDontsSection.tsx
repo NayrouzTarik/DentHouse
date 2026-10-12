@@ -258,7 +258,7 @@ export const DosAndDontsSection: React.FC = () => {
                     The Coffee Lover's Guide: Keeping Your Teeth Stain-Free
                   </h3>
                   <p className="mt-1 text-xs sm:text-sm text-amber-900/80 leading-relaxed">
-                    You <strong>do not have to give up coffee forever</strong>! However, composite bonding is a porous polymer that absorbs chromogens, while Swiss E.max® porcelain is a glazed ceramic that is 100% stain-proof. Here are the exact scientific rules to follow:
+                    You <strong>do not have to give up coffee forever</strong>! However, composite bonding is a micro-hybrid resin that requires mindful care, while Swiss E.max® porcelain is a high-density glazed ceramic engineered for superior stain resistance. Here are the practical guidelines to follow:
                   </p>
                 </div>
               </div>

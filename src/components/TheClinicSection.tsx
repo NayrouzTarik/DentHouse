@@ -138,8 +138,8 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
                 </tr>
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-slate-800">Set of 20 Veneers Cost</td>
-                  <td className="py-3.5 px-4 text-slate-500 line-through">£14,000 – £16,500</td>
-                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-emerald-700">£3,450 (Save over £11,000)</td>
+                  <td className="py-3.5 px-4 text-slate-500 line-through">£14,000 – £16,500 (Treatment only)</td>
+                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-slate-900">£3,450 (Treatment + Palmeraie Stay + Transfers)</td>
                 </tr>
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-slate-800">Laser Procedures</td>
@@ -169,6 +169,10 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
               </tbody>
             </table>
           </div>
+
+          <p className="mt-4 text-[11px] text-slate-500 text-center leading-relaxed">
+            *Illustrative fee benchmark based on private UK clinic quotes for 20 porcelain veneers (£700–£825/tooth). Packages include the accommodation and transfer services explicitly listed in your chosen offer. <strong>Flights are not included.</strong>
+          </p>
         </div>
       </div>
     </section>

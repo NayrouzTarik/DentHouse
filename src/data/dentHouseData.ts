@@ -193,8 +193,8 @@ export const PRECONFIGURED_PACKAGES = [
       '20 Swiss E.max® Porcelain Veneers each',
       '15% Group Discount on treatments',
       '4 Private Chauffeur Transfers Included (Airport & Clinic)',
-      'Bring 2 companions to stay with you for FREE',
-      '5-Year Comprehensive Warranty & UK documentation'
+      '5-Year Comprehensive Warranty & UK documentation',
+      'Package covers treatment, stay & chauffeur (Flights not included)'
     ]
   },
   {
@@ -213,8 +213,8 @@ export const PRECONFIGURED_PACKAGES = [
       '20 Hand-layered Swiss E.max® Veneers',
       '5-Star Palmeraie Luxury Stay (2 days)',
       'Option to bring 2 guests to stay for FREE',
-      '4 Private Chauffeur Transfers included',
-      '5-Year Warranty with digital serial certificates'
+      '5-Year Warranty with digital serial certificates',
+      'Package covers treatment, stay & chauffeur (Flights not included)'
     ]
   },
   {
@@ -233,8 +233,8 @@ export const PRECONFIGURED_PACKAGES = [
       '20 Composite Bondings (No drilling of enamel)',
       '1-Year Warranty + Free 6-Month Check-Up',
       '2 Nights Essential Palmeraie Garden Suite',
-      '4 Private Chauffeur Transfers included',
-      'Completed in 2 comfortable days'
+      'Completed in 2 comfortable days',
+      'Package covers treatment, stay & chauffeur (Flights not included)'
     ]
   }
 ];
@@ -244,8 +244,8 @@ export const TREATMENT_LONGEVITY_GUIDE = {
     name: 'Swiss E.max® Porcelain Veneers',
     lifespan: '10 to 20+ Years',
     material: 'Swiss Ivoclar Lithium Disilicate Glass-Ceramic',
-    porosity: 'Non-porous (0% absorption)',
-    stainResistance: '100% Stain-Proof against coffee, red wine, tea, and nicotine',
+    porosity: 'High-density glazed ceramic structure',
+    stainResistance: 'High stain resistance against coffee, tea, and red wine',
     vulnerablePoint: 'Resin cement line at the gum margin if oral hygiene is neglected',
     prepDepth: 'Ultra-conservative sub-0.3mm (No aggressive drilling)',
     nightguardNeed: 'Mandatory custom nightguard to prevent bruxism micro-fractures',
@@ -259,7 +259,7 @@ export const TREATMENT_LONGEVITY_GUIDE = {
     porosity: 'Micro-porous polymer (Absorbs chromogens if unattended)',
     stainResistance: 'Moderate (Requires immediate water rinse after coffee and 6-mo polish)',
     vulnerablePoint: 'Direct incisal biting edges and surface staining from tannins',
-    prepDepth: 'Zero drilling of healthy enamel (100% reversible & additive)',
+    prepDepth: 'Conservative additive technique with zero drilling of healthy enamel',
     nightguardNeed: 'Essential to shield lower flexural strength (120–160 MPa)',
     toothpasteRDA: 'RDA < 50 (Ultra-gentle paste, zero baking soda or charcoal)',
     warranty: '1-Year Warranty + Complimentary 6-Month High-Gloss Diamond Check-Up'
@@ -380,8 +380,8 @@ export const PALMERAIE_SEASONALITY_DATA = [
     dentHouseGBP: 110,
     savingGBP: 60,
     demand: 'Clinic Advantage',
-    status: 'Guaranteed 100% Villa Fill via Medical Tourism',
-    note: 'General tourists stay home, but dental patients enjoy chilled AC clinic visits + private pool recovery. Stable 100% occupancy for partner villas!'
+    status: 'Consistent Demand via Scheduled Treatment Packages',
+    note: 'Scheduled dental packages provide consistent year-round occupancy for partner Palmeraie villas across all seasons.'
   },
   {
     month: 'August',
@@ -501,7 +501,7 @@ export const DOS_AND_DONTS = {
     },
     {
       title: 'Never bargain with airport taxis or worry about transfers',
-      desc: 'All 4 private VIP chauffeur transfers (Airport ➔ Palmeraie ➔ Clinic ➔ Palmeraie ➔ Airport) are 100% pre-scheduled and included in your plan.',
+      desc: 'All 4 private VIP chauffeur transfers (Airport ➔ Palmeraie ➔ Clinic ➔ Palmeraie ➔ Airport) are fully pre-scheduled and included in your plan.',
       tag: 'Logistics'
     }
   ]
@@ -635,32 +635,36 @@ export const PATIENT_STORIES = [
     name: 'Sophie & Mark T.',
     location: 'Surrey, UK',
     treatment: 'Duo Swiss E.max® Porcelain Veneers (20 teeth each)',
-    saving: 'Saved £22,000 total vs Central London',
+    saving: 'Duo Smile Transformation',
     rating: 5,
-    quote: 'We chose the Duo package and stayed in a stunning Palmeraie villa. We even brought our daughter along for free because of the 2-free-guests perk! The teeth look completely natural, 5-year warranty was clearly registered, and private chauffeur transfers made everything stress-free.'
+    quote: 'We chose the Duo package and stayed in a stunning Palmeraie villa. We even brought our daughter along because of the 2-free-guests perk! The teeth look completely natural, the 5-year warranty was clearly registered, and private chauffeur transfers made everything stress-free once we landed.'
   },
   {
     name: 'Oliver B.',
     location: 'Manchester, UK',
     treatment: '20 Composite Bondings',
-    saving: 'Saved £4,650 vs UK Private Clinic',
+    saving: 'Composite Bonding Weekend',
     rating: 5,
-    quote: 'Only took 2 days! No drilling of my teeth at all. The master aesthetic dentists shaped them with absolute precision. Having the 1-year warranty and a free 6-month checkup gives me massive peace of mind. Flew from Manchester on Thursday, back Sunday evening.'
+    quote: 'Completed across 2 days with zero drilling of my healthy natural enamel. The master aesthetic dentists shaped them with absolute precision. Having the 1-year warranty and a free 6-month checkup gives me massive peace of mind. Flew from Manchester on Thursday, back Sunday evening.'
   },
   {
     name: 'Chloe M.',
     location: 'Chelsea, London',
     treatment: 'Swiss E.max® Porcelain Veneers',
-    saving: 'Saved £11,050 vs Harley Street',
+    saving: 'Swiss E.max® Makeover',
     rating: 5,
-    quote: 'I was quoted £14,500 in London for 20 E.max veneers. At Dent House I paid £3,450 for the exact same Swiss Ivoclar porcelain, plus £180 for the luxury Palmeraie resort where my partner stayed with me for free. The 5-year warranty paperwork is top-notch.'
+    quote: 'I compared London clinic options for 20 veneers before choosing Dent House. At £3,450 for authentic Swiss Ivoclar porcelain, combined with the Palmeraie resort where my partner joined me at no extra lodging cost, the transparent package and 5-year warranty documentation were outstanding.'
   }
 ];
 
 export const FAQS = [
   {
+    q: 'Are flights included in the dental packages?',
+    a: 'No. Flights are not included and are booked independently by the patient. Direct flights to Marrakech Menara (RAK) operate daily from London, Manchester, Bristol, and Birmingham (approx. 3h 20m). All 4 private chauffeur transfers within Marrakech (Airport ➔ Accommodation ➔ Clinic) are fully included in your package.'
+  },
+  {
     q: 'What treatments do you offer at Dent House Marrakech?',
-    a: 'We specialize strictly in two high-demand cosmetic treatments: (1) Direct Composite Bonding (£1,850 for 20 teeth) and (2) Swiss E.max® Porcelain Veneers (£3,450 for 20 teeth). Both are completed in 2 days. We do not perform laser cutting or aggressive unnecessary procedures.'
+    a: 'We specialize strictly in two cosmetic treatments: (1) Direct Composite Bonding (£1,850 for 20 teeth) and (2) Swiss E.max® Porcelain Veneers (£3,450 for 20 teeth). Both are completed in 2 days. Packages include treatment, accommodation, and private transfers; flights are not included.'
   },
   {
     q: 'What are the warranty terms for Bonding and E.max Veneers?',
@@ -672,7 +676,7 @@ export const FAQS = [
   },
   {
     q: 'Are all 4 chauffeur transfers included even if I book my own hotel?',
-    a: 'Yes, 100%! All 4 private chauffeur transfers (Airport ➔ Hotel, Hotel ➔ Clinic, Clinic ➔ Hotel, Hotel ➔ Airport) are included in every single plan, whether you stay with us in Palmeraie or arrange your own accommodation.'
+    a: 'Yes. All 4 private chauffeur transfers (Airport ➔ Hotel, Hotel ➔ Clinic, Clinic ➔ Hotel, Hotel ➔ Airport) are fully included in every single plan, whether you stay with us in Palmeraie or arrange your own accommodation.'
   },
   {
     q: 'What makes the Duo and Trio plans such a good deal?',

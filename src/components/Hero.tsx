@@ -29,27 +29,30 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onExplorePackage
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Punchy, UK-Targeted High-Converting Copy */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.12] font-serif font-bold text-slate-900 tracking-tight text-balance">
-              Your smile journey starts here.
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.14] font-serif font-bold text-slate-900 tracking-tight text-balance">
+              Swiss E.max® Veneers & Composite Bonding in Marrakech
             </h1>
 
             <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed font-sans max-w-xl">
-              World-class Swiss porcelain veneers and composite bonding in sunny Marrakech. Completed in just 2 days, with luxury accommodation, VIP chauffeur transfers, and up to 70% savings compared to UK private clinics.
+              Explore authentic Swiss E.max® porcelain veneers and composite bonding packages in sunny Marrakech. Completed in just 2 days, combining your clinical treatment with luxury Palmeraie accommodation and organised chauffeur transfers. <strong>Flights are not included.</strong>
             </p>
 
             {/* Quick UK Patient Trust Indicators */}
-            <div className="mt-6 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-600 font-medium">
+            <div className="mt-6 flex flex-wrap items-center gap-y-2 gap-x-5 text-xs text-slate-600 font-medium">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#0284C7]" />
                 <span>5-Yr E.max / 1-Yr Bonding Warranty</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#0284C7]" />
-                <span>2-Day Turnaround</span>
+                <span>2-Day Clinical Turnaround</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#0284C7]" />
-                <span>Palmeraie Stays (Bring 2 Guests Free)</span>
+                <span>Palmeraie Stays & Transfers Included</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md font-semibold">
+                <span>Flights Not Included</span>
               </div>
             </div>
 
@@ -60,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onExplorePackage
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#0284C7] hover:bg-[#0369A1] active:scale-[0.98] rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5 fill-white/20" />
-                <span>Talk to our team on WhatsApp</span>
+                <span>Request Personalised Quote on WhatsApp</span>
               </button>
 
               <button
@@ -73,23 +76,26 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onExplorePackage
             </div>
 
             {/* UK Advantage Callout Card */}
-            <div className="mt-8 p-4 rounded-xl bg-sky-50/70 border border-sky-100 flex items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
+            <div className="mt-8 p-4 rounded-xl bg-sky-50/70 border border-sky-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center text-[#0284C7] shrink-0 font-bold text-sm">
                   £
                 </div>
                 <div>
                   <div className="text-xs font-bold text-slate-900">
-                    UK Harley Street vs Dent House
+                    Transparent Package Comparison
                   </div>
-                  <div className="text-xs text-slate-600">
-                    London private set of 20 veneers: <span className="line-through text-slate-400">£14,500</span> · Dent House from <span className="font-semibold text-[#0284C7]">£3,450</span>
+                  <div className="text-xs text-slate-600 mt-0.5">
+                    Representative UK private quote for 20 veneers: <span className="line-through text-slate-400">£14,500</span> · Dent House package from <span className="font-semibold text-[#0284C7]">£3,450</span>
+                  </div>
+                  <div className="text-[11px] text-slate-500 mt-1">
+                    Includes treatment, accommodation & transfers. Compare total costs including flights before deciding.
                   </div>
                 </div>
               </div>
-              <div className="hidden sm:block text-right">
-                <span className="text-[11px] font-bold text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded-md whitespace-nowrap">
-                  Save over £11,000
+              <div className="shrink-0 self-start sm:self-center">
+                <span className="text-[11px] font-bold text-sky-800 bg-sky-100/90 px-2.5 py-1 rounded-md whitespace-nowrap">
+                  Full 20-Teeth Package
                 </span>
               </div>
             </div>

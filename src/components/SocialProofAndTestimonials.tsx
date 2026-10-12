@@ -70,6 +70,11 @@ export const SocialProofAndTestimonials: React.FC<SocialProofProps> = ({ onOpenC
           ))}
         </div>
 
+        {/* UK Healthcare Advertising Disclosure */}
+        <p className="mt-6 text-[11px] text-slate-500 text-center leading-relaxed max-w-3xl mx-auto">
+          *Patient accounts reflect individual experiences. Dental treatment suitability, turnaround times, and results depend on clinical assessment. Packages cover dental procedures, accommodation, and chauffeur transfers as explicitly specified in your quote. <strong>Flights are not included.</strong>
+        </p>
+
         {/* Before & After Interactive Showcase Teaser */}
         <div className="mt-14 rounded-2xl bg-gradient-to-r from-slate-900 to-sky-950 p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-xl">

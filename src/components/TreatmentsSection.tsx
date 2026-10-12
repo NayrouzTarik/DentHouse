@@ -98,18 +98,22 @@ export const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({
 
                     <div className="mt-2 flex items-center justify-between text-xs">
                       <span className="text-slate-500">
-                        UK private clinic average:
+                        Illustrative UK private clinic rate:
                       </span>
                       <span className="line-through text-slate-400 font-semibold">
                         £{t.ukPrivatePriceGBP.toLocaleString()}
                       </span>
                     </div>
 
-                    <div className="mt-2.5 p-2 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-semibold flex items-center justify-between">
-                      <span>Your UK Patient Advantage:</span>
-                      <span className="text-emerald-700 font-bold">
-                        Save £{savings.toLocaleString()}
+                    <div className="mt-2.5 p-2 rounded-lg bg-sky-50 text-slate-700 text-xs flex items-center justify-between">
+                      <span className="text-slate-600">Representative fee difference:</span>
+                      <span className="text-[#0284C7] font-bold">
+                        £{savings.toLocaleString()} lower
                       </span>
+                    </div>
+
+                    <div className="mt-2 text-[11px] text-amber-800 bg-amber-50/80 px-2 py-1 rounded border border-amber-200/50">
+                      Flights not included. Compare overall travel and treatment costs prior to booking.
                     </div>
                   </div>
 
