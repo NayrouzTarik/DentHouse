@@ -1,0 +1,6 @@
+{
+  "name": "Dent House Marrakech - Cosmetic Dentistry & Smile Makeovers",
+  "description": "Premium cosmetic dentistry in Marrakech tailored for UK patients. 2-day veneers and smile makeovers with private chauffeur, luxury Palmeraie stays, and transparent all-inclusive packages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
