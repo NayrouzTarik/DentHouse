@@ -164,10 +164,10 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
               <img
                 src={
                   activeDay === 0
-                    ? '/src/assets/images/chauffeur_vip_transfer_1791832484434.jpg'
+                    ? '/images/chauffeur_vip_transfer_1791832484434.jpg'
                     : activeDay === 1
-                    ? '/src/assets/images/marrakech_palmeraie_resort_1791832462639.jpg'
-                    : '/src/assets/images/smile_makeover_veneers_1791832473573.jpg'
+                    ? '/images/marrakech_palmeraie_resort_1791832462639.jpg'
+                    : '/images/smile_makeover_veneers_1791832473573.jpg'
                 }
                 alt="Marrakech Dental Journey Experience"
                 className="w-full h-72 sm:h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500"

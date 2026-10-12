@@ -99,7 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onExplorePackage
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100 aspect-[16/10] sm:aspect-[16/10]">
               <img
-                src="/src/assets/images/hero_denthouse_consultation_1791832441772.jpg"
+                src="/images/hero_denthouse_consultation_1791832441772.jpg"
                 alt="Cosmetic dentist reviewing 3D digital smile scan with British patient in Marrakech clinic"
                 className="w-full h-full object-cover object-center"
                 referrerPolicy="no-referrer"

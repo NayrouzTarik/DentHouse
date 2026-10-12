@@ -43,7 +43,7 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
           <div className="lg:col-span-6 relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100 relative group aspect-[16/10]">
               <img
-                src="/src/assets/images/clinic_interior_luxury_1791832453390.jpg"
+                src="/images/clinic_interior_luxury_1791832453390.jpg"
                 alt="Dent House Marrakech Luxury Cosmetic Dental Suite"
                 className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"
