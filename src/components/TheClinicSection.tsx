@@ -60,9 +60,7 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
                     Trios® 3Shape Digital Intraoral Scanning Bay
                   </div>
                 </div>
-                <span className="text-[11px] font-bold text-[#0284C7] bg-sky-50 px-2 py-0.5 rounded">
-                  ISO-13485 Hospital Standards
-                </span>
+
               </div>
             </div>
 

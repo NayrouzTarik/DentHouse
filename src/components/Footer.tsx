@@ -22,10 +22,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
                 <ShieldCheck className="w-4 h-4 text-sky-400" />
                 5-Year E.max / 1-Year Bonding Warranty
               </span>
-              <span className="text-slate-600">·</span>
-              <span className="text-[11px] font-medium text-slate-300">
-                ISO-13485 Hygiene Standards
-              </span>
+
             </div>
           </div>
 
