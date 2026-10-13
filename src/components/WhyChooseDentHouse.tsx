@@ -4,9 +4,9 @@ import {
   FileCheck,
   Plane,
   Sparkles,
-  CheckCircle2,
   Gem,
   UserCheck,
+  Percent,
   Car,
 } from 'lucide-react';
 
@@ -15,71 +15,89 @@ interface WhyChooseProps {
 }
 
 export const WhyChooseDentHouse: React.FC<WhyChooseProps> = ({ onOpenConsultation }) => {
-  const cards = [
-    {
-      icon: Heart,
-      title: 'Care That Starts With You',
-      desc: 'We take time to listen to your personal goals, understand your facial symmetry, and curate options that look naturally beautiful—never artificial.',
-    },
-    {
-      icon: FileCheck,
-      title: 'Clear, Honest Pricing',
-      desc: 'Know exactly what your complete set of 20 teeth, luxury resort stay, and private transfers cost before you board your flight. Zero surprises.',
-    },
-    {
-      icon: Plane,
-      title: 'Your Marrakech Visit',
-      desc: 'From landing at Marrakech Menara to private chauffeur pick-ups and poolside relaxation, we coordinate every practical detail of your trip.',
-    },
-    {
-      icon: Sparkles,
-      title: 'Guidance Beyond Treatment',
-      desc: 'Receive comprehensive dental handover records, clinical photographs, custom night guard, and registered warranties (5 years for veneers, 1 year + 6-month check-up for bonding).',
-    },
-  ];
-
+  // 4 Top Quick Pillars from Page 8
   const quickPillars = [
     {
-      icon: Heart,
-      title: 'Personalised Dental Care',
-      desc: 'Bespoke 3D smile tailoring',
-    },
-    {
-      icon: FileCheck,
-      title: 'Clear Package Options',
-      desc: 'All-inclusive fixed fees',
-    },
-    {
       icon: UserCheck,
-      title: 'UK & International Support',
-      desc: 'Dedicated multilingual concierge',
+      title: 'Qualified Dental Professionals',
+      desc: 'Expert care from highly trained and experienced dentists, focused on your smile.',
+    },
+    {
+      icon: Percent,
+      title: 'Save Up to 70% vs UK Prices',
+      desc: 'Premium smile transformations at a fraction of comparable UK prices.',
     },
     {
       icon: Gem,
-      title: 'Quality Materials',
-      desc: 'Certified medical-grade porcelain',
+      title: 'Premium-Grade Materials',
+      desc: 'Carefully selected materials for beautiful, natural-looking smiles that last.',
+    },
+    {
+      icon: Plane,
+      title: 'Seamless International Patient Experience',
+      desc: 'Personalised support from your first enquiry to your visit in Marrakech.',
+    },
+  ];
+
+  // 4 Detailed Experience Cards from Pages 9 & 10
+  const detailedCards = [
+    {
+      icon: Heart,
+      title: 'Personalised Smile Design',
+      desc: 'Every smile is different. We take time to understand your goals, facial features, and preferences to create a smile that feels natural, balanced, and uniquely yours.',
+    },
+    {
+      icon: FileCheck,
+      title: 'Exceptional Value, Without Compromise',
+      desc: 'Enjoy premium cosmetic dental treatments in Marrakech at prices that can be up to 70% lower than in the UK, with clear package pricing before you travel.',
+    },
+    {
+      icon: Car,
+      title: 'Your Smile, Your Marrakech Experience',
+      desc: 'From private airport transfers to your accommodation and clinic visits, we coordinate the practical details so you can focus on your treatment and enjoy your stay.',
+    },
+    {
+      icon: Sparkles,
+      title: 'Quality Materials, Lasting Care',
+      desc: 'We select quality dental materials with a focus on aesthetics, function, and natural-looking results, supported by treatment documentation, aftercare guidance, and applicable warranties.',
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-sky-50/40 to-white">
+    <section className="py-20 bg-gradient-to-b from-sky-50/40 via-white to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top 4 Quick Pillar Cards (matches mobile inspiration screen) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+        {/* Section Header from Page 8 */}
+        <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
+              WHY CHOOSE DENT HOUSE MARRAKECH
+            </span>
+            <span className="w-8 h-px bg-[#0284C7]/40" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-slate-900 tracking-tight">
+            More Than Just a Smile
+          </h2>
+          <p className="mt-3 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            We combine world-class dental care with an unforgettable experience, giving you the confidence to smile brighter.
+          </p>
+        </div>
+
+        {/* Top 4 Quick Pillar Cards (Page 8) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {quickPillars.map((p, idx) => {
             const Icon = p.icon;
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-sky-100/80 p-5 sm:p-6 text-center shadow-xs hover:shadow-md hover:border-[#0284C7]/30 transition-all flex flex-col items-center justify-center group"
+                className="bg-white rounded-2xl border border-sky-100/90 p-5 sm:p-6 text-center shadow-xs hover:shadow-md hover:border-[#0284C7]/30 transition-all flex flex-col items-center justify-start group"
               >
-                <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#0284C7] flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#0284C7] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shrink-0 shadow-2xs">
                   <Icon className="w-6 h-6 stroke-[1.75]" />
                 </div>
                 <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
                   {p.title}
                 </h4>
-                <p className="text-[11px] sm:text-xs text-slate-500 mt-1">
+                <p className="text-xs text-slate-500 mt-2 leading-relaxed">
                   {p.desc}
                 </p>
               </div>
@@ -87,32 +105,16 @@ export const WhyChooseDentHouse: React.FC<WhyChooseProps> = ({ onOpenConsultatio
           })}
         </div>
 
-        {/* Why choose Dent House Marrakech heading & 4 deep reasons */}
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-              THE DENT HOUSE PROMISE
-            </span>
-            <span className="w-8 h-px bg-[#0284C7]/40" />
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">
-            Why choose <span className="text-[#0284C7]">Dent House Marrakech?</span>
-          </h2>
-          <p className="mt-3 text-base text-slate-600">
-            Designed from the ground up for UK & international patients who demand world-class clinical quality with 5-star holiday relaxation.
-          </p>
-        </div>
-
-        {/* 4 Cards Grid */}
+        {/* 4 Detailed Cards Grid (Pages 9 & 10) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {cards.map((card, idx) => {
+          {detailedCards.map((card, idx) => {
             const Icon = card.icon;
             return (
               <div
                 key={idx}
                 className="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-sky-200 transition-all flex items-start gap-4"
               >
-                <div className="w-11 h-11 rounded-xl bg-sky-50 text-[#0284C7] flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-sky-50 text-[#0284C7] flex items-center justify-center shrink-0 shadow-2xs">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>

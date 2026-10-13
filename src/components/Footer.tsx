@@ -108,7 +108,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               </div>
               <div className="flex items-center gap-2.5">
                 <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
-                <span>Concierge WhatsApp: +44 20 8092 6820</span>
+                <span>Concierge WhatsApp: +212 674-998315</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
