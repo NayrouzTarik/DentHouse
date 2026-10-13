@@ -16,7 +16,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation, activeSectio
     { label: '2-Day Journey', href: '#journey' },
     { label: 'Stain & Care Guide', href: '#clinical-care' },
     { label: 'The Clinic', href: '#clinic' },
-    { label: 'UK FAQs', href: '#faqs' },
+    { label: 'Patient FAQs', href: '#faqs' },
   ];
 
   return (
@@ -91,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation, activeSectio
                 <span>Chat on WhatsApp</span>
               </button>
               <p className="text-center text-xs text-slate-500 pt-1">
-                Fast response within 2 hours • Direct English speaking UK team
+                Fast response within 2 hours • Dedicated UK & International patient concierge
               </p>
             </div>
           </nav>

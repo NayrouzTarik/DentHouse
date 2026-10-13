@@ -26,7 +26,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
   onClose,
   prefilledPlan,
 }) => {
-  const [treatment, setTreatment] = useState<string>('Swiss E.max® Porcelain Veneers');
+  const [treatment, setTreatment] = useState<string>('Premium Porcelain Veneers');
   const [party, setParty] = useState<string>('duo');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -83,7 +83,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
       `• Inclusions: ${inclusionsNote}`,
       ``,
       `👤 PATIENT DETAILS:`,
-      `• Name: ${name || 'UK Patient'}`,
+      `• Name: ${name || 'UK & International Patient'}`,
       `• Phone: +44 ${phone || 'Not provided'}`,
       notes ? `• Special Requests: ${notes}` : `• Status: Requesting 3D smile review and earliest travel dates`,
       photoUploaded ? `• Photos: I have 2 smile photos ready to send on this chat` : ``,

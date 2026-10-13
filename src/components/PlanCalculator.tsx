@@ -702,7 +702,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                     className="w-full py-3.5 px-4 rounded-xl text-sm font-bold text-white bg-[#0284C7] hover:bg-[#0369A1] shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
                   >
                     <MessageCircle className="w-4 h-4 fill-white/20" />
-                    <span>Send Plan to UK WhatsApp Concierge</span>
+                    <span>Send Plan to WhatsApp Concierge</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
 

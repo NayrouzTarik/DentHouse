@@ -30,10 +30,10 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
             <span className="w-8 h-px bg-[#0284C7]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-slate-900 tracking-tight">
-            The Clinic: Swiss dental engineering in Marrakech.
+            The Clinic: World-class dental excellence in Marrakech.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            We don't compromise on materials or medical standards. From 3Shape Trios® wireless digital scanning to genuine Swiss Ivoclar E.max® lithium disilicate porcelain, our clinical suite meets and exceeds London Harley Street benchmarks.
+            We don't compromise on materials or medical standards. From 3Shape Trios® wireless digital scanning to certified premium medical-grade porcelain and micro-hybrid composites, our clinical suite meets and exceeds top international benchmarks.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
             {/* Floating Guarantee Badge */}
             <div className="absolute -bottom-4 -right-2 hidden sm:flex items-center gap-2.5 bg-slate-900 text-white px-4 py-2.5 rounded-xl shadow-xl border border-slate-800 text-xs font-semibold">
               <ShieldCheck className="w-4 h-4 text-sky-400" />
-              <span>5-Year E.max / 1-Year Bonding Warranty</span>
+              <span>5-Year Veneers / 1-Year Bonding Warranty</span>
             </div>
           </div>
 
@@ -97,8 +97,8 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
 
             <div className="p-4 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-between gap-4">
               <div className="text-xs text-slate-700">
-                <span className="font-bold text-slate-900">Want to inspect our Swiss manufacturer batch certificates?</span>
-                <span className="block text-slate-500">Every patient receives authentic serial registration documents.</span>
+                <span className="font-bold text-slate-900">Want to inspect our certified laboratory quality documentation?</span>
+                <span className="block text-slate-500">Every patient receives authentic clinical registration and material certificates.</span>
               </div>
               <button
                 onClick={onOpenConsultation}
@@ -117,7 +117,7 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
               Direct Comparison: London Harley Street vs. Dent House Marrakech
             </h3>
             <p className="mt-2 text-xs sm:text-sm text-slate-500">
-              Honest facts for UK patients. No inflated pricing, no false hopes.
+              Honest facts for UK & international patients. No inflated pricing, no false hopes.
             </p>
           </div>
 
@@ -133,8 +133,8 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
               <tbody className="divide-y divide-slate-200/70 font-sans">
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-slate-800">Materials Used</td>
-                  <td className="py-3.5 px-4 text-slate-600">Swiss E.max® or Composite</td>
-                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-slate-900">Authentic Swiss Ivoclar E.max® & Vita Composites</td>
+                  <td className="py-3.5 px-4 text-slate-600">Porcelain Veneers or Composite</td>
+                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-slate-900">Certified Premium Medical-Grade Porcelain & Composites</td>
                 </tr>
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-slate-800">Set of 20 Veneers Cost</td>
@@ -164,7 +164,7 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-slate-800">Warranty Protection</td>
                   <td className="py-3.5 px-4 text-slate-600">Standard 1 to 2 years</td>
-                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-[#0284C7] rounded-b-xl">5-Year E.max / 1-Year Bonding + 6-Mo Checkup</td>
+                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-[#0284C7] rounded-b-xl">5-Year Veneers / 1-Year Bonding + 6-Mo Checkup</td>
                 </tr>
               </tbody>
             </table>

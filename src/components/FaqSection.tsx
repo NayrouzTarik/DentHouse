@@ -28,7 +28,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenConsultation }) =>
             Everything you need to know before flying.
           </h2>
           <p className="mt-3 text-base text-slate-600">
-            Straightforward answers for UK patients. No confusing medical jargon.
+            Straightforward answers for UK & international patients. No confusing medical jargon.
           </p>
         </div>
 

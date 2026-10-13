@@ -15,12 +15,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
           <div className="lg:col-span-2 space-y-4">
             <DentHouseLogo theme="dark" size="md" />
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm mt-3">
-              Dent House Marrakech is a premier center of excellence for cosmetic dentistry, Swiss E.max® porcelain veneers, and 2-day smile transformations designed specifically for selective UK and international patients.
+              Dent House Marrakech is a premier center of excellence for cosmetic dentistry, premium porcelain veneers, and 2-day smile transformations designed specifically for selective UK & international patients.
             </p>
             <div className="pt-2 flex items-center gap-3 text-slate-300">
               <span className="flex items-center gap-1.5 text-[11px] font-medium">
                 <ShieldCheck className="w-4 h-4 text-sky-400" />
-                5-Year E.max / 1-Year Bonding Warranty
+                5-Year Veneers / 1-Year Bonding Warranty
               </span>
 
             </div>
@@ -34,7 +34,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             <ul className="space-y-2">
               <li>
                 <a href="#treatments" className="hover:text-white transition-colors">
-                  Swiss E.max® Porcelain Veneers (5-Yr Warranty)
+                  Premium Porcelain Veneers (5-Yr Warranty)
                 </a>
               </li>
               <li>
@@ -97,7 +97,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
           {/* Contact Col */}
           <div>
             <h4 className="text-slate-200 font-bold uppercase tracking-wider text-xs mb-3">
-              UK Patient Desk
+              UK & International Patient Desk
             </h4>
             <div className="space-y-3">
               <div className="flex items-start gap-2.5">
@@ -108,7 +108,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               </div>
               <div className="flex items-center gap-2.5">
                 <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
-                <span>UK WhatsApp: +44 20 8092 6820</span>
+                <span>Concierge WhatsApp: +44 20 8092 6820</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
@@ -134,7 +134,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
           <div className="flex items-center gap-6">
             <span>Registered Medical Practice No. 49102-MA</span>
             <span className="text-slate-700">·</span>
-            <span>Authentic Swiss Ivoclar & Vita Materials</span>
+            <span>Certified Premium Medical-Grade Materials</span>
             <span className="text-slate-700">·</span>
             <span>Flights Not Included</span>
             <span className="text-slate-700">·</span>

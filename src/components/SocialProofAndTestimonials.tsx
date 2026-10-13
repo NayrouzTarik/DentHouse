@@ -19,10 +19,10 @@ export const SocialProofAndTestimonials: React.FC<SocialProofProps> = ({ onOpenC
             <span className="w-8 h-px bg-[#0284C7]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">
-            Trusted by selective patients across the UK.
+            Trusted by selective UK & international patients.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-            See how British professionals, couples, and friends transformed their smiles with complete peace of mind in Marrakech.
+            See how UK and international professionals, couples, and friends transformed their smiles with complete peace of mind in Marrakech.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export const SocialProofAndTestimonials: React.FC<SocialProofProps> = ({ onOpenC
             <div className="mt-6 flex flex-wrap items-center gap-4 text-xs font-medium text-sky-200">
               <span className="flex items-center gap-1.5">
                 <CheckCircle className="w-4 h-4 text-sky-400" />
-                Vita Shade Selection (BL1 to A1)
+                Custom Shade Matching (BL1 to A1)
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle className="w-4 h-4 text-sky-400" />

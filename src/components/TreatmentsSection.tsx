@@ -26,7 +26,7 @@ export const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({
             Two perfected options. One transparent price.
           </h2>
           <p className="mt-3 text-base text-slate-600 leading-relaxed">
-            We focus exclusively on Composite Bonding and authentic Swiss E.max® Porcelain Veneers. Priced per complete set of 20 teeth (10 upper + 10 lower) with 2-day turnaround, zero hidden fees, and verified warranties.
+            We focus exclusively on Composite Bonding and Premium Porcelain Veneers. Priced per complete set of 20 teeth (10 upper + 10 lower) with 2-day turnaround, zero hidden fees, and verified warranties.
           </p>
         </div>
 

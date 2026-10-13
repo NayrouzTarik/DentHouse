@@ -70,7 +70,7 @@ export default function App() {
         {/* Why Choose Dent House (Inspo Mobile Pillars & Trust Reasons) */}
         <WhyChooseDentHouse onOpenConsultation={handleOpenConsultation} />
 
-        {/* Treatments Section (Strictly Composite Bonding & Swiss E.max Veneers) */}
+        {/* Treatments Section (Strictly Composite Bonding & Premium Porcelain Veneers) */}
         <TreatmentsSection
           onSelectTreatment={handleSelectTreatmentForCalculator}
           onOpenConsultation={handleOpenConsultation}
@@ -85,16 +85,16 @@ export default function App() {
         {/* Your 2-Day Marrakech Journey (Luxury Palmeraie Stays & 4 Private Transfers) */}
         <YourJourneySection onOpenConsultation={handleOpenConsultation} />
 
-        {/* The Clinic (Swiss E.max, 3Shape Trios 5, Zero Laser) */}
+        {/* The Clinic (Premium Materials, 3Shape Trios 5, Zero Laser) */}
         <TheClinicSection onOpenConsultation={handleOpenConsultation} />
 
         {/* What to Do & What Not to Do (Clear Dos & Don'ts + 1yr/5yr Warranties) */}
         <DosAndDontsSection />
 
-        {/* Real UK Patient Reviews & Testimonials */}
+        {/* Real UK & International Patient Reviews & Testimonials */}
         <SocialProofAndTestimonials onOpenConsultation={handleOpenConsultation} />
 
-        {/* UK FAQs */}
+        {/* Patient FAQs */}
         <FaqSection onOpenConsultation={handleOpenConsultation} />
       </main>
 
@@ -113,7 +113,7 @@ export default function App() {
         <button
           onClick={handleOpenConsultation}
           className="flex items-center gap-2.5 px-4 py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all cursor-pointer active:scale-95 group"
-          aria-label="Chat with UK Concierge on WhatsApp"
+          aria-label="Chat with Concierge on WhatsApp"
         >
           <MessageCircle className="w-5 h-5 fill-white/20 shrink-0" />
           <span className="text-xs sm:text-sm font-bold pr-1">

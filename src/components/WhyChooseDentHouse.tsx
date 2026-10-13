@@ -34,7 +34,7 @@ export const WhyChooseDentHouse: React.FC<WhyChooseProps> = ({ onOpenConsultatio
     {
       icon: Sparkles,
       title: 'Guidance Beyond Treatment',
-      desc: 'Receive comprehensive UK dentist handover files, clinical photographs, night guard, and registered warranties (5 years for E.max, 1 year + 6-month check-up for bonding).',
+      desc: 'Receive comprehensive dental handover records, clinical photographs, custom night guard, and registered warranties (5 years for veneers, 1 year + 6-month check-up for bonding).',
     },
   ];
 
@@ -51,13 +51,13 @@ export const WhyChooseDentHouse: React.FC<WhyChooseProps> = ({ onOpenConsultatio
     },
     {
       icon: UserCheck,
-      title: 'Support for UK Patients',
-      desc: 'Direct English concierge',
+      title: 'UK & International Support',
+      desc: 'Dedicated multilingual concierge',
     },
     {
       icon: Gem,
       title: 'Quality Materials',
-      desc: 'Swiss Ivoclar E.max® lithium',
+      desc: 'Certified medical-grade porcelain',
     },
   ];
 
@@ -99,7 +99,7 @@ export const WhyChooseDentHouse: React.FC<WhyChooseProps> = ({ onOpenConsultatio
             Why choose <span className="text-[#0284C7]">Dent House Marrakech?</span>
           </h2>
           <p className="mt-3 text-base text-slate-600">
-            Designed from the ground up for UK patients who demand London clinical quality with 5-star holiday relaxation.
+            Designed from the ground up for UK & international patients who demand world-class clinical quality with 5-star holiday relaxation.
           </p>
         </div>
 

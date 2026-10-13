@@ -54,25 +54,25 @@ export const TREATMENTS: TreatmentOption[] = [
     features: [
       'Zero drilling of healthy enamel structure',
       'Completed in 2 comfortable appointments',
-      'Custom Vita classical shade-matching',
+      'Custom multi-layer aesthetic shade-matching',
       '1-Year Warranty with free 6-month check-up',
       'Smooth high-gloss micro-hybrid polish'
     ]
   },
   {
     id: 'veneers',
-    name: 'Swiss E.max® Porcelain Veneers',
+    name: 'Premium Porcelain Veneers',
     subtitle: 'Ultra-thin handcrafted ceramic shields',
     teethCount: 'Full Set of 20 Teeth',
     duration: '2 Days in Marrakech',
     dentHousePriceGBP: 3450,
     ukPrivatePriceGBP: 14500,
-    highlight: 'UK Patients Top Choice',
+    highlight: 'Top Choice for UK & International Patients',
     warranty: '5-Year Comprehensive Warranty',
-    checkup: 'Full UK Dental Records & Digital Backup',
-    description: 'Hand-layered Swiss Ivoclar Vivadent E.max lithium disilicate porcelain. Lifelike optical translucency, stain-proof, and backed by a 5-year replacement guarantee.',
+    checkup: 'Full Digital Records & International Handover Files',
+    description: 'Hand-layered premium medical-grade porcelain. Lifelike optical translucency, stain resistance, and backed by a 5-year replacement guarantee.',
     features: [
-      'Authentic Swiss Ivoclar Vivadent E.max® ceramic',
+      'Certified premium medical-grade porcelain ceramic',
       'Conservative sub-0.3mm preparation',
       '5-Year Comprehensive Replacement Warranty',
       '3D Intraoral Digital Simulation preview before fitting',
@@ -190,10 +190,10 @@ export const PRECONFIGURED_PACKAGES = [
     stayName: 'Comfort Palmeraie Villa & Pool (Mid-Level)',
     rideName: '4 Private Chauffeur Transfers Included',
     perks: [
-      '20 Swiss E.max® Porcelain Veneers each',
+      '20 Premium Porcelain Veneers each',
       '15% Group Discount on treatments',
       '4 Private Chauffeur Transfers Included (Airport & Clinic)',
-      '5-Year Comprehensive Warranty & UK documentation',
+      '5-Year Comprehensive Warranty & international documentation',
       'Package covers treatment, stay & chauffeur (Flights not included)'
     ]
   },
@@ -210,10 +210,10 @@ export const PRECONFIGURED_PACKAGES = [
     stayName: '2 Nights 5★ Luxury Palmeraie Oasis',
     rideName: 'VIP Private Chauffeur Included',
     perks: [
-      '20 Hand-layered Swiss E.max® Veneers',
+      '20 Hand-layered Premium Porcelain Veneers',
       '5-Star Palmeraie Luxury Stay (2 days)',
       'Option to bring 2 guests to stay for FREE',
-      '5-Year Warranty with digital serial certificates',
+      '5-Year Warranty with digital authentication',
       'Package covers treatment, stay & chauffeur (Flights not included)'
     ]
   },
@@ -241,16 +241,16 @@ export const PRECONFIGURED_PACKAGES = [
 
 export const TREATMENT_LONGEVITY_GUIDE = {
   emax: {
-    name: 'Swiss E.max® Porcelain Veneers',
+    name: 'Premium Porcelain Veneers',
     lifespan: '10 to 20+ Years',
-    material: 'Swiss Ivoclar Lithium Disilicate Glass-Ceramic',
+    material: 'High-Density Medical-Grade Porcelain & Ceramic',
     porosity: 'High-density glazed ceramic structure',
     stainResistance: 'High stain resistance against coffee, tea, and red wine',
     vulnerablePoint: 'Resin cement line at the gum margin if oral hygiene is neglected',
     prepDepth: 'Ultra-conservative sub-0.3mm (No aggressive drilling)',
     nightguardNeed: 'Mandatory custom nightguard to prevent bruxism micro-fractures',
     toothpasteRDA: 'RDA < 70 (Non-abrasive gel, avoid gritty whitening powders)',
-    warranty: '5-Year Comprehensive Replacement Warranty with Swiss serial registry'
+    warranty: '5-Year Comprehensive Replacement Warranty with registered documentation'
   },
   bonding: {
     name: 'Composite Bonding',
@@ -288,7 +288,7 @@ export const COFFEE_STAIN_PROTOCOLS = [
   {
     step: '4',
     title: 'Strict Non-Abrasive Toothpaste Rule (RDA < 70)',
-    desc: 'Avoid aggressive whitening toothpastes containing hydrated silica, charcoal, or baking soda. Abrasives scratch the high-fire glaze of E.max and dull the composite polish, creating microscopic traps for stains.',
+    desc: 'Avoid aggressive whitening toothpastes containing hydrated silica, charcoal, or baking soda. Abrasives scratch the high-fire glaze of porcelain veneers and dull the composite polish, creating microscopic traps for stains.',
     appliesTo: 'Both Treatments'
   },
   {
@@ -300,7 +300,7 @@ export const COFFEE_STAIN_PROTOCOLS = [
   {
     step: '6',
     title: 'Biannual High-Gloss Diamond Polish',
-    desc: 'Attend your free 6-month check-up at Dent House (or UK dentist). Professional polishing with sub-micron diamond paste and flexible discs restores factory high-gloss and erases micro-stains effortlessly.',
+    desc: 'Attend your free 6-month check-up at Dent House (or your home dentist). Professional polishing with sub-micron diamond paste and flexible discs restores factory high-gloss and erases micro-stains effortlessly.',
     appliesTo: 'Composite Bonding'
   }
 ];
@@ -413,7 +413,7 @@ export const PALMERAIE_SEASONALITY_DATA = [
     dentHouseGBP: 110,
     savingGBP: 270,
     demand: 'Peak',
-    status: 'Top Season for UK Patients',
+    status: 'Top Season for UK & International Patients',
     note: 'Marrakech film and cultural season. Superb weather for walking through Jardin Majorelle between fittings.'
   },
   {
@@ -491,12 +491,12 @@ export const DOS_AND_DONTS = {
     },
     {
       title: 'No abrasive whitening powders or harsh scraping',
-      desc: 'Avoid DIY whitening kits, acidic lemon rinses, or abrasive whitening pastes that corrode composite margins and micro-scratch E.max porcelain shine.',
+      desc: 'Avoid DIY whitening kits, acidic lemon rinses, or abrasive whitening pastes that corrode composite margins and micro-scratch porcelain veneer shine.',
       tag: 'Hygiene'
     },
     {
       title: 'No aggressive tooth shaving or laser tissue cutting',
-      desc: 'We never aggressively drill healthy enamel (E.max is sub-0.3mm; bonding is 0mm drilling). We also reject laser gum burning to protect biological gingival integrity.',
+      desc: 'We never aggressively drill healthy enamel (porcelain veneers are sub-0.3mm; bonding is 0mm drilling). We also reject laser gum burning to protect biological gingival integrity.',
       tag: 'Clinical Ethics'
     },
     {
@@ -545,7 +545,7 @@ export const JOURNEY_STEPS = [
   {
     step: 'Day 2',
     phase: 'Fitting & Celebration',
-    title: 'Swiss Porcelain / Bonding Placement & Handover',
+    title: 'Premium Porcelain / Bonding Placement & Handover',
     time: 'Morning & Afternoon',
     summary: 'Our dedicated lab completes your smile overnight. Day 2 is where your new smile is revealed.',
     points: [
@@ -566,8 +566,8 @@ export const JOURNEY_STEPS = [
       },
       {
         time: '17:00',
-        label: 'Warranty Certificate & UK Handover Files',
-        desc: 'Receive your official Warranty Certificate (1 Year + 6-month check-up for bonding, 5 Years for E.max), bite guard, and UK dentist files.'
+        label: 'Warranty Certificate & International Handover Files',
+        desc: 'Receive your official Warranty Certificate (1 Year + 6-month check-up for bonding, 5 Years for porcelain veneers), bite guard, and dental records.'
       },
       {
         time: '18:30',
@@ -581,17 +581,17 @@ export const JOURNEY_STEPS = [
     phase: 'Flexible Return',
     title: 'Fly Home with Total Confidence & Peace of Mind',
     time: 'Flexible Departure',
-    summary: 'Fly back to the UK with 50% discount on extra nights if you choose to extend your holiday.',
+    summary: 'Fly back home with 50% discount on extra nights if you choose to extend your holiday.',
     points: [
       {
         time: 'Flexible',
-        label: 'Direct 3.5h Flight Back to UK',
-        desc: 'Private chauffeur transfer to Marrakech Menara Airport for your flight back to London, Manchester, Bristol, or Birmingham.'
+        label: 'Direct Flight Back Home (UK & International)',
+        desc: 'Private chauffeur transfer to Marrakech Menara Airport for your flight back to the UK, Europe, or beyond.'
       },
       {
         time: 'Ongoing',
         label: 'Warranty Coverage & 6-Month Check-Up',
-        desc: 'Direct WhatsApp communication with our clinic. 1-Year warranty for bonding with 6-month check-up, and 5-Year warranty for E.max veneers.'
+        desc: 'Direct WhatsApp communication with our clinic. 1-Year warranty for bonding with 6-month check-up, and 5-Year warranty for porcelain veneers.'
       }
     ]
   }
@@ -599,8 +599,8 @@ export const JOURNEY_STEPS = [
 
 export const CLINIC_HIGHLIGHTS = [
   {
-    title: 'Authentic Swiss Ivoclar E.max® Ceramic',
-    desc: 'We exclusively use genuine Swiss Ivoclar Vivadent lithium disilicate porcelain with individual manufacturer certificates.',
+    title: 'Certified Premium Medical-Grade Materials',
+    desc: 'We exclusively use certified, top-tier aesthetic porcelain and micro-hybrid composites tailored to each patient.',
     icon: 'ShieldCheck'
   },
   {
@@ -609,8 +609,8 @@ export const CLINIC_HIGHLIGHTS = [
     icon: 'Award'
   },
   {
-    title: 'Honest Warranties: 5 Years E.max, 1 Year Bonding',
-    desc: 'Clear, realistic warranties. 5-Year comprehensive replacement warranty for E.max veneers, and 1-year warranty with free 6-month check-up for bonding.',
+    title: 'Honest Warranties: 5 Years Veneers, 1 Year Bonding',
+    desc: 'Clear, realistic warranties. 5-Year comprehensive replacement warranty for porcelain veneers, and 1-year warranty with free 6-month check-up for bonding.',
     icon: 'FileCheck'
   },
   {
@@ -634,7 +634,7 @@ export const PATIENT_STORIES = [
   {
     name: 'Sophie & Mark T.',
     location: 'Surrey, UK',
-    treatment: 'Duo Swiss E.max® Porcelain Veneers (20 teeth each)',
+    treatment: 'Duo Premium Porcelain Veneers (20 teeth each)',
     saving: 'Duo Smile Transformation',
     rating: 5,
     quote: 'We chose the Duo package and stayed in a stunning Palmeraie villa. We even brought our daughter along because of the 2-free-guests perk! The teeth look completely natural, the 5-year warranty was clearly registered, and private chauffeur transfers made everything stress-free once we landed.'
@@ -650,10 +650,10 @@ export const PATIENT_STORIES = [
   {
     name: 'Chloe M.',
     location: 'Chelsea, London',
-    treatment: 'Swiss E.max® Porcelain Veneers',
-    saving: 'Swiss E.max® Makeover',
+    treatment: 'Premium Porcelain Veneers',
+    saving: 'Premium Porcelain Makeover',
     rating: 5,
-    quote: 'I compared London clinic options for 20 veneers before choosing Dent House. At £3,450 for authentic Swiss Ivoclar porcelain, combined with the Palmeraie resort where my partner joined me at no extra lodging cost, the transparent package and 5-year warranty documentation were outstanding.'
+    quote: 'I compared London clinic options for 20 veneers before choosing Dent House. At £3,450 for hand-layered premium porcelain, combined with the Palmeraie resort where my partner joined me at no extra lodging cost, the transparent package and 5-year warranty documentation were outstanding.'
   }
 ];
 
@@ -664,11 +664,11 @@ export const FAQS = [
   },
   {
     q: 'What treatments do you offer at Dent House Marrakech?',
-    a: 'We specialize strictly in two cosmetic treatments: (1) Direct Composite Bonding (£1,850 for 20 teeth) and (2) Swiss E.max® Porcelain Veneers (£3,450 for 20 teeth). Both are completed in 2 days. Packages include treatment, accommodation, and private transfers; flights are not included.'
+    a: 'We specialize strictly in two cosmetic treatments: (1) Direct Composite Bonding (£1,850 for 20 teeth) and (2) Premium Porcelain Veneers (£3,450 for 20 teeth). Both are completed in 2 days. Packages include treatment, accommodation, and private transfers; flights are not included.'
   },
   {
-    q: 'What are the warranty terms for Bonding and E.max Veneers?',
-    a: 'We believe in honest, realistic warranties: Composite Bonding carries a 1-Year Warranty plus a complimentary clinical check-up at 6 months. Swiss E.max Porcelain Veneers carry a 5-Year Comprehensive Replacement Warranty backed by manufacturer serial certificates.'
+    q: 'What are the warranty terms for Bonding and Porcelain Veneers?',
+    a: 'We believe in honest, realistic warranties: Composite Bonding carries a 1-Year Warranty plus a complimentary clinical check-up at 6 months. Premium Porcelain Veneers carry a 5-Year Comprehensive Replacement Warranty backed by registered documentation.'
   },
   {
     q: 'How does the Palmeraie accommodation work? Can I bring guests?',
@@ -684,6 +684,6 @@ export const FAQS = [
   },
   {
     q: 'Do you offer laser gum treatment or laser whitening?',
-    a: 'No. We respect natural tooth biology. We do not perform laser gum trimming or aggressive laser whitening that can cause severe sensitivity. Our cosmetic smile designs rely on conservative prep, biocompatible Swiss ceramics, and master artisan hand-layering.'
+    a: 'No. We respect natural tooth biology. We do not perform laser gum trimming or aggressive laser whitening that can cause severe sensitivity. Our cosmetic smile designs rely on conservative prep, biocompatible premium ceramics, and master artisan hand-layering.'
   }
 ];

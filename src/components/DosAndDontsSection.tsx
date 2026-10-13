@@ -48,7 +48,7 @@ export const DosAndDontsSection: React.FC = () => {
             Treatment Longevity: DOs, DON'Ts & Stain Care.
           </h2>
           <p className="mt-3 text-base text-slate-600 leading-relaxed">
-            Swiss E.max® porcelain and composite bonding have distinct physical properties. Follow our clinical guidance to protect against coffee stains, prevent edge chipping, and maximize your smile's lifespan.
+            Premium porcelain veneers and composite bonding have distinct physical properties. Follow our clinical guidance to protect against coffee stains, prevent edge chipping, and maximize your smile's lifespan.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export const DosAndDontsSection: React.FC = () => {
               }`}
             >
               <ShieldCheck className="w-4 h-4 text-[#0284C7]" />
-              <span>E.max vs Bonding Comparison</span>
+              <span>Veneers vs Bonding Comparison</span>
             </button>
           </div>
         </div>
@@ -139,7 +139,7 @@ export const DosAndDontsSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* E.max Porcelain Veneers Warranty Card */}
+              {/* Premium Porcelain Veneers Warranty Card */}
               <div className="bg-white rounded-2xl border-2 border-[#0284C7]/60 p-6 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden ring-4 ring-sky-50">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-sky-100/50 rounded-bl-full pointer-events-none" />
                 <div className="flex items-center gap-3 mb-3">
@@ -148,7 +148,7 @@ export const DosAndDontsSection: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-[11px] font-bold uppercase text-[#0284C7] tracking-wider">
-                      Swiss E.max® Porcelain
+                      Premium Porcelain Veneers
                     </span>
                     <h3 className="text-lg font-bold text-slate-900">
                       5-Year Comprehensive Warranty
@@ -156,11 +156,11 @@ export const DosAndDontsSection: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Backed by official Swiss Ivoclar Vivadent manufacturer serial registration. 5 years of structural integrity and replacement guarantee.
+                  Backed by registered clinical documentation and quality certification. 5 years of structural integrity and replacement guarantee.
                 </p>
                 <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#0284C7]">
                   <Sparkles className="w-4 h-4" />
-                  <span>Full digital clinical files provided for your UK dentist</span>
+                  <span>Full digital clinical files provided for your home dentist</span>
                 </div>
               </div>
             </div>
@@ -258,7 +258,7 @@ export const DosAndDontsSection: React.FC = () => {
                     The Coffee Lover's Guide: Keeping Your Teeth Stain-Free
                   </h3>
                   <p className="mt-1 text-xs sm:text-sm text-amber-900/80 leading-relaxed">
-                    You <strong>do not have to give up coffee forever</strong>! However, composite bonding is a micro-hybrid resin that requires mindful care, while Swiss E.max® porcelain is a high-density glazed ceramic engineered for superior stain resistance. Here are the practical guidelines to follow:
+                    You <strong>do not have to give up coffee forever</strong>! However, composite bonding is a micro-hybrid resin that requires mindful care, while premium porcelain is a high-density glazed ceramic engineered for superior stain resistance. Here are the practical guidelines to follow:
                   </p>
                 </div>
               </div>
@@ -345,14 +345,14 @@ export const DosAndDontsSection: React.FC = () => {
           </div>
         )}
 
-        {/* TAB 3: E.max vs Composite Longevity Comparison */}
+        {/* TAB 3: Porcelain Veneers vs Composite Longevity Comparison */}
         {activeTab === 'longevity-compare' && (
           <div className="mt-10 max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* E.max Card */}
+              {/* Porcelain Veneers Card */}
               <div className="bg-white rounded-2xl border-2 border-[#0284C7]/80 p-6 shadow-md relative overflow-hidden ring-4 ring-sky-50">
                 <div className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase bg-sky-100 text-[#0284C7] mb-3">
-                  Swiss Ceramic Standard
+                  Premium Ceramic Standard
                 </div>
                 <h3 className="text-xl font-bold font-serif text-slate-900">
                   {TREATMENT_LONGEVITY_GUIDE.emax.name}

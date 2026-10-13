@@ -21,27 +21,27 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onExplorePackage
           </span>
           <span className="w-8 h-px bg-[#0284C7]/40" />
           <span className="text-xs text-slate-500 font-medium hidden sm:inline">
-            Direct 3.5h Flights from London & Regional UK
+            Welcoming UK & International Patients · Direct Flights from London & European Hubs
           </span>
         </div>
 
         {/* 2-Column Desktop Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Column: Punchy, UK-Targeted High-Converting Copy */}
+          {/* Left Column: Punchy, UK & International High-Converting Copy */}
           <div className="lg:col-span-6 flex flex-col justify-center">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.14] font-serif font-bold text-slate-900 tracking-tight text-balance">
-              Swiss E.max® Veneers & Composite Bonding in Marrakech
+              Premium Porcelain Veneers & Composite Bonding in Marrakech
             </h1>
 
             <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed font-sans max-w-xl">
-              Explore authentic Swiss E.max® porcelain veneers and composite bonding packages in sunny Marrakech. Completed in just 2 days, combining your clinical treatment with luxury Palmeraie accommodation and organised chauffeur transfers. <strong>Flights are not included.</strong>
+              Explore world-class premium porcelain veneers and composite bonding packages in sunny Marrakech. Designed for UK & international patients, completed in just 2 days, combining clinical precision with luxury Palmeraie accommodation and private chauffeur transfers. <strong>Flights are not included.</strong>
             </p>
 
-            {/* Quick UK Patient Trust Indicators */}
+            {/* Quick Patient Trust Indicators */}
             <div className="mt-6 flex flex-wrap items-center gap-y-2 gap-x-5 text-xs text-slate-600 font-medium">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#0284C7]" />
-                <span>5-Yr E.max / 1-Yr Bonding Warranty</span>
+                <span>5-Yr Veneers / 1-Yr Bonding Warranty</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#0284C7]" />
@@ -106,7 +106,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onExplorePackage
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100 aspect-[16/10] sm:aspect-[16/10]">
               <img
                 src="/images/hero_denthouse_consultation_1791832441772.jpg"
-                alt="Cosmetic dentist reviewing 3D digital smile scan with British patient in Marrakech clinic"
+                alt="Cosmetic dentist reviewing 3D digital smile scan with UK & international patient in Marrakech clinic"
                 className="w-full h-full object-cover object-center"
                 referrerPolicy="no-referrer"
                 loading="eager"

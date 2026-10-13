@@ -24,8 +24,8 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
 
   const dayTabs = [
     { label: 'Day 1: Arrival & Smile Design', subtitle: '3D Scan, Color Selection & Preparation' },
-    { label: 'Day 2: Fit, Bond & Reveal', subtitle: 'Swiss Porcelain Placement & Celebration' },
-    { label: 'Day 3: Flexible UK Return', subtitle: 'Fly Home with 5-Year E.max / 1-Year Bonding Warranty' },
+    { label: 'Day 2: Fit, Bond & Reveal', subtitle: 'Premium Porcelain Placement & Celebration' },
+    { label: 'Day 3: Flexible Departure', subtitle: 'Fly Home with 5-Year Veneers / 1-Year Bonding Warranty' },
   ];
 
   return (
@@ -188,7 +188,7 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
                     ? 'Personal Chauffeur at Marrakech Menara'
                     : activeDay === 1
                     ? 'Relax by the Pool Between Appointments'
-                    : '5-Year Guaranteed Swiss E.max Porcelain Smile'}
+                    : '5-Year Guaranteed Premium Porcelain Smile'}
                 </h4>
               </div>
             </div>
@@ -196,7 +196,7 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
             {/* Travel Perks Bento Box */}
             <div className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm space-y-4">
               <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                UK Patient Concierge Inclusions
+                UK & International Concierge Inclusions
               </div>
 
               <div className="grid grid-cols-2 gap-3 text-xs">
@@ -221,7 +221,7 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
                 <div className="p-3 rounded-xl bg-slate-50 border border-slate-100">
                   <ShieldCheck className="w-4 h-4 text-[#0284C7] mb-1.5" />
                   <div className="font-bold text-slate-800">5-Yr / 1-Yr Warranties</div>
-                  <div className="text-slate-500 text-[11px] mt-0.5">1 yr bonding (+6mo checkup) / 5 yr E.max</div>
+                  <div className="text-slate-500 text-[11px] mt-0.5">1 yr bonding (+6mo checkup) / 5 yr veneers</div>
                 </div>
               </div>
 
