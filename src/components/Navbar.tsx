@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DentHouseLogo } from './DentHouseLogo';
 import { MessageCircle, Menu, X, ArrowUpRight } from 'lucide-react';
+import { getWhatsAppUrl } from '../data/dentHouseData';
 
 interface NavbarProps {
   onOpenConsultation: () => void;
@@ -44,14 +45,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation, activeSectio
 
           {/* Zone 3: 1 primary action */}
           <div className="flex items-center gap-3 shrink-0">
-            <button
-              onClick={onOpenConsultation}
+            <a
+              href={getWhatsAppUrl("Hello, I would like to request a free consultation at Dent House Marrakech.")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-semibold text-white bg-[#0284C7] hover:bg-[#0369A1] active:scale-[0.98] rounded-xl shadow-sm hover:shadow transition-all whitespace-nowrap cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 text-white shrink-0 fill-white/20" />
-              <span>Free WhatsApp Review</span>
+              <span>Free Consultation</span>
               <ArrowUpRight className="w-3.5 h-3.5 opacity-80 shrink-0" />
-            </button>
+            </a>
 
             {/* Mobile menu trigger */}
             <button
@@ -80,16 +83,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation, activeSectio
               </a>
             ))}
             <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenConsultation();
-                }}
-                className="w-full flex items-center justify-center gap-2 py-3 text-sm font-semibold text-white bg-[#0284C7] hover:bg-[#0369A1] rounded-xl shadow-sm"
+              <a
+                href={getWhatsAppUrl("Hello, I would like to request a free consultation at Dent House Marrakech.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full flex items-center justify-center gap-2 py-3 text-sm font-semibold text-white bg-[#0284C7] hover:bg-[#0369A1] rounded-xl shadow-sm cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Chat on WhatsApp</span>
-              </button>
+              </a>
               <p className="text-center text-xs text-slate-500 pt-1">
                 Fast response within 2 hours • Dedicated UK & International patient concierge
               </p>

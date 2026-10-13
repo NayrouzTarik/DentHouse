@@ -1,5 +1,5 @@
 import React from 'react';
-import { TREATMENTS, TreatmentOption } from '../data/dentHouseData';
+import { TREATMENTS, TreatmentOption, getWhatsAppUrl } from '../data/dentHouseData';
 import { Check, Sparkles, MessageCircle, ArrowRight, ShieldCheck, CalendarCheck } from 'lucide-react';
 
 interface TreatmentsSectionProps {
@@ -147,13 +147,15 @@ export const TreatmentsSection: React.FC<TreatmentsSectionProps> = ({
                     <ArrowRight className="w-4 h-4" />
                   </button>
 
-                  <button
-                    onClick={onOpenConsultation}
-                    className="w-full py-2 px-3 rounded-xl text-xs font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                  <a
+                    href={getWhatsAppUrl(`Hello, I would like to request a free photo assessment for ${t.name} at Dent House Marrakech.`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-2 px-3 rounded-xl text-xs font-medium text-slate-600 hover:text-[#0284C7] hover:bg-sky-50/60 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <MessageCircle className="w-3.5 h-3.5 text-[#0284C7]" />
                     <span>Free photo assessment for {t.name}</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             );

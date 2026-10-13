@@ -5,6 +5,7 @@ import {
   RIDE_OPTIONS,
   EXTRAS_OPTIONS,
   PRECONFIGURED_PACKAGES,
+  getWhatsAppUrl,
 } from '../data/dentHouseData';
 import {
   Users,
@@ -107,6 +108,34 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
     setSelectedExtras((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
+  };
+
+  const buildWhatsAppPlanMessage = () => {
+    const extrasNames = selectedExtras
+      .map((id) => EXTRAS_OPTIONS.find((e) => e.id === id)?.name)
+      .filter(Boolean) as string[];
+
+    const partyText =
+      partyType === 'solo'
+        ? 'Solo (1 patient)'
+        : partyType === 'duo'
+        ? 'Duo (2 patients - 15% discount)'
+        : 'Trio (3 patients - 20% discount)';
+
+    return [
+      "Hello Dent House Marrakech, I have created a custom treatment plan on your website:",
+      "",
+      `• Treatment: ${selectedTreatment.name} (20 teeth)`,
+      `• Party: ${partyText}`,
+      `• Stay: ${selectedStay.name} (${nights} nights in Palmeraie)`,
+      `• Chauffeur: ${selectedRide.vehicle} (4 private transfers included)`,
+      extrasNames.length > 0 ? `• Extras: ${extrasNames.join(', ')}` : '',
+      `• Estimated Total: £${perPersonPrice.toLocaleString()} / person (Total £${grandTotal.toLocaleString()})`,
+      "",
+      "Could you please confirm available dates and next steps for a free consultation?",
+    ]
+      .filter(Boolean)
+      .join('\n');
   };
 
   const handleBookCurrentPlan = () => {
@@ -696,18 +725,30 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                 </div>
 
                 {/* Primary CTA */}
-                <div className="mt-6">
-                  <button
-                    onClick={handleBookCurrentPlan}
+                <div className="mt-6 space-y-2">
+                  <a
+                    href={getWhatsAppUrl(buildWhatsAppPlanMessage())}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full py-3.5 px-4 rounded-xl text-sm font-bold text-white bg-[#0284C7] hover:bg-[#0369A1] shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
                   >
                     <MessageCircle className="w-4 h-4 fill-white/20" />
-                    <span>Send Plan to WhatsApp Concierge</span>
+                    <span>Send Plan to WhatsApp</span>
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </a>
 
-                  <p className="mt-2 text-center text-[11px] text-slate-400">
-                    No upfront card required · Fast response within 2 hours with our clinical team
+                  {onOpenConsultationWithPlan && (
+                    <button
+                      type="button"
+                      onClick={handleBookCurrentPlan}
+                      className="w-full py-1.5 px-3 text-xs font-semibold text-slate-500 hover:text-slate-800 transition-colors text-center cursor-pointer"
+                    >
+                      Preview or edit plan note first
+                    </button>
+                  )}
+
+                  <p className="mt-1 text-center text-[11px] text-slate-400">
+                    No upfront card required · Direct WhatsApp with our Marrakech clinical team
                   </p>
                 </div>
               </div>

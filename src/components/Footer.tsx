@@ -1,6 +1,7 @@
 import React from 'react';
 import { DentHouseLogo } from './DentHouseLogo';
 import { MessageCircle, Phone, MapPin, Mail, ShieldCheck, Heart } from 'lucide-react';
+import { getWhatsAppUrl, CLINIC_WHATSAPP_DISPLAY } from '../data/dentHouseData';
 
 interface FooterProps {
   onOpenConsultation: () => void;
@@ -106,21 +107,29 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
                   Boulevard Mohammed V, Guéliz, Marrakech 40000, Morocco
                 </span>
               </div>
-              <div className="flex items-center gap-2.5">
+              <a
+                href={getWhatsAppUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 hover:text-white transition-colors"
+              >
                 <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
-                <span>Concierge WhatsApp: +212 674-998315</span>
-              </div>
+                <span>Concierge WhatsApp: {CLINIC_WHATSAPP_DISPLAY}</span>
+              </a>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
                 <span>Direct Line: +212 5 24 43 80 00</span>
               </div>
               <div className="pt-2">
-                <button
-                  onClick={onOpenConsultation}
-                  className="w-full py-2 px-3 text-xs font-semibold rounded-lg bg-[#0284C7] hover:bg-[#0369A1] text-white transition-colors cursor-pointer"
+                <a
+                  href={getWhatsAppUrl("Hello, I would like to request a free digital assessment at Dent House Marrakech.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-2.5 px-3 text-xs font-semibold rounded-lg bg-[#0284C7] hover:bg-[#0369A1] text-white transition-colors cursor-pointer flex items-center justify-center gap-2 text-center"
                 >
-                  Book Free Digital Assessment
-                </button>
+                  <MessageCircle className="w-3.5 h-3.5 fill-white/20" />
+                  <span>Book Free Digital Assessment</span>
+                </a>
               </div>
             </div>
           </div>

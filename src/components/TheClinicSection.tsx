@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CLINIC_HIGHLIGHTS } from '../data/dentHouseData';
+import { CLINIC_HIGHLIGHTS, getWhatsAppUrl } from '../data/dentHouseData';
 import {
   ShieldCheck,
   Award,
@@ -100,12 +100,14 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
                 <span className="font-bold text-slate-900">Want to inspect our certified laboratory quality documentation?</span>
                 <span className="block text-slate-500">Every patient receives authentic clinical registration and material certificates.</span>
               </div>
-              <button
-                onClick={onOpenConsultation}
+              <a
+                href={getWhatsAppUrl("Hello, I would like to request the clinic and materials dossier for Dent House Marrakech.")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="shrink-0 px-3.5 py-2 text-xs font-bold text-white bg-[#0284C7] hover:bg-[#0369A1] rounded-lg transition-colors cursor-pointer"
               >
                 Request Lab Dossier
-              </button>
+              </a>
             </div>
           </div>
         </div>

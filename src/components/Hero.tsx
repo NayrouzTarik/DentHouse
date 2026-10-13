@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle, ArrowRight, ShieldCheck, Clock, Plane, Sparkles, CheckCircle2 } from 'lucide-react';
+import { getWhatsAppUrl } from '../data/dentHouseData';
 
 interface HeroProps {
   onOpenConsultation: () => void;
@@ -43,13 +44,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onExplorePackage
 
         {/* CTAs (White & Blue themed per user note) */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 max-w-md mx-auto">
-          <button
-            onClick={onOpenConsultation}
+          <a
+            href={getWhatsAppUrl("Hello, I would like to request a free consultation at Dent House Marrakech.")}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#0284C7] hover:bg-[#0369A1] active:scale-[0.98] rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap"
           >
             <MessageCircle className="w-5 h-5 fill-white/20" />
             <span>Book Your Free Consultation</span>
-          </button>
+          </a>
 
           <button
             onClick={handleScrollToTreatments}

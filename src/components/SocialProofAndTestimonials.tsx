@@ -1,6 +1,6 @@
 import React from 'react';
-import { PATIENT_STORIES } from '../data/dentHouseData';
-import { Star, CheckCircle, Quote, ArrowRight } from 'lucide-react';
+import { PATIENT_STORIES, getWhatsAppUrl } from '../data/dentHouseData';
+import { Star, CheckCircle, Quote, ArrowRight, MessageCircle } from 'lucide-react';
 
 interface SocialProofProps {
   onOpenConsultation: () => void;
@@ -100,13 +100,16 @@ export const SocialProofAndTestimonials: React.FC<SocialProofProps> = ({ onOpenC
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
-            <button
-              onClick={onOpenConsultation}
+            <a
+              href={getWhatsAppUrl("Hello, I would like to request a free digital smile preview at Dent House Marrakech.")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="py-3.5 px-6 rounded-xl text-sm font-semibold bg-[#0284C7] hover:bg-[#0369A1] text-white shadow-md hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer"
             >
+              <MessageCircle className="w-4 h-4 fill-white/20" />
               <span>Get Free Digital Mockup on WhatsApp</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

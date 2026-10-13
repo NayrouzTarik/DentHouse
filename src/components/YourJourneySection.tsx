@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { JOURNEY_STEPS } from '../data/dentHouseData';
+import { JOURNEY_STEPS, getWhatsAppUrl } from '../data/dentHouseData';
 import {
   Calendar,
   Clock,
@@ -13,6 +13,7 @@ import {
   ChevronRight,
   Sun,
   Coffee,
+  MessageCircle,
 } from 'lucide-react';
 
 interface YourJourneySectionProps {
@@ -146,13 +147,16 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
                   <ChevronRight className="w-4 h-4" />
                 </button>
               ) : (
-                <button
-                  onClick={onOpenConsultation}
+                <a
+                  href={getWhatsAppUrl("Hello, I would like to check available travel dates for a smile makeover at Dent House Marrakech.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0284C7] hover:text-[#0369A1] transition-colors cursor-pointer"
                 >
+                  <MessageCircle className="w-3.5 h-3.5 fill-[#0284C7]/20" />
                   <span>Ready to start? Check available travel dates</span>
                   <ChevronRight className="w-4 h-4" />
-                </button>
+                </a>
               )}
             </div>
           </div>
@@ -225,13 +229,16 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
                 </div>
               </div>
 
-              <button
-                onClick={onOpenConsultation}
+              <a
+                href={getWhatsAppUrl("Hello, I have questions about travel dates and flights for Dent House Marrakech.")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold text-[#0284C7] bg-sky-50 hover:bg-sky-100 border border-sky-200 transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
+                <MessageCircle className="w-4 h-4 fill-[#0284C7]/20" />
                 <span>Ask questions about travel dates & flights</span>
                 <ChevronRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { X, MessageCircle, ArrowUpRight, Sparkles, Check, CheckCircle2 } from 'lucide-react';
+import { X, MessageCircle, ArrowUpRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import {
+  CLINIC_WHATSAPP_DISPLAY,
+  DEFAULT_CONSULTATION_MESSAGE,
+  getWhatsAppUrl,
+} from '../data/dentHouseData';
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -12,13 +17,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
   onClose,
   prefilledPlan,
 }) => {
-  const WHATSAPP_PHONE = '212674998315';
-  const WHATSAPP_DISPLAY = '+212 674-998315';
-
-  const defaultConsultationMessage =
-    "Hi Dent House Marrakech, I'd like to book a free consultation.";
-
-  const [message, setMessage] = useState<string>(defaultConsultationMessage);
+  const [message, setMessage] = useState<string>(DEFAULT_CONSULTATION_MESSAGE);
 
   useEffect(() => {
     if (prefilledPlan) {
@@ -50,13 +49,13 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 
       setMessage(planMessage);
     } else {
-      setMessage(defaultConsultationMessage);
+      setMessage(DEFAULT_CONSULTATION_MESSAGE);
     }
   }, [prefilledPlan, isOpen]);
 
   if (!isOpen) return null;
 
-  const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = getWhatsAppUrl(message);
 
   const handleOpenWhatsApp = () => {
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
@@ -77,7 +76,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                 Direct WhatsApp
               </span>
               <h3 className="text-base font-bold text-slate-900 leading-none">
-                Message {WHATSAPP_DISPLAY}
+                Message {CLINIC_WHATSAPP_DISPLAY}
               </h3>
             </div>
           </div>

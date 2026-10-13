@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FAQS } from '../data/dentHouseData';
+import { FAQS, getWhatsAppUrl } from '../data/dentHouseData';
 import { ChevronDown, MessageCircle, HelpCircle } from 'lucide-react';
 
 interface FaqSectionProps {
@@ -85,12 +85,14 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenConsultation }) =>
             </div>
           </div>
 
-          <button
-            onClick={onOpenConsultation}
-            className="w-full sm:w-auto py-2.5 px-5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#0284C7] hover:bg-[#0369A1] transition-colors shrink-0 cursor-pointer"
+          <a
+            href={getWhatsAppUrl("Hello, I have a question regarding treatments at Dent House Marrakech.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto py-2.5 px-5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#0284C7] hover:bg-[#0369A1] transition-colors shrink-0 cursor-pointer text-center"
           >
             Chat with Clinical Team
-          </button>
+          </a>
         </div>
       </div>
     </section>

@@ -17,6 +17,7 @@ import { DosAndDontsSection } from './components/DosAndDontsSection';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
 import { MessageCircle } from 'lucide-react';
+import { getWhatsAppUrl } from './data/dentHouseData';
 
 export default function App() {
   const [consultationModalOpen, setConsultationModalOpen] = useState(false);
@@ -110,8 +111,10 @@ export default function App() {
 
       {/* Floating Sticky Quick Action for Mobile/Desktop */}
       <div className="fixed bottom-5 right-5 z-40">
-        <button
-          onClick={handleOpenConsultation}
+        <a
+          href={getWhatsAppUrl("Hello, I would like to request a free consultation at Dent House Marrakech.")}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2.5 px-4 py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all cursor-pointer active:scale-95 group"
           aria-label="Chat with Concierge on WhatsApp"
         >
@@ -119,7 +122,7 @@ export default function App() {
           <span className="text-xs sm:text-sm font-bold pr-1">
             Chat on WhatsApp
           </span>
-        </button>
+        </a>
       </div>
     </div>
   );

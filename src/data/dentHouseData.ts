@@ -1,3 +1,11 @@
+export const CLINIC_WHATSAPP_NUMBER = '212674998315';
+export const CLINIC_WHATSAPP_DISPLAY = '+212 674-998315';
+export const DEFAULT_CONSULTATION_MESSAGE =
+  'Hello, I would like to request a free consultation at Dent House Marrakech.';
+
+export const getWhatsAppUrl = (message: string = DEFAULT_CONSULTATION_MESSAGE) =>
+  `https://wa.me/${CLINIC_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
 export interface TreatmentOption {
   id: string;
   name: string;
