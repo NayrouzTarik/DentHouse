@@ -73,16 +73,23 @@ export const GoogleReviewsSection: React.FC<GoogleReviewsSectionProps> = ({
                 </span>
               </div>
               <div className="flex items-center gap-2 mt-1.5 flex-wrap text-xs text-slate-500">
-                <span className="text-slate-700 font-bold text-sm">4.9</span>
+                <span className="text-slate-800 font-bold text-sm">4.8</span>
                 <div className="flex items-center gap-0.5 text-[#F4B400]">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#F4B400] text-[#F4B400]" />
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${
+                        i < 4
+                          ? 'fill-[#F4B400] text-[#F4B400]'
+                          : 'fill-[#F4B400]/75 text-[#F4B400]'
+                      }`}
+                    />
                   ))}
                 </div>
                 <span className="text-slate-400">•</span>
-                <span className="font-medium text-slate-700">148 Google reviews</span>
+                <span className="font-medium text-slate-700">47 Google reviews</span>
                 <span className="text-slate-400">•</span>
-                <span>Cosmetic Dental Clinic in Marrakech</span>
+                <span>Cosmetic Dental Practice</span>
               </div>
             </div>
           </div>
@@ -95,7 +102,7 @@ export const GoogleReviewsSection: React.FC<GoogleReviewsSectionProps> = ({
               className="py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold bg-[#0284C7] hover:bg-[#0369A1] text-white flex items-center gap-2 transition-all cursor-pointer shadow-xs"
             >
               <MessageCircle className="w-4 h-4 fill-white/20" />
-              <span>Ask a Question on WhatsApp</span>
+              <span>Ask on WhatsApp</span>
             </a>
           </div>
         </div>
@@ -103,7 +110,7 @@ export const GoogleReviewsSection: React.FC<GoogleReviewsSectionProps> = ({
         {/* Filter Chips */}
         {showFilters && (
           <div className="pt-5 flex items-center gap-2 flex-wrap">
-            <span className="text-xs font-semibold text-slate-500 mr-1">Filter by:</span>
+            <span className="text-xs font-semibold text-slate-500 mr-1">Filter:</span>
             <button
               type="button"
               onClick={() => setFilter('all')}
@@ -113,7 +120,7 @@ export const GoogleReviewsSection: React.FC<GoogleReviewsSectionProps> = ({
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
-              All Reviews (148)
+              All (47)
             </button>
             <button
               type="button"
@@ -209,9 +216,16 @@ export const GoogleReviewsSection: React.FC<GoogleReviewsSectionProps> = ({
 
               {/* Stars & Time */}
               <div className="mt-3 flex items-center gap-2">
-                <div className="flex items-center gap-0.5 text-[#F4B400]">
-                  {[...Array(rev.rating)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-[#F4B400] text-[#F4B400]" />
+                <div className="flex items-center gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-3.5 h-3.5 ${
+                        i < rev.rating
+                          ? 'fill-[#F4B400] text-[#F4B400]'
+                          : 'fill-slate-200 text-slate-200'
+                      }`}
+                    />
                   ))}
                 </div>
                 <span className="text-[11px] text-slate-400 font-normal">
@@ -273,14 +287,11 @@ export const GoogleReviewsSection: React.FC<GoogleReviewsSectionProps> = ({
         <div className="flex items-center gap-2">
           <GoogleLogoSvg className="w-4 h-4 shrink-0" />
           <span>
-            Reviews collected and verified from patients registered through Dent House Marrakech.
+            Google Business Profile · Guéliz, Marrakech
           </span>
         </div>
-        <div className="flex items-center gap-3">
-          <span className="text-emerald-700 font-semibold flex items-center gap-1">
-            <ShieldCheck className="w-4 h-4" />
-            100% Verified Real Appointments
-          </span>
+        <div className="flex items-center gap-2 text-slate-400">
+          <span>Patient ratings recorded via Google Maps</span>
         </div>
       </div>
     </div>

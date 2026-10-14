@@ -779,17 +779,17 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     isLocalGuide: true,
     reviewCount: 23,
     photoCount: 9,
-    rating: 5,
+    rating: 4,
     timeAgo: '3 months ago',
     location: 'Birmingham, UK',
     treatment: 'Composite Bonding (20 Teeth)',
     treatmentType: 'bonding',
     duration: '2 Days in Marrakech',
-    badges: ['Positive: Punctuality, Quality, Cleanliness'],
-    reviewText: "Flew in Thursday night, had appointment #1 Friday morning for shade matching and direct chairside layering, then final high-gloss diamond polish on Saturday afternoon. Flew back Sunday afternoon ready for work Monday morning.\n\nI appreciated that they didn't try to upsell me to veneers—they told me honestly that composite bonding was ideal for closing my gaps without removing any enamel. Honest, polite, English-speaking staff, and 1-year guarantee. Highly recommended.",
+    badges: ['Positive: Quality, Cleanliness, Value'],
+    reviewText: "Really happy with the composite bonding results. The teeth look completely natural, zero drilling of my enamel, and saved thousands compared to Birmingham private quotes. Only dropping 1 star because Friday morning's appointment ran about 20 minutes behind schedule, but the dentists took their time and didn't rush my treatment at all. Driver Hassan was great too.",
     ownerResponse: {
       date: '3 months ago',
-      text: "Thank you Oliver! Preserving healthy natural enamel is always our first clinical priority. We look forward to seeing your 6-month checkup photos soon on WhatsApp."
+      text: "Thank you for the balanced feedback Oliver! We apologize again for the short wait on Friday morning—we always ensure our dentists give each patient full dedicated chairside time without rushing. We're thrilled you love your new smile and look forward to your WhatsApp checkup."
     }
   },
   {
@@ -821,17 +821,17 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     isLocalGuide: false,
     reviewCount: 9,
     photoCount: 2,
-    rating: 5,
+    rating: 4,
     timeAgo: '5 months ago',
     location: 'Edinburgh, UK',
     treatment: 'E.max Porcelain Veneers (20 Teeth)',
     treatmentType: 'veneers',
     duration: '4 Days in Marrakech',
-    badges: ['Positive: Professionalism, Quality, Value'],
-    reviewText: "I had chipped front teeth and severe coffee staining from years of university and work. The 4-day E.max process was so smooth. The shade BL2 looks bright and radiant without looking like plastic dentures. Chauffeur service made navigating Marrakech very easy. Love my new smile so much!",
+    badges: ['Positive: Quality, Professionalism'],
+    reviewText: "Flew from Edinburgh for 20 E.max veneers. The ceramic finish and natural translucency are lovely—definitely not the fake 'Turkey teeth' look I was worried about. 4 stars only because navigating Marrakech airport at night was a bit hectic with passport queues, although Hassan was waiting with my name card once I came through. Clinical care and veneers themselves were 5/5.",
     ownerResponse: {
       date: '5 months ago',
-      text: "Thank you Hannah! So pleased to hear you love your new E.max smile. Keep smiling with confidence!"
+      text: "Thank you Hannah! RAK airport can indeed get busy on evening European flight arrivals, but we're glad Hassan met you smoothly. Enjoy your radiant E.max smile!"
     }
   }
 ];
