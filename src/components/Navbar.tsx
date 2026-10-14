@@ -15,9 +15,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
   const navLinks = [
     { label: 'Home', path: '/' },
     { label: 'Treatments', path: '/treatments' },
+    { label: 'Packages', path: '/packages' },
     { label: 'Calculator', path: '/calculator' },
-    { label: '2-Day Journey & Clinic', path: '/journey' },
-    { label: 'Patient FAQs', path: '/faqs' },
+    { label: 'Smile Stories', path: '/stories' },
+    { label: 'Journey & Clinic', path: '/journey' },
+    { label: 'FAQs', path: '/faqs' },
   ];
 
   return (
@@ -29,8 +31,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
             <DentHouseLogo size="md" />
           </Link>
 
-          {/* Zone 2: 4-5 single-line clean text links */}
-          <nav className="hidden md:flex items-center gap-7 text-sm font-medium">
+          {/* Zone 2: clean text links */}
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm font-medium">
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}

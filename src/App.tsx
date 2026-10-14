@@ -15,7 +15,9 @@ import { getWhatsAppUrl } from './data/dentHouseData';
 // Pages
 import { HomePage } from './pages/HomePage';
 import { TreatmentsPage } from './pages/TreatmentsPage';
+import { PackagesPage } from './pages/PackagesPage';
 import { CalculatorPage } from './pages/CalculatorPage';
+import { StoriesPage } from './pages/StoriesPage';
 import { JourneyPage } from './pages/JourneyPage';
 import { FaqPage } from './pages/FaqPage';
 
@@ -62,6 +64,10 @@ export default function App() {
               }
             />
             <Route
+              path="/packages"
+              element={<PackagesPage onOpenConsultation={handleOpenConsultation} />}
+            />
+            <Route
               path="/calculator"
               element={
                 <CalculatorPage
@@ -71,6 +77,10 @@ export default function App() {
               }
             />
             <Route path="/plan" element={<Navigate to="/calculator" replace />} />
+            <Route
+              path="/stories"
+              element={<StoriesPage onOpenConsultation={handleOpenConsultation} />}
+            />
             <Route
               path="/journey"
               element={<JourneyPage onOpenConsultation={handleOpenConsultation} />}

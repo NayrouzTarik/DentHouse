@@ -62,35 +62,35 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             </ul>
           </div>
 
-          {/* Packages & Journey Col */}
+          {/* Packages & Experience Col */}
           <div>
             <h4 className="text-slate-200 font-bold uppercase tracking-wider text-xs mb-3">
-              Palmeraie Stay & Deals
+              Packages & Experience
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/calculator" className="hover:text-white transition-colors">
-                  Treatment & Stay Calculator
+                <Link to="/packages" className="hover:text-white transition-colors">
+                  All-Inclusive Packages
                 </Link>
               </li>
               <li>
                 <Link to="/calculator" className="hover:text-white transition-colors">
-                  Palmeraie Suites (From £70/Night)
+                  Price & Stay Calculator
                 </Link>
               </li>
               <li>
-                <Link to="/calculator" className="hover:text-white transition-colors">
-                  Bring 2 Guests for Free (Mid & Luxury)
-                </Link>
-              </li>
-              <li>
-                <Link to="/calculator" className="hover:text-white transition-colors">
-                  Extra Nights at 50% OFF
+                <Link to="/stories" className="hover:text-white transition-colors">
+                  Smile Stories & Reviews
                 </Link>
               </li>
               <li>
                 <Link to="/journey" className="hover:text-white transition-colors">
-                  2-Day Journey & 4 Included Transfers
+                  2-Day Journey & Palmeraie Stays
+                </Link>
+              </li>
+              <li>
+                <Link to="/faqs" className="hover:text-white transition-colors">
+                  Patient FAQs & Support
                 </Link>
               </li>
             </ul>
