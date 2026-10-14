@@ -311,7 +311,7 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#0284C7] hover:bg-[#0369A1] transition-all cursor-pointer shadow-md text-xs sm:text-sm"
             >
               <MessageCircle className="w-4 h-4 fill-white/20" />
-              <span>Send Photos on WhatsApp (+212 674-998315)</span>
+              <span>Send Photos on WhatsApp (+212 789-668454)</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

@@ -244,7 +244,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
             className="shrink-0 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold bg-[#0284C7] hover:bg-[#0369A1] text-white flex items-center gap-2 shadow-md transition-all cursor-pointer whitespace-nowrap"
           >
             <MessageCircle className="w-4 h-4 fill-white/20" />
-            <span>Send Photos on WhatsApp (+212 674-998315)</span>
+            <span>Send Photos on WhatsApp (+212 789-668454)</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

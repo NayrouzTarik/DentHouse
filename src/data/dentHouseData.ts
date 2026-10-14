@@ -1,5 +1,5 @@
-export const CLINIC_WHATSAPP_NUMBER = '212674998315';
-export const CLINIC_WHATSAPP_DISPLAY = '+212 674-998315';
+export const CLINIC_WHATSAPP_NUMBER = '212789668454';
+export const CLINIC_WHATSAPP_DISPLAY = '+212 789-668454';
 export const DEFAULT_CONSULTATION_MESSAGE =
   'Hello, I would like to request a free consultation at Dent House Marrakech.';
 

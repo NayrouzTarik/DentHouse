@@ -124,7 +124,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               </a>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>Direct Line: +212 5 24 43 80 00</span>
+                <span>Direct Line: +212 789-668454</span>
               </div>
               <div className="pt-2">
                 <a
