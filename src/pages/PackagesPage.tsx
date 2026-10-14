@@ -8,10 +8,11 @@ interface PackagesPageProps {
 }
 
 export const PackagesPage: React.FC<PackagesPageProps> = () => {
-  const [selectedTreatment, setSelectedTreatment] = useState<'veneers' | 'bonding'>('veneers');
+  const [selectedTreatment, setSelectedTreatment] = useState<'bonding' | 'veneers'>('bonding');
 
-  const activePackages = selectedTreatment === 'veneers' ? EMAX_PACKAGES : BONDING_PACKAGES;
-  const isVeneers = selectedTreatment === 'veneers';
+  const activePackages = selectedTreatment === 'bonding' ? BONDING_PACKAGES : EMAX_PACKAGES;
+  const isBonding = selectedTreatment === 'bonding';
+  const isVeneers = !isBonding;
 
   return (
     <div className="pt-6">
@@ -27,8 +28,28 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
           Transparent prices including your cosmetic treatment, central Marrakech house stay, and dedicated private chauffeur. Flights not included.
         </p>
 
-        {/* Treatment Tab Switcher: Emax (4 Days) vs Composite Bonding (2 Days) */}
+        {/* Treatment Tab Switcher: Composite Bonding (2 Days) vs Emax (4 Days) */}
         <div className="mt-8 inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200/80 max-w-md w-full">
+          <button
+            type="button"
+            onClick={() => setSelectedTreatment('bonding')}
+            className={`flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex flex-col items-center justify-center gap-0.5 ${
+              isBonding
+                ? 'bg-white text-slate-900 shadow-sm'
+                : 'text-slate-500 hover:text-slate-900'
+            }`}
+          >
+            <span className="flex items-center gap-1.5">
+              <span>Composite Bonding</span>
+              <span className="text-[10px] font-semibold bg-sky-100 text-[#0284C7] px-2 py-0.2 rounded-full">
+                2 Days
+              </span>
+            </span>
+            <span className="text-[11px] font-normal text-slate-400">
+              Zero drilling · 1-Yr Warranty
+            </span>
+          </button>
+
           <button
             type="button"
             onClick={() => setSelectedTreatment('veneers')}
@@ -46,26 +67,6 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
             </span>
             <span className="text-[11px] font-normal text-slate-400">
               Lab-crafted · 5-Yr Warranty
-            </span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setSelectedTreatment('bonding')}
-            className={`flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex flex-col items-center justify-center gap-0.5 ${
-              !isVeneers
-                ? 'bg-white text-slate-900 shadow-sm'
-                : 'text-slate-500 hover:text-slate-900'
-            }`}
-          >
-            <span className="flex items-center gap-1.5">
-              <span>Composite Bonding</span>
-              <span className="text-[10px] font-semibold bg-sky-100 text-[#0284C7] px-2 py-0.2 rounded-full">
-                2 Days
-              </span>
-            </span>
-            <span className="text-[11px] font-normal text-slate-400">
-              Zero drilling · 48 Hours
             </span>
           </button>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
-import { PATIENT_STORIES, getWhatsAppUrl } from '../data/dentHouseData';
-import { Star, CheckCircle, Quote, ArrowRight, MessageCircle } from 'lucide-react';
+import { getWhatsAppUrl } from '../data/dentHouseData';
+import { GoogleReviewsSection } from './GoogleReviewsSection';
+import { CheckCircle, ArrowRight, MessageCircle } from 'lucide-react';
 
 interface SocialProofProps {
   onOpenConsultation: () => void;
@@ -11,10 +12,10 @@ export const SocialProofAndTestimonials: React.FC<SocialProofProps> = ({ onOpenC
     <section className="py-20 bg-slate-50/70 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="flex items-center justify-center gap-2 mb-3">
             <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-              PATIENT REVIEWS
+              VERIFIED GOOGLE REVIEWS
             </span>
             <span className="w-8 h-px bg-[#0284C7]/40" />
           </div>
@@ -22,53 +23,12 @@ export const SocialProofAndTestimonials: React.FC<SocialProofProps> = ({ onOpenC
             Trusted by selective UK & international patients.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-            See how UK and international professionals, couples, and friends transformed their smiles with complete peace of mind in Marrakech.
+            See genuine, unedited Google accounts and real patient experiences from London, Manchester, Bristol, and across Europe.
           </p>
         </div>
 
-        {/* 3 Patient Testimonial Cards */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {PATIENT_STORIES.map((story, idx) => (
-            <div
-              key={idx}
-              className="rounded-2xl bg-white border border-slate-200/80 p-6 sm:p-7 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
-            >
-              <div>
-                {/* Rating & Savings Tag */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-1 text-amber-400">
-                    {[...Array(story.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400" />
-                    ))}
-                  </div>
-                  <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">
-                    {story.saving}
-                  </span>
-                </div>
-
-                <Quote className="w-6 h-6 text-sky-200 mb-2" />
-
-                {/* Quote */}
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed italic">
-                  "{story.quote}"
-                </p>
-              </div>
-
-              {/* Patient Info */}
-              <div className="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between">
-                <div>
-                  <h4 className="text-sm font-bold text-slate-900">
-                    {story.name}
-                  </h4>
-                  <p className="text-xs text-slate-500">
-                    {story.location} · {story.treatment}
-                  </p>
-                </div>
-                <CheckCircle className="w-4 h-4 text-[#0284C7] shrink-0" />
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Realistic Google Reviews Widget (Top 3) */}
+        <GoogleReviewsSection maxCount={3} showFilters={false} />
 
         {/* UK Healthcare Advertising Disclosure */}
         <p className="mt-6 text-[11px] text-slate-500 text-center leading-relaxed max-w-3xl mx-auto">
