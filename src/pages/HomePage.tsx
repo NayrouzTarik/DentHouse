@@ -30,24 +30,24 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
 
   const realPatientPhotos = [
     {
-      src: '/images/patient_sophie.jpg',
-      label: 'Sophie & Mark (Surrey, UK)',
-      detail: 'Duo Porcelain Makeover',
+      src: '/images/bonding_after.jpg',
+      label: 'Composite Bonding Sculpt',
+      detail: '2 Days · Zero Drilling · Interactive Before/After',
     },
     {
-      src: '/images/veneers_before_after.jpg',
-      label: 'Porcelain Veneers Before & After',
-      detail: 'Natural Shade BL2 · 20 Teeth',
+      src: '/images/veneers_after.jpg',
+      label: 'E.max Porcelain Veneers',
+      detail: '4 Days · Natural Shade BL2 · 5-Yr Warranty',
     },
     {
-      src: '/images/bonding_before_after.jpg',
-      label: 'Composite Bonding Before & After',
-      detail: 'Zero Drilling · 2 Days',
+      src: '/images/patient_charlotte.jpg',
+      label: 'Charlotte D. (London, UK)',
+      detail: 'Verified Patient · Google Review',
     },
     {
-      src: '/images/patient_oliver.jpg',
-      label: 'Oliver (Manchester, UK)',
-      detail: '20 Composite Bondings',
+      src: '/images/patient_marcus.jpg',
+      label: 'Marcus S. (Manchester, UK)',
+      detail: 'Verified Patient · Local Guide',
     },
   ];
 
