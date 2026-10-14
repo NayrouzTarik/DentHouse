@@ -60,31 +60,31 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
       />
 
       {/* 2. Why Choose Us For Your Smile? (Exact user specification) */}
-      <section className="py-20 bg-slate-50 border-t border-slate-100">
+      <section className="py-10 sm:py-14 bg-slate-50 border-t border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
             <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
               PEACE OF MIND
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-1.5">
               Why choose us for your smile?
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {whyChooseUs.map((item, idx) => (
               <div
                 key={idx}
-                className="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex items-start gap-4"
+                className="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex items-start gap-3.5"
               >
-                <div className="w-8 h-8 rounded-full bg-sky-100 text-[#0284C7] flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-5 h-5 stroke-[2.5]" />
+                <div className="w-7 h-7 rounded-full bg-sky-100 text-[#0284C7] flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="w-4 h-4 stroke-[2.5]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900">
+                  <h3 className="text-base font-bold text-slate-900">
                     {item.title}
                   </h3>
-                  <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">
+                  <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -95,14 +95,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
       </section>
 
       {/* 3. Real Patient Smiles (2 to 4 Real Pictures) */}
-      <section className="py-20 bg-white border-t border-slate-100">
+      <section className="py-10 sm:py-14 bg-white border-t border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
             <div>
               <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
                 REAL PATIENTS
               </span>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-1">
                 Real Patient Results
               </h2>
             </div>
@@ -115,7 +115,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {realPatientPhotos.map((photo, i) => (
               <Link
                 key={i}
@@ -130,20 +130,20 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-4 flex-1 flex flex-col justify-between">
+                <div className="p-3.5 flex-1 flex flex-col justify-between">
                   <div className="text-sm font-bold text-slate-900 group-hover:text-[#0284C7] transition-colors">
                     {photo.label}
                   </div>
-                  <div className="text-xs text-slate-500 mt-1">{photo.detail}</div>
+                  <div className="text-xs text-slate-500 mt-0.5">{photo.detail}</div>
                 </div>
               </Link>
             ))}
           </div>
 
-          <div className="mt-8 text-center">
+          <div className="mt-6 text-center">
             <Link
               to="/stories"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-semibold transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-semibold transition-colors"
             >
               <span>View Smile Stories & Patient Reviews</span>
               <ArrowRight className="w-4 h-4" />
@@ -153,27 +153,27 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
       </section>
 
       {/* 4. Minimal Bottom Conversion Banner */}
-      <section className="py-16 bg-slate-900 text-white border-t border-slate-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <h2 className="text-2xl sm:text-4xl font-serif font-bold">
+      <section className="py-10 sm:py-12 bg-slate-900 text-white border-t border-slate-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+          <h2 className="text-xl sm:text-3xl font-serif font-bold">
             Start with a free WhatsApp smile assessment.
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
             Send close-up photos of your smile to receive a direct clinical evaluation, recommended options, and exact pricing before booking your trip.
           </p>
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href={getWhatsAppUrl("Hello, I would like to request a free smile assessment at Dent House Marrakech.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-white bg-[#0284C7] hover:bg-[#0369A1] transition-all cursor-pointer shadow-md text-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#0284C7] hover:bg-[#0369A1] transition-all cursor-pointer shadow-md text-xs sm:text-sm"
             >
               <MessageCircle className="w-4 h-4 fill-white/20" />
               <span>Book Free WhatsApp Consultation</span>
             </a>
             <Link
               to="/packages"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 transition-all text-sm border border-slate-700"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-slate-200 hover:text-white bg-slate-800 hover:bg-slate-700 transition-all text-xs sm:text-sm border border-slate-700"
             >
               <span>Explore All-Inclusive Packages</span>
               <ArrowRight className="w-4 h-4" />

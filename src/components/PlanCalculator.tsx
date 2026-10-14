@@ -40,7 +40,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
 
   // Step 3: Stay (City Center Residence or Self-Arranged)
   const [stayId, setStayId] = useState<string>('city-center-1room');
-  const [nights, setNights] = useState<number>(2); // 2 days base stay
+  const [nights, setNights] = useState<number>(initialTreatmentId === 'veneers' ? 4 : 2);
 
   // Step 4: Ride (100% Included by default)
   const [rideId, setRideId] = useState<string>('included-chauffeur');
@@ -56,6 +56,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
 
   // Selected Treatment
   const selectedTreatment = TREATMENTS.find((t) => t.id === treatmentId) || TREATMENTS[1];
+  const baseTreatmentDays = selectedTreatment.id === 'veneers' ? 4 : 2;
 
   // Base treatment cost per person before and after discount
   const baseTreatmentPrice = selectedTreatment.dentHousePriceGBP;
@@ -63,14 +64,14 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
   const totalTreatmentCost = discountedTreatmentPrice * partyCount;
 
   // Stay cost calculation with 50% discount on extra nights!
-  // Base stay = 2 nights (covered for treatment days)
-  // Extra nights = nights - 2 (charged at -50%)
+  // Base stay = 4 nights for E.max / 2 nights for Bonding
+  // Extra nights = nights - baseTreatmentDays (charged at -50%)
   const selectedStay = STAY_OPTIONS.find((s) => s.id === stayId) || STAY_OPTIONS[1];
   let totalStayCost = 0;
   if (selectedStay.tier !== 'none') {
     const baseRate = selectedStay.basePricePerNightGBP;
-    const baseNights = Math.min(nights, 2);
-    const extraNights = Math.max(0, nights - 2);
+    const baseNights = Math.min(nights, baseTreatmentDays);
+    const extraNights = Math.max(0, nights - baseTreatmentDays);
     const extraNightRate = baseRate * 0.5; // Price -50% for extra nights!
 
     // On 2-Room City House, they can bring 2 guests to stay with them for FREE!
@@ -298,7 +299,10 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                     return (
                       <div
                         key={t.id}
-                        onClick={() => setTreatmentId(t.id)}
+                        onClick={() => {
+                          setTreatmentId(t.id);
+                          setNights(t.id === 'veneers' ? 4 : 2);
+                        }}
                         className={`p-4 rounded-xl border transition-all cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${
                           isSelected
                             ? 'border-[#0284C7] bg-sky-50/40 ring-2 ring-sky-100'
@@ -327,7 +331,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                               )}
                             </div>
                             <p className="text-xs text-slate-500 mt-0.5">
-                              {t.subtitle} · 2 Days Treatment
+                              {t.subtitle} · {t.duration}
                             </p>
                             <div className="mt-1.5 flex items-center gap-2 text-[11px] font-semibold text-[#0284C7]">
                               <ShieldCheck className="w-3.5 h-3.5" />
@@ -372,7 +376,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                         Marrakech Accommodation
                       </h3>
                       <p className="text-xs text-slate-500">
-                        City center private house or self-arranged
+                        City center private house ({baseTreatmentDays} days base stay)
                       </p>
                     </div>
                   </div>
@@ -384,20 +388,31 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                       onChange={(e) => setNights(Number(e.target.value))}
                       className="border border-slate-200 rounded-lg px-2.5 py-1 text-slate-800 text-xs font-semibold bg-white cursor-pointer"
                     >
-                      <option value={2}>2 Nights (Base Stay)</option>
-                      <option value={3}>3 Nights (+1 Night at 50% OFF)</option>
-                      <option value={4}>4 Nights (+2 Nights at 50% OFF)</option>
-                      <option value={5}>5 Nights (+3 Nights at 50% OFF)</option>
+                      {baseTreatmentDays === 4 ? (
+                        <>
+                          <option value={4}>4 Nights (Base 4-Day Stay)</option>
+                          <option value={5}>5 Nights (+1 Night at 50% OFF)</option>
+                          <option value={6}>6 Nights (+2 Nights at 50% OFF)</option>
+                          <option value={7}>7 Nights (+3 Nights at 50% OFF)</option>
+                        </>
+                      ) : (
+                        <>
+                          <option value={2}>2 Nights (Base 2-Day Stay)</option>
+                          <option value={3}>3 Nights (+1 Night at 50% OFF)</option>
+                          <option value={4}>4 Nights (+2 Nights at 50% OFF)</option>
+                          <option value={5}>5 Nights (+3 Nights at 50% OFF)</option>
+                        </>
+                      )}
                     </select>
                   </div>
                 </div>
 
                 {/* Extra Night Discount Highlight Box */}
-                {nights > 2 && stayId !== 'no-stay' && (
+                {nights > baseTreatmentDays && stayId !== 'no-stay' && (
                   <div className="mt-3 p-2.5 rounded-lg bg-emerald-50 border border-emerald-200/80 text-xs text-emerald-800 flex items-center gap-2">
                     <Percent className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>
-                      <strong>Extra Night Perk Applied:</strong> The base covers 2 treatment days. Extra {nights - 2} night{nights - 2 > 1 ? 's are' : ' is'} discounted by 50%!
+                      <strong>Extra Night Perk Applied:</strong> The base covers {baseTreatmentDays} treatment days. Extra {nights - baseTreatmentDays} night{nights - baseTreatmentDays > 1 ? 's are' : ' is'} discounted by 50%!
                     </span>
                   </div>
                 )}
@@ -406,8 +421,8 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   {STAY_OPTIONS.map((s) => {
                     const isSelected = stayId === s.id;
                     const baseRate = s.basePricePerNightGBP;
-                    const baseNights = Math.min(nights, 2);
-                    const extraNights = Math.max(0, nights - 2);
+                    const baseNights = Math.min(nights, baseTreatmentDays);
+                    const extraNights = Math.max(0, nights - baseTreatmentDays);
                     const computedTotal = (baseNights * baseRate) + (extraNights * (baseRate * 0.5));
 
                     return (

@@ -1,6 +1,7 @@
 import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { PlanCalculator } from '../components/PlanCalculator';
-import { ShieldCheck, Calendar, Users, Car } from 'lucide-react';
+import { Calendar, Users, Car } from 'lucide-react';
 
 interface CalculatorPageProps {
   onOpenConsultationWithPlan: (plan: any) => void;
@@ -11,6 +12,13 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({
   onOpenConsultationWithPlan,
   activeTreatmentId,
 }) => {
+  const [searchParams] = useSearchParams();
+  const queryTreatment = searchParams.get('treatment');
+  const initialTreatment =
+    queryTreatment === 'bonding' || queryTreatment === 'veneers'
+      ? queryTreatment
+      : activeTreatmentId;
+
   return (
     <div className="pt-6">
       {/* Page Header */}
@@ -23,7 +31,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({
             Treatment & Stay Calculator
           </h1>
           <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Customize your dental treatment, party size, Palmeraie stay duration, and private chauffeur options to calculate your exact investment.
+            Customize your dental treatment, party size, Marrakech house stay, and private excursions to calculate your exact investment.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">
@@ -46,7 +54,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({
       {/* Standalone 5-Step Custom Plan Calculator */}
       <PlanCalculator
         onOpenConsultationWithPlan={onOpenConsultationWithPlan}
-        initialTreatmentId={activeTreatmentId}
+        initialTreatmentId={initialTreatment}
       />
     </div>
   );

@@ -69,22 +69,23 @@ export const TREATMENTS: TreatmentOption[] = [
   },
   {
     id: 'veneers',
-    name: 'Premium Porcelain Veneers',
+    name: 'E.max Porcelain Veneers',
     subtitle: 'Ultra-thin handcrafted ceramic shields',
     teethCount: 'Full Set of 20 Teeth',
-    duration: '2 Days in Marrakech',
+    duration: '4 Days in Marrakech',
     dentHousePriceGBP: 3450,
     ukPrivatePriceGBP: 14500,
     highlight: 'Top Choice for UK & International Patients',
     warranty: '5-Year Comprehensive Warranty',
     checkup: 'Full Digital Records & International Handover Files',
-    description: 'Hand-layered premium medical-grade porcelain. Lifelike optical translucency, stain resistance, and backed by a 5-year replacement guarantee.',
+    description: 'Hand-layered premium E.max ceramic shields crafted in our digital lab over 4 days. Unmatched optical translucency, stain resistance, and backed by a 5-year replacement warranty.',
     features: [
-      'Certified premium medical-grade porcelain ceramic',
-      'Conservative sub-0.3mm preparation',
+      'Certified premium E.max medical-grade ceramic',
+      'Ultra-conservative sub-0.3mm preparation',
+      '4 Days in Marrakech for precision laboratory crafting',
       '5-Year Comprehensive Replacement Warranty',
       '3D Intraoral Digital Simulation preview before fitting',
-      'Stain-proof against coffee, tea, and red wine'
+      '100% stain-proof against coffee, tea, and red wine'
     ]
   }
 ];
@@ -156,68 +157,145 @@ export const EXTRAS_OPTIONS: ExtraOption[] = [
   }
 ];
 
-export const PRECONFIGURED_PACKAGES = [
+export const EMAX_PACKAGES = [
   {
-    id: 'solo-package',
-    badge: 'Solo Traveler',
-    name: 'The Solo Smile Escape',
+    id: 'emax-solo',
+    badge: 'Solo Traveler · 4 Days',
+    name: 'E.max Solo Smile Holiday',
+    treatmentType: 'E.max Porcelain Veneers',
+    duration: '4 Days in Marrakech',
     partyType: 'solo',
     treatmentId: 'veneers',
-    pricePerPersonGBP: 3590,
-    totalPriceGBP: 3590,
+    pricePerPersonGBP: 3660,
+    totalPriceGBP: 3660,
     ukHarleyStreetPerPerson: 14500,
-    totalSaving: 10910,
-    stayName: 'Dent House City Center (1-Room House)',
-    rideName: 'Private Chauffeur Transfers Included',
+    totalSaving: 10840,
+    stayName: '4 Nights Dent House City Center House',
+    rideName: 'All Private Chauffeur Transfers Included',
     perks: [
-      'Full set of 20 Premium Porcelain Veneers',
-      '2 Nights Dent House City Center House',
-      'Private Chauffeur Transfers Included (Airport & Clinic)',
-      '5-Year Comprehensive Warranty & digital handover',
-      'Package covers treatment, stay & chauffeur (Flights not included)'
-    ]
-  },
-  {
-    id: 'duo-package',
-    badge: 'Best Value (Couples & Friends)',
-    name: 'The Duo Smile Holiday',
-    partyType: 'duo',
-    treatmentId: 'veneers',
-    pricePerPersonGBP: 2990,
-    totalPriceGBP: 5980,
-    ukHarleyStreetPerPerson: 14500,
-    totalSaving: 23020,
-    stayName: 'Dent House City Center (1-Room House)',
-    rideName: 'Private Chauffeur Transfers Included',
-    perks: [
-      '20 Premium Porcelain Veneers EACH (2 patients)',
-      'Save £600/person by traveling together',
-      '2 Nights City Center Stay Included',
-      'All Private Chauffeur Transfers Included',
+      'Full set of 20 Handcrafted E.max Porcelain Veneers',
+      '4 Days in Marrakech for precision laboratory crafting',
+      '4 Nights Private City Center House',
+      'All Private Chauffeur Transfers Included (Airport & Clinic)',
       '5-Year Comprehensive Replacement Warranty'
     ]
   },
   {
-    id: 'trio-package',
-    badge: 'Maximum Group Savings',
-    name: 'The Trio Smile Getaway',
+    id: 'emax-duo',
+    badge: 'Best Value for 2 · 4 Days',
+    name: 'E.max Duo Smile Holiday',
+    treatmentType: 'E.max Porcelain Veneers',
+    duration: '4 Days in Marrakech',
+    partyType: 'duo',
+    treatmentId: 'veneers',
+    pricePerPersonGBP: 3090,
+    totalPriceGBP: 6180,
+    ukHarleyStreetPerPerson: 14500,
+    totalSaving: 22820,
+    stayName: '4 Nights Dent House City Center House',
+    rideName: 'All Private Chauffeur Transfers Included',
+    perks: [
+      '20 E.max Porcelain Veneers for EACH person (2 patients)',
+      'Save £570/person by traveling together',
+      '4 Days in Marrakech for precision laboratory crafting',
+      '4 Nights Private City Center House Included',
+      '5-Year Comprehensive Replacement Warranty'
+    ]
+  },
+  {
+    id: 'emax-trio',
+    badge: 'Maximum Savings · 4 Days',
+    name: 'E.max Trio Smile Holiday',
+    treatmentType: 'E.max Porcelain Veneers',
+    duration: '4 Days in Marrakech',
     partyType: 'trio',
     treatmentId: 'veneers',
-    pricePerPersonGBP: 2750,
-    totalPriceGBP: 8250,
+    pricePerPersonGBP: 2820,
+    totalPriceGBP: 8460,
     ukHarleyStreetPerPerson: 14500,
-    totalSaving: 35250,
+    totalSaving: 35040,
     stayName: 'Deluxe 2-Room City House (Stay Together Free)',
-    rideName: 'Private Chauffeur Transfers Included',
+    rideName: 'All Private Chauffeur Transfers Included',
     perks: [
-      '20 Premium Porcelain Veneers EACH (3 patients)',
-      'Save £840/person by coming as a group',
-      'Upgraded 2-Room City Residence (Companions stay free)',
-      'All Private Chauffeur Transfers Included',
+      '20 E.max Porcelain Veneers for EACH person (3 patients)',
+      'Save £840/person with group rate',
+      '4 Days in Marrakech for precision laboratory crafting',
+      'Deluxe 2-Room City House (Guests stay free)',
       '5-Year Comprehensive Replacement Warranty'
     ]
   }
 ];
+
+export const BONDING_PACKAGES = [
+  {
+    id: 'bonding-solo',
+    badge: 'Solo Traveler · 2 Days',
+    name: 'Composite Bonding Solo Glow',
+    treatmentType: 'Composite Bonding',
+    duration: '2 Days in Marrakech',
+    partyType: 'solo',
+    treatmentId: 'bonding',
+    pricePerPersonGBP: 1990,
+    totalPriceGBP: 1990,
+    ukHarleyStreetPerPerson: 6500,
+    totalSaving: 4510,
+    stayName: '2 Nights Dent House City Center House',
+    rideName: 'All Private Chauffeur Transfers Included',
+    perks: [
+      'Full set of 20 Composite Bondings (Zero drilling)',
+      'Completed in 2 comfortable days (48 Hours)',
+      '2 Nights Private City Center House',
+      'All Private Chauffeur Transfers Included (Airport & Clinic)',
+      '1-Year Warranty + Free 6-Month Check-Up'
+    ]
+  },
+  {
+    id: 'bonding-duo',
+    badge: 'Best Value for 2 · 2 Days',
+    name: 'Composite Bonding Duo Escape',
+    treatmentType: 'Composite Bonding',
+    duration: '2 Days in Marrakech',
+    partyType: 'duo',
+    treatmentId: 'bonding',
+    pricePerPersonGBP: 1690,
+    totalPriceGBP: 3380,
+    ukHarleyStreetPerPerson: 6500,
+    totalSaving: 9620,
+    stayName: '2 Nights Dent House City Center House',
+    rideName: 'All Private Chauffeur Transfers Included',
+    perks: [
+      '20 Composite Bondings for EACH person (2 patients)',
+      'Save £300/person by traveling together',
+      'Zero drilling of natural enamel',
+      '2 Nights Private City Center House Included',
+      '1-Year Warranty + Free 6-Month Check-Up'
+    ]
+  },
+  {
+    id: 'bonding-trio',
+    badge: 'Maximum Savings · 2 Days',
+    name: 'Composite Bonding Trio Getaway',
+    treatmentType: 'Composite Bonding',
+    duration: '2 Days in Marrakech',
+    partyType: 'trio',
+    treatmentId: 'bonding',
+    pricePerPersonGBP: 1550,
+    totalPriceGBP: 4650,
+    ukHarleyStreetPerPerson: 6500,
+    totalSaving: 14850,
+    stayName: 'Deluxe 2-Room City House (Stay Together Free)',
+    rideName: 'All Private Chauffeur Transfers Included',
+    perks: [
+      '20 Composite Bondings for EACH person (3 patients)',
+      'Save £440/person with group rate',
+      'Completed in 2 comfortable days (48 Hours)',
+      'Deluxe 2-Room City House (Guests stay free)',
+      '1-Year Warranty + Free 6-Month Check-Up'
+    ]
+  }
+];
+
+export const PRECONFIGURED_PACKAGES = EMAX_PACKAGES;
 
 export const TREATMENT_LONGEVITY_GUIDE = {
   emax: {
