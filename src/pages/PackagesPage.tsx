@@ -19,7 +19,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
           Fixed Packages & Custom Plans
         </h1>
         <p className="mt-3 text-base text-slate-600">
-          Transparent prices including your dental treatment, boutique Palmeraie accommodation, and private chauffeur transfers. Flights not included.
+          Transparent prices including your dental treatment, central Marrakech accommodation, and private chauffeur transfers. Flights not included.
         </p>
       </div>
 

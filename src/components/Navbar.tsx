@@ -18,6 +18,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
     { label: 'Packages', path: '/packages' },
     { label: 'Calculator', path: '/calculator' },
     { label: 'Smile Stories', path: '/stories' },
+    { label: 'Aftercare', path: '/aftercare' },
     { label: 'Journey & Clinic', path: '/journey' },
     { label: 'FAQs', path: '/faqs' },
   ];

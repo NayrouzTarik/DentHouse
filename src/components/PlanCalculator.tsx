@@ -38,14 +38,14 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
     initialTreatmentId === 'makeover' ? 'veneers' : initialTreatmentId
   );
 
-  // Step 3: Stay (All in Palmeraie)
-  const [stayId, setStayId] = useState<string>('comfort-palmeraie');
+  // Step 3: Stay (City Center Residence or Self-Arranged)
+  const [stayId, setStayId] = useState<string>('city-center-1room');
   const [nights, setNights] = useState<number>(2); // 2 days base stay
 
-  // Step 4: Ride (Standard included by default)
-  const [rideId, setRideId] = useState<string>('standard');
+  // Step 4: Ride (100% Included by default)
+  const [rideId, setRideId] = useState<string>('included-chauffeur');
 
-  // Step 5: Extras (Optional paid add-ons)
+  // Step 5: Extras (Tours & Excursions)
   const [selectedExtras, setSelectedExtras] = useState<string[]>([]);
 
   // People count
@@ -73,16 +73,15 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
     const extraNights = Math.max(0, nights - 2);
     const extraNightRate = baseRate * 0.5; // Price -50% for extra nights!
 
-    // On Mid-Level and Luxury tiers, they can bring 2 guests to stay with them for FREE!
-    // So 1 room covers up to 3 people without multiplying!
+    // On 2-Room City House, they can bring 2 guests to stay with them for FREE!
     totalStayCost = (baseNights * baseRate) + (extraNights * extraNightRate);
   }
 
-  // Ride cost: Standard vehicle is £0 (Included), Comfort SUV is +£40, Executive Mercedes is +£95
+  // Ride cost: Standard vehicle is £0 (Included in treatment)
   const selectedRide = RIDE_OPTIONS.find((r) => r.id === rideId) || RIDE_OPTIONS[0];
   const totalRideCost = selectedRide.surchargeGBP;
 
-  // Extras cost
+  // Extras cost (Tours & Excursions)
   const totalExtrasCost = selectedExtras.reduce((sum, extraId) => {
     const extra = EXTRAS_OPTIONS.find((e) => e.id === extraId);
     if (!extra) return sum;
@@ -122,9 +121,9 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
       "",
       `• Treatment: ${selectedTreatment.name} (20 teeth)`,
       `• Party: ${partyText}`,
-      `• Stay: ${selectedStay.name} (${nights} nights in Palmeraie)`,
-      `• Chauffeur: ${selectedRide.vehicle} (4 private transfers included)`,
-      extrasNames.length > 0 ? `• Extras: ${extrasNames.join(', ')}` : '',
+      `• Stay: ${selectedStay.name} (${nights} nights in Marrakech)`,
+      `• Chauffeur: Private transfers included (£0)`,
+      extrasNames.length > 0 ? `• Excursions & Tours: ${extrasNames.join(', ')}` : '',
       `• Estimated Total: £${perPersonPrice.toLocaleString()} / person (Total £${grandTotal.toLocaleString()})`,
       "",
       "Could you please confirm available dates and next steps for a free consultation?",
@@ -361,7 +360,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                 </div>
               </div>
 
-              {/* STEP 3: Stay (All in Palmeraie + 50% Off Extra Nights + Bring 2 Guests Free) */}
+              {/* STEP 3: Stay (City Center 1-Room House or 2-Room Upgrade + Bring 2 Guests Free) */}
               <div className="p-6 rounded-2xl border border-slate-200/90 bg-white shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
@@ -370,10 +369,10 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                     </span>
                     <div>
                       <h3 className="text-base font-bold text-slate-900">
-                        Palmeraie Accommodation
+                        Marrakech Accommodation
                       </h3>
                       <p className="text-xs text-slate-500">
-                        All stays located in Palmeraie · Starts at £70
+                        City center private house or self-arranged
                       </p>
                     </div>
                   </div>
@@ -393,8 +392,6 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   </div>
                 </div>
 
-
-
                 {/* Extra Night Discount Highlight Box */}
                 {nights > 2 && stayId !== 'no-stay' && (
                   <div className="mt-3 p-2.5 rounded-lg bg-emerald-50 border border-emerald-200/80 text-xs text-emerald-800 flex items-center gap-2">
@@ -405,7 +402,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   </div>
                 )}
 
-                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {STAY_OPTIONS.map((s) => {
                     const isSelected = stayId === s.id;
                     const baseRate = s.basePricePerNightGBP;
@@ -448,7 +445,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                           <span className="font-semibold text-slate-900">
                             {s.basePricePerNightGBP === 0
                               ? '£0'
-                              : `£${computedTotal} total (${nights} nights)`}
+                              : `£${computedTotal} (${nights}n)`}
                           </span>
                         </div>
                       </div>
@@ -457,7 +454,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                 </div>
               </div>
 
-              {/* STEP 4: Ride */}
+              {/* STEP 4: Ride (Single Included Option) */}
               <div className="p-6 rounded-2xl border border-slate-200/90 bg-white shadow-sm">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -469,51 +466,36 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                     </h3>
                   </div>
                   <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md">
-                    4 Transfers Included in Every Plan
+                    100% Included with Treatment (£0)
                   </span>
                 </div>
                 <p className="text-xs text-slate-500 mt-1">
-                  Airport ⇄ Palmeraie and Palmeraie ⇄ Clinic. Price is per vehicle (not per person).
+                  Private chauffeur transfers are included in the price of your dental care. No extra fees for airport & clinic roundtrips.
                 </p>
 
-                <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {RIDE_OPTIONS.map((r) => {
-                    const isSelected = rideId === r.id;
-
-                    return (
-                      <div
-                        key={r.id}
-                        onClick={() => setRideId(r.id)}
-                        className={`p-3.5 rounded-xl border transition-all cursor-pointer relative ${
-                          isSelected
-                            ? 'border-[#0284C7] bg-sky-50/40 ring-2 ring-sky-100'
-                            : 'border-slate-200 hover:border-slate-300'
-                        }`}
-                      >
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs font-bold text-slate-900">
-                            {r.name}
-                          </span>
-                          <Car className="w-4 h-4 text-slate-400" />
-                        </div>
-                        <div className="text-[11px] font-semibold text-[#0284C7] mt-1">
-                          {r.vehicle}
-                        </div>
-                        <p className="mt-1 text-[10px] text-slate-500">
-                          {r.description}
-                        </p>
-                        <div className="mt-3 pt-2 border-t border-slate-100 text-[11px] font-semibold text-slate-800">
-                          {r.surchargeGBP === 0
-                            ? 'Included (£0)'
-                            : `+£${r.surchargeGBP} vehicle total`}
-                        </div>
+                <div className="mt-4 p-4 rounded-xl border border-[#0284C7] bg-sky-50/40 ring-1 ring-sky-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-white border border-sky-100 flex items-center justify-center text-[#0284C7] shrink-0">
+                      <Car className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold text-slate-900">
+                        Dedicated Private Chauffeur (All 4 Transfers Included)
                       </div>
-                    );
-                  })}
+                      <p className="text-xs text-slate-600 mt-0.5">
+                        Airport pickup ➔ Accommodation, clinic appointment roundtrips, and return airport departure transfer.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="shrink-0 text-right">
+                    <span className="text-xs font-bold text-emerald-700 bg-emerald-100/70 px-2.5 py-1 rounded-full">
+                      Included (£0)
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              {/* STEP 5: Authentic Extras (No Fake Promises / No Laser) */}
+              {/* STEP 5: Tours & Excursions */}
               <div className="p-6 rounded-2xl border border-slate-200/90 bg-white shadow-sm">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -521,13 +503,16 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                       5
                     </span>
                     <h3 className="text-base font-bold text-slate-900">
-                      Optional Marrakech Extras
+                      Add Tours & Excursions (Optional)
                     </h3>
                   </div>
                   <span className="text-xs text-slate-500">
-                    Real, transparent activities
+                    Want your driver to take you exploring?
                   </span>
                 </div>
+                <p className="text-xs text-slate-500 mt-1">
+                  If you want your chauffeur to take you to the Medina or out into the Agafay stone desert, you can add an optional excursion:
+                </p>
 
                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {EXTRAS_OPTIONS.map((e) => {
@@ -537,7 +522,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                       <div
                         key={e.id}
                         onClick={() => toggleExtra(e.id)}
-                        className={`p-3 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
+                        className={`p-3.5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
                           isSelected
                             ? 'border-[#0284C7] bg-sky-50/40'
                             : 'border-slate-200 hover:border-slate-300'
@@ -560,7 +545,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                           </p>
                         </div>
                         <div className="mt-3 pt-2 border-t border-slate-100 text-xs font-semibold text-slate-800">
-                          £{e.priceGBP} / person
+                          +£{e.priceGBP} / person
                         </div>
                       </div>
                     );
@@ -637,9 +622,9 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Palmeraie Stay ({nights} nights):</span>
+                    <span>Stay ({nights} nights):</span>
                     <span className="font-semibold text-slate-800">
-                      {selectedStay.name.split(' ')[0]} {selectedStay.name.split(' ')[1]} (£{totalStayCost})
+                      {selectedStay.name} (£{totalStayCost})
                     </span>
                   </div>
                   {selectedStay.freeGuestsIncluded > 0 && (
@@ -651,7 +636,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   <div className="flex items-center justify-between">
                     <span>4x Private Transfers:</span>
                     <span className="font-semibold text-slate-800">
-                      {selectedRide.vehicle} ({totalRideCost === 0 ? 'Included' : `+£${totalRideCost}`})
+                      Private Chauffeur (100% Included)
                     </span>
                   </div>
                   {selectedExtras.length > 0 && (

@@ -91,158 +91,130 @@ export const TREATMENTS: TreatmentOption[] = [
 
 export const STAY_OPTIONS: StayOption[] = [
   {
-    id: 'essential-palmeraie',
-    name: 'Essential Palmeraie Garden Suite',
-    tier: 'budget',
-    basePricePerNightGBP: 70,
-    freeGuestsIncluded: 0,
-    description: 'Serene, clean Palmeraie garden residence surrounded by date palms, 10 minutes from the clinic.',
-    perks: ['Fresh Moroccan breakfast', 'Peaceful pool access', 'Extra nights at 50% OFF (£35/night)']
-  },
-  {
-    id: 'comfort-palmeraie',
-    name: 'Comfort Palmeraie Villa & Pool (Mid-Level)',
-    tier: 'comfort',
-    basePricePerNightGBP: 110,
-    freeGuestsIncluded: 2,
-    description: 'Boutique villa retreat in Palmeraie with private sun terrace and lagoon swimming pool. BRING 2 GUESTS FOR FREE!',
-    perks: [
-      '★ Bring 2 people to stay with you for FREE',
-      'Courtyard breakfast & poolside loungers',
-      'Extra nights at 50% OFF (£55/night)'
-    ]
-  },
-  {
-    id: 'luxury-palmeraie',
-    name: '5★ Luxury Palmeraie Oasis & Suite (Luxury Level)',
-    tier: 'luxury',
-    basePricePerNightGBP: 180,
-    freeGuestsIncluded: 2,
-    description: 'Prestigious 5-star Palmeraie resort suite with private terrace, Olympic-sized swimming pool, and butler service. BRING 2 GUESTS FOR FREE!',
-    perks: [
-      '★ Bring 2 people to stay with you for FREE',
-      'Gourmet buffet breakfast & VIP concierge',
-      'Extra nights at 50% OFF (£90/night)'
-    ]
-  },
-  {
     id: 'no-stay',
     name: 'Self-Arranged Accommodation',
     tier: 'none',
     basePricePerNightGBP: 0,
     freeGuestsIncluded: 0,
-    description: 'Book your own hotel, Airbnb, or villa in Marrakech. All 4 VIP chauffeur transfers remain 100% included.',
-    perks: ['4 VIP chauffeur transfers still 100% included', 'Schedule coordinated to your location']
+    description: 'Book your own hotel, Airbnb, or riad in Marrakech. All private chauffeur transfers remain 100% included.',
+    perks: ['£0 extra accommodation cost', 'Private chauffeur transfers included']
+  },
+  {
+    id: 'city-center-1room',
+    name: 'Dent House City Center (1-Room House)',
+    tier: 'comfort',
+    basePricePerNightGBP: 70,
+    freeGuestsIncluded: 0,
+    description: 'Modern, private 1-room residence in Marrakech city center, 5–10 minutes from the clinic and restaurants.',
+    perks: ['Private 1-room city home', 'Central Marrakech location', 'Extra nights at 50% OFF (£35/nt)']
+  },
+  {
+    id: 'city-center-2room',
+    name: 'Deluxe 2-Room City House (Upgrade)',
+    tier: 'luxury',
+    basePricePerNightGBP: 110,
+    freeGuestsIncluded: 2,
+    description: 'Spacious 2-room residence in prime city center. Upgrade with a small fee and bring 2 companions to stay for FREE!',
+    perks: [
+      '★ Bring 2 people to stay with you for FREE',
+      'Spacious 2-room city residence',
+      'Prime central location near clinic',
+      'Extra nights at 50% OFF (£55/nt)'
+    ]
   }
 ];
 
 export const RIDE_OPTIONS: RideOption[] = [
   {
-    id: 'standard',
-    name: 'Standard Private Ride',
+    id: 'included-chauffeur',
+    name: 'Private Chauffeur Transfers',
     tier: 'standard',
-    vehicle: 'Peugeot 308 / 208 Sedan',
+    vehicle: 'Private Air-Conditioned Vehicle & Dedicated Chauffeur',
     surchargeGBP: 0,
-    description: 'Clean air-conditioned private vehicle with courteous driver for all 4 transfers.'
-  },
-  {
-    id: 'comfort',
-    name: 'Comfort SUV Transfer',
-    tier: 'comfort',
-    vehicle: 'Dacia Duster / Renault SUV',
-    surchargeGBP: 40,
-    description: 'Spacious high-riding SUV with elevated suspension and extra boot luggage room.'
-  },
-  {
-    id: 'premium',
-    name: 'VIP Executive Mercedes-Benz',
-    tier: 'premium',
-    vehicle: 'Mercedes-Benz E-Class / V-Class Chauffeur',
-    surchargeGBP: 95,
-    description: 'Luxury executive chauffeur with chilled bottled water and meet-and-greet terminal service.'
+    description: '100% included in treatment: Airport pickup, clinic appointments return, and departure transfer.'
   }
 ];
 
 export const EXTRAS_OPTIONS: ExtraOption[] = [
   {
-    id: 'hammam',
-    name: 'Traditional Royal Moroccan Hammam & Argan Spa',
-    priceGBP: 60,
-    description: 'Black soap body scrub, eucalyptus steam bath, and relaxing argan oil massage to unwind between appointments.'
+    id: 'medina-tour',
+    name: 'Historic Medina & Souks Guided Tour',
+    priceGBP: 45,
+    description: 'Private driver transfer to Medina with guided walking tour through historic quarters, Bahia Palace, and artisan souks.'
   },
   {
-    id: 'desert-dinner',
-    name: 'Agafay Desert Sunset Dinner & Stargazing',
-    priceGBP: 85,
-    description: 'Scenic 40-minute drive to the Agafay stone desert for a candlelight Moroccan tagine dinner with fire show under the stars.'
+    id: 'agafay-tour',
+    name: 'Agafay Desert Sunset Excursion & Dinner',
+    priceGBP: 75,
+    description: 'Private chauffeur scenic drive to Agafay stone desert for sunset dinner with traditional Moroccan tagine and stargazing.'
   },
   {
-    id: 'medina-guide',
-    name: 'Private Guided Historic Medina & Jardin Majorelle Tour',
-    priceGBP: 50,
-    description: '3-hour private walking tour through hidden artisan quarters, Yves Saint Laurent gardens, and spice markets.'
+    id: 'atlas-tour',
+    name: 'Atlas Mountains & Ourika Valley Day Trip',
+    priceGBP: 65,
+    description: 'Private scenic day tour through the High Atlas Mountains, Berber riverside villages, and waterfalls.'
   }
 ];
 
 export const PRECONFIGURED_PACKAGES = [
   {
-    id: 'duo-escape',
-    badge: 'Best Value For Couples & Friends',
+    id: 'solo-package',
+    badge: 'Solo Traveler',
+    name: 'The Solo Smile Escape',
+    partyType: 'solo',
+    treatmentId: 'veneers',
+    pricePerPersonGBP: 3590,
+    totalPriceGBP: 3590,
+    ukHarleyStreetPerPerson: 14500,
+    totalSaving: 10910,
+    stayName: 'Dent House City Center (1-Room House)',
+    rideName: 'Private Chauffeur Transfers Included',
+    perks: [
+      'Full set of 20 Premium Porcelain Veneers',
+      '2 Nights Dent House City Center House',
+      'Private Chauffeur Transfers Included (Airport & Clinic)',
+      '5-Year Comprehensive Warranty & digital handover',
+      'Package covers treatment, stay & chauffeur (Flights not included)'
+    ]
+  },
+  {
+    id: 'duo-package',
+    badge: 'Best Value (Couples & Friends)',
     name: 'The Duo Smile Holiday',
     partyType: 'duo',
     treatmentId: 'veneers',
-    pricePerPersonGBP: 2932,
-    totalPriceGBP: 5865,
+    pricePerPersonGBP: 2990,
+    totalPriceGBP: 5980,
     ukHarleyStreetPerPerson: 14500,
-    totalSaving: 23135,
-    stayName: 'Comfort Palmeraie Villa & Pool (Mid-Level)',
-    rideName: '4 Private Chauffeur Transfers Included',
+    totalSaving: 23020,
+    stayName: 'Dent House City Center (1-Room House)',
+    rideName: 'Private Chauffeur Transfers Included',
     perks: [
-      '20 Premium Porcelain Veneers each',
-      '15% Group Discount on treatments',
-      '4 Private Chauffeur Transfers Included (Airport & Clinic)',
-      '5-Year Comprehensive Warranty & international documentation',
-      'Package covers treatment, stay & chauffeur (Flights not included)'
+      '20 Premium Porcelain Veneers EACH (2 patients)',
+      'Save £600/person by traveling together',
+      '2 Nights City Center Stay Included',
+      'All Private Chauffeur Transfers Included',
+      '5-Year Comprehensive Replacement Warranty'
     ]
   },
   {
-    id: 'solo-executive',
-    badge: 'Popular Weekend Trip',
-    name: 'The 48H Solo Palmeraie Transformation',
-    partyType: 'solo',
+    id: 'trio-package',
+    badge: 'Maximum Group Savings',
+    name: 'The Trio Smile Getaway',
+    partyType: 'trio',
     treatmentId: 'veneers',
-    pricePerPersonGBP: 3810,
-    totalPriceGBP: 3810,
+    pricePerPersonGBP: 2750,
+    totalPriceGBP: 8250,
     ukHarleyStreetPerPerson: 14500,
-    totalSaving: 10690,
-    stayName: '2 Nights 5★ Luxury Palmeraie Oasis',
-    rideName: 'VIP Private Chauffeur Included',
+    totalSaving: 35250,
+    stayName: 'Deluxe 2-Room City House (Stay Together Free)',
+    rideName: 'Private Chauffeur Transfers Included',
     perks: [
-      '20 Hand-layered Premium Porcelain Veneers',
-      '5-Star Palmeraie Luxury Stay (2 days)',
-      'Option to bring 2 guests to stay for FREE',
-      '5-Year Warranty with digital authentication',
-      'Package covers treatment, stay & chauffeur (Flights not included)'
-    ]
-  },
-  {
-    id: 'solo-bonding',
-    badge: 'Minimally Invasive Weekend Glow',
-    name: 'The Natural Composite Bonding Escape',
-    partyType: 'solo',
-    treatmentId: 'bonding',
-    pricePerPersonGBP: 1990,
-    totalPriceGBP: 1990,
-    ukHarleyStreetPerPerson: 6500,
-    totalSaving: 4510,
-    stayName: '2 Nights Essential Palmeraie Garden Suite (£70/nt)',
-    rideName: 'Private Chauffeur Shuttles Included',
-    perks: [
-      '20 Composite Bondings (No drilling of enamel)',
-      '1-Year Warranty + Free 6-Month Check-Up',
-      '2 Nights Essential Palmeraie Garden Suite',
-      'Completed in 2 comfortable days',
-      'Package covers treatment, stay & chauffeur (Flights not included)'
+      '20 Premium Porcelain Veneers EACH (3 patients)',
+      'Save £840/person by coming as a group',
+      'Upgraded 2-Room City Residence (Companions stay free)',
+      'All Private Chauffeur Transfers Included',
+      '5-Year Comprehensive Replacement Warranty'
     ]
   }
 ];

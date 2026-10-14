@@ -84,8 +84,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
                 </Link>
               </li>
               <li>
+                <Link to="/aftercare" className="hover:text-white transition-colors">
+                  Aftercare & Longevity Guide
+                </Link>
+              </li>
+              <li>
                 <Link to="/journey" className="hover:text-white transition-colors">
-                  2-Day Journey & Palmeraie Stays
+                  2-Day Journey & Clinic
                 </Link>
               </li>
               <li>

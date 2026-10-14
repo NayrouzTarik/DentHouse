@@ -18,6 +18,7 @@ import { TreatmentsPage } from './pages/TreatmentsPage';
 import { PackagesPage } from './pages/PackagesPage';
 import { CalculatorPage } from './pages/CalculatorPage';
 import { StoriesPage } from './pages/StoriesPage';
+import { AftercarePage } from './pages/AftercarePage';
 import { JourneyPage } from './pages/JourneyPage';
 import { FaqPage } from './pages/FaqPage';
 
@@ -80,6 +81,10 @@ export default function App() {
             <Route
               path="/stories"
               element={<StoriesPage onOpenConsultation={handleOpenConsultation} />}
+            />
+            <Route
+              path="/aftercare"
+              element={<AftercarePage onOpenConsultation={handleOpenConsultation} />}
             />
             <Route
               path="/journey"
