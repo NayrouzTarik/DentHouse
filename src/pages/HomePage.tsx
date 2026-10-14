@@ -47,11 +47,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                to="/plan"
+                to="/calculator"
                 className="inline-flex items-center gap-2 px-5 py-2.5 text-xs sm:text-sm font-semibold rounded-xl bg-[#0284C7] text-white hover:bg-[#0369A1] shadow-xs transition-all"
               >
                 <Sliders className="w-4 h-4" />
-                <span>Build Custom Plan</span>
+                <span>Price Calculator</span>
               </Link>
             </div>
           </div>
@@ -94,7 +94,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
 
                 <div className="mt-8 pt-4 flex items-center gap-3">
                   <Link
-                    to="/plan"
+                    to="/calculator"
                     className="flex-1 py-3 px-4 rounded-xl text-center text-xs sm:text-sm font-bold bg-[#0284C7] hover:bg-[#0369A1] text-white shadow-xs transition-all"
                   >
                     Calculate Package

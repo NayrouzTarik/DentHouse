@@ -69,22 +69,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/plan" className="hover:text-white transition-colors">
-                  5-Step Custom Plan Calculator
+                <Link to="/calculator" className="hover:text-white transition-colors">
+                  Treatment & Stay Calculator
                 </Link>
               </li>
               <li>
-                <Link to="/plan" className="hover:text-white transition-colors">
+                <Link to="/calculator" className="hover:text-white transition-colors">
                   Palmeraie Suites (From £70/Night)
                 </Link>
               </li>
               <li>
-                <Link to="/plan" className="hover:text-white transition-colors">
+                <Link to="/calculator" className="hover:text-white transition-colors">
                   Bring 2 Guests for Free (Mid & Luxury)
                 </Link>
               </li>
               <li>
-                <Link to="/plan" className="hover:text-white transition-colors">
+                <Link to="/calculator" className="hover:text-white transition-colors">
                   Extra Nights at 50% OFF
                 </Link>
               </li>

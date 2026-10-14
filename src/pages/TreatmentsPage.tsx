@@ -18,7 +18,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = ({
 
   const handleSelectTreatment = (treatmentId: string) => {
     onSelectTreatmentForCalculator(treatmentId);
-    navigate('/plan');
+    navigate('/calculator');
   };
 
   return (
@@ -63,11 +63,11 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = ({
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <button
-                  onClick={() => navigate('/plan')}
+                  onClick={() => navigate('/calculator')}
                   className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-slate-900 bg-white hover:bg-slate-100 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
                 >
                   <Sliders className="w-4 h-4 text-[#0284C7]" />
-                  <span>Build Your Package Plan</span>
+                  <span>Open Price Calculator</span>
                 </button>
                 <a
                   href={getWhatsAppUrl("Hello, I would like to request a free photo assessment for cosmetic dentistry at Dent House Marrakech.")}

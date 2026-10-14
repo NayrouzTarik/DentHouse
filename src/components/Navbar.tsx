@@ -15,7 +15,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
   const navLinks = [
     { label: 'Home', path: '/' },
     { label: 'Treatments', path: '/treatments' },
-    { label: 'Build Your Plan', path: '/plan' },
+    { label: 'Calculator', path: '/calculator' },
     { label: '2-Day Journey & Clinic', path: '/journey' },
     { label: 'Patient FAQs', path: '/faqs' },
   ];

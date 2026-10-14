@@ -4,7 +4,6 @@ import {
   STAY_OPTIONS,
   RIDE_OPTIONS,
   EXTRAS_OPTIONS,
-  PRECONFIGURED_PACKAGES,
   getWhatsAppUrl,
 } from '../data/dentHouseData';
 import {
@@ -19,7 +18,6 @@ import {
   MessageCircle,
   Percent,
   Sliders,
-  Award,
   Calendar,
 } from 'lucide-react';
 
@@ -32,9 +30,6 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
   onOpenConsultationWithPlan,
   initialTreatmentId = 'veneers',
 }) => {
-  // Mode: Curated Packages vs Custom 5-Step Builder
-  const [activeTab, setActiveTab] = useState<'custom' | 'curated'>('custom');
-
   // Step 1: Who is coming
   const [partyType, setPartyType] = useState<'solo' | 'duo' | 'trio'>('duo');
 
@@ -168,52 +163,23 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
     <section id="packages" className="py-20 bg-white border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-                PLANS & PRICING
-              </span>
-              <span className="w-8 h-px bg-[#0284C7]/40" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">
-              Build your 2-day Marrakech package.
-            </h2>
-            <p className="mt-2 text-base text-slate-600 max-w-2xl">
-              All stays located in Palmeraie starting at £70. Extra nights at 50% OFF. Mid & Luxury tiers let you bring 2 guests for free!
-            </p>
+        <div className="max-w-3xl">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
+              CUSTOM PRICE CALCULATOR
+            </span>
+            <span className="w-8 h-px bg-[#0284C7]/40" />
           </div>
-
-          {/* Mode Switcher */}
-          <div className="inline-flex p-1 bg-slate-100 rounded-xl shrink-0">
-            <button
-              onClick={() => setActiveTab('custom')}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer ${
-                activeTab === 'custom'
-                  ? 'bg-white text-slate-900 shadow-sm'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <Sliders className="w-3.5 h-3.5 text-[#0284C7]" />
-              <span>5-Step Custom Plan Builder</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('curated')}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer ${
-                activeTab === 'curated'
-                  ? 'bg-white text-slate-900 shadow-sm'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              <Award className="w-3.5 h-3.5 text-[#0284C7]" />
-              <span>Curated Ready Packages</span>
-            </button>
-          </div>
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">
+            Calculate your custom 2-day Marrakech package.
+          </h2>
+          <p className="mt-2 text-base text-slate-600">
+            Select your treatment, party size, Palmeraie stay duration, and private chauffeur options. Stays start at £70/night with extra nights at 50% OFF!
+          </p>
         </div>
 
-        {/* Tab 1: Custom Plan Builder */}
-        {activeTab === 'custom' && (
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* 5-Step Custom Plan Builder */}
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Steps Column (7 Cols) */}
             <div className="lg:col-span-7 space-y-8">
               {/* STEP 1: Who is coming */}
@@ -754,90 +720,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
               </div>
             </div>
           </div>
-        )}
-
-        {/* Tab 2: Curated Ready Packages */}
-        {activeTab === 'curated' && (
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            {PRECONFIGURED_PACKAGES.map((pkg) => {
-              return (
-                <div
-                  key={pkg.id}
-                  className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
-                >
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#0284C7] bg-sky-50 px-2.5 py-1 rounded-md">
-                      {pkg.badge}
-                    </span>
-
-                    <h3 className="text-xl font-serif font-bold text-slate-900 mt-3">
-                      {pkg.name}
-                    </h3>
-
-                    {/* Price Block */}
-                    <div className="mt-4 pt-4 border-t border-slate-100">
-                      <div className="flex items-baseline gap-1.5">
-                        <span className="text-3xl font-extrabold text-slate-900 font-sans">
-                          £{pkg.pricePerPersonGBP.toLocaleString()}
-                        </span>
-                        <span className="text-xs text-slate-500 font-medium">
-                          / person
-                        </span>
-                      </div>
-                      <div className="text-xs text-slate-500 mt-1">
-                        Total package: £{pkg.totalPriceGBP.toLocaleString()}
-                      </div>
-                      <div className="mt-2 p-2 rounded-lg bg-sky-50 text-slate-700 text-xs flex items-center justify-between">
-                        <span className="text-slate-600">vs UK Private Benchmark:</span>
-                        <span className="font-bold text-[#0284C7]">
-                          £{pkg.totalSaving.toLocaleString()} lower
-                        </span>
-                      </div>
-                      <div className="mt-1 text-[10px] text-amber-800 text-center">
-                        Flights not included. Compare total travel costs.
-                      </div>
-                    </div>
-
-                    {/* Stay & Ride Info */}
-                    <div className="mt-5 space-y-1.5 text-xs text-slate-600 bg-slate-50 p-3 rounded-xl border border-slate-100">
-                      <div className="font-semibold text-slate-800">
-                        {pkg.stayName}
-                      </div>
-                      <div className="text-slate-500">
-                        {pkg.rideName}
-                      </div>
-                    </div>
-
-                    {/* Perks List */}
-                    <ul className="mt-5 space-y-2 text-xs text-slate-700">
-                      {pkg.perks.map((p, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0 mt-0.5" />
-                          <span>{p}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mt-8 pt-5 border-t border-slate-100">
-                    <button
-                      onClick={() => {
-                        setPartyType(pkg.partyType as any);
-                        setTreatmentId(pkg.treatmentId);
-                        setActiveTab('custom');
-                      }}
-                      className="w-full py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold bg-[#0284C7] hover:bg-[#0369A1] text-white transition-all flex items-center justify-center gap-2 cursor-pointer"
-                    >
-                      <span>Select & Customize Plan</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
-    </section>
-  );
-};
+        </div>
+      </section>
+    );
+  };

@@ -15,7 +15,7 @@ import { getWhatsAppUrl } from './data/dentHouseData';
 // Pages
 import { HomePage } from './pages/HomePage';
 import { TreatmentsPage } from './pages/TreatmentsPage';
-import { PlanPage } from './pages/PlanPage';
+import { CalculatorPage } from './pages/CalculatorPage';
 import { JourneyPage } from './pages/JourneyPage';
 import { FaqPage } from './pages/FaqPage';
 
@@ -62,14 +62,15 @@ export default function App() {
               }
             />
             <Route
-              path="/plan"
+              path="/calculator"
               element={
-                <PlanPage
+                <CalculatorPage
                   onOpenConsultationWithPlan={handleOpenConsultationWithPlan}
                   activeTreatmentId={activeTreatmentForCalculator}
                 />
               }
             />
+            <Route path="/plan" element={<Navigate to="/calculator" replace />} />
             <Route
               path="/journey"
               element={<JourneyPage onOpenConsultation={handleOpenConsultation} />}
