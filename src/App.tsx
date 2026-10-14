@@ -4,20 +4,20 @@
  */
 
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { ScrollToTop } from './components/ScrollToTop';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { WhyChooseDentHouse } from './components/WhyChooseDentHouse';
-import { TreatmentsSection } from './components/TreatmentsSection';
-import { PlanCalculator } from './components/PlanCalculator';
-import { YourJourneySection } from './components/YourJourneySection';
-import { TheClinicSection } from './components/TheClinicSection';
-import { SocialProofAndTestimonials } from './components/SocialProofAndTestimonials';
-import { FaqSection } from './components/FaqSection';
-import { DosAndDontsSection } from './components/DosAndDontsSection';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
 import { MessageCircle } from 'lucide-react';
 import { getWhatsAppUrl } from './data/dentHouseData';
+
+// Pages
+import { HomePage } from './pages/HomePage';
+import { TreatmentsPage } from './pages/TreatmentsPage';
+import { PlanPage } from './pages/PlanPage';
+import { JourneyPage } from './pages/JourneyPage';
+import { FaqPage } from './pages/FaqPage';
 
 export default function App() {
   const [consultationModalOpen, setConsultationModalOpen] = useState(false);
@@ -36,94 +36,79 @@ export default function App() {
 
   const handleSelectTreatmentForCalculator = (treatmentId: string) => {
     setActiveTreatmentForCalculator(treatmentId);
-    // Smooth scroll to packages section
-    const elem = document.getElementById('packages');
-    if (elem) {
-      elem.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleExplorePackages = () => {
-    const elem = document.getElementById('packages');
-    if (elem) {
-      elem.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-sky-100 selection:text-sky-900">
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-sky-100 selection:text-sky-900">
+        {/* Navigation Bar */}
+        <Navbar onOpenConsultation={handleOpenConsultation} />
 
+        {/* Dynamic Route Pages */}
+        <main className="flex-1">
+          <Routes>
+            <Route
+              path="/"
+              element={<HomePage onOpenConsultation={handleOpenConsultation} />}
+            />
+            <Route
+              path="/treatments"
+              element={
+                <TreatmentsPage
+                  onOpenConsultation={handleOpenConsultation}
+                  onSelectTreatmentForCalculator={handleSelectTreatmentForCalculator}
+                />
+              }
+            />
+            <Route
+              path="/plan"
+              element={
+                <PlanPage
+                  onOpenConsultationWithPlan={handleOpenConsultationWithPlan}
+                  activeTreatmentId={activeTreatmentForCalculator}
+                />
+              }
+            />
+            <Route
+              path="/journey"
+              element={<JourneyPage onOpenConsultation={handleOpenConsultation} />}
+            />
+            <Route
+              path="/faqs"
+              element={<FaqPage onOpenConsultation={handleOpenConsultation} />}
+            />
+            {/* Fallback to Home */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
 
-      {/* Strict 3-zone Header Navigation */}
-      <Navbar
-        onOpenConsultation={handleOpenConsultation}
-        activeSection="home"
-      />
+        {/* Global Footer */}
+        <Footer onOpenConsultation={handleOpenConsultation} />
 
-      {/* Main Content */}
-      <main className="flex-1">
-        {/* Hero Section */}
-        <Hero
-          onOpenConsultation={handleOpenConsultation}
-          onExplorePackages={handleExplorePackages}
+        {/* Consultation & Smile Review Modal */}
+        <ConsultationModal
+          isOpen={consultationModalOpen}
+          onClose={() => setConsultationModalOpen(false)}
+          prefilledPlan={selectedPlanDetails}
         />
 
-        {/* Why Choose Dent House (Inspo Mobile Pillars & Trust Reasons) */}
-        <WhyChooseDentHouse onOpenConsultation={handleOpenConsultation} />
-
-        {/* Treatments Section (Strictly Composite Bonding & Premium Porcelain Veneers) */}
-        <TreatmentsSection
-          onSelectTreatment={handleSelectTreatmentForCalculator}
-          onOpenConsultation={handleOpenConsultation}
-        />
-
-        {/* 5-Step Custom Plan & Pricing Calculator (Palmeraie stays, extra nights -50%, bring 2 guests free) */}
-        <PlanCalculator
-          onOpenConsultationWithPlan={handleOpenConsultationWithPlan}
-          initialTreatmentId={activeTreatmentForCalculator}
-        />
-
-        {/* Your 2-Day Marrakech Journey (Luxury Palmeraie Stays & 4 Private Transfers) */}
-        <YourJourneySection onOpenConsultation={handleOpenConsultation} />
-
-        {/* The Clinic (Premium Materials, 3Shape Trios 5, Zero Laser) */}
-        <TheClinicSection onOpenConsultation={handleOpenConsultation} />
-
-        {/* What to Do & What Not to Do (Clear Dos & Don'ts + 1yr/5yr Warranties) */}
-        <DosAndDontsSection />
-
-        {/* Real UK & International Patient Reviews & Testimonials */}
-        <SocialProofAndTestimonials onOpenConsultation={handleOpenConsultation} />
-
-        {/* Patient FAQs */}
-        <FaqSection onOpenConsultation={handleOpenConsultation} />
-      </main>
-
-      {/* Footer */}
-      <Footer onOpenConsultation={handleOpenConsultation} />
-
-      {/* Consultation & Smile Review Modal */}
-      <ConsultationModal
-        isOpen={consultationModalOpen}
-        onClose={() => setConsultationModalOpen(false)}
-        prefilledPlan={selectedPlanDetails}
-      />
-
-      {/* Floating Sticky Quick Action for Mobile/Desktop */}
-      <div className="fixed bottom-5 right-5 z-40">
-        <a
-          href={getWhatsAppUrl("Hello, I would like to request a free consultation at Dent House Marrakech.")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2.5 px-4 py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all cursor-pointer active:scale-95 group"
-          aria-label="Chat with Concierge on WhatsApp"
-        >
-          <MessageCircle className="w-5 h-5 fill-white/20 shrink-0" />
-          <span className="text-xs sm:text-sm font-bold pr-1">
-            Chat on WhatsApp
-          </span>
-        </a>
+        {/* Floating Quick WhatsApp Action */}
+        <div className="fixed bottom-5 right-5 z-40">
+          <a
+            href={getWhatsAppUrl("Hello, I would like to request a free consultation at Dent House Marrakech.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2.5 px-4 py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all cursor-pointer active:scale-95 group"
+            aria-label="Chat with Concierge on WhatsApp"
+          >
+            <MessageCircle className="w-5 h-5 fill-white/20 shrink-0" />
+            <span className="text-xs sm:text-sm font-bold pr-1">
+              Chat on WhatsApp
+            </span>
+          </a>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }

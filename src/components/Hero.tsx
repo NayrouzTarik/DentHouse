@@ -1,21 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MessageCircle, ArrowRight, ShieldCheck, Clock, Plane, Sparkles, CheckCircle2 } from 'lucide-react';
 import { getWhatsAppUrl } from '../data/dentHouseData';
 
 interface HeroProps {
-  onOpenConsultation: () => void;
-  onExplorePackages: () => void;
+  onOpenConsultation?: () => void;
+  onExplorePackages?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onExplorePackages }) => {
-  const handleScrollToTreatments = () => {
-    const elem = document.getElementById('treatments');
-    if (elem) {
-      elem.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      onExplorePackages();
-    }
-  };
+export const Hero: React.FC<HeroProps> = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-sky-50/60 via-white to-white pt-10 pb-16 lg:pt-16 lg:pb-24">
@@ -54,13 +47,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onExplorePackage
             <span>Book Your Free Consultation</span>
           </a>
 
-          <button
-            onClick={handleScrollToTreatments}
+          <Link
+            to="/treatments"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm sm:text-base font-semibold text-[#0284C7] bg-white hover:bg-sky-50/70 border border-sky-200 hover:border-sky-300 rounded-xl transition-all cursor-pointer whitespace-nowrap shadow-2xs"
           >
             <span>Explore Our Treatments</span>
             <ArrowRight className="w-4 h-4 text-[#0284C7]" />
-          </button>
+          </Link>
         </div>
 
         {/* Quick Reassurance Trust Strip */}

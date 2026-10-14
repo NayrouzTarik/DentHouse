@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { DentHouseLogo } from './DentHouseLogo';
 import { MessageCircle, Menu, X, ArrowUpRight } from 'lucide-react';
 import { getWhatsAppUrl } from '../data/dentHouseData';
 
 interface NavbarProps {
-  onOpenConsultation: () => void;
-  activeSection: string;
+  onOpenConsultation?: () => void;
+  activeSection?: string;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation, activeSection }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Treatments', href: '#treatments' },
-    { label: 'Packages & Pricing', href: '#packages' },
-    { label: '2-Day Journey', href: '#journey' },
-    { label: 'Stain & Care Guide', href: '#clinical-care' },
-    { label: 'The Clinic', href: '#clinic' },
-    { label: 'Patient FAQs', href: '#faqs' },
+    { label: 'Home', path: '/' },
+    { label: 'Treatments', path: '/treatments' },
+    { label: 'Build Your Plan', path: '/plan' },
+    { label: '2-Day Journey & Clinic', path: '/journey' },
+    { label: 'Patient FAQs', path: '/faqs' },
   ];
 
   return (
@@ -25,21 +25,36 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation, activeSectio
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-8 h-20">
           {/* Zone 1: Single text/brand mark */}
-          <a href="#" className="flex items-center shrink-0 group py-1">
+          <Link to="/" className="flex items-center shrink-0 group py-1">
             <DentHouseLogo size="md" />
-          </a>
+          </Link>
 
           {/* Zone 2: 4-5 single-line clean text links */}
-          <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+          <nav className="hidden md:flex items-center gap-7 text-sm font-medium">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="whitespace-nowrap hover:text-[#0284C7] transition-colors py-1 relative group"
+              <NavLink
+                key={link.path}
+                to={link.path}
+                end={link.path === '/'}
+                className={({ isActive }) =>
+                  `whitespace-nowrap transition-colors py-1 relative group ${
+                    isActive
+                      ? 'text-[#0284C7] font-semibold'
+                      : 'text-slate-600 hover:text-[#0284C7]'
+                  }`
+                }
               >
-                <span>{link.label}</span>
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0284C7] transition-all group-hover:w-full rounded-full" />
-              </a>
+                {({ isActive }) => (
+                  <>
+                    <span>{link.label}</span>
+                    <span
+                      className={`absolute bottom-0 left-0 h-0.5 bg-[#0284C7] rounded-full transition-all ${
+                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                    />
+                  </>
+                )}
+              </NavLink>
             ))}
           </nav>
 
@@ -73,14 +88,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation, activeSectio
         <div className="md:hidden border-t border-slate-100 bg-white px-5 pt-3 pb-6 shadow-xl animate-in fade-in slide-in-from-top-2 duration-200">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <NavLink
+                key={link.path}
+                to={link.path}
+                end={link.path === '/'}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 text-base font-medium text-slate-700 hover:text-[#0284C7] hover:bg-sky-50 rounded-lg transition-colors"
+                className={({ isActive }) =>
+                  `px-3 py-2 text-base font-medium rounded-lg transition-colors ${
+                    isActive
+                      ? 'text-[#0284C7] bg-sky-50 font-bold'
+                      : 'text-slate-700 hover:text-[#0284C7] hover:bg-sky-50/60'
+                  }`
+                }
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
             <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
               <a

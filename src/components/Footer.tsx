@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { DentHouseLogo } from './DentHouseLogo';
 import { MessageCircle, Phone, MapPin, Mail, ShieldCheck, Heart } from 'lucide-react';
 import { getWhatsAppUrl, CLINIC_WHATSAPP_DISPLAY } from '../data/dentHouseData';
@@ -34,29 +35,29 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="#treatments" className="hover:text-white transition-colors">
+                <Link to="/treatments" className="hover:text-white transition-colors">
                   Premium Porcelain Veneers (5-Yr Warranty)
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#treatments" className="hover:text-white transition-colors">
-                  Composite Bonding (1-Yr Warranty + 6-Mo Checkup)
-                </a>
+                <Link to="/treatments" className="hover:text-white transition-colors">
+                  Composite Bonding (1-Yr Warranty)
+                </Link>
               </li>
               <li>
-                <a href="#treatments" className="hover:text-white transition-colors">
+                <Link to="/journey" className="hover:text-white transition-colors">
                   Trios® 3Shape Digital Intraoral Scanning
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#treatments" className="hover:text-white transition-colors">
-                  Conservative Enamel-Preserving Protocol
-                </a>
+                <Link to="/treatments" className="hover:text-white transition-colors">
+                  Conservative Enamel-Preserving Care
+                </Link>
               </li>
               <li>
-                <a href="#treatments" className="hover:text-white transition-colors">
-                  Zero Laser / Zero Over-Drilling Guarantee
-                </a>
+                <Link to="/faqs" className="hover:text-white transition-colors">
+                  Patient FAQs & Care Guide
+                </Link>
               </li>
             </ul>
           </div>
@@ -68,29 +69,29 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="#packages" className="hover:text-white transition-colors">
+                <Link to="/plan" className="hover:text-white transition-colors">
+                  5-Step Custom Plan Calculator
+                </Link>
+              </li>
+              <li>
+                <Link to="/plan" className="hover:text-white transition-colors">
                   Palmeraie Suites (From £70/Night)
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#packages" className="hover:text-white transition-colors">
+                <Link to="/plan" className="hover:text-white transition-colors">
                   Bring 2 Guests for Free (Mid & Luxury)
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#packages" className="hover:text-white transition-colors">
+                <Link to="/plan" className="hover:text-white transition-colors">
                   Extra Nights at 50% OFF
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#packages" className="hover:text-white transition-colors">
-                  The Duo Smile Holiday (Save 15%)
-                </a>
-              </li>
-              <li>
-                <a href="#journey" className="hover:text-white transition-colors">
-                  4 Included Chauffeur Shuttles
-                </a>
+                <Link to="/journey" className="hover:text-white transition-colors">
+                  2-Day Journey & 4 Included Transfers
+                </Link>
               </li>
             </ul>
           </div>
