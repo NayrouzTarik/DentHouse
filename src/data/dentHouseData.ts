@@ -870,7 +870,7 @@ export const FAQS = [
   },
   {
     q: 'What treatments do you offer at Dent House Marrakech?',
-    a: 'Our core specialities and bundled travel packages focus on complete smile transformations: (1) Direct Composite Bonding (£1,850 for 20 teeth, including a 2 night luxury stay) and (2) Handcrafted Porcelain Veneers (£3,450 for 20 teeth, including a 4 night luxury stay). Beyond aesthetic makeovers, as a state-of-the-art clinic, we provide a full spectrum of dental care that UK patients often find prohibitively expensive privately back home: Dental Implants (Swiss/German titanium), Full-Arch Restorations, Surgical Wisdom Teeth Extractions, High-Strength Zirconia & E.max Crowns, Specialist Root Canal Therapy, Gum Contouring, and In-Clinic Laser Teeth Whitening. If you need complementary dental work alongside your smile makeover, send us your dental notes or X-rays on WhatsApp for a personalized assessment.'
+    a: 'Our core specialities and bundled travel packages focus on complete smile makeovers: Direct Composite Bonding (including a 2 night luxury stay) and Handcrafted E.max Porcelain Veneers (including a 4 night luxury stay). Beyond cosmetic transformations, as a comprehensive modern dental center, we offer a full suite of advanced clinical treatments: Dental Implants (Swiss & German titanium), Full-Arch Restorations, Surgical Wisdom Teeth Extractions, High-Strength Zirconia & E.max Crowns, Specialist Root Canal Therapy, Gum Contouring, and In-Clinic Laser Whitening. If you require additional dental care alongside your smile makeover, message our team on WhatsApp for a personalized assessment.'
   },
   {
     q: 'How does accommodation work in Marrakech? Can I bring guests?',
