@@ -683,7 +683,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>4 Private Chauffeur Transfers included in every plan</span>
+                    <span>Private Chauffeur Transfers included with all packages</span>
                   </div>
                   <div className="mt-2 p-2 rounded-lg bg-amber-50 border border-amber-200/60 text-[10px] text-amber-900 leading-snug">
                     Your package includes the accommodation and services explicitly listed in your selected offer. <strong>Flights are not included.</strong>

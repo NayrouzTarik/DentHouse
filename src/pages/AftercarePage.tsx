@@ -52,7 +52,7 @@ export const AftercarePage: React.FC<AftercarePageProps> = () => {
                       <h3 className="text-xl font-serif font-bold text-slate-900">
                         E.max Porcelain Veneers
                       </h3>
-                      <span className="text-xs text-slate-500">Medical-Grade Ceramic Shields (4 Days)</span>
+                      <span className="text-xs text-slate-500">Medical-Grade Ceramic Shields (4 Night Luxury Stay)</span>
                     </div>
                   </div>
                   <span className="text-sm font-extrabold text-[#0284C7] bg-sky-100/80 px-3 py-1.5 rounded-full border border-sky-200">
@@ -84,9 +84,9 @@ export const AftercarePage: React.FC<AftercarePageProps> = () => {
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-[#0284C7] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-slate-900">Expected Lifespan: 15–20+ Years:</strong>
+                      <strong className="text-slate-900">Expected Lifespan: 10 to 15 Years:</strong>
                       <p className="text-xs text-slate-600 mt-0.5">
-                        Porcelain is non-porous and harder than natural enamel. It is 100% stain-proof against black coffee, red wine, and everyday foods.
+                        E.max lithium disilicate has a clinically established lifespan of 10 to 15 years (maximum 15 years) with proper oral hygiene and regular dental checkups. It is non-porous and highly stain-resistant against coffee, red wine, and everyday foods.
                       </p>
                     </div>
                   </div>
@@ -121,7 +121,7 @@ export const AftercarePage: React.FC<AftercarePageProps> = () => {
                       <h3 className="text-xl font-serif font-bold text-slate-900">
                         Composite Bonding
                       </h3>
-                      <span className="text-xs text-slate-500">Direct Chairside Aesthetic Sculpting (2 Days)</span>
+                      <span className="text-xs text-slate-500">Direct Chairside Aesthetic Sculpting (2 Night Luxury Stay)</span>
                     </div>
                   </div>
                   <span className="text-sm font-extrabold text-emerald-800 bg-emerald-100 px-3 py-1.5 rounded-full border border-emerald-200">

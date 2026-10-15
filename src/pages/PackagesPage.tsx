@@ -28,7 +28,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
           Transparent prices including your cosmetic treatment, central Marrakech house stay, and dedicated private chauffeur. Flights not included.
         </p>
 
-        {/* Treatment Tab Switcher: Composite Bonding (2 Days) vs Emax (4 Days) */}
+        {/* Treatment Tab Switcher */}
         <div className="mt-8 inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200/80 max-w-md w-full">
           <button
             type="button"
@@ -41,12 +41,9 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
           >
             <span className="flex items-center gap-1.5">
               <span>Composite Bonding</span>
-              <span className="text-[10px] font-semibold bg-sky-100 text-[#0284C7] px-2 py-0.2 rounded-full">
-                2 Days
-              </span>
             </span>
             <span className="text-[11px] font-normal text-slate-400">
-              Zero drilling · 1-Yr Warranty
+              Zero drilling · Natural aesthetics
             </span>
           </button>
 
@@ -61,12 +58,9 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
           >
             <span className="flex items-center gap-1.5">
               <span>E.max Porcelain Veneers</span>
-              <span className="text-[10px] font-semibold bg-sky-100 text-[#0284C7] px-2 py-0.2 rounded-full">
-                4 Days
-              </span>
             </span>
             <span className="text-[11px] font-normal text-slate-400">
-              Lab-crafted · 5-Yr Warranty
+              Lab-crafted ceramic shields
             </span>
           </button>
         </div>
@@ -75,8 +69,8 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
           <Clock className="w-3.5 h-3.5 text-[#0284C7]" />
           <span>
             {isVeneers
-              ? 'E.max requires 4 days for precision digital laboratory crafting and master finishing.'
-              : 'Composite Bonding is sculpted chairside in 2 comfortable days without drilling natural enamel.'}
+              ? 'E.max includes a 4 night luxury stay for precision digital laboratory crafting and master finishing.'
+              : 'Composite Bonding is sculpted chairside with a 2 night luxury stay without drilling natural enamel.'}
           </span>
         </div>
       </div>
@@ -164,14 +158,14 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
                   <span className="text-xs text-slate-500 font-medium">/ person</span>
                 </div>
                 <div className="text-xs text-slate-500 mt-1">
-                  {isVeneers ? 'Custom 4-Day E.max Package' : 'Custom 2-Day Bonding Package'}
+                  {isVeneers ? 'Custom 4-Night Luxury Plan' : 'Custom 2-Night Luxury Plan'}
                 </div>
               </div>
 
               <p className="mt-4 text-xs text-slate-600 leading-relaxed">
                 {isVeneers
-                  ? 'Build your personalized 4-day trip: customize teeth count, house stay duration (extra nights 50% off), companion guests, and desert tours.'
-                  : 'Build your personalized 2-day trip: zero drilling, customize house stay duration (extra nights 50% off), companion guests, and desert tours.'}
+                  ? 'Build your personalized 4-night luxury stay: customize teeth count, house stay duration (extra nights 50% off), companion guests, and desert tours.'
+                  : 'Build your personalized 2-night luxury stay: zero drilling, customize house stay duration (extra nights 50% off), companion guests, and desert tours.'}
               </p>
 
               <ul className="mt-4 space-y-2 text-xs text-slate-700">
@@ -179,16 +173,16 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
                   <Check className="w-3.5 h-3.5 text-[#0284C7]" />
                   <span>
                     {isVeneers
-                      ? '20 E.max Veneers (5-Year Warranty)'
-                      : '20 Composite Bondings (1-Yr Warranty + Review)'}
+                      ? '20 E.max Veneers (Dedicated Clinical Care)'
+                      : '20 Composite Bondings (Dedicated Review)'}
                   </span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-3.5 h-3.5 text-[#0284C7]" />
                   <span>
                     {isVeneers
-                      ? '4 Days for digital lab crafting'
-                      : '2 Days quick turnaround (48 Hours)'}
+                      ? '4 Night luxury stay for digital lab crafting'
+                      : '2 Night luxury stay with VIP transfers'}
                   </span>
                 </li>
                 <li className="flex items-center gap-2">

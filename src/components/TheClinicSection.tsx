@@ -151,17 +151,17 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-slate-800">Turnaround Duration</td>
                   <td className="py-3.5 px-4 text-slate-600">3 to 4 weeks (3-4 separate appointments)</td>
-                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-[#0284C7]">2 Days (In-house master lab overnight)</td>
+                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-[#0284C7]">2 or 4 Nights Luxury Stay</td>
                 </tr>
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-slate-800">Private Chauffeur Shuttles</td>
                   <td className="py-3.5 px-4 text-slate-400">None (Patient self-travel)</td>
-                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-slate-900">4 Private Chauffeur Transfers Included</td>
+                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-slate-900">Private Chauffeur Transfers Included</td>
                 </tr>
                 <tr>
-                  <td className="py-3.5 px-4 font-semibold text-slate-800">Palmeraie Accommodations</td>
+                  <td className="py-3.5 px-4 font-semibold text-slate-800">Central Marrakech Stay</td>
                   <td className="py-3.5 px-4 text-slate-400">None</td>
-                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-emerald-700">Bring 2 Guests for FREE (Mid/Luxury) + 50% Off Extra Nights</td>
+                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-emerald-700">Flexible Central Stays + Companions Welcome</td>
                 </tr>
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-slate-800">Warranty Protection</td>

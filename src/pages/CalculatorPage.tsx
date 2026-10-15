@@ -37,7 +37,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({
           <div className="mt-6 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-50 text-[#0284C7]">
               <Calendar className="w-4 h-4" />
-              2 Days Base Stay (Extra nights 50% OFF)
+              2 or 4 Nights Luxury Stay (Extra nights 50% OFF)
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800">
               <Users className="w-4 h-4" />
@@ -45,7 +45,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700">
               <Car className="w-4 h-4 text-[#0284C7]" />
-              4 Private Chauffeur Transfers Included
+              Private Chauffeur Transfers Included
             </span>
           </div>
         </div>

@@ -61,7 +61,7 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
                       Composite Bonding Natural Sculpt
                     </h3>
                     <span className="text-xs font-semibold text-[#0284C7] bg-sky-50 px-2.5 py-1 rounded-md">
-                      2 Days
+                      2 Night Luxury Stay
                     </span>
                   </div>
                   <p className="mt-2 text-xs text-slate-600 leading-relaxed">
@@ -112,7 +112,7 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
                       Porcelain Veneers Transformation
                     </h3>
                     <span className="text-xs font-semibold text-[#0284C7] bg-sky-50 px-2.5 py-1 rounded-md">
-                      4 Days
+                      4 Night Luxury Stay
                     </span>
                   </div>
                   <p className="mt-2 text-xs text-slate-600 leading-relaxed">
@@ -183,7 +183,7 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#0284C7] hover:bg-[#0369A1] transition-all cursor-pointer shadow-md text-xs sm:text-sm"
             >
               <MessageCircle className="w-4 h-4 fill-white/20" />
-              <span>Send Photos on WhatsApp (+212 789-668454)</span>
+              <span>Send Photos on WhatsApp (+212 643-517922)</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

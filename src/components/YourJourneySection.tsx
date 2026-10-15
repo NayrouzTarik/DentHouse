@@ -52,7 +52,7 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
         <div className="mt-8 flex justify-center">
           <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 bg-sky-50/80 border border-sky-100 rounded-2xl px-5 py-3 text-xs sm:text-sm text-slate-700 font-medium shadow-xs">
             <span className="flex items-center gap-1.5 text-[#0284C7] font-bold">
-              <Car className="w-4 h-4" /> 4 Private Chauffeur Transfers Included:
+              <Car className="w-4 h-4" /> Private Chauffeur Transfers Included:
             </span>
             <span>Airport ➔ Hotel</span>
             <span className="text-slate-300">·</span>

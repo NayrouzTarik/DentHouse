@@ -36,7 +36,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                 </span>
                 <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                   <Sparkles className="w-3.5 h-3.5" />
-                  1-Year Warranty
+                  Direct Sculpt
                 </span>
               </div>
 
@@ -45,7 +45,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
               </h2>
               <div className="flex items-center gap-2 mt-1 text-xs font-semibold text-[#0284C7]">
                 <Clock className="w-3.5 h-3.5" />
-                <span>2 Days in Marrakech</span>
+                <span>2 Night Luxury Stay</span>
                 <span className="text-slate-300">•</span>
                 <span className="text-slate-500">Direct chairside aesthetic resin sculpting</span>
               </div>
@@ -56,7 +56,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                   High-grade micro-hybrid resin carefully shaped directly over natural teeth by our cosmetic dentists to fix chips, close spacing, and smooth contours.
                 </p>
                 <p>
-                  Requires zero drilling of your healthy enamel and is completed over a quick 48-hour trip to Marrakech.
+                  Requires zero drilling of your healthy enamel and is completed comfortably during your 2 night luxury stay in Marrakech.
                 </p>
               </div>
 
@@ -72,7 +72,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>Completed in 2 comfortable appointments (48 hours)</span>
+                    <span>2 nights stay with vip transfert</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#0284C7]" />
@@ -80,7 +80,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>1-Year Warranty with free 6-month check-up & review</span>
+                    <span>Dedicated clinical follow-up & aftercare guidance</span>
                   </li>
                 </ul>
               </div>
@@ -97,7 +97,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                   </div>
                 </div>
                 <div className="text-right text-xs text-slate-500">
-                  <span className="block font-medium">2 Days Treatment</span>
+                  <span className="block font-medium">2 Night Luxury Stay</span>
                   <span className="text-emerald-700 font-semibold">Weekend friendly</span>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
             {/* CTAs */}
             <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
               <a
-                href={getWhatsAppUrl("Hello, I would like to ask questions about Composite Bonding (2 days) at Dent House Marrakech.")}
+                href={getWhatsAppUrl("Hello, I would like to ask questions about Composite Bonding (2 night luxury stay) at Dent House Marrakech.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold bg-[#0284C7] hover:bg-[#0369A1] text-white shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
@@ -133,7 +133,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                 </span>
                 <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  5-Year Warranty
+                  Premium Ceramic
                 </span>
               </div>
 
@@ -142,7 +142,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
               </h2>
               <div className="flex items-center gap-2 mt-1 text-xs font-semibold text-[#0284C7]">
                 <Clock className="w-3.5 h-3.5" />
-                <span>4 Days in Marrakech</span>
+                <span>4 Night Luxury Stay</span>
                 <span className="text-slate-300">•</span>
                 <span className="text-slate-500">Ultra-thin handcrafted ceramic shields</span>
               </div>
@@ -173,11 +173,11 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>4 days in Marrakech for custom digital lab crafting</span>
+                    <span>4 night luxury stay for custom digital lab crafting</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>5-Year Comprehensive Warranty & digital records handover</span>
+                    <span>Dedicated clinical aftercare & digital records handover</span>
                   </li>
                 </ul>
               </div>
@@ -194,7 +194,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                   </div>
                 </div>
                 <div className="text-right text-xs text-slate-500">
-                  <span className="block font-medium">4 Days Treatment</span>
+                  <span className="block font-medium">4 Night Luxury Stay</span>
                   <span className="text-emerald-700 font-semibold">Save vs UK private</span>
                 </div>
               </div>
@@ -203,7 +203,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
             {/* CTAs */}
             <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
               <a
-                href={getWhatsAppUrl("Hello, I would like to ask questions about E.max Porcelain Veneers (4 days) at Dent House Marrakech.")}
+                href={getWhatsAppUrl("Hello, I would like to ask questions about E.max Porcelain Veneers (4 night luxury stay) at Dent House Marrakech.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold bg-slate-900 hover:bg-slate-800 text-white shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
@@ -244,7 +244,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
             className="shrink-0 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold bg-[#0284C7] hover:bg-[#0369A1] text-white flex items-center gap-2 shadow-md transition-all cursor-pointer whitespace-nowrap"
           >
             <MessageCircle className="w-4 h-4 fill-white/20" />
-            <span>Send Photos on WhatsApp (+212 789-668454)</span>
+            <span>Send Photos on WhatsApp (+212 643-517922)</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plane, Car, Sparkles, ShieldCheck, MapPin, MessageCircle, ArrowRight, CheckCircle2, Clock } from 'lucide-react';
+import { Plane, Car, Sparkles, ShieldCheck, MapPin, MessageCircle, ArrowRight, CheckCircle2, Clock, UserCheck, Stethoscope } from 'lucide-react';
 import { getWhatsAppUrl } from '../data/dentHouseData';
 
 interface JourneyPageProps {
@@ -19,18 +19,18 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
     {
       step: '02',
       title: 'Smile Design & Treatment',
-      subtitle: 'Days 1–2 (Bonding) or Days 1–4 (E.max)',
+      subtitle: '2 Nights (Bonding) or 4 Nights (E.max)',
       desc: 'Digital 3D intraoral scanning, customized shade selection, and precision crafting. No endless appointments or unnecessary delays.',
       icon: Sparkles,
-      tag: '2 or 4 Days',
+      tag: '2 or 4 Nights Luxury Stay',
     },
     {
       step: '03',
       title: 'Smile Reveal & Safe Return',
       subtitle: 'Final Day: Departure',
-      desc: 'Final bite check, high-gloss diamond polish, official warranty registration, and private chauffeur transfer back to the airport.',
+      desc: 'Final bite check, high-gloss diamond polish, official clinical records handover, and private chauffeur transfer back to the airport.',
       icon: Plane,
-      tag: '5-Yr / 1-Yr Warranty',
+      tag: 'Aftercare & Guarantee',
     },
   ];
 
@@ -53,6 +53,57 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
     },
   ];
 
+  const teamMembers = [
+    {
+      name: 'Dr. Adil Benali',
+      role: 'Lead Cosmetic Dental Surgeon & Smile Architect',
+      credentials: 'Faculty of Odontology (Bordeaux) · 14+ Years Aesthetic Dentistry',
+      specialty: 'Expert in Digital Smile Design, minimally invasive preparation, and bespoke E.max lithium disilicate veneers.',
+      languages: 'English, French, Arabic',
+    },
+    {
+      name: 'Dr. Leila Mansouri',
+      role: 'Senior Aesthetic Dental Specialist',
+      credentials: 'Faculty of Dental Surgery (Paris Diderot) · 10+ Years Practice',
+      specialty: 'Specialist in multi-layered composite bonding, chairside anatomy replication, and high-gloss polish finishes.',
+      languages: 'English, French',
+    },
+    {
+      name: 'Hassan El Idrissi',
+      role: 'Head of International Patient Hospitality & VIP Transfers',
+      credentials: 'Luxury Concierge Management · 8+ Years Experience',
+      specialty: 'Coordinates airport arrivals, dedicated Mercedes chauffeur transfers, and seamless city accommodations.',
+      languages: 'English, French, Arabic',
+    },
+  ];
+
+  const realPhotos = [
+    {
+      src: '/images/chauffeur_vip_transfer_1791832484434.jpg',
+      title: 'VIP Mercedes Chauffeur Transfer',
+      subtitle: 'Private airport meet & greet and direct clinic transfers in our Mercedes fleet',
+      tag: 'Mercedes VIP Van',
+    },
+    {
+      src: '/images/hero_denthouse_consultation_1791832441772.jpg',
+      title: 'Digital Consultation Suite',
+      subtitle: 'Interactive 3Shape Trios® 3D smile planning with our lead cosmetic surgeons',
+      tag: '3D Digital Design',
+    },
+    {
+      src: '/images/clinic_interior_luxury_1791832453390.jpg',
+      title: 'High-Tech Treatment Operatory',
+      subtitle: 'Surgically sterile environment with ergonomic dental suites and ambient lighting',
+      tag: 'Guéliz Medical Center',
+    },
+    {
+      src: '/images/marrakech_palmeraie_resort_1791832462639.jpg',
+      title: 'Central Marrakech Accommodation',
+      subtitle: 'Curated premium stays in central Marrakech for optimal rest between visits',
+      tag: 'Central Stay',
+    },
+  ];
+
   return (
     <div className="pt-6">
       {/* Header */}
@@ -68,8 +119,8 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-12">
-        {/* 1. Simple 3-Step Journey (Concise & Skimmable) */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-14">
+        {/* 1. Simple 3-Step Journey */}
         <div>
           <div className="text-center max-w-xl mx-auto mb-8">
             <h2 className="text-2xl font-serif font-bold text-slate-900">
@@ -116,7 +167,92 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
           </div>
         </div>
 
-        {/* 2. The Clinic & Technology (Visual, zero exhausting text) */}
+        {/* 2. Meet Our Team Section */}
+        <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-xs">
+          <div className="text-center max-w-xl mx-auto mb-8">
+            <span className="text-xs font-bold text-[#0284C7] uppercase tracking-wider">
+              EXPERT CLINICIANS & HOSPITALITY
+            </span>
+            <h2 className="text-2xl font-serif font-bold text-slate-900 mt-1">
+              Meet Our Team
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              Senior cosmetic dental surgeons, certified ceramists, and dedicated VIP hospitality coordinators.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {teamMembers.map((member, i) => (
+              <div
+                key={i}
+                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between hover:border-sky-300 transition-colors"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-sky-100 text-[#0284C7] flex items-center justify-center mb-4">
+                    {i === 2 ? <UserCheck className="w-6 h-6" /> : <Stethoscope className="w-6 h-6" />}
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-900">{member.name}</h3>
+                  <div className="text-xs font-semibold text-[#0284C7] mt-0.5">{member.role}</div>
+                  <div className="text-[11px] text-slate-500 mt-1">{member.credentials}</div>
+                  <p className="text-xs text-slate-600 mt-3 leading-relaxed">{member.specialty}</p>
+                </div>
+
+                <div className="mt-5 pt-3 border-t border-slate-200/70 text-[11px] text-slate-500 flex items-center justify-between">
+                  <span>Languages:</span>
+                  <span className="font-semibold text-slate-700">{member.languages}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 3. Real Behind-the-Scenes Photo Gallery (Mercedes Van, Clinic, Consultation) */}
+        <div>
+          <div className="text-center max-w-xl mx-auto mb-8">
+            <span className="text-xs font-bold text-[#0284C7] uppercase tracking-wider">
+              AUTHENTIC GLIMPSE
+            </span>
+            <h2 className="text-2xl font-serif font-bold text-slate-900 mt-1">
+              Real Clinic & Transfer Photos
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              Authentic behind-the-scenes photography of our Mercedes VIP fleet, digital consult rooms, and treatment operatories.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {realPhotos.map((photo, i) => (
+              <div
+                key={i}
+                className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-xs hover:shadow-md transition-all flex flex-col"
+              >
+                <div className="aspect-4/3 w-full overflow-hidden bg-slate-100 relative">
+                  <img
+                    src={photo.src}
+                    alt={photo.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-2.5 right-2.5 bg-slate-950/70 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md">
+                    {photo.tag}
+                  </div>
+                </div>
+                <div className="p-4 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h4 className="text-xs font-bold text-slate-900 group-hover:text-[#0284C7] transition-colors">
+                      {photo.title}
+                    </h4>
+                    <p className="text-[11px] text-slate-500 mt-1 leading-snug">
+                      {photo.subtitle}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 4. The Clinic & Technology Strengths */}
         <div className="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/80">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Visual Photo */}
@@ -158,7 +294,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
           </div>
         </div>
 
-        {/* 3. Flight & Travel Assistance (Crisp Banner) */}
+        {/* 5. Flight & Travel Assistance (Crisp Banner) */}
         <div className="p-6 sm:p-8 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
           <div className="space-y-1 text-center sm:text-left">
             <div className="inline-flex items-center gap-1.5 text-sky-400 text-xs font-bold uppercase">
@@ -174,7 +310,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
           </div>
 
           <a
-            href={getWhatsAppUrl("Hello, I would like to check available appointment dates and flight advice for Marrakech.")}
+            href={getWhatsAppUrl("Hello, I would like to check available appointment dates and travel advice for Marrakech.")}
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold bg-[#0284C7] hover:bg-[#0369A1] text-white flex items-center gap-2 shadow-xs transition-all whitespace-nowrap cursor-pointer"

@@ -55,22 +55,6 @@ export const Hero: React.FC<HeroProps> = () => {
             <ArrowRight className="w-4 h-4 text-[#0284C7]" />
           </Link>
         </div>
-
-        {/* Quick Reassurance Trust Strip */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-y-2 gap-x-5 text-xs text-slate-600 font-medium">
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-[#0284C7]" />
-            <span>5-Yr Veneers / 1-Yr Bonding Warranty</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-[#0284C7]" />
-            <span>2 to 4 Days Turnaround</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-[#0284C7]" />
-            <span>City House Stays & Transfers Included</span>
-          </div>
-        </div>
       </div>
     </section>
   );

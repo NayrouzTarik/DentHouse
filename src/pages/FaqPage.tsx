@@ -93,7 +93,7 @@ export const FaqPage: React.FC<FaqPageProps> = ({ onOpenConsultation }) => {
                 </p>
                 <div className="mt-4 text-xs text-slate-700">
                   <span className="font-semibold block">Reception Desk:</span>
-                  +212 789-668454
+                  +212 643-517922
                 </div>
               </div>
               <div className="mt-6 text-xs text-slate-500">

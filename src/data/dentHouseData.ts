@@ -1,5 +1,5 @@
-export const CLINIC_WHATSAPP_NUMBER = '212789668454';
-export const CLINIC_WHATSAPP_DISPLAY = '+212 789-668454';
+export const CLINIC_WHATSAPP_NUMBER = '212643517922';
+export const CLINIC_WHATSAPP_DISPLAY = '+212 643-517922';
 export const DEFAULT_CONSULTATION_MESSAGE =
   'Hello, I would like to request a free consultation at Dent House Marrakech.';
 
@@ -53,15 +53,15 @@ export const TREATMENTS: TreatmentOption[] = [
     name: 'Composite Bonding',
     subtitle: 'Direct micro-hybrid aesthetic resin sculpting',
     teethCount: 'Full Set of 20 Teeth',
-    duration: '2 Days in Marrakech',
+    duration: '2 Night Luxury Stay',
     dentHousePriceGBP: 1850,
     ukPrivatePriceGBP: 6500,
     warranty: '1-Year Warranty',
     checkup: 'Complimentary Check-Up at 6 Months',
-    description: 'Minimally invasive cosmetic transformation shaped and polished chairside by our master aesthetic dentists in just 48 hours without drilling natural enamel.',
+    description: 'Minimally invasive cosmetic transformation shaped and polished chairside by our master aesthetic dentists with a 2 night luxury stay and VIP transfer.',
     features: [
       'Zero drilling of healthy enamel structure',
-      'Completed in 2 comfortable appointments',
+      '2 Night luxury stay with VIP transfer',
       'Custom multi-layer aesthetic shade-matching',
       '1-Year Warranty with free 6-month check-up',
       'Smooth high-gloss micro-hybrid polish'
@@ -72,18 +72,18 @@ export const TREATMENTS: TreatmentOption[] = [
     name: 'E.max Porcelain Veneers',
     subtitle: 'Ultra-thin handcrafted ceramic shields',
     teethCount: 'Full Set of 20 Teeth',
-    duration: '4 Days in Marrakech',
+    duration: '4 Night Luxury Stay',
     dentHousePriceGBP: 3450,
     ukPrivatePriceGBP: 14500,
     highlight: 'Top Choice for UK & International Patients',
     warranty: '5-Year Comprehensive Warranty',
     checkup: 'Full Digital Records & International Handover Files',
-    description: 'Hand-layered premium E.max ceramic shields crafted in our digital lab over 4 days. Unmatched optical translucency, stain resistance, and backed by a 5-year replacement warranty.',
+    description: 'Hand-layered premium E.max ceramic shields crafted in our digital lab with a 4 night luxury stay. 10 to 15 year lifespan, unmatched optical translucency, and stain resistance.',
     features: [
       'Certified premium E.max medical-grade ceramic',
       'Ultra-conservative sub-0.3mm preparation',
-      '4 Days in Marrakech for precision laboratory crafting',
-      '5-Year Comprehensive Replacement Warranty',
+      '4 Night luxury stay with precision digital lab crafting & VIP transfer',
+      '10 to 15 Year lifespan with registered warranty',
       '3D Intraoral Digital Simulation preview before fitting',
       '100% stain-proof against coffee, tea, and red wine'
     ]
@@ -160,10 +160,10 @@ export const EXTRAS_OPTIONS: ExtraOption[] = [
 export const EMAX_PACKAGES = [
   {
     id: 'emax-solo',
-    badge: 'Solo Traveler · 4 Days',
+    badge: 'Solo Traveler',
     name: 'E.max Solo Smile Holiday',
     treatmentType: 'E.max Porcelain Veneers',
-    duration: '4 Days in Marrakech',
+    duration: '4 Night Luxury Stay',
     partyType: 'solo',
     treatmentId: 'veneers',
     pricePerPersonGBP: 3660,
@@ -174,18 +174,18 @@ export const EMAX_PACKAGES = [
     rideName: 'All Private Chauffeur Transfers Included',
     perks: [
       'Full set of 20 Handcrafted E.max Porcelain Veneers',
-      '4 Days in Marrakech for precision laboratory crafting',
+      '4 Night luxury stay for precision laboratory crafting',
       '4 Nights Private City Center House',
       'All Private Chauffeur Transfers Included (Airport & Clinic)',
-      '5-Year Comprehensive Replacement Warranty'
+      'Dedicated Aftercare & Clinical Follow-Up'
     ]
   },
   {
     id: 'emax-duo',
-    badge: 'Best Value for 2 · 4 Days',
+    badge: 'Best Value for 2',
     name: 'E.max Duo Smile Holiday',
     treatmentType: 'E.max Porcelain Veneers',
-    duration: '4 Days in Marrakech',
+    duration: '4 Night Luxury Stay',
     partyType: 'duo',
     treatmentId: 'veneers',
     pricePerPersonGBP: 3090,
@@ -197,17 +197,17 @@ export const EMAX_PACKAGES = [
     perks: [
       '20 E.max Porcelain Veneers for EACH person (2 patients)',
       'Save £570/person by traveling together',
-      '4 Days in Marrakech for precision laboratory crafting',
+      '4 Night luxury stay for precision laboratory crafting',
       '4 Nights Private City Center House Included',
-      '5-Year Comprehensive Replacement Warranty'
+      'Dedicated Aftercare & Clinical Follow-Up'
     ]
   },
   {
     id: 'emax-trio',
-    badge: 'Maximum Savings · 4 Days',
+    badge: 'Maximum Savings',
     name: 'E.max Trio Smile Holiday',
     treatmentType: 'E.max Porcelain Veneers',
-    duration: '4 Days in Marrakech',
+    duration: '4 Night Luxury Stay',
     partyType: 'trio',
     treatmentId: 'veneers',
     pricePerPersonGBP: 2820,
@@ -219,9 +219,9 @@ export const EMAX_PACKAGES = [
     perks: [
       '20 E.max Porcelain Veneers for EACH person (3 patients)',
       'Save £840/person with group rate',
-      '4 Days in Marrakech for precision laboratory crafting',
+      '4 Night luxury stay for precision laboratory crafting',
       'Deluxe 2-Room City House (Guests stay free)',
-      '5-Year Comprehensive Replacement Warranty'
+      'Dedicated Aftercare & Clinical Follow-Up'
     ]
   }
 ];
@@ -229,10 +229,10 @@ export const EMAX_PACKAGES = [
 export const BONDING_PACKAGES = [
   {
     id: 'bonding-solo',
-    badge: 'Solo Traveler · 2 Days',
+    badge: 'Solo Traveler',
     name: 'Composite Bonding Solo Glow',
     treatmentType: 'Composite Bonding',
-    duration: '2 Days in Marrakech',
+    duration: '2 Night Luxury Stay',
     partyType: 'solo',
     treatmentId: 'bonding',
     pricePerPersonGBP: 1990,
@@ -243,18 +243,18 @@ export const BONDING_PACKAGES = [
     rideName: 'All Private Chauffeur Transfers Included',
     perks: [
       'Full set of 20 Composite Bondings (Zero drilling)',
-      'Completed in 2 comfortable days (48 Hours)',
+      '2 Night luxury stay with VIP transfer',
       '2 Nights Private City Center House',
       'All Private Chauffeur Transfers Included (Airport & Clinic)',
-      '1-Year Warranty + Free 6-Month Check-Up'
+      'Dedicated Aftercare + Free Follow-Up Check'
     ]
   },
   {
     id: 'bonding-duo',
-    badge: 'Best Value for 2 · 2 Days',
+    badge: 'Best Value for 2',
     name: 'Composite Bonding Duo Escape',
     treatmentType: 'Composite Bonding',
-    duration: '2 Days in Marrakech',
+    duration: '2 Night Luxury Stay',
     partyType: 'duo',
     treatmentId: 'bonding',
     pricePerPersonGBP: 1690,
@@ -267,16 +267,16 @@ export const BONDING_PACKAGES = [
       '20 Composite Bondings for EACH person (2 patients)',
       'Save £300/person by traveling together',
       'Zero drilling of natural enamel',
-      '2 Nights Private City Center House Included',
-      '1-Year Warranty + Free 6-Month Check-Up'
+      '2 Night luxury stay with VIP transfer',
+      'Dedicated Aftercare + Free Follow-Up Check'
     ]
   },
   {
     id: 'bonding-trio',
-    badge: 'Maximum Savings · 2 Days',
+    badge: 'Maximum Savings',
     name: 'Composite Bonding Trio Getaway',
     treatmentType: 'Composite Bonding',
-    duration: '2 Days in Marrakech',
+    duration: '2 Night Luxury Stay',
     partyType: 'trio',
     treatmentId: 'bonding',
     pricePerPersonGBP: 1550,
@@ -288,9 +288,9 @@ export const BONDING_PACKAGES = [
     perks: [
       '20 Composite Bondings for EACH person (3 patients)',
       'Save £440/person with group rate',
-      'Completed in 2 comfortable days (48 Hours)',
+      '2 Night luxury stay with VIP transfer',
       'Deluxe 2-Room City House (Guests stay free)',
-      '1-Year Warranty + Free 6-Month Check-Up'
+      'Dedicated Aftercare + Free Follow-Up Check'
     ]
   }
 ];
@@ -300,7 +300,7 @@ export const PRECONFIGURED_PACKAGES = EMAX_PACKAGES;
 export const TREATMENT_LONGEVITY_GUIDE = {
   emax: {
     name: 'Premium Porcelain Veneers',
-    lifespan: '10 to 20+ Years',
+    lifespan: '10 to 15 Years (Maximum 15 Years)',
     material: 'High-Density Medical-Grade Porcelain & Ceramic',
     porosity: 'High-density glazed ceramic structure',
     stainResistance: 'High stain resistance against coffee, tea, and red wine',
@@ -559,7 +559,7 @@ export const DOS_AND_DONTS = {
     },
     {
       title: 'Never bargain with airport taxis or worry about transfers',
-      desc: 'All 4 private VIP chauffeur transfers (Airport ➔ Palmeraie ➔ Clinic ➔ Palmeraie ➔ Airport) are fully pre-scheduled and included in your plan.',
+      desc: 'Private VIP chauffeur transfers are pre-scheduled and included in your plan (hotel to clinic, plus airport transfers for package guests). Ask us on WhatsApp for custom arrangements.',
       tag: 'Logistics'
     }
   ]
@@ -866,30 +866,26 @@ export const PATIENT_STORIES = [
 export const FAQS = [
   {
     q: 'Are flights included in the dental packages?',
-    a: 'No. Flights are not included and are booked independently by the patient. Direct flights to Marrakech Menara (RAK) operate daily from London, Manchester, Bristol, and Birmingham (approx. 3h 20m). All 4 private chauffeur transfers within Marrakech (Airport ➔ Accommodation ➔ Clinic) are fully included in your package.'
+    a: 'No. Flights are not included and are booked independently by the patient. Direct flights to Marrakech Menara (RAK) operate daily from London, Manchester, Bristol, and Birmingham (approx. 3h 20m). Dedicated private chauffeur transfers within Marrakech are arranged as part of your package.'
   },
   {
     q: 'What treatments do you offer at Dent House Marrakech?',
-    a: 'We specialize strictly in two cosmetic treatments: (1) Direct Composite Bonding (£1,850 for 20 teeth, completed in 2 days) and (2) Premium Porcelain Veneers (£3,450 for 20 teeth, completed in 4 days). Packages include treatment, accommodation, and private transfers; flights are not included.'
+    a: 'We specialize strictly in two cosmetic treatments: (1) Direct Composite Bonding (£1,850 for 20 teeth, including a 2 night luxury stay) and (2) Premium Porcelain Veneers (£3,450 for 20 teeth, including a 4 night luxury stay). Packages include treatment, central city accommodation, and VIP chauffeur transfers; flights are not included.'
   },
   {
-    q: 'What are the warranty terms for Bonding and Porcelain Veneers?',
-    a: 'We believe in honest, realistic warranties: Composite Bonding carries a 1-Year Warranty plus a complimentary clinical check-up at 6 months. Premium Porcelain Veneers carry a 5-Year Comprehensive Replacement Warranty backed by registered documentation.'
+    q: 'How does accommodation work in Marrakech? Can I bring guests?',
+    a: 'All our partner accommodations are located in the heart of Marrakech (Centre-Ville / Guéliz), close to upscale dining, cafes, and our clinic. We offer flexible arrangements tailored to your style and party size, and you can bring companion guests with you. Contact our concierge on WhatsApp to personalize your stay without rigid nightly constraints.'
   },
   {
-    q: 'How does the Palmeraie accommodation work? Can I bring guests?',
-    a: 'All our accommodations are located in Palmeraie, Marrakech’s prestigious palm oasis. Pricing starts at £70/night for the Essential Suite. If you select the Mid-Level (£110/night) or Luxury (£180/night) Palmeraie stay, you can bring up to 2 people with you to stay for FREE! Furthermore, any extra nights added beyond the base treatment days are discounted by 50%.'
-  },
-  {
-    q: 'Are all 4 chauffeur transfers included even if I book my own hotel?',
-    a: 'Yes. All 4 private chauffeur transfers (Airport ➔ Hotel, Hotel ➔ Clinic, Clinic ➔ Hotel, Hotel ➔ Airport) are fully included in every single plan, whether you stay with us in Palmeraie or arrange your own accommodation.'
+    q: 'How do transfers work if I arrange my own accommodation?',
+    a: 'If you choose self-accommodation, our private chauffeur handles your transfers between your hotel and the clinic for all appointments. Please note that airport-to-hotel arrival and departure transfers are reserved for patients booking our complete accommodation packages. If you have specific transfer requirements, simply ask us directly on WhatsApp!'
   },
   {
     q: 'What makes the Duo and Trio plans such a good deal?',
-    a: 'Duo gives both patients a 15% group discount on dental treatments. Trio gives a 20% group discount on dental treatments. Sharing Palmeraie accommodation and chauffeur transfers keeps total trip costs substantially lower per person while traveling together.'
+    a: 'Duo gives both patients a 15% group discount on dental treatments. Trio gives a 20% group discount on dental treatments. Sharing central city accommodation and chauffeur transfers keeps total trip costs substantially lower per person while traveling together.'
   },
   {
     q: 'Do you offer laser gum treatment or laser whitening?',
-    a: 'No. We respect natural tooth biology. We do not perform laser gum trimming or aggressive laser whitening that can cause severe sensitivity. Our cosmetic smile designs rely on conservative prep, biocompatible premium ceramics, and master artisan hand-layering.'
+    a: 'Whether we perform laser gum treatment or laser whitening depends on your individual clinical assessment and personal preference. During your digital consultation, our clinical team evaluates your gum line, tooth anatomy, and enamel shade to recommend the ideal aesthetic approach for you.'
   }
 ];

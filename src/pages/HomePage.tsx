@@ -11,20 +11,20 @@ interface HomePageProps {
 export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
   const whyChooseUs = [
     {
-      title: 'Exceptional Value',
-      desc: 'Save thousands compared with UK prices while receiving premium cosmetic dental care.',
+      title: 'Qualified Dental Professionals',
+      desc: 'Expert care from highly trained and experienced dentists, focused on your smile.',
     },
     {
-      title: 'Expert Dentists',
-      desc: 'Our experienced team provides personalised cosmetic treatments designed around your smile.',
+      title: 'Save Up to 70% vs UK Prices',
+      desc: 'Premium smile transformations at a fraction of comparable UK prices.',
     },
     {
-      title: 'Marrakech Experience',
-      desc: "Combine your smile transformation with a stay in one of the world's most beautiful destinations.",
+      title: 'Premium-Grade Materials',
+      desc: 'Carefully selected materials for beautiful, natural-looking smiles that last.',
     },
     {
-      title: 'Premium Materials',
-      desc: 'We use quality composite and veneer materials selected for natural-looking, lasting results.',
+      title: 'Seamless International Patient Experience',
+      desc: 'Personalised support from your first enquiry to your visit in Marrakech.',
     },
   ];
 
@@ -32,12 +32,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
     {
       src: '/images/bonding_after.jpg',
       label: 'Composite Bonding Sculpt',
-      detail: '2 Days · Zero Drilling · Interactive Before/After',
+      detail: '2 Night Luxury Stay · Zero Drilling · Natural Aesthetics',
     },
     {
       src: '/images/veneers_after.jpg',
       label: 'E.max Porcelain Veneers',
-      detail: '4 Days · Natural Shade BL2 · 5-Yr Warranty',
+      detail: '4 Night Luxury Stay · Handcrafted BL2 Porcelain',
     },
     {
       src: '/images/patient_charlotte.jpg',
@@ -69,6 +69,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-1.5">
               Why choose us for your smile?
             </h2>
+            <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
+              We combine world-class dental care with an unforgettable experience, giving you the confidence to smile brighter.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
