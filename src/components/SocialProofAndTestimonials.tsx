@@ -15,19 +15,19 @@ export const SocialProofAndTestimonials: React.FC<SocialProofProps> = ({ onOpenC
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="flex items-center justify-center gap-2 mb-3">
             <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-              VERIFIED GOOGLE REVIEWS
+              PATIENT EXPERIENCES
             </span>
             <span className="w-8 h-px bg-[#0284C7]/40" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">
-            Trusted by selective UK & international patients.
+            Trusted by UK & European patients.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-            See genuine, unedited Google accounts and real patient experiences from London, Manchester, Bristol, and across Europe.
+            Real feedback and case experiences from patients who travelled from London, Manchester, Bristol, and across Europe to Dent House Marrakech.
           </p>
         </div>
 
-        {/* Realistic Google Reviews Widget (Top 3) */}
+        {/* Realistic Patient Reviews (Top 3) */}
         <GoogleReviewsSection maxCount={3} showFilters={false} />
 
         {/* UK Healthcare Advertising Disclosure */}

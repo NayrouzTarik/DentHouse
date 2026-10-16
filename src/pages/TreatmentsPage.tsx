@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TREATMENTS, getWhatsAppUrl } from '../data/dentHouseData';
+import { TREATMENTS, getWhatsAppUrl, CLINIC_WHATSAPP_DISPLAY } from '../data/dentHouseData';
 import { Check, ShieldCheck, Sparkles, MessageCircle, ArrowRight, Clock, HelpCircle } from 'lucide-react';
 
 interface TreatmentsPageProps {
@@ -244,7 +244,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
             className="shrink-0 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold bg-[#0284C7] hover:bg-[#0369A1] text-white flex items-center gap-2 shadow-md transition-all cursor-pointer whitespace-nowrap"
           >
             <MessageCircle className="w-4 h-4 fill-white/20" />
-            <span>Send Photos on WhatsApp (+212 643-517922)</span>
+            <span>Send Photos on WhatsApp ({CLINIC_WHATSAPP_DISPLAY})</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getWhatsAppUrl } from '../data/dentHouseData';
+import { getWhatsAppUrl, CLINIC_WHATSAPP_DISPLAY } from '../data/dentHouseData';
 import { GoogleReviewsSection } from '../components/GoogleReviewsSection';
 import { BeforeAfterSlider } from '../components/BeforeAfterSlider';
 import { CheckCircle, MessageCircle, ArrowRight, ShieldCheck, Sparkles, SlidersHorizontal } from 'lucide-react';
@@ -147,17 +147,17 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
           </div>
         </div>
 
-        {/* Section 2: Hyper-Realistic Verified Google Reviews Widget & Feed */}
+        {/* Section 2: Authentic Patient Reviews & Feed */}
         <div>
           <div className="mb-6">
             <span className="text-xs font-bold text-[#0284C7] uppercase tracking-wider">
-              VERIFIED GOOGLE REVIEWS
+              PATIENT REVIEWS & EXPERIENCES
             </span>
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-1">
-              What UK & International Patients Say
+              What UK & European Patients Say
             </h2>
             <p className="mt-2 text-xs sm:text-sm text-slate-600">
-              Authentic reviews posted by patients after completing their smile treatments in Marrakech.
+              Authentic feedback and case journeys shared by patients following their cosmetic dental treatment in Marrakech.
             </p>
           </div>
 
@@ -183,7 +183,7 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#0284C7] hover:bg-[#0369A1] transition-all cursor-pointer shadow-md text-xs sm:text-sm"
             >
               <MessageCircle className="w-4 h-4 fill-white/20" />
-              <span>Send Photos on WhatsApp (+212 643-517922)</span>
+              <span>Send Photos on WhatsApp ({CLINIC_WHATSAPP_DISPLAY})</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

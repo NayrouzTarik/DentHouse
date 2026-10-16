@@ -42,12 +42,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
     {
       src: '/images/patient_charlotte.jpg',
       label: 'Charlotte D. (London, UK)',
-      detail: 'Verified Patient · Google Review',
+      detail: 'Composite Bonding Patient · London, UK',
     },
     {
       src: '/images/patient_marcus.jpg',
       label: 'Marcus S. (Manchester, UK)',
-      detail: 'Verified Patient · Local Guide',
+      detail: 'E.max Veneers Patient · Manchester, UK',
     },
   ];
 

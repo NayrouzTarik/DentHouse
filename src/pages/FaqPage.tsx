@@ -93,7 +93,9 @@ export const FaqPage: React.FC<FaqPageProps> = ({ onOpenConsultation }) => {
                 </p>
                 <div className="mt-4 text-xs text-slate-700">
                   <span className="font-semibold block">Reception Desk:</span>
-                  +212 643-517922
+                  <a href="tel:+212789668454" className="hover:text-[#0284C7] transition-colors">
+                    {CLINIC_WHATSAPP_DISPLAY}
+                  </a>
                 </div>
               </div>
               <div className="mt-6 text-xs text-slate-500">

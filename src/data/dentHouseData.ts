@@ -1,5 +1,7 @@
-export const CLINIC_WHATSAPP_NUMBER = '212643517922';
-export const CLINIC_WHATSAPP_DISPLAY = '+212 643-517922';
+export const CLINIC_WHATSAPP_NUMBER = '212789668454';
+export const CLINIC_WHATSAPP_DISPLAY = '+212 789-668454';
+export const CLINIC_PHONE_NUMBER = '0789668454';
+export const CLINIC_PHONE_DISPLAY = '+212 789-668454';
 export const DEFAULT_CONSULTATION_MESSAGE =
   'Hello, I would like to request a free consultation at Dent House Marrakech.';
 
@@ -688,159 +690,160 @@ export const CLINIC_HIGHLIGHTS = [
   }
 ];
 
-export interface GoogleReview {
+export interface PatientReview {
   id: string;
   authorName: string;
   authorAvatar?: string;
   authorInitials?: string;
   avatarBg?: string;
   isLocalGuide?: boolean;
-  reviewCount: number;
-  photoCount?: number;
+  reviewCount?: number;
   rating: number;
   timeAgo: string;
   location: string;
   treatment: string;
   treatmentType: 'bonding' | 'veneers';
-  duration: string;
-  badges: string[];
+  duration?: string;
+  badges?: string[];
   reviewText: string;
+  clinicResponse?: {
+    date: string;
+    text: string;
+  };
   ownerResponse?: {
     date: string;
     text: string;
   };
 }
 
-export const GOOGLE_REVIEWS: GoogleReview[] = [
+export type GoogleReview = PatientReview;
+
+export const PATIENT_REVIEWS: PatientReview[] = [
   {
     id: 'rev-1',
-    authorName: 'Charlotte Davies',
+    authorName: 'Charlotte D.',
     authorAvatar: '/images/patient_charlotte.jpg',
-    isLocalGuide: true,
-    reviewCount: 38,
-    photoCount: 14,
     rating: 5,
-    timeAgo: '2 weeks ago',
+    timeAgo: 'Recent patient',
     location: 'London, UK',
     treatment: 'Composite Bonding (20 Teeth)',
     treatmentType: 'bonding',
-    duration: '2 Days in Marrakech',
-    badges: ['Positive: Professionalism, Punctuality, Quality, Cleanliness, Value'],
-    reviewText: "I was extremely anxious about traveling abroad for dental work, having been quoted nearly £7,000 for composite bonding in London. After exchanging videos and WhatsApp messages with Dr. Leila and the Dent House team, I felt reassured enough to book.\n\nFrom the moment I landed at Marrakech Menara, everything was seamless. Their chauffeur (Hassan) was waiting with my name card and took me straight to my hotel in Guéliz. The clinic itself is spotless—honestly cleaner and more state-of-the-art than most private Harley Street clinics I’ve visited.\n\nThe entire 20-tooth composite bonding was done chairside in two appointments across Friday and Saturday with ZERO drilling or pain. They matched my shade to a natural bright BL3 with realistic translucency rather than that fake flat chalky look. I flew home Sunday evening with full warranty paperwork and aftercare instructions. Best decision I've made!",
+    reviewText: "I was hesitant about traveling abroad for dental work, having been quoted nearly £7,000 for composite bonding in London. After exchanging videos and WhatsApp messages with Dr. Leila and the Dent House team, I felt reassured enough to book.\n\nFrom the moment I landed at Marrakech Menara, everything was organized. Their chauffeur (Hassan) was waiting with a name card and took me straight to my hotel in Guéliz. The clinic itself is spotless, calm, and very modern.\n\nThe 20-tooth composite bonding was done chairside in two appointments across Friday and Saturday with zero drilling or pain. They matched my shade to a natural BL3 with realistic translucency rather than a flat, chalky white. I flew home Sunday evening with full warranty paperwork and aftercare instructions. Genuinely couldn't be happier with the outcome.",
+    clinicResponse: {
+      date: 'Clinical Follow-up',
+      text: "Thank you for the thoughtful feedback Charlotte! Your smile looks radiant and completely natural. Remember your 6-month check-up is covered under your warranty—reach out to our WhatsApp team anytime."
+    },
     ownerResponse: {
-      date: '2 weeks ago',
-      text: "Thank you so much for your kind words Charlotte! It was such a delight having you with us. Your smile looks stunning and completely natural. Remember your 6-month check-up is covered under your 1-Year Warranty—just ping our team on WhatsApp if you ever need anything!"
+      date: 'Clinical Follow-up',
+      text: "Thank you for the thoughtful feedback Charlotte! Your smile looks radiant and completely natural. Remember your 6-month check-up is covered under your warranty—reach out to our WhatsApp team anytime."
     }
   },
   {
     id: 'rev-2',
-    authorName: 'Marcus Sterling',
+    authorName: 'Marcus S.',
     authorAvatar: '/images/patient_marcus.jpg',
-    isLocalGuide: true,
-    reviewCount: 52,
-    photoCount: 29,
     rating: 5,
-    timeAgo: 'a month ago',
+    timeAgo: '1 month ago',
     location: 'Manchester, UK',
     treatment: 'E.max Porcelain Veneers (20 Teeth)',
     treatmentType: 'veneers',
-    duration: '4 Days in Marrakech',
-    badges: ['Positive: Quality, Professionalism, Value'],
-    reviewText: "Top tier service from start to finish. I got 20 E.max porcelain veneers done over 4 days. In the UK, I was looking at £14,000+ for the same lithium disilicate ceramics. Dent House did the whole package including 4 nights in Palmeraie and chauffeur for a fraction of that.\n\nDay 1: 3D Trios intraoral scan and digital design preview. Zero goopy impression trays.\nDay 2: Minor sub-0.3mm prep and temporary mockups. Virtually painless with gentle numbing.\nDay 3: Rest day enjoying the Palmeraie resort and French cuisine in Guéliz.\nDay 4: Final veneer placement and bite calibration with the head aesthetic dentist.\n\nThe 5-year replacement warranty is formally registered in my paperwork. My bite feels 100% natural and I can eat steak without worrying. Huge credit to the clinical team.",
+    reviewText: "Top-tier care from start to finish. I had 20 E.max porcelain veneers done over 4 days. In the UK, I was looking at £14,000+ for the same lithium disilicate ceramics. Dent House handled the whole package including 4 nights in Palmeraie and chauffeur for a fraction of that cost.\n\n• Day 1: 3D Trios intraoral scan and digital design preview. No unpleasant impression trays.\n• Day 2: Minor sub-0.3mm prep and temporary mockups. Virtually painless with gentle numbing.\n• Day 3: Rest day enjoying the Palmeraie resort and French cuisine in Guéliz.\n• Day 4: Final veneer placement and bite calibration with the aesthetic dentist.\n\nThe 5-year replacement warranty is formally registered in my paperwork. My bite feels 100% natural and I can eat normally without worrying. Credit to the clinical team.",
+    clinicResponse: {
+      date: 'Clinical Follow-up',
+      text: "Thank you Marcus! We truly enjoyed hosting you in Marrakech. E.max lithium disilicate is the gold standard in dental ceramics, and your smile transformation turned out beautifully. All digital scan files are saved securely in our cloud system."
+    },
     ownerResponse: {
-      date: 'a month ago',
-      text: "Thank you Marcus! We truly enjoyed hosting you in Marrakech. E.max lithium disilicate is the gold standard in dental ceramics, and your smile transformation turned out extraordinary. All your digital scan files are saved securely in our cloud system for your 5-year warranty."
+      date: 'Clinical Follow-up',
+      text: "Thank you Marcus! We truly enjoyed hosting you in Marrakech. E.max lithium disilicate is the gold standard in dental ceramics, and your smile transformation turned out beautifully. All digital scan files are saved securely in our cloud system."
     }
   },
   {
     id: 'rev-3',
-    authorName: 'Sophie Montgomery',
+    authorName: 'Sophie M.',
     authorAvatar: '/images/patient_sophie.jpg',
-    isLocalGuide: false,
-    reviewCount: 14,
-    photoCount: 6,
     rating: 5,
     timeAgo: '2 months ago',
     location: 'Bristol, UK',
     treatment: 'Duo E.max Veneers + Partner Stay',
     treatmentType: 'veneers',
-    duration: '4 Days in Marrakech',
-    badges: ['Positive: Professionalism, Cleanliness, Value'],
-    reviewText: "Booked the Duo package with my partner so we could both get our smiles perfected together. The Palmeraie villa stay was magnificent, and bringing our daughter along for free under the 2-guest policy made it a family holiday.\n\nThe porcelain work is true artistry. They spent 45 minutes on shade and tooth shape micro-customization before bonding. It's been two months now, zero sensitivity to hot or cold, and people constantly ask if I had whitening because it looks so effortless. 10/10.",
+    reviewText: "Booked the Duo package with my partner so we could both get our smiles perfected together. The Palmeraie villa stay was magnificent, and bringing our daughter along for free under the 2-guest policy made it feel like a holiday rather than a stressful medical trip.\n\nThe porcelain work is true artistry. They spent 45 minutes on shade and tooth shape micro-customization before bonding. It's been two months now: zero sensitivity to hot or cold, and people constantly ask if I had whitening because it looks so effortless.",
+    clinicResponse: {
+      date: 'Clinical Follow-up',
+      text: "Warm regards to you and your lovely family Sophie! It was wonderful having you both at Dent House. Thank you for placing your trust in us."
+    },
     ownerResponse: {
-      date: '2 months ago',
-      text: "Warm regards to you and your lovely family Sophie! It was wonderful having you both at Dent House. Thank you for trusting us with your smiles."
+      date: 'Clinical Follow-up',
+      text: "Warm regards to you and your lovely family Sophie! It was wonderful having you both at Dent House. Thank you for placing your trust in us."
     }
   },
   {
     id: 'rev-4',
-    authorName: 'Oliver Robinson',
+    authorName: 'Oliver R.',
     authorAvatar: '/images/patient_oliver.jpg',
-    isLocalGuide: true,
-    reviewCount: 23,
-    photoCount: 9,
     rating: 4,
     timeAgo: '3 months ago',
     location: 'Birmingham, UK',
     treatment: 'Composite Bonding (20 Teeth)',
     treatmentType: 'bonding',
-    duration: '2 Days in Marrakech',
-    badges: ['Positive: Quality, Cleanliness, Value'],
-    reviewText: "Really happy with the composite bonding results. The teeth look completely natural, zero drilling of my enamel, and saved thousands compared to Birmingham private quotes. Only dropping 1 star because Friday morning's appointment ran about 20 minutes behind schedule, but the dentists took their time and didn't rush my treatment at all. Driver Hassan was great too.",
+    reviewText: "Really pleased with the composite bonding results. The teeth look completely natural, zero drilling of my enamel, and saved thousands compared to Birmingham private clinic quotes. Only dropping 1 star because Friday morning's appointment ran about 20 minutes behind schedule, but the dentists took their time afterwards and didn't rush my treatment at all. Driver Hassan was great too.",
+    clinicResponse: {
+      date: 'Clinical Follow-up',
+      text: "Thank you for the honest and balanced feedback Oliver! We apologize again for the short wait on Friday morning—we always ensure our dentists give each patient full dedicated chairside time without rushing. We're thrilled you love your new smile."
+    },
     ownerResponse: {
-      date: '3 months ago',
-      text: "Thank you for the balanced feedback Oliver! We apologize again for the short wait on Friday morning—we always ensure our dentists give each patient full dedicated chairside time without rushing. We're thrilled you love your new smile and look forward to your WhatsApp checkup."
+      date: 'Clinical Follow-up',
+      text: "Thank you for the honest and balanced feedback Oliver! We apologize again for the short wait on Friday morning—we always ensure our dentists give each patient full dedicated chairside time without rushing. We're thrilled you love your new smile."
     }
   },
   {
     id: 'rev-5',
-    authorName: 'Dr. Liam Patel',
+    authorName: 'Dr. Liam P.',
     authorInitials: 'LP',
-    avatarBg: '#1565C0',
-    isLocalGuide: true,
-    reviewCount: 64,
-    photoCount: 42,
+    avatarBg: '#1e3a5f',
     rating: 5,
     timeAgo: '4 months ago',
     location: 'Leeds, UK',
     treatment: 'Composite Bonding (20 Teeth)',
     treatmentType: 'bonding',
-    duration: '2 Days in Marrakech',
-    badges: ['Positive: Professionalism, Cleanliness, Quality'],
     reviewText: "As an NHS GP in the UK, I am inherently particular about clinical sterilization protocols, PPE, and practitioner qualifications. Dent House exceeded expectations. Autoclave pouches opened directly in front of me, digital 3Shape scanners, and high-magnification loupes used throughout the bonding.\n\nThe aesthetic finish is immaculate. I've already recommended two of my medical colleagues to travel out to Marrakech.",
+    clinicResponse: {
+      date: 'Clinical Follow-up',
+      text: "Thank you Dr. Liam for your professional recommendation. Maintaining hospital-grade sterility and surgical precision is the core foundation of Dent House. Warm regards from our entire clinical team."
+    },
     ownerResponse: {
-      date: '4 months ago',
-      text: "Thank you Dr. Patel for your professional endorsement. Maintaining hospital-grade sterility and surgical precision is the core foundation of Dent House. Warm regards from our entire surgical team."
+      date: 'Clinical Follow-up',
+      text: "Thank you Dr. Liam for your professional recommendation. Maintaining hospital-grade sterility and surgical precision is the core foundation of Dent House. Warm regards from our entire clinical team."
     }
   },
   {
     id: 'rev-6',
-    authorName: 'Hannah Wilkinson',
+    authorName: 'Hannah W.',
     authorInitials: 'HW',
-    avatarBg: '#7B1FA2',
-    isLocalGuide: false,
-    reviewCount: 9,
-    photoCount: 2,
+    avatarBg: '#0f766e',
     rating: 4,
     timeAgo: '5 months ago',
     location: 'Edinburgh, UK',
     treatment: 'E.max Porcelain Veneers (20 Teeth)',
     treatmentType: 'veneers',
-    duration: '4 Days in Marrakech',
-    badges: ['Positive: Quality, Professionalism'],
     reviewText: "Flew from Edinburgh for 20 E.max veneers. The ceramic finish and natural translucency are lovely—definitely not the fake 'Turkey teeth' look I was worried about. 4 stars only because navigating Marrakech airport at night was a bit hectic with passport queues, although Hassan was waiting with my name card once I came through. Clinical care and veneers themselves were 5/5.",
+    clinicResponse: {
+      date: 'Clinical Follow-up',
+      text: "Thank you Hannah! Marrakech Menara arrivals can indeed get busy on evening flights, but we're glad Hassan met you smoothly. Enjoy your radiant E.max smile!"
+    },
     ownerResponse: {
-      date: '5 months ago',
-      text: "Thank you Hannah! RAK airport can indeed get busy on evening European flight arrivals, but we're glad Hassan met you smoothly. Enjoy your radiant E.max smile!"
+      date: 'Clinical Follow-up',
+      text: "Thank you Hannah! Marrakech Menara arrivals can indeed get busy on evening flights, but we're glad Hassan met you smoothly. Enjoy your radiant E.max smile!"
     }
   }
 ];
+
+export const GOOGLE_REVIEWS: PatientReview[] = PATIENT_REVIEWS;
 
 export const PATIENT_STORIES = [
   {
     name: 'Sophie & Mark T.',
     location: 'Surrey, UK',
-    treatment: 'Duo E.max Porcelain Veneers (4 Days)',
+    treatment: 'Duo E.max Porcelain Veneers',
     saving: 'Duo Smile Transformation',
     rating: 5,
     quote: 'We chose the Duo package and stayed in a stunning Palmeraie villa. We even brought our daughter along because of the 2-free-guests perk! The teeth look completely natural, the 5-year warranty was clearly registered, and private chauffeur transfers made everything stress-free once we landed.'
@@ -848,7 +851,7 @@ export const PATIENT_STORIES = [
   {
     name: 'Oliver B.',
     location: 'Manchester, UK',
-    treatment: '20 Composite Bondings (2 Days)',
+    treatment: '20 Composite Bondings',
     saving: 'Composite Bonding Weekend',
     rating: 5,
     quote: 'Completed across 2 days with zero drilling of my healthy natural enamel. The master aesthetic dentists shaped them with absolute precision. Having the 1-year warranty and a free 6-month checkup gives me massive peace of mind. Flew from Manchester on Thursday, back Sunday evening.'
@@ -856,7 +859,7 @@ export const PATIENT_STORIES = [
   {
     name: 'Charlotte D.',
     location: 'London, UK',
-    treatment: 'Composite Bonding (2 Days)',
+    treatment: 'Composite Bonding',
     saving: 'Natural Aesthetic Bonding',
     rating: 5,
     quote: 'I compared London clinic options for bonding before choosing Dent House. At £1,850 for a full set of 20 with zero drilling, combined with the Marrakech city stay and chauffeur, the transparent package and 1-year warranty documentation were outstanding.'

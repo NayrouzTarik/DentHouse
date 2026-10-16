@@ -122,10 +122,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
                 <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
                 <span>Concierge WhatsApp: {CLINIC_WHATSAPP_DISPLAY}</span>
               </a>
-              <div className="flex items-center gap-2.5">
+              <a
+                href="tel:+212789668454"
+                className="flex items-center gap-2.5 hover:text-white transition-colors"
+              >
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>Direct Line: +212 643-517922</span>
-              </div>
+                <span>Direct Line: {CLINIC_WHATSAPP_DISPLAY}</span>
+              </a>
               <div className="pt-2">
                 <a
                   href={getWhatsAppUrl("Hello, I would like to request a free digital assessment at Dent House Marrakech.")}
