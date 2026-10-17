@@ -24,8 +24,8 @@ export const WhyChooseDentHouse: React.FC<WhyChooseProps> = ({ onOpenConsultatio
     },
     {
       icon: Percent,
-      title: 'Save Up to 70% vs UK Prices',
-      desc: 'Premium smile transformations at a fraction of comparable UK prices.',
+      title: 'Save up to 70% on EU/UK prices',
+      desc: 'Premium smile transformations at a fraction of comparable EU & UK prices.',
     },
     {
       icon: Gem,
@@ -49,7 +49,7 @@ export const WhyChooseDentHouse: React.FC<WhyChooseProps> = ({ onOpenConsultatio
     {
       icon: FileCheck,
       title: 'Exceptional Value, Without Compromise',
-      desc: 'Enjoy premium cosmetic dental treatments in Marrakech at prices that can be up to 70% lower than in the UK, with clear package pricing before you travel.',
+      desc: 'Enjoy premium cosmetic dental treatments in Marrakech at prices that can be up to 70% lower than in the UK and Europe, with clear package pricing before you travel.',
     },
     {
       icon: Car,

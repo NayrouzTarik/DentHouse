@@ -15,8 +15,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
       desc: 'Expert care from highly trained and experienced dentists, focused on your smile.',
     },
     {
-      title: 'Save Up to 70% vs UK Prices',
-      desc: 'Premium smile transformations at a fraction of comparable UK prices.',
+      title: 'Save up to 70% on EU/UK prices',
+      desc: 'Premium smile transformations at a fraction of comparable EU & UK prices.',
     },
     {
       title: 'Premium-Grade Materials',
