@@ -458,15 +458,6 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                       treatment only full set of composite veneers
                     </p>
 
-                    <div className="mt-3 p-2.5 rounded-lg bg-slate-100/80 text-[11px] text-slate-600 space-y-1">
-                      <div className="font-semibold text-slate-800">
-                        Accommodation not included
-                      </div>
-                      <div className="text-slate-500">
-                        Transfers not included
-                      </div>
-                    </div>
-
                     <ul className="mt-3 space-y-1.5 text-xs text-slate-600">
                       <li className="flex items-center gap-2">
                         <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />

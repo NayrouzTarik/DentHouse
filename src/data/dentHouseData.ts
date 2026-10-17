@@ -243,8 +243,8 @@ export const BONDING_PACKAGES = [
     totalPriceGBP: 1199,
     ukHarleyStreetPerPerson: 5500,
     totalSaving: 4301,
-    stayName: 'Accommodation not included',
-    rideName: 'Transfers not included',
+    stayName: '',
+    rideName: '',
     clinicalNote: 'Treatment subject to the dentist’s clinical assessment',
     perks: [
       'Full Set Composite Bonding (20 Teeth)',
@@ -252,7 +252,6 @@ export const BONDING_PACKAGES = [
       'Your New Smile in Just One Day',
       '1-Year Treatment Warranty',
       'All dental materials included',
-      'Accommodation and transfers not included',
       'Treatment subject to the dentist’s clinical assessment'
     ]
   },
@@ -299,8 +298,8 @@ export const BONDING_PACKAGES = [
     totalPriceGBP: 2199,
     ukHarleyStreetPerPerson: 5500,
     totalSaving: 8801,
-    stayName: 'Accommodation not included',
-    rideName: 'Transfers not included',
+    stayName: '',
+    rideName: '',
     clinicalNote: 'Treatment subject to the dentist’s clinical assessment',
     perks: [
       'Full Set Composite Bonding (20 Teeth per person)',
@@ -308,7 +307,6 @@ export const BONDING_PACKAGES = [
       'Your New Smile in Just One Day',
       '1-Year Treatment Warranty',
       'All dental materials included',
-      'Accommodation and transfers not included',
       'Treatment subject to the dentist’s clinical assessment'
     ]
   },
@@ -355,8 +353,8 @@ export const BONDING_PACKAGES = [
     totalPriceGBP: 3199,
     ukHarleyStreetPerPerson: 5500,
     totalSaving: 13301,
-    stayName: 'Accommodation not included',
-    rideName: 'Transfers not included',
+    stayName: '',
+    rideName: '',
     clinicalNote: 'Treatment subject to the dentist’s clinical assessment',
     perks: [
       'Full Set Composite Bonding (20 Teeth per person)',
@@ -364,7 +362,6 @@ export const BONDING_PACKAGES = [
       'Your New Smile in Just One Day',
       '1-Year Treatment Warranty',
       'All dental materials included',
-      'Accommodation and transfers not included',
       'Treatment subject to the dentist’s clinical assessment'
     ]
   },

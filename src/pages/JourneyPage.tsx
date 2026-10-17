@@ -53,30 +53,6 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
     },
   ];
 
-  const teamMembers = [
-    {
-      name: 'Dr. Adil Benali',
-      role: 'Lead Cosmetic Dental Surgeon & Smile Architect',
-      credentials: 'Faculty of Odontology (Bordeaux) · 14+ Years Aesthetic Dentistry',
-      specialty: 'Expert in Digital Smile Design, minimally invasive preparation, and bespoke E.max lithium disilicate veneers.',
-      languages: 'English, French, Arabic',
-    },
-    {
-      name: 'Dr. Leila Mansouri',
-      role: 'Senior Aesthetic Dental Specialist',
-      credentials: 'Faculty of Dental Surgery (Paris Diderot) · 10+ Years Practice',
-      specialty: 'Specialist in multi-layered composite bonding, chairside anatomy replication, and high-gloss polish finishes.',
-      languages: 'English, French',
-    },
-    {
-      name: 'Hassan El Idrissi',
-      role: 'Head of International Patient Hospitality & VIP Transfers',
-      credentials: 'Luxury Concierge Management · 8+ Years Experience',
-      specialty: 'Coordinates airport arrivals, dedicated Mercedes chauffeur transfers, and seamless city accommodations.',
-      languages: 'English, French, Arabic',
-    },
-  ];
-
   const realPhotos = [
     {
       src: '/images/chauffeur_vip_transfer_1791832484434.jpg',
@@ -167,42 +143,197 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
           </div>
         </div>
 
-        {/* 2. Meet Our Team Section */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-xs">
-          <div className="text-center max-w-xl mx-auto mb-8">
-            <span className="text-xs font-bold text-[#0284C7] uppercase tracking-wider">
-              EXPERT CLINICIANS & HOSPITALITY
+        {/* 2. Meet Our Team Section - Alternating Experience Showcase */}
+        <div className="space-y-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="text-xs font-bold text-[#0284C7] uppercase tracking-widest font-sans">
+              THE PEOPLE BEHIND YOUR SMILE
             </span>
-            <h2 className="text-2xl font-serif font-bold text-slate-900 mt-1">
+            <h2 className="text-2xl sm:text-4xl font-serif font-bold text-slate-900 mt-1.5 tracking-tight">
               Meet Our Team
             </h2>
-            <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              Senior cosmetic dental surgeons, certified ceramists, and dedicated VIP hospitality coordinators.
+            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+              From the moment you touch down in Marrakech, our dedicated transport team, expert cosmetic dentists, and multilingual coordinators look after every single detail of your journey.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {teamMembers.map((member, i) => (
-              <div
-                key={i}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between hover:border-sky-300 transition-colors"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-xl bg-sky-100 text-[#0284C7] flex items-center justify-center mb-4">
-                    {i === 2 ? <UserCheck className="w-6 h-6" /> : <Stethoscope className="w-6 h-6" />}
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900">{member.name}</h3>
-                  <div className="text-xs font-semibold text-[#0284C7] mt-0.5">{member.role}</div>
-                  <div className="text-[11px] text-slate-500 mt-1">{member.credentials}</div>
-                  <p className="text-xs text-slate-600 mt-3 leading-relaxed">{member.specialty}</p>
+          <div className="space-y-8">
+            {/* ROW 1: Text Left, Image Right - VIP Airport Transport & Black Van */}
+            <div className="p-6 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-sm flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+              {/* Text Left */}
+              <div className="flex-1 space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-[#0284C7] text-xs font-bold uppercase tracking-wider">
+                  <Car className="w-3.5 h-3.5" />
+                  <span>Private Airport Chauffeur & Transfers</span>
                 </div>
-
-                <div className="mt-5 pt-3 border-t border-slate-200/70 text-[11px] text-slate-500 flex items-center justify-between">
-                  <span>Languages:</span>
-                  <span className="font-semibold text-slate-700">{member.languages}</span>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-900 leading-snug">
+                  VIP Airport Meet & Greet in Our Black Van
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Your journey starts the second you step out of Marrakech Menara Airport (RAK). Your dedicated private chauffeur greets you directly at the terminal exit holding a personalized name board and assists with all luggage.
+                </p>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Travel in total comfort in our executive black VIP van with air conditioning, chilled water, and Wi-Fi. All roundtrip transfers between the airport, your central hotel, and the clinic are fully coordinated and included in every stay package.
+                </p>
+                <div className="grid grid-cols-2 gap-2.5 pt-2">
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>Airport Terminal Meet & Greet</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>Executive Black Mercedes Fleet</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>All Clinic Transfers Included</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>Zero Local Navigation Stress</span>
+                  </div>
                 </div>
               </div>
-            ))}
+
+              {/* Image Right */}
+              <div className="w-full lg:w-1/2 shrink-0">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
+                  <img
+                    src="/images/chauffeur_vip_van.jpg"
+                    alt="Private Chauffeur with Black Mercedes VIP Van at Marrakech Airport"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
+                    <span className="font-semibold bg-slate-950/60 backdrop-blur-xs px-2.5 py-1 rounded-lg">
+                      Marrakech Menara Airport (RAK)
+                    </span>
+                    <span className="text-[11px] font-bold text-sky-300 bg-slate-950/60 backdrop-blur-xs px-2.5 py-1 rounded-lg">
+                      Executive Black Van
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ROW 2: Image Left, Text Right - The Clinic & Cosmetic Dentist */}
+            <div className="p-6 sm:p-10 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12">
+              {/* Text Right */}
+              <div className="flex-1 space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-[#0284C7] text-xs font-bold uppercase tracking-wider">
+                  <Stethoscope className="w-3.5 h-3.5" />
+                  <span>Cosmetic Dentists & Advanced Clinic</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-900 leading-snug">
+                  Master Cosmetic Dentists & Precision Digital Suites
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Our cosmetic dental surgeons specialize in minimally invasive smile transformations, with specialized post-graduate training and over a decade of aesthetic expertise. Every procedure is tailored to your unique facial features and natural tooth dynamics.
+                </p>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Inside our high-tech operatory, we utilize state-of-the-art 3Shape Trios® 3D intraoral scanners to map your bite with sub-millimeter precision. Experience zero discomfort, gentle anesthesia protocols, and world-class certified European materials.
+                </p>
+                <div className="grid grid-cols-2 gap-2.5 pt-2">
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>Specialist Cosmetic Dentists</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>3Shape Trios® 3D Scanning</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>Painless, Gentle Clinical Care</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>Natural Micro-Shade Layering</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image Left */}
+              <div className="w-full lg:w-1/2 shrink-0">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
+                  <img
+                    src="/images/hero_denthouse_consultation_1791832441772.jpg"
+                    alt="Cosmetic Dentist and Patient in Modern Consultation Suite"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
+                    <span className="font-semibold bg-slate-950/60 backdrop-blur-xs px-2.5 py-1 rounded-lg">
+                      Digital Consultation & Clinical Suite
+                    </span>
+                    <span className="text-[11px] font-bold text-sky-300 bg-slate-950/60 backdrop-blur-xs px-2.5 py-1 rounded-lg">
+                      Expert Aesthetic Dentist
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ROW 3: Text Left, Image Right - The Reception with Official Logo */}
+            <div className="p-6 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-sm flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+              {/* Text Left */}
+              <div className="flex-1 space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-[#0284C7] text-xs font-bold uppercase tracking-wider">
+                  <UserCheck className="w-3.5 h-3.5" />
+                  <span>Welcome & International Concierge</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-slate-900 leading-snug">
+                  Warm Patient Reception & Multilingual Coordination
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Step into our modern, tranquil clinic in the heart of Marrakech. Our welcoming patient lounge is designed to give you a relaxing, stress-free setting from your initial consultation through your final smile reveal.
+                </p>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Our international coordinators speak fluent English and French, staying by your side to answer questions, guide your treatment steps, and coordinate aftercare guarantees. We treat every visitor with authentic Moroccan hospitality.
+                </p>
+                <div className="grid grid-cols-2 gap-2.5 pt-2">
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>Fluent English & French Team</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>Personal Care Coordinator</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>Relaxing Patient Lounge</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
+                    <span>Guéliz District · Central Marrakech</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image Right - Reception with Logo */}
+              <div className="w-full lg:w-1/2 shrink-0">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
+                  <img
+                    src="/images/reception.png"
+                    alt="Dent House Marrakech Clinic Reception with Official 3D Logo"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
+                    <span className="font-semibold bg-slate-950/60 backdrop-blur-xs px-2.5 py-1 rounded-lg">
+                      Dent House Marrakech Reception
+                    </span>
+                    <span className="text-[11px] font-bold text-sky-300 bg-slate-950/60 backdrop-blur-xs px-2.5 py-1 rounded-lg">
+                      Official Clinic
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

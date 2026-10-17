@@ -490,21 +490,19 @@ const BondingCard: React.FC<{ pkg: (typeof BONDING_PACKAGES)[0] }> = ({ pkg }) =
           </div>
         )}
 
-        {/* Accommodation & Transfers Details Box */}
-        <div
-          className={`mt-4 p-3 rounded-xl text-xs space-y-1 ${
-            isStay ? 'bg-sky-50/50 text-slate-700 border border-sky-100/60' : 'bg-slate-50 text-slate-600'
-          }`}
-        >
-          <div className="flex items-center gap-1.5 font-semibold text-slate-800">
-            <Hotel className="w-3.5 h-3.5 text-[#0284C7]" />
-            <span>{pkg.stayName}</span>
+        {/* Accommodation & Transfers Details Box (Only for packages with Stay) */}
+        {isStay && (
+          <div className="mt-4 p-3 rounded-xl text-xs space-y-1 bg-sky-50/50 text-slate-700 border border-sky-100/60">
+            <div className="flex items-center gap-1.5 font-semibold text-slate-800">
+              <Hotel className="w-3.5 h-3.5 text-[#0284C7]" />
+              <span>{pkg.stayName}</span>
+            </div>
+            <div className="flex items-center gap-1.5 text-slate-500 text-[11px]">
+              <Car className="w-3.5 h-3.5 text-[#0284C7]" />
+              <span>{pkg.rideName}</span>
+            </div>
           </div>
-          <div className="flex items-center gap-1.5 text-slate-500 text-[11px]">
-            <Car className="w-3.5 h-3.5 text-[#0284C7]" />
-            <span>{pkg.rideName}</span>
-          </div>
-        </div>
+        )}
 
         {/* Feature List */}
         <ul className="mt-4 space-y-2 text-xs text-slate-600">
