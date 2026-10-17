@@ -88,17 +88,18 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
               {/* Starting Price Only */}
               <div className="mt-6 pt-4 border-t border-slate-100 flex items-baseline justify-between">
                 <div>
-                  <span className="text-xs text-slate-400 block">Full Smile Set</span>
+                  <span className="text-xs text-slate-400 block">Up to 20 Teeth</span>
                   <div className="flex items-baseline gap-1">
                     <span className="text-xs text-slate-500 font-medium">Starting from</span>
                     <span className="text-2xl sm:text-3xl font-extrabold text-[#0284C7] font-sans">
-                      £1,850
+                      £1,199
                     </span>
+                    <span className="text-xs text-slate-500 font-medium">/ person</span>
                   </div>
                 </div>
                 <div className="text-right text-xs text-slate-500">
-                  <span className="block font-medium">2 Night Luxury Stay</span>
-                  <span className="text-emerald-700 font-semibold">Weekend friendly</span>
+                  <span className="block font-medium">Treatment Only or With Stay</span>
+                  <span className="text-emerald-700 font-semibold">From £1,199 (Stay +£200)</span>
                 </div>
               </div>
             </div>

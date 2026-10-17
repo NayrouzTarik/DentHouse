@@ -56,7 +56,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
       {/* 1. Hero Section */}
       <Hero
         onOpenConsultation={onOpenConsultation}
-        onExplorePackages={() => {}}
+        onExplorePackages={() => { }}
       />
 
       {/* 2. Why Choose Us For Your Smile? (Exact user specification) */}

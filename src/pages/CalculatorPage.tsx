@@ -41,7 +41,7 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800">
               <Users className="w-4 h-4" />
-              Group Discounts: Duo 15% · Trio 20%
+              Group Discounts: Duo & Trio Packages
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700">
               <Car className="w-4 h-4 text-[#0284C7]" />
