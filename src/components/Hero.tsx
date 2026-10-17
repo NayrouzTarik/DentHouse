@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, ArrowRight, ShieldCheck, Clock, Plane, Sparkles, CheckCircle2 } from 'lucide-react';
+import { MessageCircle, ArrowRight } from 'lucide-react';
 import { getWhatsAppUrl } from '../data/dentHouseData';
 
 interface HeroProps {
@@ -17,13 +17,6 @@ export const Hero: React.FC<HeroProps> = () => {
       <div className="absolute top-1/3 left-0 -ml-32 w-72 h-72 rounded-full bg-blue-100/30 blur-3xl pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Editorial Brand Kicker */}
-        <div className="inline-flex items-center gap-2 mb-3 px-3.5 py-1.5 rounded-full bg-sky-100/80 border border-sky-200/60 shadow-2xs">
-          <Sparkles className="w-3.5 h-3.5 text-[#0284C7]" />
-          <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-            DENT HOUSE MARRAKECH
-          </span>
-        </div>
 
         {/* Catchy, clear H1 headline */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl leading-[1.12] font-serif font-bold text-slate-900 tracking-tight text-balance max-w-3xl mx-auto">
