@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Hero } from '../components/Hero';
+import { SEOHead } from '../components/SEOHead';
 import { Check, ArrowRight, MessageCircle, Star, Sparkles } from 'lucide-react';
 import { getWhatsAppUrl } from '../data/dentHouseData';
 
@@ -33,26 +34,36 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
       src: '/images/results/after1.png',
       label: 'Composite Bonding Sculpt',
       detail: '2 Night Luxury Stay · Zero Drilling · Natural Aesthetics',
+      alt: 'Composite bonding smile transformation in Marrakech - natural resin sculpt with zero drilling',
     },
     {
       src: '/images/results/after3.png',
       label: 'E.max Porcelain Veneers',
       detail: '4 Night Luxury Stay · Handcrafted BL2 Porcelain',
+      alt: 'E.max porcelain veneers smile makeover in Marrakech - handcrafted BL2 ceramic shields',
     },
     {
       src: '/images/results/client1.png',
       label: 'Charlotte D. (London, UK)',
       detail: 'Composite Bonding Patient · London, UK',
+      alt: 'Charlotte D. from London UK - composite bonding patient at Dent House Marrakech',
     },
     {
       src: '/images/results/client2.png',
       label: 'Marcus S. (Manchester, UK)',
       detail: 'E.max Veneers Patient · Manchester, UK',
+      alt: 'Marcus S. from Manchester UK - porcelain veneers patient at Dent House Marrakech',
     },
   ];
 
   return (
     <div>
+      <SEOHead
+        title="Composite Bonding Marrakech & Porcelain Veneers | Dent House Marrakech"
+        description="Specialist composite bonding and porcelain veneers in Marrakech, Morocco. Save up to 70% vs UK private prices with 2-day natural smile makeovers, luxury accommodation, and VIP chauffeur transfers."
+        canonicalUrl="https://denthousemarrakech.com/"
+      />
+
       {/* 1. Hero Section */}
       <Hero
         onOpenConsultation={onOpenConsultation}
@@ -128,7 +139,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
                 <div className="aspect-4/3 w-full overflow-hidden bg-slate-200">
                   <img
                     src={photo.src}
-                    alt={photo.label}
+                    alt={photo.alt || photo.label}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />

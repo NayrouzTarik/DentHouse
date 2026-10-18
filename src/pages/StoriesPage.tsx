@@ -2,6 +2,7 @@ import React from 'react';
 import { getWhatsAppUrl, CLINIC_WHATSAPP_DISPLAY } from '../data/dentHouseData';
 import { GoogleReviewsSection } from '../components/GoogleReviewsSection';
 import { BeforeAfterSlider } from '../components/BeforeAfterSlider';
+import { SEOHead } from '../components/SEOHead';
 import { CheckCircle, MessageCircle, ArrowRight, ShieldCheck, Sparkles, SlidersHorizontal } from 'lucide-react';
 
 interface StoriesPageProps {
@@ -11,6 +12,12 @@ interface StoriesPageProps {
 export const StoriesPage: React.FC<StoriesPageProps> = () => {
   return (
     <div className="pt-6">
+      <SEOHead
+        title="Composite Bonding Before & After Marrakech | UK Patient Reviews"
+        description="See real before and after composite bonding and porcelain veneer results from UK patients who travelled to Marrakech. Verified 4.8/5 reviews and diastema closures."
+        canonicalUrl="https://denthousemarrakech.com/stories"
+      />
+
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-3xl">
         <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">

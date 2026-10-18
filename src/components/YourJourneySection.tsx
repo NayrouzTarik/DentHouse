@@ -173,7 +173,13 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
                     ? '/images/marrakech_palmeraie_resort_1791832462639.jpg'
                     : '/images/smile_makeover_veneers_1791832473573.jpg'
                 }
-                alt="Marrakech Dental Journey Experience"
+                alt={
+                  activeDay === 0
+                    ? 'Private VIP chauffeur airport transfer in Marrakech for dental patients'
+                    : activeDay === 1
+                    ? 'Luxury partner accommodation in Marrakech between dental appointments'
+                    : 'Completed natural smile makeover with composite bonding and veneers in Marrakech'
+                }
                 className="w-full h-72 sm:h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />

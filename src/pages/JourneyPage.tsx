@@ -1,6 +1,7 @@
 import React from 'react';
 import { Plane, Car, Sparkles, ShieldCheck, MapPin, MessageCircle, ArrowRight, CheckCircle2, Clock, UserCheck, Stethoscope } from 'lucide-react';
 import { getWhatsAppUrl } from '../data/dentHouseData';
+import { SEOHead } from '../components/SEOHead';
 
 interface JourneyPageProps {
   onOpenConsultation: () => void;
@@ -82,6 +83,12 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
 
   return (
     <div className="pt-6">
+      <SEOHead
+        title="Dental Tourism Marrakech Guide | UK Patient Travel & Clinic Journey"
+        description="Plan your dental holiday to Marrakech for composite bonding: direct UK flights, VIP airport chauffeur meet & greet, central accommodation, and 2-day smile turnaround."
+        canonicalUrl="https://denthousemarrakech.com/journey"
+      />
+
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center max-w-3xl">
         <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">

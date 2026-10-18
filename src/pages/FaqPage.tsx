@@ -1,15 +1,36 @@
 import React from 'react';
 import { FaqSection } from '../components/FaqSection';
 import { MapPin, Phone, MessageCircle, Clock, ShieldCheck, Mail } from 'lucide-react';
-import { CLINIC_WHATSAPP_DISPLAY, getWhatsAppUrl } from '../data/dentHouseData';
+import { CLINIC_WHATSAPP_DISPLAY, getWhatsAppUrl, FAQS } from '../data/dentHouseData';
+import { SEOHead } from '../components/SEOHead';
 
 interface FaqPageProps {
   onOpenConsultation: () => void;
 }
 
 export const FaqPage: React.FC<FaqPageProps> = ({ onOpenConsultation }) => {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
     <div className="pt-6">
+      <SEOHead
+        title="Composite Bonding & Dental Tourism FAQ Marrakech | Dent House"
+        description="Answers to common questions from UK patients about composite bonding in Marrakech, pricing, warranties, accommodation, flights, and painless clinical procedures."
+        canonicalUrl="https://denthousemarrakech.com/faqs"
+        schemaData={faqSchema}
+      />
+
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="max-w-3xl">

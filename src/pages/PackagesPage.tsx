@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { EMAX_PACKAGES, BONDING_PACKAGES, getWhatsAppUrl } from '../data/dentHouseData';
+import { SEOHead } from '../components/SEOHead';
 import { Check, Sliders, MessageCircle, ArrowRight, Sparkles, Clock, Hotel, Car, Users, User } from 'lucide-react';
 
 interface PackagesPageProps {
@@ -22,6 +23,12 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
 
   return (
     <div className="pt-6">
+      <SEOHead
+        title="Composite Bonding Prices & Packages Marrakech | Dent House"
+        description="Transparent composite bonding packages in Marrakech from £1,199 for UK patients. Treatment-only or all-inclusive packages with 2 nights luxury stay and chauffeur transfers."
+        canonicalUrl="https://denthousemarrakech.com/packages"
+      />
+
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-3xl">
         <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">

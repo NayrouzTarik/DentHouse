@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { PlanCalculator } from '../components/PlanCalculator';
+import { SEOHead } from '../components/SEOHead';
 import { Calendar, Users, Car } from 'lucide-react';
 
 interface CalculatorPageProps {
@@ -21,6 +22,12 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({
 
   return (
     <div className="pt-6">
+      <SEOHead
+        title="Smile Makeover & Composite Bonding Cost Calculator | Dent House Marrakech"
+        description="Calculate your exact composite bonding or porcelain veneers investment in Marrakech. Select solo, duo, or trio packages, central city stays, and private transfers."
+        canonicalUrl="https://denthousemarrakech.com/calculator"
+      />
+
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="max-w-3xl">

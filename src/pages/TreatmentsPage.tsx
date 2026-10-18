@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TREATMENTS, getWhatsAppUrl, CLINIC_WHATSAPP_DISPLAY } from '../data/dentHouseData';
+import { SEOHead } from '../components/SEOHead';
 import { Check, ShieldCheck, Sparkles, MessageCircle, ArrowRight, Clock, HelpCircle } from 'lucide-react';
 
 interface TreatmentsPageProps {
@@ -11,6 +12,34 @@ interface TreatmentsPageProps {
 export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
   return (
     <div className="pt-6">
+      <SEOHead
+        title="Composite Bonding Marrakech | Minimally Invasive Smiles | Dent House"
+        description="High-grade composite bonding in Marrakech from £1,199. Chairside sculpting, zero healthy enamel drilling, 2-night stay packages with private chauffeur transfers for UK patients."
+        canonicalUrl="https://denthousemarrakech.com/treatments"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "MedicalWebPage",
+          "@id": "https://denthousemarrakech.com/treatments#webpage",
+          "name": "Composite Bonding & Cosmetic Dentistry in Marrakech",
+          "description": "Comprehensive guide to direct composite bonding and E.max porcelain veneers at Dent House Marrakech.",
+          "url": "https://denthousemarrakech.com/treatments",
+          "about": [
+            {
+              "@type": "MedicalProcedure",
+              "name": "Composite Bonding Marrakech",
+              "procedureType": "NoninvasiveProcedure",
+              "description": "Direct chairside micro-hybrid composite resin sculpting for up to 20 teeth with zero healthy tooth drilling."
+            },
+            {
+              "@type": "MedicalProcedure",
+              "name": "E.max Porcelain Veneers Marrakech",
+              "procedureType": "NoninvasiveProcedure",
+              "description": "Ultra-thin handcrafted ceramic shields crafted in digital lab with 4 nights luxury stay."
+            }
+          ]
+        }}
+      />
+
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-3xl">
         <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">

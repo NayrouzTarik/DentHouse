@@ -15,7 +15,7 @@ export const Hero: React.FC<HeroProps> = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/home_background.png"
-          alt="Dent House Marrakech Cosmetic Dental Suite"
+          alt="Dent House Marrakech cosmetic dentistry clinic suite in Morocco"
           className="w-full h-full object-cover object-center"
         />
         {/* Subtle dark contrast overlay so the original font stays crisp and readable */}

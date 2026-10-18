@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check, X, ShieldCheck, Sparkles, MessageCircle, ArrowRight, Award, CalendarCheck, Clock, FileText } from 'lucide-react';
 import { getWhatsAppUrl } from '../data/dentHouseData';
+import { SEOHead } from '../components/SEOHead';
 
 interface AftercarePageProps {
   onOpenConsultation: () => void;
@@ -9,6 +10,12 @@ interface AftercarePageProps {
 export const AftercarePage: React.FC<AftercarePageProps> = () => {
   return (
     <div className="pt-6">
+      <SEOHead
+        title="Composite Bonding Aftercare & Longevity Guide | Dent House Marrakech"
+        description="Essential aftercare protocols for composite bonding: preventing coffee stains, 48-hour curing window, nightguard use, and 1-year warranty with 6-month check-up."
+        canonicalUrl="https://denthousemarrakech.com/aftercare"
+      />
+
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-3xl">
         <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
