@@ -5,6 +5,7 @@ import {
   DEFAULT_CONSULTATION_MESSAGE,
   getWhatsAppUrl,
 } from '../data/dentHouseData';
+import { trackWhatsAppClick, trackBookingClick } from '../utils/analytics';
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -58,6 +59,16 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
   const whatsappUrl = getWhatsAppUrl(message);
 
   const handleOpenWhatsApp = () => {
+    trackWhatsAppClick({
+      placement: 'consultation_modal',
+      linkText: 'Open in WhatsApp',
+      destinationUrl: 'whatsapp',
+    });
+    trackBookingClick({
+      bookingType: prefilledPlan ? 'custom_plan_consultation' : 'free_consultation',
+      placement: 'consultation_modal',
+      treatmentType: prefilledPlan?.treatment || 'consultation',
+    });
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     onClose();
   };
