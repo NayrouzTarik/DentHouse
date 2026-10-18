@@ -128,20 +128,12 @@ export const GoogleReviewsSection: React.FC<GoogleReviewsSectionProps> = ({
             <div>
               {/* Reviewer Header */}
               <div className="flex items-center gap-3">
-                {rev.authorAvatar ? (
-                  <img
-                    src={rev.authorAvatar}
-                    alt={`${rev.authorName} - Patient Review`}
-                    className="w-11 h-11 rounded-full object-cover border border-slate-200 shadow-xs shrink-0"
-                  />
-                ) : (
-                  <div
-                    style={{ backgroundColor: rev.avatarBg || '#1e3a5f' }}
-                    className="w-11 h-11 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0 shadow-xs"
-                  >
-                    {rev.authorInitials || rev.authorName.charAt(0)}
-                  </div>
-                )}
+                <div
+                  style={{ backgroundColor: rev.avatarBg || '#0284C7' }}
+                  className="w-11 h-11 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0 shadow-xs"
+                >
+                  {rev.authorInitials || rev.authorName.charAt(0)}
+                </div>
 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-1.5">

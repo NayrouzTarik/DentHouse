@@ -821,7 +821,8 @@ export const PATIENT_REVIEWS: PatientReview[] = [
   {
     id: 'rev-1',
     authorName: 'Charlotte D.',
-    authorAvatar: '/images/patient_charlotte.jpg',
+    authorInitials: 'CD',
+    avatarBg: '#0284C7',
     rating: 5,
     timeAgo: 'Recent patient',
     location: 'London, UK',
@@ -840,7 +841,8 @@ export const PATIENT_REVIEWS: PatientReview[] = [
   {
     id: 'rev-2',
     authorName: 'Marcus S.',
-    authorAvatar: '/images/patient_marcus.jpg',
+    authorInitials: 'MS',
+    avatarBg: '#0369A1',
     rating: 5,
     timeAgo: '1 month ago',
     location: 'Manchester, UK',
@@ -859,7 +861,8 @@ export const PATIENT_REVIEWS: PatientReview[] = [
   {
     id: 'rev-3',
     authorName: 'Sophie M.',
-    authorAvatar: '/images/patient_sophie.jpg',
+    authorInitials: 'SM',
+    avatarBg: '#0f766e',
     rating: 5,
     timeAgo: '2 months ago',
     location: 'Bristol, UK',
@@ -878,7 +881,8 @@ export const PATIENT_REVIEWS: PatientReview[] = [
   {
     id: 'rev-4',
     authorName: 'Oliver R.',
-    authorAvatar: '/images/patient_oliver.jpg',
+    authorInitials: 'OR',
+    avatarBg: '#1e3a5f',
     rating: 4,
     timeAgo: '3 months ago',
     location: 'Birmingham, UK',

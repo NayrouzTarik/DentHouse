@@ -30,22 +30,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
 
   const realPatientPhotos = [
     {
-      src: '/images/bonding_after.jpg',
+      src: '/images/results/after1.png',
       label: 'Composite Bonding Sculpt',
       detail: '2 Night Luxury Stay · Zero Drilling · Natural Aesthetics',
     },
     {
-      src: '/images/veneers_after.jpg',
+      src: '/images/results/after3.png',
       label: 'E.max Porcelain Veneers',
       detail: '4 Night Luxury Stay · Handcrafted BL2 Porcelain',
     },
     {
-      src: '/images/patient_charlotte.jpg',
+      src: '/images/results/client1.png',
       label: 'Charlotte D. (London, UK)',
       detail: 'Composite Bonding Patient · London, UK',
     },
     {
-      src: '/images/patient_marcus.jpg',
+      src: '/images/results/client2.png',
       label: 'Marcus S. (Manchester, UK)',
       detail: 'E.max Veneers Patient · Manchester, UK',
     },
