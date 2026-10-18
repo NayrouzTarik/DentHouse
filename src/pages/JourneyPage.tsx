@@ -177,7 +177,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                   VIP Airport Meet & Greet in Our Black Van
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Your journey starts the second you step out of Marrakech Menara Airport (RAK). Your dedicated private chauffeur greets you directly at the terminal exit holding a personalized name board and assists with all luggage.
+                  Your journey starts the second you step out of Marrakech Menara Airport (RAK). Your dedicated private chauffeur, Aymane, greets you directly at the terminal exit holding a personalized name board and assists with all luggage.
                 </p>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   Travel in total comfort in our executive black VIP van with air conditioning, chilled water, and Wi-Fi. All roundtrip transfers between the airport, your central hotel, and the clinic are fully coordinated and included in every stay package.
@@ -236,7 +236,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                   Master Cosmetic Dentists & Precision Digital Suites
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Our cosmetic dental surgeons specialize in minimally invasive smile transformations, with specialized post-graduate training and over a decade of aesthetic expertise. Every procedure is tailored to your unique facial features and natural tooth dynamics.
+                  Led by Dr Mouad, our cosmetic dental surgeons specialize in minimally invasive smile transformations, with specialized post-graduate training and over a decade of aesthetic expertise. Every procedure is tailored to your unique facial features and natural tooth dynamics.
                 </p>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   Inside our high-tech operatory, we utilize state-of-the-art 3Shape Trios® 3D intraoral scanners to map your bite with sub-millimeter precision. Experience zero discomfort, gentle anesthesia protocols, and world-class certified European materials.

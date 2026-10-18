@@ -828,7 +828,7 @@ export const PATIENT_REVIEWS: PatientReview[] = [
     location: 'London, UK',
     treatment: 'Composite Bonding (20 Teeth)',
     treatmentType: 'bonding',
-    reviewText: "I spent months going back and forth about whether to travel for dental work. Private quotes in London were coming in around £6,500 to £7,000, which just wasn't feasible for me. What settled my nerves was being able to message Dr Leila directly on WhatsApp and send through videos of my teeth before committing to anything.\n\nThe clinic in Guéliz is very calm and clean. Hassan picked me up at the airport on the Friday, and the bonding itself was done across two sessions on Friday and Saturday. I was mainly worried about ending up with that blinding, blocky white look, but the dentist took time shaping each tooth so they still look like real teeth, just neat and even. Flew back Sunday with the aftercare kit and care instructions. Really pleased with how straightforward the whole trip was.",
+    reviewText: "I spent months going back and forth about whether to travel for dental work. Private quotes in London were coming in around £6,500 to £7,000, which just wasn't feasible for me. What settled my nerves was being able to message Dr Mouad directly on WhatsApp and send through videos of my teeth before committing to anything.\n\nThe clinic in Guéliz is very calm and clean. Aymane picked me up at the airport on the Friday, and the bonding itself was done across two sessions on Friday and Saturday. I was mainly worried about ending up with that blinding, blocky white look, but the dentist took time shaping each tooth so they still look like real teeth, just neat and even. Flew back Sunday with the aftercare kit and care instructions. Really pleased with how straightforward the whole trip was.",
     clinicResponse: {
       date: 'Clinical Follow-up',
       text: "Thank you for sharing your experience, Charlotte. We're glad the video consultations helped put your mind at ease before travelling, and that you're happy with the natural finish. Please feel free to message our clinical team on WhatsApp if you have any questions during your aftercare."
@@ -888,7 +888,7 @@ export const PATIENT_REVIEWS: PatientReview[] = [
     location: 'Birmingham, UK',
     treatment: 'Composite Bonding (20 Teeth)',
     treatmentType: 'bonding',
-    reviewText: "Good experience overall and saved a substantial amount compared to private quotes in Birmingham. The resin bonding looks very tidy and blends in with my natural teeth without needing enamel ground down.\n\nKnocked one star off simply because the Friday appointment started around 25 minutes late due to an earlier case running over. That said, once I was in the chair, the dentist didn't rush anything and spent a good couple of hours making sure the edges were smooth and symmetrical. Driver was punctual and polite too.",
+    reviewText: "Good experience overall and saved a substantial amount compared to private quotes in Birmingham. The resin bonding looks very tidy and blends in with my natural teeth without needing enamel ground down.\n\nKnocked one star off simply because the Friday appointment started around 25 minutes late due to an earlier case running over. That said, once I was in the chair, the dentist didn't rush anything and spent a good couple of hours making sure the edges were smooth and symmetrical. Aymane was punctual and polite too.",
     clinicResponse: {
       date: 'Clinical Follow-up',
       text: "Thank you for the balanced review, Oliver. We apologize again for the short delay to your Friday appointment—we ensure our dentists never cut corners on chair time. We're very pleased you're satisfied with the bonding and the finish."
@@ -928,14 +928,14 @@ export const PATIENT_REVIEWS: PatientReview[] = [
     location: 'Edinburgh, UK',
     treatment: 'E.max Porcelain Veneers (20 Teeth)',
     treatmentType: 'veneers',
-    reviewText: "Flew down from Edinburgh for a full set of veneers. My biggest fear was coming back with that oversized, ultra-bright look you see on social media, but the dentist listened carefully to what I wanted and kept the translucency and tooth shape looking natural.\n\nOnly reason for 4 stars is that arriving into Marrakech airport on an evening flight was pretty chaotic with passport control queues. Fortunately the driver was waiting right outside arrivals with my name on a board, which was a huge relief after a long journey. The clinical side and the veneers themselves were first rate.",
+    reviewText: "Flew down from Edinburgh for a full set of veneers. My biggest fear was coming back with that oversized, ultra-bright look you see on social media, but the dentist listened carefully to what I wanted and kept the translucency and tooth shape looking natural.\n\nOnly reason for 4 stars is that arriving into Marrakech airport on an evening flight was pretty chaotic with passport control queues. Fortunately Aymane was waiting right outside arrivals with my name on a board, which was a huge relief after a long journey. The clinical side and the veneers themselves were first rate.",
     clinicResponse: {
       date: 'Clinical Follow-up',
-      text: "Thank you for the review, Hannah. Evening passport control at Marrakech Menara can certainly get busy, so we're glad our chauffeur met you promptly once through. We're thrilled you love the natural look of your veneers."
+      text: "Thank you for the review, Hannah. Evening passport control at Marrakech Menara can certainly get busy, so we're glad Aymane met you promptly once through. We're thrilled you love the natural look of your veneers."
     },
     ownerResponse: {
       date: 'Clinical Follow-up',
-      text: "Thank you for the review, Hannah. Evening passport control at Marrakech Menara can certainly get busy, so we're glad our chauffeur met you promptly once through. We're thrilled you love the natural look of your veneers."
+      text: "Thank you for the review, Hannah. Evening passport control at Marrakech Menara can certainly get busy, so we're glad Aymane met you promptly once through. We're thrilled you love the natural look of your veneers."
     }
   }
 ];
