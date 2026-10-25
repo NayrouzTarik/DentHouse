@@ -65,14 +65,14 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
 
   if (isBonding) {
     if (partyType === 'solo') {
-      baseTreatmentCost = 1199;
-      treatmentCostPerPerson = 1199;
+      baseTreatmentCost = 1299;
+      treatmentCostPerPerson = 1299;
     } else if (partyType === 'duo') {
-      baseTreatmentCost = 2199;
-      treatmentCostPerPerson = 1099.5;
+      baseTreatmentCost = 2399;
+      treatmentCostPerPerson = 1199.5;
     } else {
-      baseTreatmentCost = 3199;
-      treatmentCostPerPerson = 1066.33;
+      baseTreatmentCost = 3499;
+      treatmentCostPerPerson = 1166.33;
     }
   } else {
     // E.max Veneers: Base £3,450 per person (Duo 15% off = £2,933, Trio 20% off = £2,760)
@@ -278,7 +278,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   <div className="mt-3 pt-2 border-t border-slate-100/80 flex items-baseline justify-between text-xs">
                     <span className="text-slate-500">Standard Package from:</span>
                     <span className="font-extrabold text-slate-900 text-sm">
-                      £1,199
+                      £1,299
                     </span>
                   </div>
                 </button>
@@ -355,7 +355,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   </div>
                   <p className="mt-1 text-xs text-slate-500">1 patient</p>
                   <div className="mt-2 text-[11px] font-semibold text-slate-600">
-                    {isBonding ? '£1,199 standard' : '£3,450 standard'}
+                    {isBonding ? '£1,299 standard' : '£3,450 standard'}
                   </div>
                 </button>
 
@@ -378,7 +378,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   </div>
                   <p className="mt-1 text-xs text-slate-500">2 patients</p>
                   <div className="mt-2 text-[11px] text-emerald-700 font-semibold">
-                    {isBonding ? '£1,099.50/pers' : '£2,933/pers'}
+                    {isBonding ? '£1,199.50/pers' : '£2,933/pers'}
                   </div>
                 </button>
 
@@ -401,7 +401,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   </div>
                   <p className="mt-1 text-xs text-slate-500">3 patients</p>
                   <div className="mt-2 text-[11px] text-emerald-700 font-semibold">
-                    {isBonding ? '£1,066.33/pers' : '£2,760/pers'}
+                    {isBonding ? '£1,166.33/pers' : '£2,760/pers'}
                   </div>
                 </button>
               </div>
@@ -801,7 +801,7 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                   <div className="flex items-center justify-between text-emerald-700 font-semibold pt-1 border-t border-slate-100">
                     <span>Group Rate Discount:</span>
                     <span>
-                      {partyType === 'duo' ? 'Save £199 (£1,099.50/pers)' : 'Save £398 (£1,066.33/pers)'}
+                      {partyType === 'duo' ? 'Save £199 (£1,199.50/pers)' : 'Save £398 (£1,166.33/pers)'}
                     </span>
                   </div>
                 )}

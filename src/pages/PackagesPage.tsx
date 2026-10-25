@@ -25,7 +25,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
     <div className="pt-6">
       <SEOHead
         title="Composite Bonding Prices & Packages Marrakech | Dent House"
-        description="Transparent composite bonding packages in Marrakech from £1,199 for UK patients. Treatment-only or all-inclusive packages with 2 nights luxury stay and chauffeur transfers."
+        description="Transparent composite bonding packages in Marrakech from £1,299 for UK patients. Treatment-only or all-inclusive packages with 2 nights luxury stay and chauffeur transfers."
         canonicalUrl="https://denthousemarrakech.com/packages"
       />
 

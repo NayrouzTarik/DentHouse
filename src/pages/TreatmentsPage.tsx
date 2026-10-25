@@ -14,7 +14,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
     <div className="pt-6">
       <SEOHead
         title="Composite Bonding Marrakech | Minimally Invasive Smiles | Dent House"
-        description="High-grade composite bonding in Marrakech from £1,199. Chairside sculpting, zero healthy enamel drilling, 2-night stay packages with private chauffeur transfers for UK patients."
+        description="High-grade composite bonding in Marrakech from £1,299. Chairside sculpting, zero healthy enamel drilling, 2-night stay packages with private chauffeur transfers for UK patients."
         canonicalUrl="https://denthousemarrakech.com/treatments"
         schemaData={{
           "@context": "https://schema.org",
@@ -121,14 +121,14 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                   <div className="flex items-baseline gap-1">
                     <span className="text-xs text-slate-500 font-medium">Starting from</span>
                     <span className="text-2xl sm:text-3xl font-extrabold text-[#0284C7] font-sans">
-                      £1,199
+                      £1,299
                     </span>
                     <span className="text-xs text-slate-500 font-medium">/ person</span>
                   </div>
                 </div>
                 <div className="text-right text-xs text-slate-500">
                   <span className="block font-medium">Treatment Only or With Stay</span>
-                  <span className="text-emerald-700 font-semibold">From £1,199 (Stay +£200)</span>
+                  <span className="text-emerald-700 font-semibold">From £1,299 (Stay +£200)</span>
                 </div>
               </div>
             </div>
