@@ -56,25 +56,25 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
 
   const realPhotos = [
     {
-      src: '/images/cabinet/chauffeur.png',
+      src: '/images/cabinet/chauffeur.webp',
       title: 'VIP Mercedes Chauffeur Transfer',
       subtitle: 'Private airport meet & greet and direct clinic transfers in our Mercedes fleet',
       tag: 'Mercedes VIP Van',
     },
     {
-      src: '/images/cabinet/team_patient.png',
+      src: '/images/cabinet/team_patient.webp',
       title: 'Digital Consultation Suite',
       subtitle: 'Interactive 3Shape Trios® 3D smile planning with our lead cosmetic surgeons',
       tag: '3D Digital Design',
     },
     {
-      src: '/images/cabinet/cabinet.png',
+      src: '/images/cabinet/cabinet.webp',
       title: 'High-Tech Treatment Operatory',
       subtitle: 'Surgically sterile environment with ergonomic dental suites and ambient lighting',
       tag: 'Clinical Excellence',
     },
     {
-      src: '/images/cabinet/staying.png',
+      src: '/images/cabinet/staying.webp',
       title: 'Central Marrakech Accommodation',
       subtitle: 'Curated premium stays in central Marrakech for optimal rest between visits',
       tag: 'Central Stay',
@@ -206,10 +206,11 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
               <div className="w-full lg:w-1/2 shrink-0">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
                   <img
-                    src="/images/cabinet/chauffeur.png"
+                    src="/images/cabinet/chauffeur.webp"
                     alt="Private Chauffeur with Black VIP Van at Marrakech Airport"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
@@ -265,10 +266,11 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
               <div className="w-full lg:w-1/2 shrink-0">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
                   <img
-                    src="/images/cabinet/team_patient.png"
+                    src="/images/cabinet/team_patient.webp"
                     alt="Cosmetic Dentist and Patient in Modern Consultation Suite"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
@@ -324,10 +326,11 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
               <div className="w-full lg:w-1/2 shrink-0">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
                   <img
-                    src="/images/cabinet/reception.png"
+                    src="/images/cabinet/reception.webp"
                     alt="Dent House Marrakech Clinic Reception with Official 3D Logo"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
@@ -396,9 +399,11 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
             {/* Visual Photo */}
             <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md aspect-4/3 bg-slate-200 relative group">
               <img
-                src="/images/cabinet/cabinet.png"
+                src="/images/cabinet/cabinet.webp"
                 alt="Dent House Marrakech Modern Clinic Suite"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-xs text-white p-2.5 rounded-xl text-xs flex items-center justify-between">
                 <span className="font-semibold">Modern Clinical Suite</span>

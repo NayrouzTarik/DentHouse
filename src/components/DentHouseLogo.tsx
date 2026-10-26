@@ -21,8 +21,8 @@ export const DentHouseLogo: React.FC<DentHouseLogoProps> = ({
 
   const logoSrc =
     theme === 'dark'
-      ? '/images/logo-dark-mode.png'
-      : '/images/logo-transparent.png';
+      ? '/images/logo-dark-mode.webp'
+      : '/images/logo-transparent.webp';
 
   return (
     <div className={`inline-flex items-center select-none ${className}`}>
@@ -30,10 +30,13 @@ export const DentHouseLogo: React.FC<DentHouseLogoProps> = ({
         src={logoSrc}
         alt="Dent House Marrakech"
         className={`${heightClasses} w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]`}
+        decoding="async"
         onError={(e) => {
-          // Robust fallback to root logo.png if customized version fails
+          // Robust fallback if webp is unsupported or missing
           const target = e.currentTarget;
-          if (!target.src.endsWith('/images/logo.png')) {
+          if (target.src.endsWith('.webp')) {
+            target.src = theme === 'dark' ? '/images/logo-dark-mode.png' : '/images/logo-transparent.png';
+          } else if (!target.src.endsWith('/images/logo.png')) {
             target.src = '/images/logo.png';
           }
         }}

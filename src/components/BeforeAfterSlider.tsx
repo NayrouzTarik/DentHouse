@@ -108,6 +108,8 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
           alt={afterAlt}
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           draggable={false}
+          loading="lazy"
+          decoding="async"
         />
 
         {/* Layer 2: Before Image (Clipped overlay) */}
@@ -122,6 +124,8 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
             alt={beforeAlt}
             className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             draggable={false}
+            loading="lazy"
+            decoding="async"
           />
         </div>
 

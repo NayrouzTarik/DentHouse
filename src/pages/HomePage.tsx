@@ -31,25 +31,25 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
 
   const realPatientPhotos = [
     {
-      src: '/images/results/after1.png',
+      src: '/images/results/after1.webp',
       label: 'Composite Bonding Sculpt',
       detail: '2 Night Luxury Stay · Zero Drilling · Natural Aesthetics',
       alt: 'Composite bonding smile transformation in Marrakech - natural resin sculpt with zero drilling',
     },
     {
-      src: '/images/results/after3.png',
+      src: '/images/results/after3.webp',
       label: 'E.max Porcelain Veneers',
       detail: '4 Night Luxury Stay · Handcrafted BL2 Porcelain',
       alt: 'E.max porcelain veneers smile makeover in Marrakech - handcrafted BL2 ceramic shields',
     },
     {
-      src: '/images/results/client1.png',
+      src: '/images/results/client1.webp',
       label: 'Charlotte D. (London, UK)',
       detail: 'Composite Bonding Patient · London, UK',
       alt: 'Charlotte D. from London UK - composite bonding patient at Dent House Marrakech',
     },
     {
-      src: '/images/results/client2.png',
+      src: '/images/results/client2.webp',
       label: 'Marcus S. (Manchester, UK)',
       detail: 'E.max Veneers Patient · Manchester, UK',
       alt: 'Marcus S. from Manchester UK - porcelain veneers patient at Dent House Marrakech',
@@ -142,6 +142,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
                     alt={photo.alt || photo.label}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3.5 flex-1 flex flex-col justify-between">

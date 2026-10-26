@@ -14,9 +14,12 @@ export const Hero: React.FC<HeroProps> = () => {
       {/* Background Clinic Image - Using the New Cabinet Picture */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/cabinet/background_website.png"
+          src="/images/cabinet/background_website.webp"
           alt="Dent House Marrakech cosmetic dentistry clinic suite in Morocco"
           className="w-full h-full object-cover object-center blur-[0.75px] scale-[1.01]"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
         />
         {/* Balanced contrast overlay so the text stays crisp and readable */}
         <div className="absolute inset-0 bg-slate-950/50" />

@@ -54,8 +54,8 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
             <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
               <div className="p-4 sm:p-5 pb-0">
                 <BeforeAfterSlider
-                  beforeImage="/images/results/before2.png"
-                  afterImage="/images/results/after2.png"
+                  beforeImage="/images/results/before2.webp"
+                  afterImage="/images/results/after2.webp"
                   beforeAlt="Patient teeth before composite bonding showing diastema spacing"
                   afterAlt="Patient teeth after composite bonding showing closed gap and smooth polish"
                   badge="20 Composite Bondings"
@@ -105,8 +105,8 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
             <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
               <div className="p-4 sm:p-5 pb-0">
                 <BeforeAfterSlider
-                  beforeImage="/images/results/before4.png"
-                  afterImage="/images/results/after4.png"
+                  beforeImage="/images/results/before4.webp"
+                  afterImage="/images/results/after4.webp"
                   beforeAlt="Patient teeth before porcelain veneers with wear and deep discoloration"
                   afterAlt="Patient teeth after handcrafted E.max porcelain veneers"
                   badge="20 Porcelain Veneers"

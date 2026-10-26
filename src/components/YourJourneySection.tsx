@@ -168,10 +168,10 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
               <img
                 src={
                   activeDay === 0
-                    ? '/images/cabinet/chauffeur.png'
+                    ? '/images/cabinet/chauffeur.webp'
                     : activeDay === 1
-                    ? '/images/cabinet/staying.png'
-                    : '/images/smile_makeover_veneers_1791832473573.jpg'
+                    ? '/images/cabinet/staying.webp'
+                    : '/images/smile_makeover_veneers_1791832473573.webp'
                 }
                 alt={
                   activeDay === 0
@@ -181,7 +181,8 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
                     : 'Completed natural smile makeover with composite bonding and veneers in Marrakech'
                 }
                 className="w-full h-72 sm:h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
 
