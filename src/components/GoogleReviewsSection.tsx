@@ -57,7 +57,7 @@ export const GoogleReviewsSection: React.FC<GoogleReviewsSectionProps> = ({
                 <span className="text-slate-300">•</span>
                 <span className="font-medium text-slate-700">UK & European Patients</span>
                 <span className="text-slate-300">•</span>
-                <span>Cosmetic Smile Clinic · Guéliz</span>
+                <span>Cosmetic Smile Clinic · Marrakech</span>
               </div>
             </div>
           </div>
@@ -209,7 +209,7 @@ export const GoogleReviewsSection: React.FC<GoogleReviewsSectionProps> = ({
       <div className="mt-8 pt-5 border-t border-slate-200/70 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <div className="flex items-center gap-2">
           <ShieldCheck className="w-4 h-4 text-[#0284C7] shrink-0" />
-          <span>Dent House Cosmetic Clinic · Guéliz, Marrakech</span>
+          <span>Dent House Cosmetic Clinic · Marrakech</span>
         </div>
         <div className="text-slate-400 text-center sm:text-right">
           <span>Individual clinical outcomes may vary. Treatment planned after digital assessment.</span>

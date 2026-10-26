@@ -168,9 +168,9 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
               <img
                 src={
                   activeDay === 0
-                    ? '/images/chauffeur_vip_transfer_1791832484434.jpg'
+                    ? '/images/cabinet/chauffeur.png'
                     : activeDay === 1
-                    ? '/images/marrakech_palmeraie_resort_1791832462639.jpg'
+                    ? '/images/cabinet/staying.png'
                     : '/images/smile_makeover_veneers_1791832473573.jpg'
                 }
                 alt={
@@ -190,7 +190,7 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
                   {activeDay === 0
                     ? 'VIP Welcome & Transfers'
                     : activeDay === 1
-                    ? 'Palmeraie Resort Leisure & Recovery'
+                    ? 'City Center Leisure & Recovery'
                     : 'Lifelong Natural Confidence'}
                 </span>
                 <h4 className="text-base sm:text-lg font-serif font-bold text-white mt-1">
@@ -224,7 +224,7 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
 
                 <div className="p-3 rounded-xl bg-slate-50 border border-slate-100">
                   <Hotel className="w-4 h-4 text-emerald-600 mb-1.5" />
-                  <div className="font-bold text-slate-800">Palmeraie Guest Perk</div>
+                  <div className="font-bold text-slate-800">City Center Guest Perk</div>
                   <div className="text-slate-500 text-[11px] mt-0.5">Bring 2 guests free (Mid & Luxury)</div>
                 </div>
 

@@ -424,7 +424,7 @@ export const DosAndDontsSection: React.FC = () => {
           </div>
         )}
 
-        {/* Palmeraie Guest & Extra Night Advantage Notice */}
+        {/* City Center Guest & Extra Night Advantage Notice */}
         <div className="mt-12 max-w-4xl mx-auto rounded-2xl bg-gradient-to-r from-sky-900 to-slate-900 p-5 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
           <div className="flex items-center gap-3.5">
             <div className="w-10 h-10 rounded-xl bg-white/10 text-sky-300 flex items-center justify-center shrink-0">
@@ -432,10 +432,10 @@ export const DosAndDontsSection: React.FC = () => {
             </div>
             <div className="text-xs sm:text-sm">
               <span className="font-bold text-white block">
-                Palmeraie Advantage: Bring 2 Companions for £0 Extra!
+                City Center Advantage: Bring 2 Companions for £0 Extra!
               </span>
               <span className="text-slate-300">
-                Choose Mid-Level (£110) or Luxury (£180) Palmeraie stays and bring up to 2 companions to stay with you for completely FREE. Extra nights are 50% OFF!
+                Choose Mid-Level (£110) or Luxury (£180) city center stays and bring up to 2 companions to stay with you for completely FREE. Extra nights are 50% OFF!
               </span>
             </div>
           </div>

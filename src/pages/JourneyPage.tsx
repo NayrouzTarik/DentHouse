@@ -45,8 +45,8 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
       desc: 'Genuine Ivoclar E.max lithium disilicate ceramics and micro-hybrid composite resins.',
     },
     {
-      title: 'Prestigious Guéliz District',
-      desc: 'Modern, sterile clinical suite located in central Marrakech, close to cafes and top residences.',
+      title: 'Modern Clinical Suite',
+      desc: 'Modern, sterile clinical suite equipped with advanced dental technology, designed for patient comfort.',
     },
     {
       title: 'Dedicated International Team',
@@ -56,25 +56,25 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
 
   const realPhotos = [
     {
-      src: '/images/chauffeur_vip_transfer_1791832484434.jpg',
+      src: '/images/cabinet/chauffeur.png',
       title: 'VIP Mercedes Chauffeur Transfer',
       subtitle: 'Private airport meet & greet and direct clinic transfers in our Mercedes fleet',
       tag: 'Mercedes VIP Van',
     },
     {
-      src: '/images/hero_denthouse_consultation_1791832441772.jpg',
+      src: '/images/cabinet/team_patient.png',
       title: 'Digital Consultation Suite',
       subtitle: 'Interactive 3Shape Trios® 3D smile planning with our lead cosmetic surgeons',
       tag: '3D Digital Design',
     },
     {
-      src: '/images/clinic_interior_luxury_1791832453390.jpg',
+      src: '/images/cabinet/cabinet.png',
       title: 'High-Tech Treatment Operatory',
       subtitle: 'Surgically sterile environment with ergonomic dental suites and ambient lighting',
-      tag: 'Guéliz Medical Center',
+      tag: 'Clinical Excellence',
     },
     {
-      src: '/images/marrakech_palmeraie_resort_1791832462639.jpg',
+      src: '/images/cabinet/staying.png',
       title: 'Central Marrakech Accommodation',
       subtitle: 'Curated premium stays in central Marrakech for optimal rest between visits',
       tag: 'Central Stay',
@@ -206,8 +206,8 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
               <div className="w-full lg:w-1/2 shrink-0">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
                   <img
-                    src="/images/chauffeur_vip_van.jpg"
-                    alt="Private Chauffeur with Black Mercedes VIP Van at Marrakech Airport"
+                    src="/images/cabinet/chauffeur.png"
+                    alt="Private Chauffeur with Black VIP Van at Marrakech Airport"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -265,7 +265,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
               <div className="w-full lg:w-1/2 shrink-0">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
                   <img
-                    src="/images/hero_denthouse_consultation_1791832441772.jpg"
+                    src="/images/cabinet/team_patient.png"
                     alt="Cosmetic Dentist and Patient in Modern Consultation Suite"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
@@ -315,7 +315,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                   </div>
                   <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
                     <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
-                    <span>Guéliz District · Central Marrakech</span>
+                    <span>Modern & Relaxing Setting</span>
                   </div>
                 </div>
               </div>
@@ -324,7 +324,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
               <div className="w-full lg:w-1/2 shrink-0">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
                   <img
-                    src="/images/reception.png"
+                    src="/images/cabinet/reception.png"
                     alt="Dent House Marrakech Clinic Reception with Official 3D Logo"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
@@ -396,12 +396,12 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
             {/* Visual Photo */}
             <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md aspect-4/3 bg-slate-200 relative group">
               <img
-                src="/images/clinic_interior_luxury_1791832453390.jpg"
+                src="/images/cabinet/cabinet.png"
                 alt="Dent House Marrakech Modern Clinic Suite"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-xs text-white p-2.5 rounded-xl text-xs flex items-center justify-between">
-                <span className="font-semibold">Guéliz Medical District</span>
+                <span className="font-semibold">Modern Clinical Suite</span>
                 <span className="text-sky-300 font-bold">Marrakech</span>
               </div>
             </div>

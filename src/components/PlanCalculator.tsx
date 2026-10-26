@@ -89,20 +89,21 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
   }
 
   // 2. Stay & Transfer Upgrade Cost Calculation
+  const fullPackageBaseFee = isBonding
+    ? (stayResidenceType === 'deluxe-2room' ? 240 : 200)
+    : (partyType === 'solo' ? 210 : partyType === 'duo' ? 315 : 360);
+  const fullPackageExtraNightRate = isBonding
+    ? (stayResidenceType === 'deluxe-2room' ? 60 : 50)
+    : 50;
+  const fullPackageStayTotal = fullPackageBaseFee + (extraNights * fullPackageExtraNightRate);
+
   let stayAndTransfersCost = 0;
   if (isFullPackage) {
-    if (isBonding) {
-      // Base 2-night luxury stay with private chauffeur transfers is £200 for the whole group (Solo, Duo, Trio)
-      const baseFee = stayResidenceType === 'deluxe-2room' ? 240 : 200;
-      const extraNightRate = stayResidenceType === 'deluxe-2room' ? 60 : 50;
-      stayAndTransfersCost = baseFee + (extraNights * extraNightRate);
-    } else {
-      // E.max Veneers 4-night base stay + transfers: Solo £210 (total £3,660), Duo £315 (total £6,180), Trio £360 (total £8,460)
-      const baseFee = partyType === 'solo' ? 210 : partyType === 'duo' ? 315 : 360;
-      const extraNightRate = 50;
-      stayAndTransfersCost = baseFee + (extraNights * extraNightRate);
-    }
+    stayAndTransfersCost = fullPackageStayTotal;
   }
+
+  const fullPackageTotalCost = baseTreatmentCost + fullPackageStayTotal;
+  const fullPackagePerPerson = Math.round(fullPackageTotalCost / partyCount);
 
   // 3. Extras (Tours & Excursions)
   const totalExtrasCost = selectedExtras.reduce((sum, extraId) => {
@@ -557,12 +558,12 @@ export const PlanCalculator: React.FC<PlanCalculatorProps> = ({
                     <span className="text-xs text-slate-500">Full package:</span>
                     <div className="text-right">
                       <span className="text-lg font-bold text-[#0284C7]">
-                        £{Math.round((baseTreatmentCost + stayAndTransfersCost) / partyCount).toLocaleString()}
+                        £{fullPackagePerPerson.toLocaleString()}
                       </span>
                       <span className="text-xs text-slate-500 font-medium"> / person</span>
                       {partyCount > 1 && (
                         <div className="text-[11px] font-semibold text-slate-600">
-                          Total: £{(baseTreatmentCost + stayAndTransfersCost).toLocaleString()}
+                          Total: £{fullPackageTotalCost.toLocaleString()}
                         </div>
                       )}
                     </div>

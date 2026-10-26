@@ -464,7 +464,7 @@ export const COFFEE_STAIN_PROTOCOLS = [
   }
 ];
 
-export const PALMERAIE_SEASONALITY_DATA = [
+export const MARRAKECH_SEASONALITY_DATA = [
   {
     month: 'January',
     season: 'Winter Sun / Gentle Pace',
@@ -474,7 +474,7 @@ export const PALMERAIE_SEASONALITY_DATA = [
     savingGBP: 110,
     demand: 'Moderate',
     status: 'Stable Dental Bookings',
-    note: 'Crisp sunny days, peaceful Palmeraie garden pools, escape bleak UK January.'
+    note: 'Crisp sunny days, peaceful garden pools, escape bleak UK January.'
   },
   {
     month: 'February',
@@ -485,7 +485,7 @@ export const PALMERAIE_SEASONALITY_DATA = [
     savingGBP: 150,
     demand: 'High',
     status: 'High Demand Window',
-    note: 'UK half-term travel, warmer afternoons, almond blossoms blooming in Palmeraie.'
+    note: 'UK half-term travel, warmer afternoons, almond blossoms blooming in Marrakech.'
   },
   {
     month: 'March',
@@ -496,7 +496,7 @@ export const PALMERAIE_SEASONALITY_DATA = [
     savingGBP: 250,
     demand: 'Peak',
     status: 'Airbnb Surge Pricing (Dent House Locks Flat £110)',
-    note: 'Ideal 25°C weather. Standard Palmeraie Airbnbs surge past £350+/night; Dent House keeps fixed rate.'
+    note: 'Ideal 25°C weather. Standard Marrakech Airbnbs surge past £350+/night; Dent House keeps fixed rate.'
   },
   {
     month: 'April',
@@ -506,8 +506,8 @@ export const PALMERAIE_SEASONALITY_DATA = [
     dentHouseGBP: 110,
     savingGBP: 280,
     demand: 'Peak',
-    status: 'Max Palmeraie Surge',
-    note: 'Easter holidays & peak European tourism. Patients save £500+ on a 2-day Palmeraie stay.'
+    status: 'Max Season Surge',
+    note: 'Easter holidays & peak European tourism. Patients save £500+ on a 2-day stay.'
   },
   {
     month: 'May',
@@ -529,7 +529,7 @@ export const PALMERAIE_SEASONALITY_DATA = [
     savingGBP: 130,
     demand: 'Moderate',
     status: 'Stable Clinic Flow',
-    note: 'Direct flights from all UK airports, relaxed uncrowded Palmeraie boutique villas.'
+    note: 'Direct flights from all UK airports, relaxed uncrowded boutique accommodations.'
   },
   {
     month: 'July',
@@ -540,7 +540,7 @@ export const PALMERAIE_SEASONALITY_DATA = [
     savingGBP: 60,
     demand: 'Clinic Advantage',
     status: 'Consistent Demand via Scheduled Treatment Packages',
-    note: 'Scheduled dental packages provide consistent year-round occupancy for partner Palmeraie villas across all seasons.'
+    note: 'Scheduled dental packages provide consistent year-round occupancy for partner accommodations across all seasons.'
   },
   {
     month: 'August',
@@ -583,8 +583,8 @@ export const PALMERAIE_SEASONALITY_DATA = [
     dentHouseGBP: 110,
     savingGBP: 240,
     demand: 'Peak',
-    status: 'Peak Palmeraie Villa Season',
-    note: 'The exact month in your search! High Airbnb demand (£350+/nt). Dent House locks in £110 flat rate + 2 Free Guests.'
+    status: 'Peak City Center Season',
+    note: 'High season travel (£350+/nt). Dent House locks in £110 flat rate + 2 Free Guests.'
   },
   {
     month: 'December',
@@ -595,7 +595,7 @@ export const PALMERAIE_SEASONALITY_DATA = [
     savingGBP: 310,
     demand: 'Peak',
     status: 'Festive Surge Protection',
-    note: 'Christmas & New Year celebrations. Palmeraie rates spike to year highs. Dent House patients protected from holiday surges.'
+    note: 'Christmas & New Year celebrations. High-season rates spike to year highs. Dent House patients protected from holiday surges.'
   }
 ];
 
@@ -628,8 +628,8 @@ export const DOS_AND_DONTS = {
     },
     {
       title: 'Bring up to 2 companions to stay with you for £0 FREE',
-      desc: 'Select our Mid-Level (£110) or Luxury (£180) Palmeraie stay and bring 2 companions at no extra lodging cost. Extra nights are 50% OFF (£55 or £90/night).',
-      tag: 'Palmeraie Stay'
+      desc: 'Select our Mid-Level (£110) or Luxury (£180) city center stay and bring 2 companions at no extra lodging cost. Extra nights are 50% OFF (£55 or £90/night).',
+      tag: 'City Center Stay'
     }
   ],
   donts: [
@@ -677,12 +677,12 @@ export const JOURNEY_STEPS = [
       {
         time: '10:00',
         label: 'VIP Airport Welcome',
-        desc: 'Your private chauffeur greets you at Arrivals with a personalized sign, handles all luggage, and drives you directly to your Palmeraie residence.'
+        desc: 'Your private chauffeur greets you at Arrivals with a personalized sign, handles all luggage, and drives you directly to your city center residence.'
       },
       {
         time: '11:15',
-        label: 'Palmeraie Check-In & Refresh',
-        desc: 'Check in to your Palmeraie suite or villa (remember: you can bring 2 guests to stay for free on Mid-level and Luxury tiers).'
+        label: 'City Center Check-In & Refresh',
+        desc: 'Check in to your city center suite or hotel (remember: you can bring 2 guests to stay for free on Mid-level and Luxury tiers).'
       },
       {
         time: '14:30',
@@ -696,8 +696,8 @@ export const JOURNEY_STEPS = [
       },
       {
         time: '19:00',
-        label: 'Evening at Leisure in Palmeraie',
-        desc: 'Chauffeur returns you to your Palmeraie resort. Enjoy Moroccan mint tea by the pool.'
+        label: 'Evening at Leisure in Marrakech',
+        desc: 'Chauffeur returns you to your city center residence. Enjoy Moroccan mint tea.'
       }
     ]
   },
@@ -710,8 +710,8 @@ export const JOURNEY_STEPS = [
     points: [
       {
         time: '10:00',
-        label: 'Palmeraie Poolside Morning',
-        desc: 'Relax by the pool or sun terrace while our master ceramists add the finishing ceramic micro-textures.'
+        label: 'Relaxing Morning in Marrakech',
+        desc: 'Relax by the terrace or cafe while our master ceramists add the finishing ceramic micro-textures.'
       },
       {
         time: '14:00',
@@ -731,7 +731,7 @@ export const JOURNEY_STEPS = [
       {
         time: '18:30',
         label: 'Celebrate in Marrakech',
-        desc: 'Chauffeur takes you to a celebratory dinner or back to your Palmeraie villa.'
+        desc: 'Chauffeur takes you to a celebratory dinner or back to your city center residence.'
       }
     ]
   },
@@ -778,13 +778,13 @@ export const CLINIC_HIGHLIGHTS = [
     icon: 'HeartHandshake'
   },
   {
-    title: 'Palmeraie Luxury Stays (Bring 2 Guests Free)',
-    desc: 'All accommodations are in Palmeraie. On Mid-Level and Luxury tiers, bring up to 2 companions to stay with you for £0 extra.',
+    title: 'City Center Luxury Stays (Bring 2 Guests Free)',
+    desc: 'All accommodations are in Marrakech City Center. On Mid-Level and Luxury tiers, bring up to 2 companions to stay with you for £0 extra.',
     icon: 'Sparkles'
   },
   {
     title: 'Extra Nights at 50% OFF',
-    desc: 'Palmeraie suites start at £70. Want to extend your stay for a longer sunshine holiday? Extra nights are discounted by 50%.',
+    desc: 'City center suites start at £70. Want to extend your stay for a longer sunshine holiday? Extra nights are discounted by 50%.',
     icon: 'Activity'
   }
 ];
@@ -828,7 +828,7 @@ export const PATIENT_REVIEWS: PatientReview[] = [
     location: 'London, UK',
     treatment: 'Composite Bonding (20 Teeth)',
     treatmentType: 'bonding',
-    reviewText: "I spent months going back and forth about whether to travel for dental work. Private quotes in London were coming in around £6,500 to £7,000, which just wasn't feasible for me. What settled my nerves was being able to message Dr Mouad directly on WhatsApp and send through videos of my teeth before committing to anything.\n\nThe clinic in Guéliz is very calm and clean. Aymane picked me up at the airport on the Friday, and the bonding itself was done across two sessions on Friday and Saturday. I was mainly worried about ending up with that blinding, blocky white look, but the dentist took time shaping each tooth so they still look like real teeth, just neat and even. Flew back Sunday with the aftercare kit and care instructions. Really pleased with how straightforward the whole trip was.",
+    reviewText: "I spent months going back and forth about whether to travel for dental work. Private quotes in London were coming in around £6,500 to £7,000, which just wasn't feasible for me. What settled my nerves was being able to message Dr Mouad directly on WhatsApp and send through videos of my teeth before committing to anything.\n\nThe clinic is very calm and clean. Aymane picked me up at the airport on the Friday, and the bonding itself was done across two sessions on Friday and Saturday. I was mainly worried about ending up with that blinding, blocky white look, but the dentist took time shaping each tooth so they still look like real teeth, just neat and even. Flew back Sunday with the aftercare kit and care instructions. Really pleased with how straightforward the whole trip was.",
     clinicResponse: {
       date: 'Clinical Follow-up',
       text: "Thank you for sharing your experience, Charlotte. We're glad the video consultations helped put your mind at ease before travelling, and that you're happy with the natural finish. Please feel free to message our clinical team on WhatsApp if you have any questions during your aftercare."
@@ -848,7 +848,7 @@ export const PATIENT_REVIEWS: PatientReview[] = [
     location: 'Manchester, UK',
     treatment: 'E.max Porcelain Veneers (20 Teeth)',
     treatmentType: 'veneers',
-    reviewText: "Had 20 porcelain veneers done last month. Back home in Manchester I was quoted silly money—over £14k—so Marrakech made a lot more sense financially, even taking flights into account.\n\nThe package Dent House set up covered the hotel in the Palmeraie and driver pickups, which took the stress out of getting around. First day was digital scans and discussing the shape, followed by prep work and temporary teeth. You get a rest day while the lab makes the veneers, then back in for final fitting and bite checks. The ceramic feels smooth and solid, bite feels completely normal, and having the written guarantee gives peace of mind. Sound team all round.",
+    reviewText: "Had 20 porcelain veneers done last month. Back home in Manchester I was quoted silly money—over £14k—so Marrakech made a lot more sense financially, even taking flights into account.\n\nThe package Dent House set up covered the hotel in the city center and driver pickups, which took the stress out of getting around. First day was digital scans and discussing the shape, followed by prep work and temporary teeth. You get a rest day while the lab makes the veneers, then back in for final fitting and bite checks. The ceramic feels smooth and solid, bite feels completely normal, and having the written guarantee gives peace of mind. Sound team all round.",
     clinicResponse: {
       date: 'Clinical Follow-up',
       text: "Thanks for the feedback, Marcus. It's great to hear you felt well looked after in Marrakech and that your bite has settled comfortably. Remember our team is always on hand via WhatsApp should you need any documentation or follow-up support."
@@ -949,7 +949,7 @@ export const PATIENT_STORIES = [
     treatment: 'Duo E.max Porcelain Veneers',
     saving: 'Duo Smile Transformation',
     rating: 5,
-    quote: 'We chose the Duo package and stayed in a stunning Palmeraie villa. We even brought our daughter along because of the 2-free-guests perk! The teeth look completely natural, the 5-year warranty was clearly registered, and private chauffeur transfers made everything stress-free once we landed.'
+    quote: 'We chose the Duo package and stayed in a stunning city center residence. We even brought our daughter along because of the 2-free-guests perk! The teeth look completely natural, the 5-year warranty was clearly registered, and private chauffeur transfers made everything stress-free once we landed.'
   },
   {
     name: 'Oliver B.',
@@ -980,7 +980,7 @@ export const FAQS = [
   },
   {
     q: 'How does accommodation work in Marrakech? Can I bring guests?',
-    a: 'All our partner accommodations are located in the heart of Marrakech (Centre-Ville / Guéliz), close to upscale dining, cafes, and our clinic. We offer flexible arrangements tailored to your style and party size, and you can bring companion guests with you. Contact our concierge on WhatsApp to personalize your stay without rigid nightly constraints.'
+    a: 'All our partner accommodations are located in the city center of Marrakech, close to upscale dining, cafes, and our clinic. We offer flexible arrangements tailored to your style and party size, and you can bring companion guests with you. Contact our concierge on WhatsApp to personalize your stay without rigid nightly constraints.'
   },
   {
     q: 'How do transfers work if I arrange my own accommodation?',

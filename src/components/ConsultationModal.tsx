@@ -29,7 +29,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
           : prefilledPlan.party === 'duo'
           ? 'Duo (2 patients - 15% discount)'
           : 'Trio (3 patients - 20% discount)';
-      const stayText = prefilledPlan.stay || 'Palmeraie Residence';
+      const stayText = prefilledPlan.stay || 'City Center Residence';
       const priceText = prefilledPlan.perPersonPrice
         ? `£${prefilledPlan.perPersonPrice.toLocaleString()} / person`
         : '';

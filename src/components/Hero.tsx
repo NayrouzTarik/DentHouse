@@ -11,16 +11,16 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = () => {
   return (
     <section className="relative overflow-hidden min-h-[480px] sm:min-h-[540px] lg:min-h-[580px] flex items-center justify-center py-16 sm:py-20 lg:py-24">
-      {/* Background Clinic Image - Full Quality, Crystal Sharp, No Blur */}
+      {/* Background Clinic Image - Using the New Cabinet Picture */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/home_background.png"
+          src="/images/cabinet/background_website.png"
           alt="Dent House Marrakech cosmetic dentistry clinic suite in Morocco"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center blur-[0.75px] scale-[1.01]"
         />
-        {/* Subtle dark contrast overlay so the original font stays crisp and readable */}
-        <div className="absolute inset-0 bg-slate-950/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-slate-950/60" />
+        {/* Balanced contrast overlay so the text stays crisp and readable */}
+        <div className="absolute inset-0 bg-slate-950/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-slate-950/60" />
       </div>
 
       {/* Centered Hero Content with Original Typography */}

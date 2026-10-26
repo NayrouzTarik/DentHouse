@@ -43,7 +43,7 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
           <div className="lg:col-span-6 relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-100 relative group aspect-[16/10]">
               <img
-                src="/images/clinic_interior_luxury_1791832453390.jpg"
+                src="/images/cabinet/cabinet.png"
                 alt="Dent House Marrakech Luxury Cosmetic Dental Suite"
                 className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"
@@ -54,7 +54,7 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-xl p-3.5 border border-white/50 shadow-md flex items-center justify-between">
                 <div>
                   <div className="text-xs font-bold text-slate-900">
-                    Suite 01 · Guéliz Prestigious Medical District
+                    Suite 01 · Modern Clinical Suite
                   </div>
                   <div className="text-[11px] text-slate-500">
                     Trios® 3Shape Digital Intraoral Scanning Bay
@@ -141,7 +141,7 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-slate-800">Set of 20 Veneers Cost</td>
                   <td className="py-3.5 px-4 text-slate-500 line-through">£14,000 – £16,500 (Treatment only)</td>
-                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-slate-900">£3,450 (Treatment + Palmeraie Stay + Transfers)</td>
+                  <td className="py-3.5 px-4 bg-sky-50/80 font-bold text-slate-900">£3,450 (Treatment + City Center Stay + Transfers)</td>
                 </tr>
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-slate-800">Laser Procedures</td>

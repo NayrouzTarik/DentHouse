@@ -88,11 +88,11 @@ export const FaqPage: React.FC<FaqPageProps> = ({ onOpenConsultation }) => {
                 </div>
                 <h3 className="text-lg font-bold text-slate-900">Clinic Location</h3>
                 <p className="text-xs text-slate-500 mt-1">
-                  Modern clinic located in the upscale modern center of Marrakech.
+                  Modern clinic suites located on Bd. Allal Al Fassi with chauffeur service for all patient visits.
                 </p>
                 <div className="mt-4 text-xs text-slate-700 leading-relaxed">
-                  Boulevard Mohammed V, Guéliz<br />
-                  Marrakech 40000, Morocco
+                  Bd. Allal Al Fassi<br />
+                  Marrakech, Morocco
                 </div>
               </div>
               <div className="mt-6 text-xs text-slate-500 flex items-center gap-1.5">

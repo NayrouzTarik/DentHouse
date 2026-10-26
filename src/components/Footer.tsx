@@ -110,7 +110,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
                 <span className="leading-snug">
-                  Boulevard Mohammed V, Guéliz, Marrakech 40000, Morocco
+                  Bd. Allal Al Fassi, Marrakech, Morocco
                 </span>
               </div>
               <a
