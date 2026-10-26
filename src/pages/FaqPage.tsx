@@ -97,7 +97,7 @@ export const FaqPage: React.FC<FaqPageProps> = ({ onOpenConsultation }) => {
               </div>
               <div className="mt-6 text-xs text-slate-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>Registered Medical Practice No. 49102-MA</span>
+                <span>Certified Clinical & Hygiene Standards</span>
               </div>
             </div>
 

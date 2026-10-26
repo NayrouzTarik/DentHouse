@@ -63,9 +63,9 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
     },
     {
       src: '/images/cabinet/team_patient.webp',
-      title: 'Digital Consultation Suite',
-      subtitle: 'Interactive 3Shape Trios® 3D smile planning with our lead cosmetic surgeons',
-      tag: '3D Digital Design',
+      title: 'Gentle Chairside Treatment',
+      subtitle: 'Precision cosmetic care and gentle chairside treatment by our experienced aesthetic dentist',
+      tag: 'Chairside Care',
     },
     {
       src: '/images/cabinet/cabinet.webp',
@@ -267,7 +267,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
                   <img
                     src="/images/cabinet/team_patient.webp"
-                    alt="Cosmetic Dentist and Patient in Modern Consultation Suite"
+                    alt="Cosmetic Dentist Performing Gentle Chairside Treatment on Patient"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     decoding="async"
@@ -275,7 +275,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
                     <span className="font-semibold bg-slate-950/60 backdrop-blur-xs px-2.5 py-1 rounded-lg">
-                      Digital Consultation & Clinical Suite
+                      Gentle Chairside Treatment
                     </span>
                     <span className="text-[11px] font-bold text-sky-300 bg-slate-950/60 backdrop-blur-xs px-2.5 py-1 rounded-lg">
                       Expert Aesthetic Dentist
