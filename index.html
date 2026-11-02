@@ -7,6 +7,29 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+
+    // Google Consent Mode v2 default setting
+    var savedConsent = null;
+    try {
+      savedConsent = localStorage.getItem('denthouse_cookie_consent');
+    } catch (e) {}
+
+    if (savedConsent === 'all') {
+      gtag('consent', 'default', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+    } else {
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'AW-18548397646');

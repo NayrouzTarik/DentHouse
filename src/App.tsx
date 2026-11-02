@@ -9,6 +9,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
+import { CookieConsentBanner } from './components/CookieConsentBanner';
 import { EnquiryTrackingProvider } from './components/EnquiryTrackingProvider';
 import { trackBookingClick } from './utils/analytics';
 import { MessageCircle } from 'lucide-react';
@@ -126,6 +127,9 @@ export default function App() {
           onClose={() => setConsultationModalOpen(false)}
           prefilledPlan={selectedPlanDetails}
         />
+
+        {/* Cookie Consent Banner (Google Consent Mode v2) */}
+        <CookieConsentBanner />
 
         {/* Floating Quick WhatsApp Action */}
         <div className="fixed bottom-5 right-5 z-40">

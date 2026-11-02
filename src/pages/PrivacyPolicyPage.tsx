@@ -321,7 +321,15 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onOpenCons
                 We use cookies for essential site functions and, if you accept, for analytics and advertising (for example Google Analytics 4 [<span className="font-mono text-slate-800">G-084Y9CMNQR</span>] and Google Ads [<span className="font-mono text-slate-800">AW-18548397646</span>]).
               </p>
               <p>
-                You can change your choice at any time through your browser settings or directly via the{' '}
+                You can change your choice at any time by clicking{' '}
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new Event('open-cookie-banner'))}
+                  className="text-sky-700 font-semibold underline hover:text-sky-900 cursor-pointer"
+                >
+                  Cookie Preferences
+                </button>
+                , through your browser settings, or directly via{' '}
                 <a
                   href="https://adssettings.google.com/"
                   target="_blank"
@@ -330,7 +338,7 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onOpenCons
                 >
                   Google Ads Settings (Opt-Out)
                 </a>{' '}
-                or the{' '}
+                and the{' '}
                 <a
                   href="https://tools.google.com/dlpage/gaoptout"
                   target="_blank"

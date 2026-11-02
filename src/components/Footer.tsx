@@ -162,6 +162,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             <Link to="/privacy" className="text-slate-300 hover:text-white underline underline-offset-2 transition-colors">
               Privacy & Cookie Policy
             </Link>
+            <span className="text-slate-700 hidden sm:inline">·</span>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event('open-cookie-banner'))}
+              className="text-slate-400 hover:text-white underline underline-offset-2 transition-colors cursor-pointer"
+            >
+              Cookie Preferences
+            </button>
           </div>
         </div>
       </div>
