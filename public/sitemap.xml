@@ -65,4 +65,12 @@
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://denthousemarrakech.com/faqs" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://denthousemarrakech.com/faqs" />
   </url>
+  <url>
+    <loc>https://denthousemarrakech.com/privacy</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://denthousemarrakech.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://denthousemarrakech.com/privacy" />
+  </url>
 </urlset>

@@ -98,6 +98,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
                   UK & International Patient FAQs
                 </Link>
               </li>
+              <li>
+                <Link to="/privacy" className="hover:text-white transition-colors text-sky-400 font-medium">
+                  Privacy Policy & Cookie Disclosures
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -154,7 +159,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             <span className="text-slate-700 hidden sm:inline">·</span>
             <span>Flights Arranged Independently</span>
             <span className="text-slate-700 hidden sm:inline">·</span>
-            <span>Patient Confidentiality & Care</span>
+            <Link to="/privacy" className="text-slate-300 hover:text-white underline underline-offset-2 transition-colors">
+              Privacy & Cookie Policy
+            </Link>
           </div>
         </div>
       </div>

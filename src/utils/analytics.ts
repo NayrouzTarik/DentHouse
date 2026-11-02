@@ -1,8 +1,12 @@
 /**
- * Google Analytics 4 (GA4) Enquiry & Event Tracking Utility
- * Measurement ID: G-084Y9CMNQR
+ * Google Analytics 4 (GA4) & Google Ads Tag (gtag.js) Utility
+ * GA4 Measurement ID: G-084Y9CMNQR
+ * Google Ads ID: AW-18548397646
  * Strictly non-PII: No personal info, message content, or visitor details are transmitted.
  */
+
+export const GOOGLE_ADS_ID = 'AW-18548397646';
+export const GA4_MEASUREMENT_ID = 'G-084Y9CMNQR';
 
 declare global {
   interface Window {
@@ -137,3 +141,22 @@ export function trackGenerateLead(params: {
     treatment_interest: params.treatmentInterest || undefined,
   });
 }
+
+/**
+ * 6. Track Google Ads Conversions
+ * Useful for firing Google Ads conversion actions configured in Google Ads campaign
+ */
+export function trackGoogleAdsConversion(conversionLabel: string, value?: number, currency: string = 'GBP') {
+  try {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', {
+        send_to: `${GOOGLE_ADS_ID}/${conversionLabel}`,
+        value: value,
+        currency: currency,
+      });
+    }
+  } catch {
+    // Fail silently in case of ad-blocker
+  }
+}
+

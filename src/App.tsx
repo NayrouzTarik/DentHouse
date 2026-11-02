@@ -23,6 +23,7 @@ import { StoriesPage } from './pages/StoriesPage';
 import { AftercarePage } from './pages/AftercarePage';
 import { JourneyPage } from './pages/JourneyPage';
 import { FaqPage } from './pages/FaqPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 
 export default function App() {
   const [consultationModalOpen, setConsultationModalOpen] = useState(false);
@@ -106,6 +107,11 @@ export default function App() {
               path="/faqs"
               element={<FaqPage onOpenConsultation={handleOpenConsultation} />}
             />
+            <Route
+              path="/privacy"
+              element={<PrivacyPolicyPage onOpenConsultation={handleOpenConsultation} />}
+            />
+            <Route path="/privacy-policy" element={<Navigate to="/privacy" replace />} />
             {/* Fallback to Home */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
