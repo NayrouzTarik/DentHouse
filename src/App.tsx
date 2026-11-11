@@ -25,6 +25,7 @@ import { AftercarePage } from './pages/AftercarePage';
 import { JourneyPage } from './pages/JourneyPage';
 import { FaqPage } from './pages/FaqPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { ThankYouPage } from './pages/ThankYouPage';
 
 export default function App() {
   const [consultationModalOpen, setConsultationModalOpen] = useState(false);
@@ -113,6 +114,23 @@ export default function App() {
               element={<PrivacyPolicyPage onOpenConsultation={handleOpenConsultation} />}
             />
             <Route path="/privacy-policy" element={<Navigate to="/privacy" replace />} />
+            {/* Conversion / Thank You Confirmation Pages (Google Ads Conversion Tracking) */}
+            <Route
+              path="/thank-you"
+              element={<ThankYouPage onOpenConsultation={handleOpenConsultation} />}
+            />
+            <Route
+              path="/conversion"
+              element={<ThankYouPage onOpenConsultation={handleOpenConsultation} />}
+            />
+            <Route
+              path="/whatsapp-conversion"
+              element={<ThankYouPage onOpenConsultation={handleOpenConsultation} />}
+            />
+            <Route
+              path="/confirmation"
+              element={<ThankYouPage onOpenConsultation={handleOpenConsultation} />}
+            />
             {/* Fallback to Home */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

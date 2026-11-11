@@ -34,6 +34,24 @@
 
     gtag('config', 'AW-18548397646');
     gtag('config', 'G-084Y9CMNQR');
+
+    // Event snippet for whatsapp clicl conversion action
+    // Conversion ID: AW-18548397646 / Label: QU1ZCMLJ568dEM6syIxF
+    function gtag_report_whatsapp_conversion(url) {
+      var callback = function () {
+        if (typeof url !== 'undefined' && url) {
+          window.location = url;
+        }
+      };
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-18548397646/QU1ZCMLJ568dEM6syIxF',
+          'event_callback': callback
+        });
+      }
+      return false;
+    }
+    window.gtag_report_whatsapp_conversion = gtag_report_whatsapp_conversion;
   </script>
 
   <meta charset="UTF-8" />

@@ -8,6 +8,10 @@
 export const GOOGLE_ADS_ID = 'AW-18548397646';
 export const GA4_MEASUREMENT_ID = 'G-084Y9CMNQR';
 
+// Google Ads Conversion Action: "whatsapp clicl conversion page"
+export const GOOGLE_ADS_WHATSAPP_CONVERSION_LABEL = 'QU1ZCMLJ568dEM6syIxF';
+export const GOOGLE_ADS_WHATSAPP_CONVERSION_SEND_TO = `${GOOGLE_ADS_ID}/${GOOGLE_ADS_WHATSAPP_CONVERSION_LABEL}`;
+
 declare global {
   interface Window {
     dataLayer?: any[];
@@ -56,6 +60,7 @@ export function sendGAEvent(eventName: string, params: Record<string, any> = {})
 
 /**
  * 1. Track WhatsApp Clicks
+ * Dispatches both Google Analytics 4 event and Google Ads conversion action
  */
 export function trackWhatsAppClick(params: {
   placement?: string;
@@ -65,12 +70,16 @@ export function trackWhatsAppClick(params: {
   const key = `${params.placement || ''}_${params.destinationUrl || ''}`;
   if (shouldThrottleEvent('whatsapp_click', key)) return;
 
+  // 1. Google Analytics 4 (GA4) Event
   sendGAEvent('whatsapp_click', {
     event_category: 'engagement',
     destination_type: 'whatsapp',
     placement: params.placement || 'unknown',
     link_text: params.linkText ? params.linkText.slice(0, 40) : 'WhatsApp',
   });
+
+  // 2. Google Ads Conversion Action ("whatsapp clicl conversion page")
+  trackGoogleAdsConversion(GOOGLE_ADS_WHATSAPP_CONVERSION_LABEL);
 }
 
 /**
@@ -144,19 +153,48 @@ export function trackGenerateLead(params: {
 
 /**
  * 6. Track Google Ads Conversions
- * Useful for firing Google Ads conversion actions configured in Google Ads campaign
+ * Useful for firing Google Ads conversion actions configured in Google Ads campaign.
+ * Defaults to WhatsApp click conversion: AW-18548397646/QU1ZCMLJ568dEM6syIxF
  */
-export function trackGoogleAdsConversion(conversionLabel: string, value?: number, currency: string = 'GBP') {
+export function trackGoogleAdsConversion(
+  conversionTarget: string = GOOGLE_ADS_WHATSAPP_CONVERSION_LABEL,
+  value?: number,
+  currency: string = 'GBP'
+) {
   try {
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      window.gtag('event', 'conversion', {
-        send_to: `${GOOGLE_ADS_ID}/${conversionLabel}`,
-        value: value,
-        currency: currency,
+    if (typeof window === 'undefined') return;
+
+    const sendTo = conversionTarget.includes('/')
+      ? conversionTarget
+      : `${GOOGLE_ADS_ID}/${conversionTarget}`;
+
+    const payload: Record<string, any> = {
+      send_to: sendTo,
+    };
+
+    if (typeof value === 'number') {
+      payload.value = value;
+      payload.currency = currency;
+    }
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', payload);
+    } else if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: 'conversion',
+        ...payload,
       });
     }
   } catch {
     // Fail silently in case of ad-blocker
   }
+}
+
+// Global debug/test helper for browser console testing
+if (typeof window !== 'undefined') {
+  (window as any).trackDentHouseWhatsAppConversion = () => {
+    trackGoogleAdsConversion(GOOGLE_ADS_WHATSAPP_CONVERSION_LABEL);
+    console.log('[Google Ads] Conversion event triggered:', GOOGLE_ADS_WHATSAPP_CONVERSION_SEND_TO);
+  };
 }
 
