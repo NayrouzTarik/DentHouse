@@ -171,3 +171,4 @@ if (missingFaqs.length > 0) {
 }
 
 process.exit(errors);
+
