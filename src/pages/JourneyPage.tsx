@@ -22,7 +22,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
       step: '02',
       title: 'Smile Design & Treatment',
       subtitle: '2 Nights (Bonding) or 4 Nights (E.max)',
-      desc: 'Digital 3D intraoral scanning, customized shade selection, and precision crafting. No endless appointments or unnecessary delays.',
+      desc: 'Bespoke smile design, customized shade matching, and precision crafting. No endless appointments or unnecessary delays.',
       icon: Sparkles,
       tag: '2 or 4 Nights Luxury Stay',
     },
@@ -38,12 +38,12 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
 
   const clinicStrengths = [
     {
-      title: '3Shape Trios® 3D Scanning',
-      desc: 'Instant digital accuracy with zero uncomfortable impression trays or gagging putty.',
+      title: 'Bespoke Smile Design & Shade Matching',
+      desc: 'Tailored smile planning and natural shade selection matched carefully to your facial symmetry and goals.',
     },
     {
-      title: 'Certified Medical Materials',
-      desc: 'Genuine Ivoclar E.max lithium disilicate ceramics and micro-hybrid composite resins.',
+      title: 'High-Grade Aesthetic Materials',
+      desc: 'Handcrafted E.max porcelain veneers and high-grade aesthetic composite resin chosen for durability and natural finish.',
     },
     {
       title: 'Modern Clinical Suite',
@@ -292,7 +292,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                   Led by Dr Mouad, our cosmetic dental surgeons specialize in minimally invasive smile transformations, with specialized post-graduate training and over a decade of aesthetic expertise. Every procedure is tailored to your unique facial features and natural tooth dynamics.
                 </p>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Inside our high-tech operatory, we utilize state-of-the-art 3Shape Trios® 3D intraoral scanners to map your bite with sub-millimeter precision. Experience zero discomfort, gentle anesthesia protocols, and world-class certified European materials.
+                  Inside our modern operatory, we use bespoke smile design and shade matching to map your bite and proportions with precision. Experience gentle care, comfortable treatment protocols, and high-grade aesthetic materials.
                 </p>
                 <div className="grid grid-cols-2 gap-2.5 pt-2">
                   <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
@@ -301,7 +301,7 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                   </div>
                   <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
                     <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
-                    <span>3Shape Trios® 3D Scanning</span>
+                    <span>Bespoke Smile Design</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-medium text-slate-700">
                     <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0" />
@@ -530,20 +530,20 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1.5">
               <div className="flex items-center gap-2 text-[#0284C7] font-bold text-xs uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4" />
-                <span>European Class-B Sterilization</span>
+                <span>Strict International Hygiene</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Hospital-grade vacuum autoclave cycles, individually sealed pouches opened chairside, and strict cross-infection audits aligned with UK HTM 01-05 standards.
+                Strict international hygiene and clinical standards, individually sealed sterile instruments opened chairside, and rigorous cross-infection control protocols.
               </p>
             </div>
 
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1.5">
               <div className="flex items-center gap-2 text-[#0284C7] font-bold text-xs uppercase tracking-wider">
                 <Stethoscope className="w-4 h-4" />
-                <span>Certified Materials &amp; Batch Tracking</span>
+                <span>Premium Aesthetic Materials</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Exclusively authentic <strong>Ivoclar Vivadent IPS e.max®</strong> ceramics, <strong>3M™ Filtek / GC G-aenial</strong> composite resins, and <strong>3Shape TRIOS®</strong> 3D digital scanning.
+                Exclusively <strong>handcrafted E.max porcelain veneers</strong>, <strong>high-grade aesthetic composite resin</strong>, and <strong>bespoke smile design &amp; shade matching</strong>.
               </p>
             </div>
 

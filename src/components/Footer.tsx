@@ -56,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               </li>
               <li>
                 <Link to="/journey" className="hover:text-white transition-colors">
-                  3Shape Trios® Digital Smile Simulation
+                  Bespoke Smile Design &amp; Shade Matching
                 </Link>
               </li>
             </ul>

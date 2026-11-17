@@ -86,7 +86,7 @@ export const TREATMENTS: TreatmentOption[] = [
       'Ultra-conservative sub-0.3mm preparation',
       '4 Night luxury stay with precision digital lab crafting & VIP transfer',
       '10 to 15 Year lifespan with registered warranty',
-      '3D Intraoral Digital Simulation preview before fitting',
+      'Bespoke smile design & shade matching preview before fitting',
       '100% stain-proof against coffee, tea, and red wine'
     ]
   }
@@ -686,8 +686,8 @@ export const JOURNEY_STEPS = [
       },
       {
         time: '14:30',
-        label: '3D Intraoral Scanning & Consultation',
-        desc: 'Private chauffeur drives you to Dent House. 3Shape Trios® wireless digital scanning with zero goopy silicone trays. Preview your bespoke 3D smile on screen.'
+        label: 'Bespoke Smile Design & Consultation',
+        desc: 'Private chauffeur drives you to Dent House for a comfortable digital consultation, shade matching, and bespoke smile design preview.'
       },
       {
         time: '16:00',
@@ -763,8 +763,8 @@ export const CLINIC_HIGHLIGHTS = [
     icon: 'ShieldCheck'
   },
   {
-    title: 'Trios® 3Shape Wireless 3D Digital Scanners',
-    desc: 'Micron-accurate intraoral digital scanning. Zero messy silicone impression putty, zero gagging, instant 3D smile previews.',
+    title: 'Bespoke Smile Design & Shade Matching',
+    desc: 'Comfortable, high-precision digital smile planning and natural shade selection tailored to your facial symmetry before final fitting.',
     icon: 'Award'
   },
   {
@@ -972,7 +972,7 @@ export const PATIENT_STORIES = [
 export const FAQS = [
   {
     q: 'Is composite bonding in Morocco safe for UK patients?',
-    a: 'Yes. At Dent House Marrakech, all cosmetic dentistry is performed by licensed specialists registered with the Ordre National des Médecins Dentistes du Maroc, following strict European Class-B autoclave sterilization protocols. We exclusively use CE-certified materials (3M™ Filtek, GC G-aenial nano-hybrid composite resin, and genuine Ivoclar Vivadent IPS e.max® porcelain) alongside 3Shape TRIOS® 3D intraoral scanning.'
+    a: 'Yes. At Dent House Marrakech, all cosmetic dentistry is performed by licensed specialists registered with the Ordre National des Médecins Dentistes du Maroc, following strict international hygiene and clinical standards. We exclusively use high-grade aesthetic composite resin and handcrafted E.max porcelain veneers alongside bespoke smile design and shade matching.'
   },
   {
     q: "Do you shave down healthy teeth ('Turkey teeth')?",
@@ -984,15 +984,15 @@ export const FAQS = [
   },
   {
     q: 'How many nights do I need in Marrakech from London, Manchester, or Dublin?',
-    a: 'Direct Composite Bonding is completed in a single clinical visit during a 2-night stay in Marrakech. Handcrafted E.max Porcelain Veneers require a 4-night stay to allow for 3Shape TRIOS® 3D digital scanning, custom ceramic layering, trial smile fitting, and final bonding. Direct ~3.5-hour flights operate daily to Marrakech Menara (RAK) from London (Gatwick, Stansted, Luton), Manchester, Birmingham, Bristol, and Dublin (with easy connections from Cardiff and Belfast).'
+    a: 'Direct Composite Bonding is completed in a single clinical visit during a 2-night stay in Marrakech. Handcrafted E.max Porcelain Veneers require a 4-night stay to allow for bespoke smile design, custom ceramic layering, trial smile fitting, and final bonding. Direct ~3.5-hour flights operate daily to Marrakech Menara (RAK) from London (Gatwick, Stansted, Luton), Manchester, Birmingham, Bristol, and Dublin (with easy connections from Cardiff and Belfast).'
   },
   {
-    q: 'What brand of composite resin and E.max porcelain do you use?',
-    a: 'We never use unbranded or generic laboratory materials. Every composite bonding smile is hand-sculpted using genuine 3M™ Filtek and GC G-aenial nano-hybrid aesthetic composites. Every porcelain veneer is crafted from authentic Ivoclar Vivadent IPS e.max® lithium disilicate ceramic, accompanied by a written clinical passport recording your exact shade codes and ceramic batch numbers.'
+    q: 'How natural and durable are your composite bonding and E.max porcelain veneers?',
+    a: 'Every smile is crafted for a lifelike, natural finish rather than an artificial look. Our direct composite bonding uses high-grade aesthetic composite resin layered to match natural enamel translucency and lasts 5–7 years with chairside repairability. Our handcrafted E.max porcelain veneers are non-porous, stain-resistant, and engineered to last 10–15 years, accompanied by your written clinical passport.'
   },
   {
     q: 'What happens if I need a touch-up once back in the UK or Ireland?',
-    a: 'Every UK and Irish patient leaves Marrakech with a written Clinical Passport detailing exact resin brands, shade codes, ceramic batch numbers, and 3Shape 3D digital scans so any local dentist in the UK or Ireland can maintain your smile effortlessly. Composite bonding includes a 1-year warranty plus a complimentary 6-month review and diamond polish; E.max porcelain veneers include a 5-year comprehensive replacement warranty backed by direct WhatsApp clinician support.'
+    a: 'Every UK and Irish patient leaves Marrakech with a written Clinical Passport detailing your exact shade codes, clinical records, and treatment documentation so any local dentist in the UK or Ireland can maintain your smile effortlessly. Composite bonding includes a 1-year warranty plus a complimentary 6-month review and diamond polish; E.max porcelain veneers include a 5-year comprehensive replacement warranty backed by direct WhatsApp clinician support.'
   },
   {
     q: 'Are flights included in the dental packages?',

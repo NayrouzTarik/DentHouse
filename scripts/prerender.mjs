@@ -131,7 +131,7 @@ async function run() {
     const outPath =
       route === '/'
         ? path.join(distDir, 'index.html')
-        : path.join(distDir, route.replace(/^\//, ''), 'index.html');
+        : path.join(distDir, `${route.replace(/^\//, '')}.html`);
 
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
     fs.writeFileSync(outPath, fullHtml, 'utf-8');

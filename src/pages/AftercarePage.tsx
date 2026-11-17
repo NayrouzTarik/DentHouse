@@ -46,7 +46,7 @@ export const AftercarePage: React.FC<AftercarePageProps> = () => {
               <div className="text-sky-400 font-bold uppercase tracking-wider text-[11px]">01 · Composite</div>
               <div className="font-bold text-white text-sm">1-Year Composite Warranty</div>
               <p className="text-slate-300 leading-relaxed">
-                Full 12-month coverage on all 3M™ Filtek &amp; GC G-aenial direct composite bonding restorations.
+                Full 12-month coverage on all high-grade aesthetic composite resin direct bonding restorations.
               </p>
             </div>
 
@@ -54,7 +54,7 @@ export const AftercarePage: React.FC<AftercarePageProps> = () => {
               <div className="text-sky-400 font-bold uppercase tracking-wider text-[11px]">02 · Porcelain</div>
               <div className="font-bold text-white text-sm">5-Year E.max Warranty</div>
               <p className="text-slate-300 leading-relaxed">
-                5-year replacement guarantee covering authentic Ivoclar Vivadent IPS e.max® lithium disilicate veneers.
+                5-year replacement guarantee covering handcrafted E.max porcelain veneers.
               </p>
             </div>
 
@@ -70,7 +70,7 @@ export const AftercarePage: React.FC<AftercarePageProps> = () => {
               <div className="text-emerald-400 font-bold uppercase tracking-wider text-[11px]">04 · UK/IE Ready</div>
               <div className="font-bold text-white text-sm">Written Clinical Passport</div>
               <p className="text-slate-300 leading-relaxed">
-                Exact resin brand, shade codes, ceramic batch numbers &amp; 3Shape 3D scans for any local UK or Irish dentist.
+                Your exact shade codes, clinical treatment summary &amp; digital records for any local UK or Irish dentist.
               </p>
             </div>
 
@@ -384,7 +384,7 @@ export const AftercarePage: React.FC<AftercarePageProps> = () => {
                 You leave Marrakech with registered medical records.
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
-                Before your departure transfer, we provide you with a full digital clinical pack — including shade matching codes, 3D intraoral scans, and laboratory warranty certificates — so any dentist in the UK or worldwide has your complete dental history.
+                Before your departure transfer, we provide you with a full digital clinical pack — including shade matching codes, bespoke treatment records, and warranty certificates — so any dentist in the UK, Ireland, or worldwide has your complete dental history.
               </p>
             </div>
 

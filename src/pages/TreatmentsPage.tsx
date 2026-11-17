@@ -12,14 +12,14 @@ interface TreatmentsPageProps {
 export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
   const comparisonRows = [
     {
-      feature: 'Certified Clinical Material',
-      bonding: '3M™ Filtek / GC G-aenial nano-hybrid composite resin',
-      veneers: 'Ivoclar Vivadent IPS e.max® lithium disilicate ceramic',
+      feature: 'Aesthetic Material',
+      bonding: 'High-grade aesthetic composite resin layered chairside',
+      veneers: 'Handcrafted E.max porcelain veneers (medical-grade ceramic)',
     },
     {
-      feature: 'Digital Diagnostics & Scan',
-      bonding: '3Shape TRIOS® 3D intraoral digital scanner & shade map',
-      veneers: '3Shape TRIOS® 3D intraoral digital scanner & CAD/CAM lab',
+      feature: 'Smile Design & Planning',
+      bonding: 'Bespoke smile design, proportion mapping & natural shade matching',
+      veneers: 'Bespoke smile design, shade matching & custom master lab crafting',
     },
     {
       feature: 'Tooth Preparation',
@@ -62,9 +62,9 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
         </h1>
         <p className="mt-3 text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Compare our two signature smile makeovers engineered for UK and Ireland patients: zero-drill direct composite bonding using{' '}
-          <strong className="text-slate-800">3M™ Filtek / GC G-aenial nano-hybrid composite resin</strong> and handcrafted{' '}
-          <strong className="text-slate-800">Ivoclar Vivadent IPS e.max® lithium disilicate</strong> porcelain veneers, planned digitally with our{' '}
-          <strong className="text-slate-800">3Shape TRIOS® 3D intraoral digital scanner</strong>.
+          <strong className="text-slate-800">high-grade aesthetic composite resin</strong> and{' '}
+          <strong className="text-slate-800">handcrafted E.max porcelain veneers</strong>, tailored with{' '}
+          <strong className="text-slate-800">bespoke smile design &amp; shade matching</strong>.
         </p>
 
         {/* Quick Section Anchor Pills */}
@@ -116,16 +116,16 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                 <Clock className="w-3.5 h-3.5" />
                 <span>1 Clinical Visit · 2 Night Luxury Stay</span>
                 <span className="text-slate-300">•</span>
-                <span className="text-slate-500">3M™ Filtek / GC G-aenial Resin</span>
+                <span className="text-slate-500">High-Grade Aesthetic Composite Resin</span>
               </div>
 
               {/* Concise Explanation of Treatment */}
               <div className="mt-4 text-xs sm:text-sm text-slate-600 space-y-2.5 leading-relaxed">
                 <p>
-                  Our cosmetic dentists hand-sculpt genuine <strong>3M™ Filtek and GC G-aenial nano-hybrid composite resin</strong> directly onto your natural teeth to close gaps (diastemas), smooth chipped edges, and harmonize colour and symmetry in a single chairside session.
+                  Our cosmetic dentists hand-sculpt <strong>high-grade aesthetic composite resin</strong> directly onto your natural teeth to close gaps (diastemas), smooth chipped edges, and harmonize colour and symmetry in a single chairside session.
                 </p>
                 <p>
-                  Because there is <strong>zero drilling or shaving of healthy tooth enamel</strong>, your natural teeth remain 100% intact. Guided by a <strong>3Shape TRIOS® 3D intraoral digital scanner</strong>, your full 20-tooth transformation finishes cleanly during a relaxing 2-night Marrakech stay.
+                  Because there is <strong>zero drilling or shaving of healthy tooth enamel</strong>, your natural teeth remain 100% intact. Guided by <strong>bespoke smile design &amp; shade matching</strong>, your full 20-tooth transformation finishes cleanly during a relaxing 2-night Marrakech stay.
                 </p>
               </div>
 
@@ -141,7 +141,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
-                    <span>Certified 3M™ Filtek &amp; GC G-aenial nano-hybrid composite layering</span>
+                    <span>High-grade aesthetic composite resin with natural multi-layer gloss</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
@@ -206,7 +206,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                 </span>
                 <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  IPS e.max® Ceramic
+                  E.max Porcelain
                 </span>
               </div>
 
@@ -217,16 +217,16 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                 <Clock className="w-3.5 h-3.5" />
                 <span>4 Night Luxury Stay</span>
                 <span className="text-slate-300">•</span>
-                <span className="text-slate-500">Ivoclar Vivadent IPS e.max®</span>
+                <span className="text-slate-500">Handcrafted E.max Ceramic Shields</span>
               </div>
 
               {/* Concise Explanation of Treatment */}
               <div className="mt-4 text-xs sm:text-sm text-slate-600 space-y-2.5 leading-relaxed">
                 <p>
-                  Individually hand-layered from authentic <strong>Ivoclar Vivadent IPS e.max® lithium disilicate</strong> ceramic in our digital lab, our veneers replicate the subtle incisal translucency, surface texture, and light reflection of natural enamel.
+                  Individually hand-layered <strong>handcrafted E.max porcelain veneers</strong> replicate the subtle incisal translucency, natural surface texture, and lifelike light reflection of healthy tooth enamel.
                 </p>
                 <p>
-                  Captured with our <strong>3Shape TRIOS® 3D intraoral digital scanner</strong> and bonded using conservative sub-0.3 mm enamel-only preparation, E.max veneers deliver 10–15 years of strength and 100% stain resistance against coffee, tea, and red wine.
+                  Planned through <strong>bespoke smile design &amp; shade matching</strong> and bonded using conservative sub-0.3 mm enamel-only preparation, E.max porcelain veneers deliver 10–15 years of strength and 100% stain resistance against coffee, tea, and red wine.
                 </p>
               </div>
 
@@ -238,11 +238,11 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                 <ul className="space-y-1.5 text-xs text-slate-700">
                   <li className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
-                    <span>3Shape TRIOS® 3D intraoral digital scanning &amp; live trial smile simulation</span>
+                    <span>Bespoke smile design, shade matching &amp; live trial smile preview</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
-                    <span>Genuine Ivoclar Vivadent IPS e.max® lithium disilicate with ingot batch certificate</span>
+                    <span>Handcrafted E.max porcelain veneers with written documentation</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
@@ -320,7 +320,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                     Direct Composite Bonding
                   </th>
                   <th className="py-4 px-5 font-semibold text-emerald-300 w-[37.5%]">
-                    Ivoclar IPS e.max® Veneers
+                    Handcrafted E.max Porcelain Veneers
                   </th>
                 </tr>
               </thead>

@@ -44,7 +44,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
       height: 391,
       label: 'E.max Porcelain Veneers',
       detail: '4 Night Luxury Stay · Handcrafted BL2 Porcelain',
-      alt: 'Handcrafted Ivoclar E.max porcelain veneers smile makeover in Marrakech Morocco',
+      alt: 'Handcrafted E.max porcelain veneers smile makeover in Marrakech Morocco',
     },
     {
       src: '/images/results/client1.webp',
@@ -91,7 +91,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
               </Link>{' '}
               or handcrafted{' '}
               <Link to="/treatments#emax-veneers" className="text-[#0284C7] font-semibold hover:underline">
-                Ivoclar E.max porcelain veneers
+                handcrafted E.max porcelain veneers
               </Link>
               , our{' '}
               <Link to="/packages" className="text-[#0284C7] font-semibold hover:underline">

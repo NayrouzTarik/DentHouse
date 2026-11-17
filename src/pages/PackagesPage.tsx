@@ -423,7 +423,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
                 </tr>
                 <tr className="bg-white">
                   <th scope="row" className="py-3.5 px-5 font-bold text-slate-900">
-                    Ivoclar IPS e.max® Veneers + 4-Night Stay &amp; Transfers
+                    Handcrafted E.max Porcelain Veneers + 4-Night Stay &amp; Transfers
                   </th>
                   <td className="py-3.5 px-5 text-slate-600">£11,000 – £14,500</td>
                   <td className="py-3.5 px-5 text-slate-600">€12,500 – €16,000</td>

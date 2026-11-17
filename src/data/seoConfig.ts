@@ -56,9 +56,9 @@ export const DR_MOUAD_ENTITY = {
   },
   knowsAbout: [
     'Direct Composite Bonding',
-    'Ivoclar Vivadent IPS e.max Porcelain Veneers',
-    '3M Filtek and GC G-aenial Nano-Hybrid Composite Resin',
-    '3Shape TRIOS 3D Intraoral Digital Scanning',
+    'Handcrafted E.max Porcelain Veneers',
+    'High-Grade Aesthetic Composite Resin',
+    'Bespoke Smile Design and Shade Matching',
     'Minimally Invasive Cosmetic Dentistry',
   ],
 };
@@ -69,7 +69,7 @@ export const CLINIC_DENTIST_ENTITY = {
   name: 'Dent House Marrakech',
   alternateName: 'Dent House Cosmetic Dental Clinic',
   description:
-    'Cosmetic dental clinic in Marrakech, Morocco specialising in direct composite bonding (3M Filtek / GC G-aenial) and handcrafted Ivoclar Vivadent IPS e.max porcelain veneers for UK & Irish patients. Packages include central city accommodation and private VIP transfers; flights arranged independently.',
+    'Cosmetic dental clinic in Marrakech, Morocco specialising in direct composite bonding with high-grade aesthetic composite resin and handcrafted E.max porcelain veneers for UK & Irish patients. Packages include central city accommodation and private VIP transfers; flights arranged independently.',
   url: `${SITE_URL}/`,
   telephone: '+212789668454',
   priceRange: '££',
@@ -119,7 +119,7 @@ export const CLINIC_DENTIST_ENTITY = {
           '@type': 'MedicalProcedure',
           name: 'Direct Composite Bonding (Set of 20 Teeth)',
           description:
-            'Direct aesthetic 3M Filtek & GC G-aenial nano-hybrid composite resin sculpting chairside in Marrakech for up to 20 teeth. Zero drilling of healthy natural enamel, 1-year warranty, and complimentary 6-month review.',
+            'Direct high-grade aesthetic composite resin sculpting chairside in Marrakech for up to 20 teeth. Zero drilling of healthy natural enamel, 1-year warranty, and complimentary 6-month review.',
           procedureType: 'NoninvasiveProcedure',
         },
         price: '1299',
@@ -145,9 +145,9 @@ export const CLINIC_DENTIST_ENTITY = {
         name: 'E.max Porcelain Veneers (Set of 20 Teeth)',
         itemOffered: {
           '@type': 'MedicalProcedure',
-          name: 'Handcrafted Ivoclar Vivadent IPS e.max Porcelain Veneers Package',
+          name: 'Handcrafted E.max Porcelain Veneers Package',
           description:
-            'Hand-layered Ivoclar Vivadent IPS e.max lithium disilicate porcelain veneers with 4 nights luxury stay, private transfers, and 5-year replacement warranty. Flights arranged independently.',
+            'Handcrafted E.max porcelain veneers with bespoke smile design and shade matching, 4 nights luxury stay, private transfers, and 5-year replacement warranty. Flights arranged independently.',
           procedureType: 'NoninvasiveProcedure',
         },
         price: '3450',
@@ -206,7 +206,7 @@ export const SEO_ROUTES: Record<string, RouteSEOConfig> = {
     path: '/treatments',
     title: 'Composite Bonding & E.max Veneers Morocco | Dent House',
     description:
-      'Compare composite bonding (zero drilling, 1 visit) & E.max porcelain veneers in Marrakech. Genuine Ivoclar & 3M materials for UK & Ireland patients.',
+      'Compare direct composite bonding (zero drilling, 1 visit) & handcrafted E.max porcelain veneers in Marrakech. Bespoke care for UK & Ireland patients.',
     canonicalUrl: `${SITE_URL}/treatments`,
     robots: DEFAULT_ROBOTS,
     breadcrumbName: 'Treatments',
@@ -219,7 +219,7 @@ export const SEO_ROUTES: Record<string, RouteSEOConfig> = {
           '@id': `${SITE_URL}/treatments#webpage`,
           name: 'Composite Bonding & E.max Veneers in Marrakech, Morocco',
           description:
-            'Compare direct composite bonding (3M Filtek & GC G-aenial, zero enamel drilling) and handcrafted Ivoclar Vivadent IPS e.max porcelain veneers at Dent House Marrakech.',
+            'Compare direct composite bonding with high-grade aesthetic composite resin (zero enamel drilling) and handcrafted E.max porcelain veneers at Dent House Marrakech.',
           url: `${SITE_URL}/treatments`,
           isPartOf: { '@id': `${SITE_URL}/#website` },
           reviewedBy: { '@id': `${SITE_URL}/#dr-mouad` },
@@ -229,14 +229,14 @@ export const SEO_ROUTES: Record<string, RouteSEOConfig> = {
               name: 'Direct Composite Bonding in Marrakech',
               procedureType: 'NoninvasiveProcedure',
               description:
-                'Chairside 3M Filtek and GC G-aenial nano-hybrid composite resin sculpting for up to 20 teeth with zero drilling of healthy tooth enamel during a 2-night Marrakech stay.',
+                'Chairside high-grade aesthetic composite resin sculpting for up to 20 teeth with zero drilling of healthy tooth enamel during a 2-night Marrakech stay.',
             },
             {
               '@type': 'MedicalProcedure',
               name: 'Handcrafted E.max Porcelain Veneers in Morocco',
               procedureType: 'NoninvasiveProcedure',
               description:
-                'Ultra-thin Ivoclar Vivadent IPS e.max lithium disilicate ceramic veneers designed via 3Shape TRIOS 3D intraoral scanner with a 4-night stay and 5-year warranty.',
+                'Ultra-thin handcrafted E.max porcelain veneers with bespoke smile design and shade matching, a 4-night stay, and a 5-year warranty.',
             },
           ],
         },

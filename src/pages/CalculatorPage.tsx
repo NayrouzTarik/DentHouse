@@ -76,9 +76,9 @@ export const CalculatorPage: React.FC<CalculatorPageProps> = ({
             </Link>{' '}
             (from £1,299 / ~€1,520 treatment-only or £1,499 / ~€1,755 with a 2-night central stay) or{' '}
             <Link to="/treatments#emax-veneers" className="text-[#0284C7] font-semibold hover:underline">
-              handcrafted Ivoclar IPS e.max® Porcelain Veneers
+              handcrafted E.max Porcelain Veneers
             </Link>{' '}
-            (from £3,450 / ~€4,040 with a 4-night luxury stay), your clinical fee covers 3Shape TRIOS® 3D digital scanning, custom shade selection, certified European materials, and your written UK &amp; Ireland Clinical Passport.
+            (from £3,450 / ~€4,040 with a 4-night luxury stay), your clinical fee covers bespoke smile design and shade matching, high-grade aesthetic materials, and your written UK &amp; Ireland Clinical Passport.
           </p>
           <p>
             Patients travelling with a partner or friends unlock automatic group savings: our <strong>Solo packages</strong> include a private central Marrakech suite and round-trip Mercedes airport and clinic chauffeur transfers, while <strong>Duo packages (2 patients)</strong> apply an instant <strong>15% discount</strong> on treatment fees and <strong>Trio packages (3 patients)</strong> apply a <strong>20% group discount</strong> alongside shared multi-room accommodation. Flights from London, Manchester, Birmingham, Bristol, Cardiff, or Dublin are booked independently to let you pick the best fares.

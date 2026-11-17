@@ -106,7 +106,7 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
                   beforeImage="/images/results/before4.webp"
                   afterImage="/images/results/after4.webp"
                   beforeAlt="Patient teeth before 20 E.max porcelain veneers in Marrakech showing enamel wear and discoloration"
-                  afterAlt="20-tooth handcrafted Ivoclar E.max porcelain veneers before and after smile makeover at Dent House Marrakech"
+                  afterAlt="20-tooth handcrafted E.max porcelain veneers before and after smile makeover at Dent House Marrakech"
                   width={536}
                   height={340}
                   badge="20 Porcelain Veneers"

@@ -33,7 +33,7 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
             The Clinic: World-class dental excellence in Marrakech.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            We don't compromise on materials or medical standards. From 3Shape Trios® wireless digital scanning to certified premium medical-grade porcelain and micro-hybrid composites, our clinical suite meets and exceeds top international benchmarks.
+            We don&apos;t compromise on materials or medical standards. From bespoke smile design and shade matching to handcrafted E.max porcelain veneers and high-grade aesthetic composite resin, our clinical suite meets strict international hygiene and clinical standards.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
                     Suite 01 · Modern Clinical Suite
                   </div>
                   <div className="text-[11px] text-slate-500">
-                    Trios® 3Shape Digital Intraoral Scanning Bay
+                    Bespoke Smile Design &amp; Shade Matching Suite
                   </div>
                 </div>
 
