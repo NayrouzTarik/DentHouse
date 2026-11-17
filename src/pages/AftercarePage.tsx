@@ -10,26 +10,80 @@ interface AftercarePageProps {
 export const AftercarePage: React.FC<AftercarePageProps> = () => {
   return (
     <div className="pt-6">
-      <SEOHead
-        title="Composite Bonding Aftercare & Longevity Guide | Dent House Marrakech"
-        description="Essential aftercare protocols for composite bonding: preventing coffee stains, 48-hour curing window, nightguard use, and 1-year warranty with 6-month check-up."
-        canonicalUrl="https://denthousemarrakech.com/aftercare"
-      />
+      <SEOHead routePath="/aftercare" />
 
       {/* Page Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-3xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-4xl">
         <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-          AFTERCARE & OFFICIAL CLINICAL WARRANTIES
+          AFTERCARE &amp; OFFICIAL CLINICAL WARRANTIES
         </span>
         <h1 className="text-3xl sm:text-5xl font-serif font-bold text-slate-900 mt-2 tracking-tight">
-          Smile Longevity & Warranty
+          Composite Bonding &amp; Veneers Aftercare &amp; UK Warranty
         </h1>
-        <p className="mt-3 text-base text-slate-600">
-          Complete warranty protection on every smile makeover, plus clinical guidelines on how to care for your teeth and prevent stains.
+        <p className="mt-3 text-base text-slate-600 max-w-2xl mx-auto">
+          Complete warranty protection and our UK &amp; Ireland Peace of Mind Protocol—so you know exactly how your smile is supported once you fly home.
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-16">
+        {/* UK & IRELAND PEACE OF MIND PROTOCOL */}
+        <section className="rounded-3xl bg-slate-900 text-white p-7 sm:p-10 shadow-lg border border-slate-800">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-sky-400">
+              <ShieldCheck className="w-4 h-4" />
+              <span>AFTER YOU FLY HOME</span>
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold mt-2">
+              UK &amp; Ireland Peace of Mind Protocol
+            </h2>
+            <p className="mt-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              The number one concern UK and Irish dental tourism patients ask is: <em className="text-white">&ldquo;What happens if I need a check-up or touch-up once I am back home?&rdquo;</em> Every Dent House Marrakech patient is protected by five concrete safeguards:
+            </p>
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-xs">
+            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-1.5">
+              <div className="text-sky-400 font-bold uppercase tracking-wider text-[11px]">01 · Composite</div>
+              <div className="font-bold text-white text-sm">1-Year Composite Warranty</div>
+              <p className="text-slate-300 leading-relaxed">
+                Full 12-month coverage on all 3M™ Filtek &amp; GC G-aenial direct composite bonding restorations.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-1.5">
+              <div className="text-sky-400 font-bold uppercase tracking-wider text-[11px]">02 · Porcelain</div>
+              <div className="font-bold text-white text-sm">5-Year E.max Warranty</div>
+              <p className="text-slate-300 leading-relaxed">
+                5-year replacement guarantee covering authentic Ivoclar Vivadent IPS e.max® lithium disilicate veneers.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-1.5">
+              <div className="text-emerald-400 font-bold uppercase tracking-wider text-[11px]">03 · Polish</div>
+              <div className="font-bold text-white text-sm">Free 6-Month Review</div>
+              <p className="text-slate-300 leading-relaxed">
+                Complimentary 6-month bite assessment and diamond-paste re-polish to keep composite gloss like day one.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-1.5">
+              <div className="text-emerald-400 font-bold uppercase tracking-wider text-[11px]">04 · UK/IE Ready</div>
+              <div className="font-bold text-white text-sm">Written Clinical Passport</div>
+              <p className="text-slate-300 leading-relaxed">
+                Exact resin brand, shade codes, ceramic batch numbers &amp; 3Shape 3D scans for any local UK or Irish dentist.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-1.5">
+              <div className="text-sky-400 font-bold uppercase tracking-wider text-[11px]">05 · Direct Line</div>
+              <div className="font-bold text-white text-sm">WhatsApp Clinician Support</div>
+              <p className="text-slate-300 leading-relaxed">
+                Direct 7-day WhatsApp access to Dr. Mouad&apos;s team for photo check-ins, bite questions, or priority appointments.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* OFFICIAL WARRANTIES SECTION (Dedicated & Front-and-Center) */}
         <div>
           <div className="text-center max-w-xl mx-auto mb-8">

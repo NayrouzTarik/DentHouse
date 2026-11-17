@@ -27,35 +27,9 @@ interface PrivacyPolicyPageProps {
 }
 
 export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onOpenConsultation }) => {
-  const privacySchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Privacy Policy | Dent House Marrakech',
-    description:
-      'Official Privacy Policy of Dent House Marrakech. Full transparency on patient data, health information, Google Ads tracking, UK GDPR rights, and data protection in Marrakech, Morocco.',
-    url: 'https://denthousemarrakech.com/privacy',
-    publisher: {
-      '@type': 'Dentist',
-      name: 'Dent House Marrakech',
-      url: 'https://denthousemarrakech.com/',
-      telephone: '+212789668454',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Bd. Allal Al Fassi',
-        addressLocality: 'Marrakech',
-        addressCountry: 'MA',
-      },
-    },
-  };
-
   return (
     <div className="pt-6 pb-20 bg-slate-50 min-h-screen text-slate-800 font-sans">
-      <SEOHead
-        title="Privacy Policy | Dent House Marrakech"
-        description="Privacy Policy for Dent House Marrakech. Full transparency on data collection, health information, Google Ads and analytics cookies, UK GDPR patient rights, and contact details."
-        canonicalUrl="https://denthousemarrakech.com/privacy"
-        schemaData={privacySchema}
-      />
+      <SEOHead routePath="/privacy" />
 
       {/* Header Banner */}
       <section className="bg-white border-b border-slate-200">

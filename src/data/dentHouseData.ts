@@ -971,8 +971,32 @@ export const PATIENT_STORIES = [
 
 export const FAQS = [
   {
+    q: 'Is composite bonding in Morocco safe for UK patients?',
+    a: 'Yes. At Dent House Marrakech, all cosmetic dentistry is performed by licensed specialists registered with the Ordre National des Médecins Dentistes du Maroc, following strict European Class-B autoclave sterilization protocols. We exclusively use CE-certified materials (3M™ Filtek, GC G-aenial nano-hybrid composite resin, and genuine Ivoclar Vivadent IPS e.max® porcelain) alongside 3Shape TRIOS® 3D intraoral scanning.'
+  },
+  {
+    q: "Do you shave down healthy teeth ('Turkey teeth')?",
+    a: 'Never. We strictly refuse aggressive "shark-tooth" crown filing of healthy teeth. Our Direct Composite Bonding requires zero drilling or shaving of natural tooth enamel. For handcrafted E.max porcelain veneers, we use conservative, minimally invasive preparation (typically 0.2–0.3 mm within enamel only) to preserve long-term tooth vitality and nerve health.'
+  },
+  {
+    q: 'How much is a full set of composite bonding or E.max veneers in Marrakech?',
+    a: 'A full set of Direct Composite Bonding (up to 20 teeth) starts from £1,299 (approx. €1,520) for treatment only, or £1,499 (approx. €1,755) with a 2-night central Marrakech luxury stay and VIP chauffeur transfers. Handcrafted E.max Porcelain Veneers (20 teeth) start from £3,450 (approx. €4,040) including a 4-night luxury stay and private transfers—saving up to 70% compared to UK (£5,500–£14,500) and Irish (€6,000–€16,000) private clinic prices.'
+  },
+  {
+    q: 'How many nights do I need in Marrakech from London, Manchester, or Dublin?',
+    a: 'Direct Composite Bonding is completed in a single clinical visit during a 2-night stay in Marrakech. Handcrafted E.max Porcelain Veneers require a 4-night stay to allow for 3Shape TRIOS® 3D digital scanning, custom ceramic layering, trial smile fitting, and final bonding. Direct ~3.5-hour flights operate daily to Marrakech Menara (RAK) from London (Gatwick, Stansted, Luton), Manchester, Birmingham, Bristol, and Dublin (with easy connections from Cardiff and Belfast).'
+  },
+  {
+    q: 'What brand of composite resin and E.max porcelain do you use?',
+    a: 'We never use unbranded or generic laboratory materials. Every composite bonding smile is hand-sculpted using genuine 3M™ Filtek and GC G-aenial nano-hybrid aesthetic composites. Every porcelain veneer is crafted from authentic Ivoclar Vivadent IPS e.max® lithium disilicate ceramic, accompanied by a written clinical passport recording your exact shade codes and ceramic batch numbers.'
+  },
+  {
+    q: 'What happens if I need a touch-up once back in the UK or Ireland?',
+    a: 'Every UK and Irish patient leaves Marrakech with a written Clinical Passport detailing exact resin brands, shade codes, ceramic batch numbers, and 3Shape 3D digital scans so any local dentist in the UK or Ireland can maintain your smile effortlessly. Composite bonding includes a 1-year warranty plus a complimentary 6-month review and diamond polish; E.max porcelain veneers include a 5-year comprehensive replacement warranty backed by direct WhatsApp clinician support.'
+  },
+  {
     q: 'Are flights included in the dental packages?',
-    a: 'No. Flights are not included and are booked independently by the patient. Direct flights to Marrakech Menara (RAK) operate daily from London, Manchester, Bristol, and Birmingham (approx. 3h 20m). Dedicated private chauffeur transfers within Marrakech are arranged as part of your package.'
+    a: 'No. Flights are not included and are booked independently by the patient. Direct flights to Marrakech Menara (RAK) operate daily from London, Manchester, Birmingham, Bristol, and Dublin (approx. 3h 25m to 3h 45m). Dedicated private chauffeur transfers within Marrakech are arranged as part of your package.'
   },
   {
     q: 'What treatments do you offer at Dent House Marrakech?',

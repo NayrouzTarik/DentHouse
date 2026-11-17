@@ -16,6 +16,8 @@ export const Hero: React.FC<HeroProps> = () => {
         <img
           src="/images/cabinet/background_website.webp"
           alt="Dent House Marrakech cosmetic dentistry clinic suite in Morocco"
+          width={2048}
+          height={1374}
           className="w-full h-full object-cover object-center blur-[0.75px] scale-[1.01]"
           loading="eager"
           decoding="async"
@@ -28,14 +30,18 @@ export const Hero: React.FC<HeroProps> = () => {
 
       {/* Centered Hero Content with Original Typography */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Original H1 Headline Font */}
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl leading-[1.12] font-serif font-bold text-white tracking-tight text-balance max-w-3xl mx-auto">
+        <p className="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-sky-300 font-sans mb-2.5">
           Your Smile. Your Signature.
+        </p>
+
+        {/* Primary Keyword-Rich H1 Headline */}
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl leading-[1.12] font-serif font-bold text-white tracking-tight text-balance max-w-4xl mx-auto">
+          Composite Bonding &amp; E.max Veneers in Marrakech
         </h1>
 
-        {/* Original Subtitle Font */}
+        {/* Subtitle with natural UK & Ireland value prop */}
         <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed font-sans max-w-2xl mx-auto text-balance">
-          Discover premium porcelain veneers and composite bonding in Marrakech, where personalised dental care meets exceptional value.
+          Bespoke cosmetic dentistry in Morocco for UK &amp; Ireland patients—save up to 70% vs private clinic fees with zero-drill composite bonding, handcrafted E.max porcelain veneers, luxury stay, and VIP chauffeur transfers.
         </p>
 
         {/* Original CTAs & Brand Colors */}

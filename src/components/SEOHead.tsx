@@ -1,25 +1,37 @@
 import React, { useEffect } from 'react';
+import { DEFAULT_OG_IMAGE, DEFAULT_ROBOTS, getRouteSEO } from '../data/seoConfig';
 
 export interface SEOHeadProps {
-  title: string;
-  description: string;
-  canonicalUrl: string;
+  routePath?: string;
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
   ogType?: string;
   ogImage?: string;
+  robots?: string;
   schemaData?: Record<string, any> | Record<string, any>[];
 }
 
 export const SEOHead: React.FC<SEOHeadProps> = ({
+  routePath,
   title,
   description,
   canonicalUrl,
   ogType = 'website',
-  ogImage = 'https://denthousemarrakech.com/images/hero_denthouse_consultation_1791832441772.jpg',
+  ogImage = DEFAULT_OG_IMAGE,
+  robots,
   schemaData,
 }) => {
+  const routeConfig = routePath ? getRouteSEO(routePath) : undefined;
+  const resolvedTitle = title ?? routeConfig?.title ?? 'Composite Bonding & E.max Veneers Marrakech | Dent House';
+  const resolvedDescription = description ?? routeConfig?.description ?? '';
+  const resolvedCanonical = canonicalUrl ?? routeConfig?.canonicalUrl ?? 'https://denthousemarrakech.com/';
+  const resolvedRobots = robots ?? routeConfig?.robots ?? DEFAULT_ROBOTS;
+  const resolvedSchema = schemaData ?? routeConfig?.schemaData;
+
   useEffect(() => {
     // 1. Update Title
-    document.title = title;
+    document.title = resolvedTitle;
 
     // Helper to update or create meta tags
     const setMetaTag = (attrName: string, attrVal: string, content: string) => {
@@ -32,19 +44,20 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       element.setAttribute('content', content);
     };
 
-    // 2. Meta description
-    setMetaTag('name', 'description', description);
+    // 2. Meta description & robots
+    setMetaTag('name', 'description', resolvedDescription);
+    setMetaTag('name', 'robots', resolvedRobots);
 
     // 3. OpenGraph tags
-    setMetaTag('property', 'og:title', title);
-    setMetaTag('property', 'og:description', description);
-    setMetaTag('property', 'og:url', canonicalUrl);
+    setMetaTag('property', 'og:title', resolvedTitle);
+    setMetaTag('property', 'og:description', resolvedDescription);
+    setMetaTag('property', 'og:url', resolvedCanonical);
     setMetaTag('property', 'og:type', ogType);
     setMetaTag('property', 'og:image', ogImage);
 
     // 4. Twitter tags
-    setMetaTag('name', 'twitter:title', title);
-    setMetaTag('name', 'twitter:description', description);
+    setMetaTag('name', 'twitter:title', resolvedTitle);
+    setMetaTag('name', 'twitter:description', resolvedDescription);
     setMetaTag('name', 'twitter:image', ogImage);
 
     // 5. Canonical link tag
@@ -54,32 +67,37 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       canonicalLink.setAttribute('rel', 'canonical');
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.setAttribute('href', canonicalUrl);
+    canonicalLink.setAttribute('href', resolvedCanonical);
 
-    // 6. Optional page-specific JSON-LD Schema
+    // 6. Hreflang alternate link tags (en-GB, en-IE, en, x-default)
+    const hreflangs = ['en-GB', 'en-IE', 'en', 'x-default'];
+    hreflangs.forEach((lang) => {
+      let altLink = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`);
+      if (!altLink) {
+        altLink = document.createElement('link');
+        altLink.setAttribute('rel', 'alternate');
+        altLink.setAttribute('hreflang', lang);
+        document.head.appendChild(altLink);
+      }
+      altLink.setAttribute('href', resolvedCanonical);
+    });
+
+    // 7. Page-specific JSON-LD Schema
     const schemaScriptId = 'page-specific-schema-ld';
     let schemaScript = document.getElementById(schemaScriptId) as HTMLScriptElement | null;
 
-    if (schemaData) {
+    if (resolvedSchema) {
       if (!schemaScript) {
         schemaScript = document.createElement('script');
         schemaScript.id = schemaScriptId;
         schemaScript.type = 'application/ld+json';
         document.head.appendChild(schemaScript);
       }
-      schemaScript.textContent = JSON.stringify(schemaData);
+      schemaScript.textContent = JSON.stringify(resolvedSchema);
     } else if (schemaScript) {
       schemaScript.remove();
     }
-
-    return () => {
-      // Clean up page-specific schema on unmount
-      const existingScript = document.getElementById(schemaScriptId);
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, [title, description, canonicalUrl, ogType, ogImage, schemaData]);
+  }, [resolvedTitle, resolvedDescription, resolvedCanonical, resolvedRobots, ogType, ogImage, resolvedSchema]);
 
   return null;
 };

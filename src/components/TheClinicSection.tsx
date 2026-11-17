@@ -45,6 +45,8 @@ export const TheClinicSection: React.FC<TheClinicSectionProps> = ({ onOpenConsul
               <img
                 src="/images/cabinet/cabinet.webp"
                 alt="Dent House Marrakech Luxury Cosmetic Dental Suite"
+                width={1529}
+                height={2048}
                 className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TREATMENTS, getWhatsAppUrl, CLINIC_WHATSAPP_DISPLAY } from '../data/dentHouseData';
+import { getWhatsAppUrl, CLINIC_WHATSAPP_DISPLAY } from '../data/dentHouseData';
 import { SEOHead } from '../components/SEOHead';
-import { Check, ShieldCheck, Sparkles, MessageCircle, ArrowRight, Clock, HelpCircle } from 'lucide-react';
+import { Check, ShieldCheck, Sparkles, MessageCircle, ArrowRight, Clock, HelpCircle, Microscope } from 'lucide-react';
 
 interface TreatmentsPageProps {
   onOpenConsultation: () => void;
@@ -10,54 +10,94 @@ interface TreatmentsPageProps {
 }
 
 export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
+  const comparisonRows = [
+    {
+      feature: 'Certified Clinical Material',
+      bonding: '3M™ Filtek / GC G-aenial nano-hybrid composite resin',
+      veneers: 'Ivoclar Vivadent IPS e.max® lithium disilicate ceramic',
+    },
+    {
+      feature: 'Digital Diagnostics & Scan',
+      bonding: '3Shape TRIOS® 3D intraoral digital scanner & shade map',
+      veneers: '3Shape TRIOS® 3D intraoral digital scanner & CAD/CAM lab',
+    },
+    {
+      feature: 'Tooth Preparation',
+      bonding: 'Zero drilling of healthy natural enamel (non-invasive)',
+      veneers: 'Conservative sub-0.3 mm enamel prep (never shaved pegs)',
+    },
+    {
+      feature: 'Marrakech Stay Length',
+      bonding: '1 clinical visit · 2-night luxury stay (or treatment only)',
+      veneers: '4-night luxury stay for master ceramic layering & try-in',
+    },
+    {
+      feature: 'Expected Durability',
+      bonding: '5–7 years (100% chairside repairable & re-polishable)',
+      veneers: '10–15 years (100% stain-resistant medical ceramic)',
+    },
+    {
+      feature: 'Fixed Price (£ GBP / € EUR)',
+      bonding: 'From £1,299 (€1,520) · £1,499 (€1,755) with 2-night stay',
+      veneers: 'From £3,450 (€4,040) including 4-night stay & transfers',
+    },
+    {
+      feature: 'Written Clinical Warranty',
+      bonding: '1-year full warranty + complimentary 6-month check-up',
+      veneers: '5-year comprehensive ceramic replacement warranty',
+    },
+  ];
+
   return (
     <div className="pt-6">
-      <SEOHead
-        title="Composite Bonding Marrakech | Minimally Invasive Smiles | Dent House"
-        description="High-grade composite bonding in Marrakech from £1,299. Chairside sculpting, zero healthy enamel drilling, 2-night stay packages with private chauffeur transfers for UK patients."
-        canonicalUrl="https://denthousemarrakech.com/treatments"
-        schemaData={{
-          "@context": "https://schema.org",
-          "@type": "MedicalWebPage",
-          "@id": "https://denthousemarrakech.com/treatments#webpage",
-          "name": "Composite Bonding & Cosmetic Dentistry in Marrakech",
-          "description": "Comprehensive guide to direct composite bonding and E.max porcelain veneers at Dent House Marrakech.",
-          "url": "https://denthousemarrakech.com/treatments",
-          "about": [
-            {
-              "@type": "MedicalProcedure",
-              "name": "Composite Bonding Marrakech",
-              "procedureType": "NoninvasiveProcedure",
-              "description": "Direct chairside micro-hybrid composite resin sculpting for up to 20 teeth with zero healthy tooth drilling."
-            },
-            {
-              "@type": "MedicalProcedure",
-              "name": "E.max Porcelain Veneers Marrakech",
-              "procedureType": "NoninvasiveProcedure",
-              "description": "Ultra-thin handcrafted ceramic shields crafted in digital lab with 4 nights luxury stay."
-            }
-          ]
-        }}
-      />
+      <SEOHead routePath="/treatments" />
 
       {/* Page Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-3xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-4xl">
         <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-          OUR SMILE SERVICES
+          OUR SMILE SERVICES · MARRAKECH, MOROCCO
         </span>
         <h1 className="text-3xl sm:text-5xl font-serif font-bold text-slate-900 mt-2 tracking-tight">
-          Cosmetic Dentistry in Marrakech
+          Composite Bonding &amp; E.max Veneers in Marrakech, Morocco
         </h1>
-        <p className="mt-3 text-base text-slate-600">
-          We focus on two premier aesthetic solutions: long-lasting E.max Porcelain Veneers and conservative Composite Bonding.
+        <p className="mt-3 text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          Compare our two signature smile makeovers engineered for UK and Ireland patients: zero-drill direct composite bonding using{' '}
+          <strong className="text-slate-800">3M™ Filtek / GC G-aenial nano-hybrid composite resin</strong> and handcrafted{' '}
+          <strong className="text-slate-800">Ivoclar Vivadent IPS e.max® lithium disilicate</strong> porcelain veneers, planned digitally with our{' '}
+          <strong className="text-slate-800">3Shape TRIOS® 3D intraoral digital scanner</strong>.
         </p>
+
+        {/* Quick Section Anchor Pills */}
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5 text-xs font-semibold">
+          <a
+            href="#composite-bonding"
+            className="px-3.5 py-1.5 rounded-full bg-sky-50 text-[#0284C7] border border-sky-200 hover:bg-sky-100 transition-colors"
+          >
+            Composite Bonding (Zero Drilling)
+          </a>
+          <a
+            href="#emax-veneers"
+            className="px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200 hover:bg-slate-200 transition-colors"
+          >
+            E.max Porcelain Veneers
+          </a>
+          <a
+            href="#comparison"
+            className="px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition-colors"
+          >
+            Bonding vs. E.max Comparison Table
+          </a>
+        </div>
       </div>
 
-      {/* Main Treatments Cards */}
+      {/* Main Treatments Cards — Both Permanently Rendered in DOM */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {/* Card 1: Composite Bonding */}
-          <div className="rounded-2xl border-2 border-[#0284C7] bg-gradient-to-b from-sky-50/40 via-white to-white p-8 shadow-xs flex flex-col justify-between">
+          <section
+            id="composite-bonding"
+            className="scroll-mt-24 rounded-2xl border-2 border-[#0284C7] bg-gradient-to-b from-sky-50/40 via-white to-white p-8 shadow-xs flex flex-col justify-between"
+          >
             <div>
               <div className="flex items-center justify-between gap-2">
                 <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#0284C7] text-white">
@@ -65,70 +105,70 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                 </span>
                 <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                   <Sparkles className="w-3.5 h-3.5" />
-                  Direct Sculpt
+                  1 Visit · Direct Sculpt
                 </span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-4">
-                Composite Bonding
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-4 leading-tight">
+                Direct Composite Bonding in Marrakech (Zero Enamel Drilling)
               </h2>
-              <div className="flex items-center gap-2 mt-1 text-xs font-semibold text-[#0284C7]">
+              <div className="flex items-center gap-2 mt-1.5 text-xs font-semibold text-[#0284C7]">
                 <Clock className="w-3.5 h-3.5" />
-                <span>2 Night Luxury Stay</span>
+                <span>1 Clinical Visit · 2 Night Luxury Stay</span>
                 <span className="text-slate-300">•</span>
-                <span className="text-slate-500">Direct chairside aesthetic resin sculpting</span>
+                <span className="text-slate-500">3M™ Filtek / GC G-aenial Resin</span>
               </div>
 
               {/* Concise Explanation of Treatment */}
-              <div className="mt-4 text-xs sm:text-sm text-slate-600 space-y-2 leading-relaxed">
+              <div className="mt-4 text-xs sm:text-sm text-slate-600 space-y-2.5 leading-relaxed">
                 <p>
-                  High-grade micro-hybrid resin carefully shaped directly over natural teeth by our cosmetic dentists to fix chips, close spacing, and smooth contours.
+                  Our cosmetic dentists hand-sculpt genuine <strong>3M™ Filtek and GC G-aenial nano-hybrid composite resin</strong> directly onto your natural teeth to close gaps (diastemas), smooth chipped edges, and harmonize colour and symmetry in a single chairside session.
                 </p>
                 <p>
-                  Requires zero drilling of your healthy enamel and is completed comfortably during your 2 night luxury stay in Marrakech.
+                  Because there is <strong>zero drilling or shaving of healthy tooth enamel</strong>, your natural teeth remain 100% intact. Guided by a <strong>3Shape TRIOS® 3D intraoral digital scanner</strong>, your full 20-tooth transformation finishes cleanly during a relaxing 2-night Marrakech stay.
                 </p>
               </div>
 
-              {/* What We Offer (High-level summary to invite questions) */}
+              {/* What We Offer */}
               <div className="mt-5 p-4 rounded-xl bg-white border border-sky-100 shadow-xs">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">
                   What we offer with this treatment:
                 </h3>
                 <ul className="space-y-1.5 text-xs text-slate-700">
                   <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>Zero drilling or shaving of natural tooth enamel</span>
+                    <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
+                    <span>Zero drilling or shaving of natural tooth enamel (never &ldquo;Turkey teeth&rdquo;)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>2 nights stay with vip transfert</span>
+                    <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
+                    <span>Certified 3M™ Filtek &amp; GC G-aenial nano-hybrid composite layering</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>Custom multi-layer shade matching & high-gloss polish</span>
+                    <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
+                    <span>2 nights central stay with VIP Mercedes airport &amp; clinic transfers</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>Dedicated clinical follow-up & aftercare guidance</span>
+                    <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
+                    <span>1-year warranty, complimentary 6-month polish &amp; written UK clinical passport</span>
                   </li>
                 </ul>
               </div>
 
-              {/* Starting Price Only */}
+              {/* Starting Price */}
               <div className="mt-6 pt-4 border-t border-slate-100 flex items-baseline justify-between">
                 <div>
                   <span className="text-xs text-slate-400 block">Up to 20 Teeth</span>
-                  <div className="flex items-baseline gap-1">
+                  <div className="flex items-baseline gap-1.5">
                     <span className="text-xs text-slate-500 font-medium">Starting from</span>
                     <span className="text-2xl sm:text-3xl font-extrabold text-[#0284C7] font-sans">
                       £1,299
                     </span>
-                    <span className="text-xs text-slate-500 font-medium">/ person</span>
+                    <span className="text-xs text-slate-500 font-medium">(~€1,520)</span>
                   </div>
                 </div>
                 <div className="text-right text-xs text-slate-500">
                   <span className="block font-medium">Treatment Only or With Stay</span>
-                  <span className="text-emerald-700 font-semibold">From £1,299 (Stay +£200)</span>
+                  <span className="text-emerald-700 font-semibold">Full Stay Package £1,499 (~€1,755)</span>
                 </div>
               </div>
             </div>
@@ -148,84 +188,88 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                 to="/packages"
                 className="py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:text-[#0284C7] transition-all flex items-center justify-center gap-1.5"
               >
-                <span>View Packages</span>
+                <span>View fixed £1,299 &amp; £3,450 packages</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
-          </div>
+          </section>
 
           {/* Card 2: E.max Porcelain Veneers */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-xs flex flex-col justify-between">
+          <section
+            id="emax-veneers"
+            className="scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-8 shadow-xs flex flex-col justify-between"
+          >
             <div>
               <div className="flex items-center justify-between gap-2">
                 <span className="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-800">
-                  Top Choice for UK Patients
+                  Top Choice for UK &amp; Ireland
                 </span>
                 <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  Premium Ceramic
+                  IPS e.max® Ceramic
                 </span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-4">
-                E.max Porcelain Veneers
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-4 leading-tight">
+                Handcrafted E.max Porcelain Veneers in Morocco
               </h2>
-              <div className="flex items-center gap-2 mt-1 text-xs font-semibold text-[#0284C7]">
+              <div className="flex items-center gap-2 mt-1.5 text-xs font-semibold text-[#0284C7]">
                 <Clock className="w-3.5 h-3.5" />
                 <span>4 Night Luxury Stay</span>
                 <span className="text-slate-300">•</span>
-                <span className="text-slate-500">Ultra-thin handcrafted ceramic shields</span>
+                <span className="text-slate-500">Ivoclar Vivadent IPS e.max®</span>
               </div>
 
               {/* Concise Explanation of Treatment */}
-              <div className="mt-4 text-xs sm:text-sm text-slate-600 space-y-2 leading-relaxed">
+              <div className="mt-4 text-xs sm:text-sm text-slate-600 space-y-2.5 leading-relaxed">
                 <p>
-                  Hand-layered medical-grade lithium disilicate ceramic shields, individually fabricated in our digital lab to replicate the depth, light reflection, and translucency of natural enamel.
+                  Individually hand-layered from authentic <strong>Ivoclar Vivadent IPS e.max® lithium disilicate</strong> ceramic in our digital lab, our veneers replicate the subtle incisal translucency, surface texture, and light reflection of natural enamel.
                 </p>
                 <p>
-                  Engineered for maximum durability and 100% stain resistance against coffee, tea, and red wine.
+                  Captured with our <strong>3Shape TRIOS® 3D intraoral digital scanner</strong> and bonded using conservative sub-0.3 mm enamel-only preparation, E.max veneers deliver 10–15 years of strength and 100% stain resistance against coffee, tea, and red wine.
                 </p>
               </div>
 
-              {/* What We Offer (High-level summary to invite questions) */}
+              {/* What We Offer */}
               <div className="mt-5 p-4 rounded-xl bg-slate-50 border border-slate-100 shadow-xs">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">
                   What we offer with this treatment:
                 </h3>
                 <ul className="space-y-1.5 text-xs text-slate-700">
                   <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>3D Intraoral digital scanning & shade simulation</span>
+                    <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
+                    <span>3Shape TRIOS® 3D intraoral digital scanning &amp; live trial smile simulation</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>Conservative sub-0.3mm preparation (preserves natural tooth)</span>
+                    <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
+                    <span>Genuine Ivoclar Vivadent IPS e.max® lithium disilicate with ingot batch certificate</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>4 night luxury stay for custom digital lab crafting</span>
+                    <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
+                    <span>Conservative sub-0.3 mm enamel prep &amp; 4-night central Marrakech luxury stay</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-[#0284C7]" />
-                    <span>Dedicated clinical aftercare & digital records handover</span>
+                    <Check className="w-3.5 h-3.5 text-[#0284C7] shrink-0" />
+                    <span>5-year replacement warranty &amp; complete digital clinical handover for UK/Irish dentists</span>
                   </li>
                 </ul>
               </div>
 
-              {/* Starting Price Only */}
+              {/* Starting Price */}
               <div className="mt-6 pt-4 border-t border-slate-100 flex items-baseline justify-between">
                 <div>
-                  <span className="text-xs text-slate-400 block">Full Smile Set</span>
-                  <div className="flex items-baseline gap-1">
+                  <span className="text-xs text-slate-400 block">Full Smile Set (20 Teeth)</span>
+                  <div className="flex items-baseline gap-1.5">
                     <span className="text-xs text-slate-500 font-medium">Starting from</span>
                     <span className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-sans">
                       £3,450
                     </span>
+                    <span className="text-xs text-slate-500 font-medium">(~€4,040)</span>
                   </div>
                 </div>
                 <div className="text-right text-xs text-slate-500">
-                  <span className="block font-medium">4 Night Luxury Stay</span>
-                  <span className="text-emerald-700 font-semibold">Save vs UK private</span>
+                  <span className="block font-medium">Includes 4-Night Stay &amp; Transfers</span>
+                  <span className="text-emerald-700 font-semibold">Save up to 70% vs UK &amp; Ireland</span>
                 </div>
               </div>
             </div>
@@ -249,8 +293,97 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
-          </div>
+          </section>
         </div>
+
+        {/* Full Clinical Comparison Table */}
+        <section id="comparison" className="scroll-mt-24 mt-14">
+          <div className="text-center max-w-3xl mx-auto mb-8">
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
+              <Microscope className="w-4 h-4" />
+              <span>SIDE-BY-SIDE CLINICAL SPECIFICATIONS</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-1.5">
+              Composite Bonding vs. E.max Veneers: Full Clinical Comparison
+            </h2>
+            <p className="mt-2 text-xs sm:text-sm text-slate-600">
+              Transparent clinical breakdown to help UK and Irish patients choose the safest, longest-lasting aesthetic option for their natural teeth.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xs">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-slate-900 text-white">
+                  <th className="py-4 px-5 font-semibold w-1/4">Clinical Factor</th>
+                  <th className="py-4 px-5 font-semibold text-sky-300 w-[37.5%]">
+                    Direct Composite Bonding
+                  </th>
+                  <th className="py-4 px-5 font-semibold text-emerald-300 w-[37.5%]">
+                    Ivoclar IPS e.max® Veneers
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {comparisonRows.map((row, idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'}>
+                    <th scope="row" className="py-3.5 px-5 font-bold text-slate-900 align-top">
+                      {row.feature}
+                    </th>
+                    <td className="py-3.5 px-5 text-slate-700 align-top leading-relaxed">
+                      {row.bonding}
+                    </td>
+                    <td className="py-3.5 px-5 text-slate-700 align-top leading-relaxed">
+                      {row.veneers}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Contextual Internal Links Strip */}
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link
+              to="/packages"
+              className="p-4 rounded-xl bg-sky-50/70 border border-sky-100 hover:border-[#0284C7] transition-all flex items-center justify-between gap-3 group"
+            >
+              <div>
+                <div className="text-xs font-bold text-[#0284C7] uppercase">All-Inclusive Pricing</div>
+                <div className="text-sm font-bold text-slate-900 mt-0.5">
+                  View fixed £1,299 &amp; £3,450 packages
+                </div>
+              </div>
+              <ArrowRight className="w-4 h-4 text-[#0284C7] shrink-0 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+
+            <Link
+              to="/aftercare"
+              className="p-4 rounded-xl bg-emerald-50/70 border border-emerald-100 hover:border-emerald-500 transition-all flex items-center justify-between gap-3 group"
+            >
+              <div>
+                <div className="text-xs font-bold text-emerald-700 uppercase">1-Yr &amp; 5-Yr Guarantees</div>
+                <div className="text-sm font-bold text-slate-900 mt-0.5">
+                  Read our UK warranty &amp; aftercare protocol
+                </div>
+              </div>
+              <ArrowRight className="w-4 h-4 text-emerald-700 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+
+            <Link
+              to="/stories"
+              className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-400 transition-all flex items-center justify-between gap-3 group"
+            >
+              <div>
+                <div className="text-xs font-bold text-slate-500 uppercase">Verified Results</div>
+                <div className="text-sm font-bold text-slate-900 mt-0.5">
+                  See real UK patient before &amp; afters
+                </div>
+              </div>
+              <ArrowRight className="w-4 h-4 text-slate-700 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+          </div>
+        </section>
 
         {/* Action Prompt: Ask questions directly to help choose */}
         <div className="mt-12 p-8 rounded-3xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
@@ -263,7 +396,7 @@ export const TreatmentsPage: React.FC<TreatmentsPageProps> = () => {
               Send us a photo on WhatsApp for a personalized recommendation.
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
-              Every smile is unique. Our clinical team will assess your enamel, alignment, and goals, then explain the best approach without any sales pressure.
+              Every smile is unique. Dr. Mouad and our clinical team will assess your enamel, alignment, and goals, then explain the best approach without any sales pressure.
             </p>
           </div>
 

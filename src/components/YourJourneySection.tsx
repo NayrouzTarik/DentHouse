@@ -180,6 +180,8 @@ export const YourJourneySection: React.FC<YourJourneySectionProps> = ({ onOpenCo
                     ? 'Luxury partner accommodation in Marrakech between dental appointments'
                     : 'Completed natural smile makeover with composite bonding and veneers in Marrakech'
                 }
+                width={activeDay === 2 ? 1200 : 2048}
+                height={activeDay === 2 ? 896 : 1143}
                 className="w-full h-72 sm:h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"

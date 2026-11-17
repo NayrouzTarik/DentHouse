@@ -8,6 +8,8 @@ interface BeforeAfterSliderProps {
   afterLabel?: string;
   beforeAlt?: string;
   afterAlt?: string;
+  width?: number;
+  height?: number;
   aspectRatio?: string;
   className?: string;
   badge?: string;
@@ -21,6 +23,8 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
   afterLabel = 'After',
   beforeAlt = 'Before smile treatment',
   afterAlt = 'After smile transformation',
+  width = 580,
+  height = 345,
   aspectRatio = 'aspect-[16/9]',
   className = '',
   badge,
@@ -106,6 +110,8 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         <img
           src={afterImage}
           alt={afterAlt}
+          width={width}
+          height={height}
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           draggable={false}
           loading="lazy"
@@ -122,6 +128,8 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
           <img
             src={beforeImage}
             alt={beforeAlt}
+            width={width}
+            height={height}
             className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             draggable={false}
             loading="lazy"

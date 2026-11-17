@@ -23,22 +23,18 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
 
   return (
     <div className="pt-6">
-      <SEOHead
-        title="Composite Bonding Prices & Packages Marrakech | Dent House"
-        description="Transparent composite bonding packages in Marrakech from £1,299 for UK patients. Treatment-only or all-inclusive packages with 2 nights luxury stay and chauffeur transfers."
-        canonicalUrl="https://denthousemarrakech.com/packages"
-      />
+      <SEOHead routePath="/packages" />
 
       {/* Page Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-3xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-4xl">
         <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-          ALL-INCLUSIVE PACKAGES
+          ALL-INCLUSIVE PACKAGES · GBP (£) &amp; EUR (€)
         </span>
         <h1 className="text-3xl sm:text-5xl font-serif font-bold text-slate-900 mt-2 tracking-tight">
-          Fixed Packages & Custom Plans
+          Marrakech Smile Makeover Packages &amp; Prices (UK vs. Morocco)
         </h1>
-        <p className="mt-3 text-base text-slate-600">
-          Transparent prices including your cosmetic treatment, central Marrakech house stay, and dedicated private chauffeur. Flights not included.
+        <p className="mt-3 text-base text-slate-600 max-w-2xl mx-auto">
+          Transparent fixed prices for UK &amp; Irish patients including your cosmetic treatment, central Marrakech stay, and dedicated private chauffeur. Flights arranged independently.
         </p>
 
         {/* Treatment Tab Switcher */}
@@ -380,6 +376,84 @@ export const PackagesPage: React.FC<PackagesPageProps> = () => {
             </div>
           </div>
         )}
+
+        {/* UK & Ireland vs. Marrakech Private Cost Comparison Table */}
+        <section className="mt-14">
+          <div className="text-center max-w-3xl mx-auto mb-6">
+            <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
+              TRANSPARENT COST BENCHMARK · GBP (£) &amp; EUR (€)
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-1.5">
+              UK &amp; Ireland Private Dental Prices vs. Dent House Marrakech
+            </h2>
+            <p className="mt-2 text-xs sm:text-sm text-slate-600">
+              Compare typical private clinic fees in London, Manchester, Birmingham, and Dublin against our fixed Marrakech packages (EUR estimates shown for Irish &amp; European patients).
+            </p>
+          </div>
+
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xs">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-slate-900 text-white">
+                  <th className="py-4 px-5 font-semibold">Smile Treatment (20 Teeth)</th>
+                  <th className="py-4 px-5 font-semibold text-slate-300">UK Private Clinic</th>
+                  <th className="py-4 px-5 font-semibold text-slate-300">Ireland Private Clinic</th>
+                  <th className="py-4 px-5 font-semibold text-sky-300">Dent House Marrakech</th>
+                  <th className="py-4 px-5 font-semibold text-emerald-300">Typical Saving</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                <tr className="bg-white">
+                  <th scope="row" className="py-3.5 px-5 font-bold text-slate-900">
+                    Composite Bonding (Treatment Only)
+                  </th>
+                  <td className="py-3.5 px-5 text-slate-600">£5,500 – £7,500</td>
+                  <td className="py-3.5 px-5 text-slate-600">€6,000 – €8,200</td>
+                  <td className="py-3.5 px-5 font-bold text-[#0284C7]">£1,299 (~€1,520)</td>
+                  <td className="py-3.5 px-5 font-semibold text-emerald-700">Save up to 75%</td>
+                </tr>
+                <tr className="bg-slate-50/60">
+                  <th scope="row" className="py-3.5 px-5 font-bold text-slate-900">
+                    Composite Bonding + 2-Night Stay &amp; VIP Transfers
+                  </th>
+                  <td className="py-3.5 px-5 text-slate-600">£5,500 – £7,500 (no stay)</td>
+                  <td className="py-3.5 px-5 text-slate-600">€6,000 – €8,200 (no stay)</td>
+                  <td className="py-3.5 px-5 font-bold text-[#0284C7]">£1,499 (~€1,755)</td>
+                  <td className="py-3.5 px-5 font-semibold text-emerald-700">Save £4,000+</td>
+                </tr>
+                <tr className="bg-white">
+                  <th scope="row" className="py-3.5 px-5 font-bold text-slate-900">
+                    Ivoclar IPS e.max® Veneers + 4-Night Stay &amp; Transfers
+                  </th>
+                  <td className="py-3.5 px-5 text-slate-600">£11,000 – £14,500</td>
+                  <td className="py-3.5 px-5 text-slate-600">€12,500 – €16,000</td>
+                  <td className="py-3.5 px-5 font-bold text-slate-900">£3,450 (~€4,040)</td>
+                  <td className="py-3.5 px-5 font-semibold text-emerald-700">Save up to 70%</td>
+                </tr>
+                <tr className="bg-slate-50/60">
+                  <th scope="row" className="py-3.5 px-5 font-bold text-slate-900">
+                    Duo (-15%) &amp; Trio (-20%) Group Packages
+                  </th>
+                  <td className="py-3.5 px-5 text-slate-600">Rarely discounted</td>
+                  <td className="py-3.5 px-5 text-slate-600">Rarely discounted</td>
+                  <td className="py-3.5 px-5 font-bold text-[#0284C7]">From £1,233 / €1,445 pp</td>
+                  <td className="py-3.5 px-5 font-semibold text-emerald-700">Extra 15%–20% OFF</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2.5 text-[11px] text-slate-500 text-center">
+            *EUR (€) equivalents are indicative based on ~1.17 GBP/EUR exchange rate. Exact fixed pricing is confirmed in GBP or EUR during your free WhatsApp clinical assessment. See{' '}
+            <Link to="/treatments#comparison" className="text-[#0284C7] font-semibold hover:underline">
+              full composite vs. E.max clinical comparison
+            </Link>{' '}
+            or read our{' '}
+            <Link to="/aftercare" className="text-[#0284C7] font-semibold hover:underline">
+              UK &amp; Ireland warranty terms
+            </Link>
+            .
+          </p>
+        </section>
 
         {/* Customization Callout Banner */}
         <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-sky-50 border border-sky-100 flex flex-col md:flex-row items-center justify-between gap-6">

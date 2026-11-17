@@ -12,22 +12,18 @@ interface StoriesPageProps {
 export const StoriesPage: React.FC<StoriesPageProps> = () => {
   return (
     <div className="pt-6">
-      <SEOHead
-        title="Composite Bonding Before & After Marrakech | UK Patient Reviews"
-        description="See real before and after composite bonding and porcelain veneer results from UK patients who travelled to Marrakech. Verified 4.8/5 reviews and diastema closures."
-        canonicalUrl="https://denthousemarrakech.com/stories"
-      />
+      <SEOHead routePath="/stories" />
 
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-3xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center max-w-4xl">
         <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-          BEFORE & AFTER RESULTS
+          BEFORE &amp; AFTER RESULTS · MARRAKECH, MOROCCO
         </span>
         <h1 className="text-3xl sm:text-5xl font-serif font-bold text-slate-900 mt-2 tracking-tight">
-          Smile Stories & Transformations
+          Composite Bonding &amp; E.max Veneers Before &amp; After Results
         </h1>
-        <p className="mt-3 text-base text-slate-600">
-          Real results and genuine experiences from selective UK & European patients who flew to Marrakech for their smile makeovers.
+        <p className="mt-3 text-base text-slate-600 max-w-2xl mx-auto">
+          Real results and genuine experiences from UK, Irish &amp; European patients who flew to Marrakech for their natural smile makeovers.
         </p>
       </div>
 
@@ -40,7 +36,7 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
                 INTERACTIVE CLINICAL COMPARISONS
               </span>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-1">
-                Real Patient Before & After
+                Real Patient Before &amp; After
               </h2>
             </div>
             <div className="inline-flex items-center gap-1.5 text-xs text-slate-600 bg-sky-50 border border-sky-100 px-3 py-1.5 rounded-full font-medium">
@@ -56,8 +52,10 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
                 <BeforeAfterSlider
                   beforeImage="/images/results/before2.webp"
                   afterImage="/images/results/after2.webp"
-                  beforeAlt="Patient teeth before composite bonding showing diastema spacing"
-                  afterAlt="Patient teeth after composite bonding showing closed gap and smooth polish"
+                  beforeAlt="Patient teeth before 20-tooth direct composite bonding in Marrakech showing diastema gap"
+                  afterAlt="20-tooth direct composite bonding before and after smile makeover at Dent House Marrakech"
+                  width={580}
+                  height={345}
                   badge="20 Composite Bondings"
                   aspectRatio="aspect-[16/9]"
                 />
@@ -107,8 +105,10 @@ export const StoriesPage: React.FC<StoriesPageProps> = () => {
                 <BeforeAfterSlider
                   beforeImage="/images/results/before4.webp"
                   afterImage="/images/results/after4.webp"
-                  beforeAlt="Patient teeth before porcelain veneers with wear and deep discoloration"
-                  afterAlt="Patient teeth after handcrafted E.max porcelain veneers"
+                  beforeAlt="Patient teeth before 20 E.max porcelain veneers in Marrakech showing enamel wear and discoloration"
+                  afterAlt="20-tooth handcrafted Ivoclar E.max porcelain veneers before and after smile makeover at Dent House Marrakech"
+                  width={536}
+                  height={340}
                   badge="20 Porcelain Veneers"
                   aspectRatio="aspect-[16/9]"
                 />

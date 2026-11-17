@@ -32,37 +32,41 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
   const realPatientPhotos = [
     {
       src: '/images/results/after1.webp',
+      width: 560,
+      height: 315,
       label: 'Composite Bonding Sculpt',
       detail: '2 Night Luxury Stay · Zero Drilling · Natural Aesthetics',
-      alt: 'Composite bonding smile transformation in Marrakech - natural resin sculpt with zero drilling',
+      alt: '20-tooth direct composite bonding before and after smile makeover at Dent House Marrakech',
     },
     {
       src: '/images/results/after3.webp',
+      width: 656,
+      height: 391,
       label: 'E.max Porcelain Veneers',
       detail: '4 Night Luxury Stay · Handcrafted BL2 Porcelain',
-      alt: 'E.max porcelain veneers smile makeover in Marrakech - handcrafted BL2 ceramic shields',
+      alt: 'Handcrafted Ivoclar E.max porcelain veneers smile makeover in Marrakech Morocco',
     },
     {
       src: '/images/results/client1.webp',
+      width: 883,
+      height: 450,
       label: 'Charlotte D. (London, UK)',
       detail: 'Composite Bonding Patient · London, UK',
-      alt: 'Charlotte D. from London UK - composite bonding patient at Dent House Marrakech',
+      alt: 'Charlotte D. from London UK after composite bonding treatment at Dent House Marrakech',
     },
     {
       src: '/images/results/client2.webp',
+      width: 625,
+      height: 312,
       label: 'Marcus S. (Manchester, UK)',
       detail: 'E.max Veneers Patient · Manchester, UK',
-      alt: 'Marcus S. from Manchester UK - porcelain veneers patient at Dent House Marrakech',
+      alt: 'Marcus S. from Manchester UK after E.max porcelain veneers at Dent House Marrakech',
     },
   ];
 
   return (
     <div>
-      <SEOHead
-        title="Composite Bonding Marrakech & Porcelain Veneers | Dent House Marrakech"
-        description="Specialist composite bonding and porcelain veneers in Marrakech, Morocco. Save up to 70% vs UK private prices with 2-day natural smile makeovers, luxury accommodation, and VIP chauffeur transfers."
-        canonicalUrl="https://denthousemarrakech.com/"
-      />
+      <SEOHead routePath="/" />
 
       {/* 1. Hero Section */}
       <Hero
@@ -81,7 +85,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
               Why choose us for your smile?
             </h2>
             <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-              We combine world-class dental care with an unforgettable experience, giving you the confidence to smile brighter.
+              Whether you choose zero-drill{' '}
+              <Link to="/treatments#composite-bonding" className="text-[#0284C7] font-semibold hover:underline">
+                direct composite bonding
+              </Link>{' '}
+              or handcrafted{' '}
+              <Link to="/treatments#emax-veneers" className="text-[#0284C7] font-semibold hover:underline">
+                Ivoclar E.max porcelain veneers
+              </Link>
+              , our{' '}
+              <Link to="/packages" className="text-[#0284C7] font-semibold hover:underline">
+                fixed Marrakech dental packages
+              </Link>{' '}
+              and{' '}
+              <Link to="/journey" className="text-[#0284C7] font-semibold hover:underline">
+                seamless UK &amp; Ireland dental journey
+              </Link>{' '}
+              give you complete confidence from first flight to final reveal.
             </p>
           </div>
 
@@ -140,6 +160,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenConsultation }) => {
                   <img
                     src={photo.src}
                     alt={photo.alt || photo.label}
+                    width={photo.width}
+                    height={photo.height}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                     decoding="async"

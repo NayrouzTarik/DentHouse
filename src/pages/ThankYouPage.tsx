@@ -36,11 +36,7 @@ export const ThankYouPage: React.FC<ThankYouPageProps> = ({ onOpenConsultation }
 
   return (
     <div className="bg-gradient-to-b from-sky-50/50 via-white to-slate-50 min-h-screen pt-28 pb-20">
-      <SEOHead
-        title="Thank You | Dent House Marrakech Consultation Request"
-        description="Thank you for contacting Dent House Marrakech. Dr Mouad and our smile makeover concierge team will review your enquiry promptly."
-        canonicalUrl="https://denthousemarrakech.com/thank-you"
-      />
+      <SEOHead routePath="/thank-you" robots="noindex, nofollow" />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         {/* Confirmation Card */}

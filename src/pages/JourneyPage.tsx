@@ -1,5 +1,6 @@
 import React from 'react';
-import { Plane, Car, Sparkles, ShieldCheck, MapPin, MessageCircle, ArrowRight, CheckCircle2, Clock, UserCheck, Stethoscope } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Plane, Car, Sparkles, ShieldCheck, MapPin, MessageCircle, ArrowRight, CheckCircle2, Clock, UserCheck, Stethoscope, Award, Calculator } from 'lucide-react';
 import { getWhatsAppUrl } from '../data/dentHouseData';
 import { SEOHead } from '../components/SEOHead';
 
@@ -57,48 +58,97 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
   const realPhotos = [
     {
       src: '/images/cabinet/chauffeur.webp',
+      width: 2048,
+      height: 1143,
       title: 'VIP Mercedes Chauffeur Transfer',
       subtitle: 'Private airport meet & greet and direct clinic transfers in our Mercedes fleet',
       tag: 'Mercedes VIP Van',
     },
     {
       src: '/images/cabinet/team_patient.webp',
+      width: 1529,
+      height: 2048,
       title: 'Gentle Chairside Treatment',
       subtitle: 'Precision cosmetic care and gentle chairside treatment by our experienced aesthetic dentist',
       tag: 'Chairside Care',
     },
     {
       src: '/images/cabinet/cabinet.webp',
+      width: 1529,
+      height: 2048,
       title: 'High-Tech Treatment Operatory',
       subtitle: 'Surgically sterile environment with ergonomic dental suites and ambient lighting',
       tag: 'Clinical Excellence',
     },
     {
       src: '/images/cabinet/staying.webp',
+      width: 2048,
+      height: 1143,
       title: 'Central Marrakech Accommodation',
       subtitle: 'Curated premium stays in central Marrakech for optimal rest between visits',
       tag: 'Central Stay',
     },
   ];
 
+  const flightCorridors = [
+    {
+      region: 'London & South East (England)',
+      airports: 'London Gatwick (LGW), Stansted (STN) & Luton (LTN)',
+      route: 'Direct to Marrakech Menara (RAK)',
+      duration: '~3h 30m',
+      airlines: 'British Airways, easyJet, Ryanair, Wizz Air',
+    },
+    {
+      region: 'North West (England)',
+      airports: 'Manchester (MAN)',
+      route: 'Direct to Marrakech Menara (RAK)',
+      duration: '~3h 45m',
+      airlines: 'easyJet, Ryanair, TUI',
+    },
+    {
+      region: 'Midlands (England)',
+      airports: 'Birmingham (BHX)',
+      route: 'Direct to Marrakech Menara (RAK)',
+      duration: '~3h 35m',
+      airlines: 'Ryanair, easyJet, TUI',
+    },
+    {
+      region: 'South West England & Wales',
+      airports: 'Bristol (BRS) / Cardiff (via BRS)',
+      route: 'Direct to Marrakech Menara (RAK)',
+      duration: '~3h 25m',
+      airlines: 'easyJet, Ryanair',
+    },
+    {
+      region: 'Ireland & Northern Ireland',
+      airports: 'Dublin (DUB) & Belfast (via DUB / LON)',
+      route: 'Direct from Dublin to Marrakech (RAK)',
+      duration: '~3h 45m',
+      airlines: 'Ryanair, Aer Lingus (seasonal)',
+    },
+    {
+      region: 'Scotland',
+      airports: 'Edinburgh (EDI) & Glasgow (GLA)',
+      route: 'Direct seasonal / 1-stop via London',
+      duration: '~4h 00m',
+      airlines: 'Ryanair, easyJet, British Airways',
+    },
+  ];
+
   return (
     <div className="pt-6">
-      <SEOHead
-        title="Dental Tourism Marrakech Guide | UK Patient Travel & Clinic Journey"
-        description="Plan your dental holiday to Marrakech for composite bonding: direct UK flights, VIP airport chauffeur meet & greet, central accommodation, and 2-day smile turnaround."
-        canonicalUrl="https://denthousemarrakech.com/journey"
-      />
+      <SEOHead routePath="/journey" />
 
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center max-w-3xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center max-w-4xl">
         <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-          YOUR MARRAKECH EXPERIENCE
+          UK &amp; IRELAND TRAVEL HUB · MARRAKECH, MOROCCO
         </span>
         <h1 className="text-3xl sm:text-5xl font-serif font-bold text-slate-900 mt-1.5 tracking-tight">
-          Your Journey & The Clinic
+          Dental Tourism in Marrakech for UK &amp; Ireland Patients
         </h1>
-        <p className="mt-2.5 text-sm sm:text-base text-slate-600">
-          Everything arranged for you: private VIP transfers, central accommodation, and modern appointments in Marrakech.
+        <p className="mt-2.5 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+          Everything coordinated around your direct ~3.5-hour flight: VIP airport meet &amp; greet, central Marrakech stays, and minimally invasive care led by Dr. Mouad.
         </p>
       </div>
 
@@ -208,6 +258,8 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                   <img
                     src="/images/cabinet/chauffeur.webp"
                     alt="Private Chauffeur with Black VIP Van at Marrakech Airport"
+                    width={2048}
+                    height={1143}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     decoding="async"
@@ -267,7 +319,9 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-4/3 sm:aspect-16/10 group">
                   <img
                     src="/images/cabinet/team_patient.webp"
-                    alt="Cosmetic Dentist Performing Gentle Chairside Treatment on Patient"
+                    alt="Dr. Mouad performing gentle chairside cosmetic bonding treatment at Dent House Marrakech"
+                    width={1529}
+                    height={2048}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     decoding="async"
@@ -328,6 +382,8 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                   <img
                     src="/images/cabinet/reception.webp"
                     alt="Dent House Marrakech Clinic Reception with Official 3D Logo"
+                    width={960}
+                    height={1280}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     decoding="async"
@@ -370,9 +426,12 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
                 <div className="aspect-4/3 w-full overflow-hidden bg-slate-100 relative">
                   <img
                     src={photo.src}
-                    alt={photo.title}
+                    alt={`${photo.title} — Dent House Marrakech cosmetic dentistry`}
+                    width={photo.width}
+                    height={photo.height}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute top-2.5 right-2.5 bg-slate-950/70 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md">
                     {photo.tag}
@@ -400,7 +459,9 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
             <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md aspect-4/3 bg-slate-200 relative group">
               <img
                 src="/images/cabinet/cabinet.webp"
-                alt="Dent House Marrakech Modern Clinic Suite"
+                alt="Dent House Marrakech Modern Clinic Suite on Bd. Allal Al Fassi"
+                width={1529}
+                height={2048}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
                 decoding="async"
@@ -436,6 +497,128 @@ export const JourneyPage: React.FC<JourneyPageProps> = () => {
             </div>
           </div>
         </div>
+
+        {/* 4B. Meet Dr. Mouad & Clinical Standards (E-E-A-T Authority) */}
+        <section className="p-6 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-xs space-y-6">
+          <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+            <div className="space-y-3 max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold uppercase tracking-wider border border-emerald-200/70">
+                <Award className="w-3.5 h-3.5" />
+                <span>Verified Clinical Governance &amp; E-E-A-T Standards</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
+                Meet Dr. Mouad &amp; Our Clinical Standards in Marrakech
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Your dental transformation is led personally by <strong className="text-slate-900">Dr. Mouad</strong>, a licensed cosmetic dental surgeon registered with the{' '}
+                <strong className="text-slate-900">Ordre National des Médecins Dentistes du Maroc</strong>. Every smile makeover follows conservative European prosthodontic principles—protecting healthy tooth structure while delivering natural shade translucency.
+              </p>
+            </div>
+            <div className="shrink-0 bg-slate-50 border border-slate-200 rounded-2xl p-4 text-xs space-y-1.5 min-w-[240px]">
+              <div className="flex items-center gap-2 font-bold text-slate-900">
+                <MapPin className="w-4 h-4 text-[#0284C7] shrink-0" />
+                <span>Clinic Address</span>
+              </div>
+              <p className="text-slate-600">Bd. Allal Al Fassi, Marrakech, Morocco</p>
+              <p className="text-[11px] text-emerald-700 font-semibold pt-1">
+                15 mins from Marrakech Menara Airport (RAK)
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1.5">
+              <div className="flex items-center gap-2 text-[#0284C7] font-bold text-xs uppercase tracking-wider">
+                <ShieldCheck className="w-4 h-4" />
+                <span>European Class-B Sterilization</span>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Hospital-grade vacuum autoclave cycles, individually sealed pouches opened chairside, and strict cross-infection audits aligned with UK HTM 01-05 standards.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1.5">
+              <div className="flex items-center gap-2 text-[#0284C7] font-bold text-xs uppercase tracking-wider">
+                <Stethoscope className="w-4 h-4" />
+                <span>Certified Materials &amp; Batch Tracking</span>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Exclusively authentic <strong>Ivoclar Vivadent IPS e.max®</strong> ceramics, <strong>3M™ Filtek / GC G-aenial</strong> composite resins, and <strong>3Shape TRIOS®</strong> 3D digital scanning.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1.5">
+              <div className="flex items-center gap-2 text-[#0284C7] font-bold text-xs uppercase tracking-wider">
+                <Clock className="w-4 h-4" />
+                <span>Zero Aggressive Shaving Policy</span>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                We reject &ldquo;Turkey teeth&rdquo; peg-crown preparation. Direct bonding requires zero enamel drilling, and E.max veneers preserve natural enamel with sub-0.3 mm prep.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 4C. Direct UK & Ireland Flight Corridors Table */}
+        <section className="space-y-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
+              DIRECT ~3.5-HOUR FLIGHTS TO MARRAKECH (RAK)
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-1.5">
+              UK &amp; Ireland Flight Corridors to Marrakech
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+              Marrakech Menara Airport (RAK) sits just 15 minutes from Dent House with direct daily flights across England, Wales, Scotland, Ireland, and Northern Ireland connections.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xs">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-slate-900 text-white">
+                  <th className="py-3.5 px-5 font-semibold">UK / Ireland Region</th>
+                  <th className="py-3.5 px-5 font-semibold">Departure Airports</th>
+                  <th className="py-3.5 px-5 font-semibold">Flight Route</th>
+                  <th className="py-3.5 px-5 font-semibold text-sky-300">Flight Time</th>
+                  <th className="py-3.5 px-5 font-semibold">Typical Carriers</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {flightCorridors.map((fc, idx) => (
+                  <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'}>
+                    <th scope="row" className="py-3.5 px-5 font-bold text-slate-900">
+                      {fc.region}
+                    </th>
+                    <td className="py-3.5 px-5 text-slate-700">{fc.airports}</td>
+                    <td className="py-3.5 px-5 text-slate-700">{fc.route}</td>
+                    <td className="py-3.5 px-5 font-bold text-[#0284C7] whitespace-nowrap">{fc.duration}</td>
+                    <td className="py-3.5 px-5 text-slate-600">{fc.airlines}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Contextual Internal Links */}
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <Link
+              to="/calculator"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-50 border border-sky-200 text-[#0284C7] hover:bg-sky-100 text-xs sm:text-sm font-bold transition-colors"
+            >
+              <Calculator className="w-4 h-4" />
+              <span>Estimate your smile &amp; stay cost</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              to="/faqs"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-[#0284C7] hover:border-sky-200 text-xs sm:text-sm font-semibold transition-colors"
+            >
+              <span>Read our UK &amp; Ireland dental travel FAQs</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </section>
 
         {/* 5. Flight & Travel Assistance (Crisp Banner) */}
         <div className="p-6 sm:p-8 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">

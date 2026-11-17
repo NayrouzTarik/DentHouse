@@ -35,18 +35,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/treatments" className="hover:text-white transition-colors">
+                <Link to="/treatments#composite-bonding" className="hover:text-white transition-colors">
                   Direct Composite Bonding (1-Yr Guarantee)
                 </Link>
               </li>
               <li>
-                <Link to="/treatments" className="hover:text-white transition-colors">
+                <Link to="/treatments#emax-veneers" className="hover:text-white transition-colors">
                   E.max Porcelain Veneers (5-Yr Guarantee)
                 </Link>
               </li>
               <li>
-                <Link to="/treatments" className="hover:text-white transition-colors">
-                  Full Smile Makeovers (10–20 Teeth)
+                <Link to="/treatments#comparison" className="hover:text-white transition-colors">
+                  Composite Bonding vs. E.max Comparison
                 </Link>
               </li>
               <li>

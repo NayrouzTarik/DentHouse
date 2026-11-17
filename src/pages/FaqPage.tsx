@@ -9,39 +9,21 @@ interface FaqPageProps {
 }
 
 export const FaqPage: React.FC<FaqPageProps> = ({ onOpenConsultation }) => {
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQS.map((faq) => ({
-      '@type': 'Question',
-      name: faq.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.a,
-      },
-    })),
-  };
-
   return (
     <div className="pt-6">
-      <SEOHead
-        title="Composite Bonding & Dental Tourism FAQ Marrakech | Dent House"
-        description="Answers to common questions from UK patients about composite bonding in Marrakech, pricing, warranties, accommodation, flights, and painless clinical procedures."
-        canonicalUrl="https://denthousemarrakech.com/faqs"
-        schemaData={faqSchema}
-      />
+      <SEOHead routePath="/faqs" />
 
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="max-w-3xl">
           <span className="text-xs font-bold tracking-widest text-[#0284C7] uppercase font-sans">
-            PATIENT INFORMATION
+            PATIENT INFORMATION · UK &amp; IRELAND
           </span>
           <h1 className="text-3xl sm:text-5xl font-serif font-bold text-slate-900 mt-2 tracking-tight">
-            Frequently Asked Questions
+            Composite Bonding, E.max Veneers &amp; Dental Tourism FAQ
           </h1>
           <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Everything you need to know about our treatments, warranties, materials, travel logistics, and clinical care.
+            Everything UK and Irish patients ask before flying to Marrakech: clinical safety, zero tooth shaving, certified materials, pricing, warranties, and travel logistics.
           </p>
         </div>
       </div>

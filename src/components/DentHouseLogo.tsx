@@ -29,6 +29,8 @@ export const DentHouseLogo: React.FC<DentHouseLogoProps> = ({
       <img
         src={logoSrc}
         alt="Dent House Marrakech"
+        width={1184}
+        height={386}
         className={`${heightClasses} w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]`}
         decoding="async"
         onError={(e) => {

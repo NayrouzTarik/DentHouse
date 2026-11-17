@@ -45,6 +45,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenConsultation }) =>
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
+                  aria-expanded={isOpen}
                   className="w-full py-4.5 px-5 sm:px-6 text-left flex items-center justify-between gap-4 hover:bg-slate-50/50 transition-colors cursor-pointer"
                 >
                   <span className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
@@ -59,11 +60,13 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenConsultation }) =>
                   </div>
                 </button>
 
-                {isOpen && (
-                  <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/30">
-                    <p>{faq.a}</p>
-                  </div>
-                )}
+                <div
+                  className={`px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/30 ${
+                    isOpen ? 'block' : 'hidden'
+                  }`}
+                >
+                  <p>{faq.a}</p>
+                </div>
               </div>
             );
           })}

@@ -27,7 +27,7 @@ import { FaqPage } from './pages/FaqPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { ThankYouPage } from './pages/ThankYouPage';
 
-export default function App() {
+export function AppContent() {
   const [consultationModalOpen, setConsultationModalOpen] = useState(false);
   const [selectedPlanDetails, setSelectedPlanDetails] = useState<any>(null);
   const [activeTreatmentForCalculator, setActiveTreatmentForCalculator] = useState<string>('veneers');
@@ -56,7 +56,7 @@ export default function App() {
   };
 
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <EnquiryTrackingProvider>
         <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-sky-100 selection:text-sky-900">
@@ -166,6 +166,14 @@ export default function App() {
         </div>
       </div>
       </EnquiryTrackingProvider>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }
