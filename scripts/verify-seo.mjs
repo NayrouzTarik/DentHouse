@@ -13,6 +13,7 @@ const indexable = [
   { route: '/aftercare', file: 'dist/aftercare.html', expectedCanonical: 'https://denthousemarrakech.com/aftercare' },
   { route: '/faqs', file: 'dist/faqs.html', expectedCanonical: 'https://denthousemarrakech.com/faqs' },
   { route: '/privacy', file: 'dist/privacy.html', expectedCanonical: 'https://denthousemarrakech.com/privacy' },
+  { route: '/consultation', file: 'dist/consultation.html', expectedCanonical: 'https://denthousemarrakech.com/consultation' },
 ];
 
 const noindex = [
@@ -95,7 +96,7 @@ for (const item of indexable) {
     hreflangs.every((h) => h === item.expectedCanonical) &&
     h1s.length === 1 &&
     rootHtmlLen > 10000 &&
-    (item.route === '/' ? rootText.length > 2500 : rootText.length > 3000) &&
+    (item.route === '/' || item.route === '/consultation' ? rootText.length > 2500 : rootText.length > 3000) &&
     ldValid &&
     ldBlocks.length >= 2 &&
     html.includes('AW-18548397646') &&

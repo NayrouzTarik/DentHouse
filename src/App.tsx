@@ -26,6 +26,7 @@ import { JourneyPage } from './pages/JourneyPage';
 import { FaqPage } from './pages/FaqPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { ThankYouPage } from './pages/ThankYouPage';
+import { ConsultationPage } from './pages/ConsultationPage';
 
 export function AppContent() {
   const [consultationModalOpen, setConsultationModalOpen] = useState(false);
@@ -114,6 +115,13 @@ export function AppContent() {
               element={<PrivacyPolicyPage onOpenConsultation={handleOpenConsultation} />}
             />
             <Route path="/privacy-policy" element={<Navigate to="/privacy" replace />} />
+            {/* Consultation Lead Form Page */}
+            <Route
+              path="/consultation"
+              element={<ConsultationPage onOpenConsultation={handleOpenConsultation} />}
+            />
+            <Route path="/book" element={<Navigate to="/consultation" replace />} />
+            <Route path="/contact" element={<Navigate to="/consultation" replace />} />
             {/* Conversion / Thank You Confirmation Pages (Google Ads Conversion Tracking) */}
             <Route
               path="/thank-you"

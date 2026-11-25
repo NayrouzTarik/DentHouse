@@ -5,6 +5,13 @@ export const CLINIC_PHONE_DISPLAY = '+212 789-668454';
 export const DEFAULT_CONSULTATION_MESSAGE =
   'Hello, I would like to request a free consultation at Dent House Marrakech.';
 
+/**
+ * Google Apps Script Web App URL for capturing consultation lead form submissions into Google Sheets.
+ * Can be overridden via environment variable VITE_LEAD_FORM_WEBHOOK_URL.
+ */
+export const GOOGLE_SHEET_LEAD_WEBHOOK_URL =
+  (typeof import.meta !== 'undefined' && import.meta.env?.VITE_LEAD_FORM_WEBHOOK_URL) || '';
+
 export const getWhatsAppUrl = (message: string = DEFAULT_CONSULTATION_MESSAGE) =>
   `https://wa.me/${CLINIC_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 

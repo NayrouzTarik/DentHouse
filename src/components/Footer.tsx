@@ -99,6 +99,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
                 </Link>
               </li>
               <li>
+                <Link to="/consultation" className="hover:text-white transition-colors text-slate-300 font-medium">
+                  Book Consultation (Online Form)
+                </Link>
+              </li>
+              <li>
                 <Link to="/privacy" className="hover:text-white transition-colors text-sky-400 font-medium">
                   Privacy Policy & Cookie Disclosures
                 </Link>

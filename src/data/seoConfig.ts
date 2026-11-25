@@ -20,6 +20,7 @@ export const PRERENDER_ROUTES = [
   '/aftercare',
   '/faqs',
   '/privacy',
+  '/consultation',
 ] as const;
 
 export const NOINDEX_ROUTES = [
@@ -419,6 +420,30 @@ export const SEO_ROUTES: Record<string, RouteSEOConfig> = {
       ],
     },
   },
+  '/consultation': {
+    path: '/consultation',
+    title: 'Book Your Dental Consultation Marrakech | Dent House',
+    description:
+      'Book your free cosmetic dental consultation in Marrakech. Enquire online for composite bonding & E.max veneers or chat with our team on WhatsApp.',
+    canonicalUrl: `${SITE_URL}/consultation`,
+    robots: DEFAULT_ROBOTS,
+    breadcrumbName: 'Book Consultation',
+    schemaData: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        buildBreadcrumbSchema('Book Consultation', `${SITE_URL}/consultation`),
+        {
+          '@type': 'ContactPage',
+          '@id': `${SITE_URL}/consultation#contactpage`,
+          name: 'Book a Consultation | Dent House Marrakech',
+          description:
+            'Online consultation booking and clinical enquiries for UK & Irish patients seeking composite bonding and E.max porcelain veneers in Marrakech.',
+          url: `${SITE_URL}/consultation`,
+          mainEntity: { '@id': `${SITE_URL}/#dentist` },
+        },
+      ],
+    },
+  },
   '/thank-you': {
     path: '/thank-you',
     title: 'Thank You | Dent House Marrakech Consultation Request',
@@ -437,6 +462,9 @@ export const SEO_ROUTES: Record<string, RouteSEOConfig> = {
 
 export function getRouteSEO(path: string): RouteSEOConfig {
   const normalized = path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path;
+  if (normalized === '/book' || normalized === '/contact') {
+    return SEO_ROUTES['/consultation'];
+  }
   if (
     normalized === '/conversion' ||
     normalized === '/whatsapp-conversion' ||
