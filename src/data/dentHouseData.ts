@@ -10,7 +10,8 @@ export const DEFAULT_CONSULTATION_MESSAGE =
  * Can be overridden via environment variable VITE_LEAD_FORM_WEBHOOK_URL.
  */
 export const GOOGLE_SHEET_LEAD_WEBHOOK_URL =
-  (typeof import.meta !== 'undefined' && import.meta.env?.VITE_LEAD_FORM_WEBHOOK_URL) || '';
+  (typeof import.meta !== 'undefined' && import.meta.env?.VITE_LEAD_FORM_WEBHOOK_URL) ||
+  'https://script.google.com/macros/s/AKfycbyRVZ7ZqpVOd47xQG01jTio6Yo-sSZT2InfbfRW5KNxds81Ai-gMvOR0bCMaNYhOv0l/exec';
 
 export const getWhatsAppUrl = (message: string = DEFAULT_CONSULTATION_MESSAGE) =>
   `https://wa.me/${CLINIC_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
