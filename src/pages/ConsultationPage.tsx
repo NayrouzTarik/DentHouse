@@ -38,6 +38,7 @@ export const ConsultationPage: React.FC<ConsultationPageProps> = () => {
     consent: false,
   });
 
+  const [customTreatment, setCustomTreatment] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -50,14 +51,24 @@ export const ConsultationPage: React.FC<ConsultationPageProps> = () => {
       setFormData((prev) => ({ ...prev, [name]: checked }));
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
+      if (name === 'treatment' && value !== 'Custom treatment') {
+        setCustomTreatment('');
+      }
     }
   };
+
+  const finalTreatmentName =
+    formData.treatment === 'Custom treatment'
+      ? customTreatment.trim()
+        ? `Custom: ${customTreatment.trim()}`
+        : ''
+      : formData.treatment;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.fullName.trim() || !formData.phone.trim() || !formData.treatment) {
-      setErrorMessage('Please fill in your name, phone number, and select a treatment.');
+    if (!formData.fullName.trim() || !formData.phone.trim() || !finalTreatmentName) {
+      setErrorMessage('Please fill in your name, phone number, and select or specify your treatment.');
       return;
     }
 
@@ -75,7 +86,7 @@ export const ConsultationPage: React.FC<ConsultationPageProps> = () => {
       fullName: formData.fullName.trim(),
       phone: formData.phone.trim(),
       email: formData.email.trim(),
-      treatment: formData.treatment,
+      treatment: finalTreatmentName,
       travelDates: formData.travelDates.trim(),
       patients: formData.patients,
       message: formData.message.trim(),
@@ -97,7 +108,7 @@ export const ConsultationPage: React.FC<ConsultationPageProps> = () => {
       trackGenerateLead({
         leadMethod: 'form_submission',
         formName: 'consultation_form',
-        treatmentInterest: formData.treatment,
+        treatmentInterest: finalTreatmentName,
       });
       trackGoogleAdsConversion();
     } catch {
@@ -125,7 +136,7 @@ export const ConsultationPage: React.FC<ConsultationPageProps> = () => {
 
   const whatsappFollowUpText = `Hi Dent House Marrakech, I just submitted a consultation enquiry on your website:
 • Name: ${formData.fullName}
-• Treatment: ${formData.treatment || 'Consultation'}
+• Treatment: ${finalTreatmentName || 'Consultation'}
 • Travel: ${formData.travelDates || 'Flexible'}
 
 I would like to share photos of my smile for a clinical assessment.`;
@@ -188,6 +199,7 @@ I would like to share photos of my smile for a clinical assessment.`;
                       type="button"
                       onClick={() => {
                         setStatus('idle');
+                        setCustomTreatment('');
                         setFormData({
                           fullName: '',
                           phone: '',
@@ -275,13 +287,28 @@ I would like to share photos of my smile for a clinical assessment.`;
                         className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20 outline-hidden text-sm text-slate-900 transition-colors bg-white"
                       >
                         <option value="">Select...</option>
-                        <option value="Composite Bonding">Direct Composite Bonding (Zero Drilling)</option>
-                        <option value="E.max Porcelain Veneers">Handcrafted E.max Porcelain Veneers</option>
-                        <option value="Full Smile Makeover">Full Smile Makeover</option>
-                        <option value="Laser Whitening & Hygiene">In-Clinic Laser Teeth Whitening</option>
-                        <option value="Dental Implants">Dental Implants / Arch Restoration</option>
-                        <option value="General Consultation">General Clinical Assessment</option>
+                        <option value="Composite Bonding (Up to 20 Teeth)">Direct Composite Bonding (Up to 20 Teeth)</option>
+                        <option value="E.max Porcelain Veneers (Set of 20 Teeth)">Handcrafted E.max Porcelain Veneers (Set of 20 Teeth)</option>
+                        <option value="Both / Compare Bonding & Veneers">Both / Compare Bonding &amp; Veneers</option>
+                        <option value="Custom treatment">Custom treatment (specify below)...</option>
                       </select>
+
+                      {formData.treatment === 'Custom treatment' && (
+                        <div className="mt-2.5 animate-in fade-in duration-200">
+                          <label htmlFor="customTreatment" className="block text-[11px] font-semibold text-sky-800 mb-1">
+                            Type your custom treatment *
+                          </label>
+                          <input
+                            id="customTreatment"
+                            type="text"
+                            required
+                            placeholder="e.g. 8 upper veneers, dental implants, gap closure, whitening..."
+                            value={customTreatment}
+                            onChange={(e) => setCustomTreatment(e.target.value)}
+                            className="w-full px-3.5 py-2.5 rounded-xl border border-sky-300 focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20 outline-hidden text-sm text-slate-900 transition-colors bg-sky-50/20 placeholder:text-slate-400"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
 
