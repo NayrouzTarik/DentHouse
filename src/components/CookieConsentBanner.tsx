@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Cookie, ShieldCheck, X } from 'lucide-react';
+import { updateClarityConsent } from '../utils/analytics';
 
 export const CookieConsentBanner: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +49,8 @@ export const CookieConsentBanner: React.FC = () => {
         });
       }
     }
+
+    updateClarityConsent(type === 'all');
 
     setIsOpen(false);
   };

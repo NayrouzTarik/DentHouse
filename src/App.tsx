@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Navbar } from './components/Navbar';
@@ -11,7 +11,7 @@ import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
 import { CookieConsentBanner } from './components/CookieConsentBanner';
 import { EnquiryTrackingProvider } from './components/EnquiryTrackingProvider';
-import { trackBookingClick } from './utils/analytics';
+import { trackBookingClick, initClarity } from './utils/analytics';
 import { MessageCircle } from 'lucide-react';
 import { getWhatsAppUrl } from './data/dentHouseData';
 
@@ -32,6 +32,10 @@ export function AppContent() {
   const [consultationModalOpen, setConsultationModalOpen] = useState(false);
   const [selectedPlanDetails, setSelectedPlanDetails] = useState<any>(null);
   const [activeTreatmentForCalculator, setActiveTreatmentForCalculator] = useState<string>('veneers');
+
+  useEffect(() => {
+    initClarity();
+  }, []);
 
   const handleOpenConsultation = () => {
     trackBookingClick({

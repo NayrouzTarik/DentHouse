@@ -1,5 +1,7 @@
+import Clarity from '@microsoft/clarity';
+
 /**
- * Google Analytics 4 (GA4) & Google Ads Tag (gtag.js) Utility
+ * Google Analytics 4 (GA4) & Google Ads Tag (gtag.js) + Microsoft Clarity Utility
  * GA4 Measurement ID: G-084Y9CMNQR
  * Google Ads ID: AW-18548397646
  * Strictly non-PII: No personal info, message content, or visitor details are transmitted.
@@ -7,6 +9,61 @@
 
 export const GOOGLE_ADS_ID = 'AW-18548397646';
 export const GA4_MEASUREMENT_ID = 'G-084Y9CMNQR';
+
+// Microsoft Clarity Project ID (set via VITE_CLARITY_PROJECT_ID or directly here)
+export const CLARITY_PROJECT_ID =
+  (typeof import.meta !== 'undefined' && import.meta.env?.VITE_CLARITY_PROJECT_ID) || 'zk8ux4woo1';
+
+let clarityInitialized = false;
+
+/**
+ * Initialize Microsoft Clarity safely on the client only (never during SSR/prerender).
+ */
+export function initClarity() {
+  try {
+    if (typeof window === 'undefined' || clarityInitialized || !CLARITY_PROJECT_ID) return;
+    Clarity.init(CLARITY_PROJECT_ID);
+    clarityInitialized = true;
+
+    // Sync existing cookie consent choice if already stored
+    try {
+      const savedChoice = localStorage.getItem('denthouse_cookie_consent');
+      if (savedChoice === 'all') {
+        Clarity.consentV2({ ad_Storage: 'granted', analytics_Storage: 'granted' });
+      } else if (savedChoice === 'essential') {
+        Clarity.consentV2({ ad_Storage: 'denied', analytics_Storage: 'denied' });
+      }
+    } catch {
+      // localStorage unavailable
+    }
+  } catch {
+    // Fail silently if blocked by ad-blocker
+  }
+}
+
+/**
+ * Update Microsoft Clarity Consent v2 alongside Google Consent Mode v2.
+ */
+export function updateClarityConsent(granted: boolean) {
+  try {
+    if (typeof window === 'undefined' || !clarityInitialized) return;
+    Clarity.consentV2({
+      ad_Storage: granted ? 'granted' : 'denied',
+      analytics_Storage: granted ? 'granted' : 'denied',
+    });
+  } catch {
+    // Fail silently
+  }
+}
+
+function sendClarityEvent(eventName: string) {
+  try {
+    if (typeof window === 'undefined' || !clarityInitialized) return;
+    Clarity.event(eventName);
+  } catch {
+    // Fail silently
+  }
+}
 
 // Google Ads Conversion Action: "whatsapp clicl conversion page"
 export const GOOGLE_ADS_WHATSAPP_CONVERSION_LABEL = 'QU1ZCMLJ568dEM6syIxF';
@@ -80,6 +137,9 @@ export function trackWhatsAppClick(params: {
 
   // 2. Google Ads Conversion Action ("whatsapp clicl conversion page")
   trackGoogleAdsConversion(GOOGLE_ADS_WHATSAPP_CONVERSION_LABEL);
+
+  // 3. Microsoft Clarity custom event
+  sendClarityEvent('whatsapp_click');
 }
 
 /**
@@ -149,6 +209,8 @@ export function trackGenerateLead(params: {
     form_name: params.formName || 'consultation_form',
     treatment_interest: params.treatmentInterest || undefined,
   });
+
+  sendClarityEvent('generate_lead');
 }
 
 /**
